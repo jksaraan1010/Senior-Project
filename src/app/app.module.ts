@@ -6,14 +6,12 @@ import { MaterialDashboardComponent } from './material-dashboard/material-dashbo
 import { NoteToSelfComponent } from './note-to-self/note-to-self.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MaterialDashboardComponent,
-    MainNavComponent,
     CalendarComponent,
     NoteToSelfComponent
   ],
