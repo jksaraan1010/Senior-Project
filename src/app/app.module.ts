@@ -26,7 +26,8 @@ import { FullCalendarComponent } from './full-calendar/full-calendar.component';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

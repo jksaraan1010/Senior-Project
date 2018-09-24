@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { CalendarComponent } from 'ng-fullcalendar';
 import { Options } from 'fullcalendar';
 
@@ -7,31 +7,18 @@ import { Options } from 'fullcalendar';
   templateUrl: './full-calendar.component.html',
   styleUrls: ['./full-calendar.component.css']
 })
-export class FullCalendarComponent implements OnInit {
+export class FullCalendarComponent{
+  title = 'my-angular-app';
   calendarOptions: Options;
-  @ViewChild(CalendarComponent) ucCalendar: CalendarComponent;
-  constructor() {}
   ngOnInit() {
-    this.eventService.getEvents().subscribe(data => {
-      this.calendarOptions = {
+  this.calendarOptions = {
         editable: true,
         eventLimit: false,
         header: {
           left: 'prev,next today',
           center: 'title',
           right: 'month,agendaWeek,agendaDay,listMonth'
-        },
-        selectable: true,
-        events: [],
-        };
-    });
+        }
+      };
   }
-  clearEvents() {
-    this.events = [];
-  }
-  loadEvents() {
-    this.eventService.getEvents().subscribe(data => {
-      this.events = data;
-    });
-  }
-  
+ }
