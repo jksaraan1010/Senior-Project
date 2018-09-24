@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FullCalendarModule } from 'ng-fullcalendar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material';
+import {DataSource} from '@angular/cdk/table';
+import { CdkTableModule } from '@angular/cdk/table';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MaterialDashboardComponent } from './material-dashboard/material-dashboard.component';
@@ -27,7 +32,10 @@ import { FullCalendarComponent } from './full-calendar/full-calendar.component';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    FullCalendarModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    HttpClientModule,
+    CdkTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
