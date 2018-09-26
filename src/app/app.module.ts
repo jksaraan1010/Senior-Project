@@ -1,31 +1,42 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FullCalendarModule } from 'ng-fullcalendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material';
-import {DataSource} from '@angular/cdk/table';
 import { CdkTableModule } from '@angular/cdk/table';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { MaterialDashboardComponent } from './material-dashboard/material-dashboard.component';
-import { NoteToSelfComponent } from './note-to-self/note-to-self.component';
-import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+// import { NoteToSelfComponent } from './note-to-self/note-to-self.component';
+import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule} from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
-import { CalendarComponent } from './calendar/calendar.component';
-import { FullCalendarComponent } from './full-calendar/full-calendar.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
+
+const appRoutes: Routes = [
+  { path: 'timeline', component: TimelineComponent },
+  { path: '',
+    redirectTo: '/heroes',
+    pathMatch: 'full'
+  },
+];
 @NgModule({
   declarations: [
     AppComponent,
-    MaterialDashboardComponent,
-    CalendarComponent,
-    NoteToSelfComponent,
-    FullCalendarComponent
+    // NoteToSelfComponent,
+    MainNavComponent,
+    MainDashboardComponent,
+    TimelineComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
     BrowserModule,
-    FullCalendarModule,
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
@@ -35,7 +46,10 @@ import { FullCalendarComponent } from './full-calendar/full-calendar.component';
     BrowserAnimationsModule,
     MatTableModule,
     HttpClientModule,
-    CdkTableModule
+    CdkTableModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

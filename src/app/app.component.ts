@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { User } from './User';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AppComponent  implements OnInit {
+   title = 'app';
+   user: User;
 
-    constructor() { }
+    constructor(private http: HttpClient) { }
     ngOnInit() {
+    // make the HTTP request
+    this.http.get<User>('http://localhost:8000/auth').subscribe(data => {
+      console.log(data);
+      this.user = data;
+    });
+
     }
   }
 

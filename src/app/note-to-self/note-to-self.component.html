@@ -1,3 +1,33 @@
-<p>
-git request
-</p>
+<div class="container">
+    <h1 class="text-center">Note to Self</h1>
+    <div class="addContainer">
+      <div class="row">
+        <form (ngSubmit)="newNote()">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <label>Add A New Note</label>
+            <input type="text" id="note" placeholder="New Note to Self" [(ngModel)]="title" name="title" class="form-control" >
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <button type="submit" name="add" class="btn btn-success btn-add">Add</button>      
+        </div>
+        </form>
+    </div>
+        <hr>
+        <div class="previousContainer"  *ngIf="notes && notes.length > 0">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <label>Note</label>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <label>Action</label>    
+                </div>   
+                <span>{{note.title}}</span>
+                <div>
+                  <div class="pull-right btn-group" role="group" aria-label="..."></div>
+                    <button type="button" (click)="editNote(note)" class="btn btn-success"> Edit</button>  
+                    <button type="button" (click)="deleteNote(note)" class="btn btn-danger"> Delete</button>
+                  </div>
+        </div>
+                
+  
+          
+      
