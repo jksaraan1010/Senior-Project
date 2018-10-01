@@ -16,13 +16,6 @@ import { MainDashboardComponent } from './main-dashboard/main-dashboard.componen
 import { TimelineComponent } from './timeline/timeline.component';
 
 
-const appRoutes: Routes = [
-  { path: 'timeline', component: TimelineComponent },
-  { path: '',
-    redirectTo: '/heroes',
-    pathMatch: 'full'
-  },
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,10 +25,6 @@ const appRoutes: Routes = [
     TimelineComponent
   ],
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
     BrowserModule,
     MatGridListModule,
     MatCardModule,
