@@ -27,5 +27,5 @@ Route::get('events',function(){
 //Route::post('events', 'EventController@addEvent')->name('events.add');
 
 Route::resource('notes', 'NotesController');
-Route::get('notes', 'NotesController@index')->name('notes.index');
+//Route::get('notes', 'NotesController@index');
 

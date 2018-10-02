@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Note;
+
 
 class NotesController extends Controller
 {
@@ -13,7 +15,8 @@ class NotesController extends Controller
      */
     public function index()
     {
-        return "This is the index page";
+        $note = Note::orderBy('id', 'desc')->get();
+        return view('notes.index') ->with('storedNotes', $note);
     }
 
     /**
@@ -23,7 +26,7 @@ class NotesController extends Controller
      */
     public function create()
     {
-        return view('notes.create');
+        //
     }
 
     /**
@@ -34,10 +37,15 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
-        //validate and save notes
         $this->validate($request, [
-         'name' => 'required|string|max:255|min:1',
+            'newNoteName'=>'required|min:3|max:255',
         ]);
+        $note = new Note;
+        $note->name = $request->newNoteName;
+
+        $note->save();
+
+        return redirect()->route('notes.index');
 
     }
 
@@ -60,7 +68,9 @@ class NotesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $note = Note::find($id);
+
+        return view('notes.edit')->with('notesUnderEdit', $note);
     }
 
     /**
@@ -72,7 +82,13 @@ class NotesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'updatedNoteName'=>'required|min:3|max:255',
+        ]);
+        $note = Note::find($id);
+        $note->name = $request->updatedNoteName;
+        $note->save();
+        return redirect()->route('notes.index');
     }
 
     /**
@@ -83,6 +99,8 @@ class NotesController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $note = Note::find($id);
+       $note->delete();
+       return redirect()->route('notes.index');
     }
 }
