@@ -17,25 +17,23 @@ class SurveyController extends Controller
     }
     public static function getQuestions($sectionId)
     {
-        $questions1 = DB::select('select Question  from `questions` WHERE `SectionId`=?', [$sectionId]);
+        $questions1 = DB::select('select Question, id from `questions` WHERE `SectionId`=?', [$sectionId]);
         //$questionsjson = json_encode($questions1);
-        //return view('survey', [$questions1]);
+        //return view('Survey', ["questionsInJson" =>$questionsjson]);
         return view('Survey',['questions'=>$questions1]);
-        //$questionId = DB::select('select questionId from `answers` WHERE `id`=?', [$questionsAnswer]);
-        //return view('Survey',['questionId'=>$questionId]);
-
-        //return response()->json(array('answersQuery'=> $answerQuery), 200);
+        //return response()->json(array('questionsjson'=> $questionsjson), 200);
     }
 
-       public function saveAnswers($questionsId, $questionsAnswer)
+       public function saveAnswers( $questionId, $QuestionAnswer)
     {
+        //$answerFromUser = $request ->get('answer');
         $answerQuery = DB::insert('insert into `answers` (user_answers) where id = questionId values(?)',[$answer]);
-
+        //$answerFromUser -> $answerQuery;
         //$answersjson= json_encode($answerQuery);
-        //return view('survey', $answersjson);
-        return view('Survey',['answers'=>$answerQuery]);
+        //return [$answersjson]);
+       return view('Survey',['answers'=>$answerFromUser]);
 
-       // return response()->json(array('answersQuery'=> $answerQuery), 200);
+      // return response()->json(array('answersQuery'=> $answerQuery), 200);
 
     }
     
