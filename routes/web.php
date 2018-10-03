@@ -19,13 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('events',function(){
-    return view('events.index');
-});
+Route::resource('events', 'EventsController');
+Route::get('/add', 'EventsController@display');
+Route::post('','EventsController@store');
+Route::get('/edit', 'EventsController@show');
+Route::get('/delete', 'EventsController@show');
 
-//Route::get('events', 'EventController@index')->name('events.index');
-//Route::post('events', 'EventController@addEvent')->name('events.add');
 
 Route::resource('notes', 'NotesController');
-//Route::get('notes', 'NotesController@index');
 
