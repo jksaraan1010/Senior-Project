@@ -11,13 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+ //  return view('welcome');
+//});
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/survey', 'SurveyController@getQuestions');
+//Route::get('survey/{sectionId}', 'SurveyController@getQuestions');
+Route::get('survey', 'SurveyController@index');
+Route::get('survey/questions/{sectionId}', 'SurveyController@getQuestions');
+//Route::post('survey/questions/{sectionId}', 'SurveyController@saveAnswers');
+
 
 Route::resource('events', 'EventsController');
 Route::get('/add', 'EventsController@display');
@@ -26,5 +31,8 @@ Route::get('/edit', 'EventsController@show');
 Route::get('/delete', 'EventsController@show');
 
 
+
+
 Route::resource('notes', 'NotesController');
+
 
