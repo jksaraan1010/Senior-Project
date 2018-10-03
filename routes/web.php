@@ -23,15 +23,16 @@ Route::get('survey', 'SurveyController@index');
 Route::get('survey/questions/{sectionId}', 'SurveyController@getQuestions');
 //Route::post('survey/questions/{sectionId}', 'SurveyController@saveAnswers');
 
-//Route::post('/survey', 'SurveyController@saveAnswers')->name('survey.saveAnswers');
 
-//Route::get('events',function(){
-   // return view('events.index');
-//});
+Route::resource('events', 'EventsController');
+Route::get('/add', 'EventsController@display');
+//Route::post('events','EventsController@store');
+Route::get('/edit', 'EventsController@show');
+Route::get('/delete', 'EventsController@show');
 
-//Route::get('events', 'EventController@index')->name('events.index');
-//Route::post('events', 'EventController@addEvent')->name('events.add');
 
-//Route::resource('notes', 'NotesController');
-//Route::get('notes', 'NotesController@index');
+
+
+Route::resource('notes', 'NotesController');
+
 

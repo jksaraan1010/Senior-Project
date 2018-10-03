@@ -21,21 +21,42 @@
         <div class="row">
             <h3> Notes to Self </h3>
         </div>
+        {{-- Success Alert --}}
+        @if(Session::has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success:</strong> {{ Session::get('success') }}
 
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <strong>Error:</strong>
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
         @endif
+
+        {{-- If the page has any errors passed to it --}}
+        @if(count($errors) > 0)
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Errors:</strong>
+
+                <ul>
+                    @foreach($errors->all() as $error)
+
+                        <li>{{ $error }}</li>
+
+                    @endforeach
+                </ul>
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+        @endif
+
         <div class="row">
             <form action="{{ route('notes.update', [$notesUnderEdit->id]) }}" method='POST'>
                 {{ csrf_field() }}
-                <input type="hidden" name='_method' value='PUT'>
+                <input type="hidden" name='_method' value='put'>
 
                 <div class="form-group">
                     <input type="text" name='updatedNoteName' class='form-control input-lg' value='{{ $notesUnderEdit->name }}'>
@@ -43,7 +64,7 @@
 
                 <div class="form-group">
                     <input type="submit" value='Update Note' class='btn btn-success btn-lg'>
-                    <a href="" class='btn btn-danger btn-lg pull-right'>Go Back</a>
+                    <a href="{{ route('notes.index')}}" class='btn btn-danger btn-lg pull-right'>Go Back</a>
                 </div>
             </form>
         </div>

@@ -8,10 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'AddDummyEvent' => $baseDir . '/database/seeds/AddDummyEvent.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
-    'App\\Event' => $baseDir . '/app/Event.php',
+    'App\\Events' => $baseDir . '/app/Events.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
-    'App\\Http\\Controllers\\EventController' => $baseDir . '/app/Http/Controllers/EventController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\NotesController' => $baseDir . '/app/Http/Controllers/NotesController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
