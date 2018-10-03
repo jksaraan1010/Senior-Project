@@ -68,30 +68,14 @@
     </div>
     <br>
     <div class="row-sm-8">
-        <a href="/add "  class="btn btn-success" style="margin:5px">Add An Event</a>
+        <a href="/add"  class="btn btn-success" style="margin:5px">Add An Event</a>
         <a href="/edit" class="btn btn-warning" style="margin:5px">Edit An Event</a>
         <a href="/delete " class="btn btn-danger" style="margin:5px">Delete An Event</a>
     </div>
 
-    <form action="{{route('events.store')}}" method="post">
-        {{csrf_field()}}
-        <div>
-            <label for=""> Enter Event Name</label>
-            <input class="form-control" name="newEventName" type="text" placeholder="Event Name">
-        </div>
-        <div>
-            <label for=""> Enter Event Start Time</label>
-            <input class="form-control" name="newEventStartDate" type="datetime-local" placeholder="Event Start Time">
-        </div>
-        <div>
-            <label for=""> Enter Event End Time</label>
-            <input class="form-control" name="newEventEndDate" type="datetime-local" placeholder="Event End Time">
-        </div>
-        <br>
-        <div>
-            <input class="btn btn-primary" name="Submit" type="submit" value="Submit" />
-        </div>
-    </form>
+
+
+
 </div>
 </body>
 

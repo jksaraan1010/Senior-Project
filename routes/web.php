@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('events', 'EventsController');
 Route::get('/add', 'EventsController@display');
-Route::post('','EventsController@store');
+//Route::post('events','EventsController@store');
 Route::get('/edit', 'EventsController@show');
 Route::get('/delete', 'EventsController@show');
 

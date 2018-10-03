@@ -19,8 +19,6 @@
             <div class="panel-body">
                 <h1> Add Event Information</h1>
 
-
-
                 <form action="{{route('events.store')}}" method="post">
                     {{csrf_field()}}
                     <div>
@@ -37,7 +35,7 @@
                     </div>
                     <br>
                     <div>
-                         <input class="btn btn-primary" name="Submit" type="submit" value="Submit" />
+                         <input class="btn btn-block btn-success" name="Submit" type="submit" value="Submit" />
                     </div>
                 </form>
             </div>

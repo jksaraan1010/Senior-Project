@@ -25,20 +25,17 @@
         @foreach($events as $event)
             <tbody>
             <tr>
-
                 <td>{{$event->event_name}}</td>
                 <td>{{$event->start_date}}</td>
                 <td>{{$event->end_date}}</td>
 
-                <th><a href="{{route('events.edit', ['events'=>$events->id])}}" class="btn btn-success"> Edit</a>
+                <th><a href="{{action('EventsController@edit',$event['id'])}}" class="btn btn-success"> Edit</a>
                 </th>
                 <th>
-
-                    <form action="{{route('events.destroy', ['events'=>$events->id])}}" method="post">
+                    <form method="post" action="{{action('EventsController@destroy', $event['id'])}}">
                         {{csrf_field()}}
                         <input type="hidden" name="_method" value="Delete" />
-
-                        <button type="submit" class="btn btn-danger" value="Delete" > Delete </button>
+                        <button type="submit" class="btn btn-danger" > Delete </button>
                     </form>
                 </th>
             </tr>
