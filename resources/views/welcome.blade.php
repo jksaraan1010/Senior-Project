@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #013E86;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -45,22 +45,19 @@
                 text-align: center;
             }
 
-            .title {
-                font-size: 84px;
-            }
 
             .links > a {
-                color: #636b6f;
+                color:white;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-            }
+                border: 2px solid #4CAF50; /* Green */
 
-            .m-b-md {
-                margin-bottom: 30px;
+
+
             }
         </style>
     </head>
@@ -78,18 +75,9 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                <img src="{{url('MTE.PNG')}}" alt="Image" width="500" height="333"/>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+
             </div>
         </div>
     </body>
