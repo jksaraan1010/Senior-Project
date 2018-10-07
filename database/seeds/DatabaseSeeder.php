@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
                 $role->syncPermissions(Permission::all());
                 $this->command->info('Admin granted all the permissions');
 
-            }elseif ($role->name == 'student') {
+            }elseif ($role->name == 'Patient') {
                 // for others by default only read access
                 $role->syncPermissions(Permission::where('name', 'LIKE', 'view_%')->get());
                 // $role->syncPermissions(Permission::where('name', '=', 'view_users')
