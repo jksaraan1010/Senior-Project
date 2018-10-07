@@ -10,7 +10,7 @@ class Role extends \Spatie\Permission\Models\Role
 	{
 	    return [
 	    	'admin',
-	        'student',
+	        'patient',
 	        'family_member',
 	    ];
 	}
