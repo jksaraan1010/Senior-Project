@@ -8,6 +8,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/app.css"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -35,7 +36,7 @@
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fa fa-bell-o"></i>
+          <i class="nav-icon fa fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -49,10 +50,7 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
-            class="fa fa-th-large"></i></a>
-      </li>
+    
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -70,8 +68,11 @@
     <div class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="info">
-          <a href="#" class=" d-block">  {{ Auth::user()->name }}</a>
+      <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+      <div class="info">    
+          <a href="#" class=" d-block"> {{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -82,26 +83,16 @@
                with font-awesome or any other icon font library -->
                <li class="nav-item">
           <router-link to="/profile" class="nav-link">
-            <i class="fas fa-user"></i>
+            <i class="nav-icon fas fa-user"></i>
             <p>
                 Profile
              </p>
           </router-link>
        </li>
-       <li class="nav-item">
-          <a href="#" class="nav-link"
-             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-             <i class="fas fa-power-off"></i> Log out
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-             </form>
-             </p>
-          </a>
-      </li>
-          
+
                <li class="nav-item">
           <router-link to="/dashboard" class="nav-link">
-              <i class="nav-icon fa fa-dashboard"></i>
+             <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
@@ -110,7 +101,7 @@
 
             <li class="nav-item">
             <a href="{{ route('events.index') }}" class="nav-link active">
-              <i class="nav-icon fa fa-calendar"></i>
+              <i class="nav-icon fa fa-calendar-alt">  </i>
               <p>
                 Reminders
                 <span class="badge badge-info right">2</span>
@@ -129,13 +120,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/forms/general.html" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
+                  <i class="nav-icon fas fa-pen"></i>
                   <p>Take Survey</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
+                  <i class="nav-icon fas fa-chart-line"></i>
                   <p>View Past Results</p>
                 </a>
               </li>
@@ -146,7 +137,7 @@
 
          <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fa fa-th"></i>
+              <i class="nav-icon fa fa-heartbeat"></i>
               <p>
                 Timeline
               </p>
@@ -156,9 +147,9 @@
 
          <li class="nav-item">
          <a href="{{ route('notes.index') }}" class="nav-link">
-            <i class="fas fa-sticky-note"></i>
+         <i class="nav-icon fa fa-clipboard-list"></i>
               <p>
-                Notes To Self 
+                 Notes
               </p>
             </a>
           </li>
@@ -175,26 +166,35 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/examples/invoice.html" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Self Care</p>
+                  <i class="nav-icon fas fa-briefcase-medical"></i>
+                  <p>Health Awareness</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/examples/profile.html" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
+                  <i class="nav-icon fas fa-hand-holding-heart"></i>
                   <p>Self Care</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/examples/login.html" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Self Care</p>
+                  <i class="nav-icon fas fa-comments"></i>
+                  <p>Communication</p>
                 </a>
               </li>
             </ul>
           </li>
 
-
+       <li class="nav-item">
+          <a href="#" class="nav-link"
+             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+             <i class="nav-icon fas fa-power-off"></i>  <p> Log Out </p>
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+             </form>
+             </p>
+          </a>
+      </li>
 
          
           
@@ -448,9 +448,6 @@
   <footer class="main-footer">
     <strong>Copyright &copy; 2018-2019 <a href="#"> My Transition Explorer </a>.</strong>
     All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.0-alpha
-    </div>
   </footer>
 
   <!-- Control Sidebar -->

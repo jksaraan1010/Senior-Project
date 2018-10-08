@@ -1,28 +1,28 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
+@extends('layouts.pageTemplate')
 
-    <title>Notes to Self</title>
-    
+@section('content')
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-</head>
-
-<body>
-
+ <!-- Content Header (Page header) -->
+ <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Notes To Self</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"> Notes To Self </li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
     <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="panel panel-default">
-                        <div class="panel-heading text-center" style="background: #013E86; color: white;">
-                            My Reminders Calendar
-                        </div>
+            <div class="container-fluid">
+                
+                    
                         <input type="button" 
                         onClick="window.print()" 
                         value="Print This Page"/>
@@ -60,8 +60,19 @@
 
             @endif
 
+<br>
 
-            <div class="row justify-content-lg-around">
+<div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title">Add A New Note</h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
                 <form class="form-inline" action="{{ route('notes.store') }}" method="post">
                     {{csrf_field()}}
                     <div class="col">
@@ -69,43 +80,61 @@
                     </div>
 
                     <div class="col">
-                        <input class="btn btn-success btn-block" margin-top="30px" type="submit" value="Add Note">
+                        <input class="btn btn-success btn-block" type="submit" value="Add Note">
                     </div>
                 </form>
+              </div>
+              <!-- /.col -->
             </div>
-            <br>
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+            </div>
 
             @if (count($storedNotes) > 0)
-                <div class="table-responsive-sm">
-                <table class="table table-sm table-striped">
-                    <thead>
-                    <th> Name</th>
-                    <th> Edit</th>
-                    <th> Delete</th>
-                    </thead>
-
-                    <tbody>
-                    @foreach ($storedNotes as $storedNotes)
-                        <tr>
-                            <td>{{ $storedNotes->name }}</td>
-                            <td><a href="{{ route('notes.edit', ['notes'=>$storedNotes->id]) }}" class='btn btn-warning'>Edit</a></td>
-                            <td>
-                                <form action="{{ route('notes.destroy', ['notes'=>$storedNotes->id]) }}" method='post'>
+<!-- /.row -->
+<div class="row">
+          <div class="col-12">
+            <div class="card card-default">
+              <div class="card-header">
+                <h3 class="card-title">List of Notes</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover">
+                  <tr>
+                    <th>Note</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                  @foreach ($storedNotes as $storedNotes)
+                  <tr>
+                     <td>{{ $storedNotes->name }}</td>
+                     <td><a href="{{ route('notes.edit', ['notes'=>$storedNotes->id]) }}" class='btn btn-primary'>Edit</a></td>
+                     <td>
+                     <form action="{{ route('notes.destroy', ['notes'=>$storedNotes->id]) }}" method='post'>
                                     {{ csrf_field() }}
-                                    <input type="hidden" name='_method' value='Delete'>
+                         <input type="hidden" name='_method' value='Delete'>
 
-                                    <input type="submit" class='btn btn-danger' value='Delete'>
-                                </form>
-                            </td>
-                        </tr>
+                         <input type="submit" class='btn btn-danger' value='Delete'>
+                    </form>
+                     </td>
+                    </tr>
                     @endforeach
-                    </tbody>
                 </table>
-            @endif
-                </div>
+            @endif                
         </div>
+              <!-- /.card-body -->
+     </div>
+            <!-- /.card -->
+</div>
 
-        </div>
-    </div>
-</body>
-</html>
+            
+</div>
+
+            </div> 
+    @endsection
+
