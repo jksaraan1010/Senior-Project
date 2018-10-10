@@ -165,19 +165,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/examples/invoice.html" class="nav-link">
+              <a href="" class="nav-link active">
                   <i class="nav-icon fas fa-briefcase-medical"></i>
                   <p>Health Awareness</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/profile.html" class="nav-link">
+              <a href="" class="nav-link active">
                   <i class="nav-icon fas fa-hand-holding-heart"></i>
                   <p>Self Care</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/login.html" class="nav-link">
+              <a href="" class="nav-link active">
                   <i class="nav-icon fas fa-comments"></i>
                   <p>Communication</p>
                 </a>

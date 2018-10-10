@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Route::get('Modules/selfCare', 'selfCareController@index');
+
 
 //Route::get('/survey', 'SurveyController@getQuestions');
 //Route::get('survey/{sectionId}', 'SurveyController@getQuestions');
@@ -37,3 +39,4 @@ Route::get('/delete', 'EventsController@show');
 
 
 Route::resource('notes', 'NotesController');
+
