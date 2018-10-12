@@ -78,7 +78,7 @@ class Internet extends Base
     final public static function safeEmailDomain()
     {
         $domains = array(
-            'example.com',
+            'gmail.com',
             'example.org',
             'example.net'
         );

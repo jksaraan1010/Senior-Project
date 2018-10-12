@@ -35,8 +35,5 @@ Route::get('/add', 'EventsController@display');
 Route::get('/edit', 'EventsController@show');
 Route::get('/delete', 'EventsController@show');
 
-
-
-
 Route::resource('notes', 'NotesController');
 

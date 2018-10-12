@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use Illuminate\Http\Request;
 use App\Note;
-
-
 class NotesController extends Controller
 {
     /**
@@ -16,9 +15,10 @@ class NotesController extends Controller
     public function index()
     {
         $note = Note::orderBy('id', 'desc')->get();
+
         return view('notes.index') ->with('storedNotes', $note);
     }
-
+   
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +26,7 @@ class NotesController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -48,6 +48,7 @@ class NotesController extends Controller
         return redirect()->route('notes.index');
 
     }
+
 
     /**
      * Display the specified resource.
@@ -103,4 +104,5 @@ class NotesController extends Controller
        $note->delete();
        return redirect()->route('notes.index');
     }
+
 }

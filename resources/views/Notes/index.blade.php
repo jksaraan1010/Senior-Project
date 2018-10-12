@@ -1,4 +1,5 @@
 @extends('layouts.pageTemplate')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @section('content')
 
@@ -21,14 +22,21 @@
     <!-- /.content-header -->
     <div class="container">
             <div class="container-fluid">
-                
-                    
+
                         <input type="button" 
                         onClick="window.print()" 
                         value="Print This Page"/>
-                        <br>
 
-            {{-- Success Alert --}}
+                <script language="javascript">
+                    function emailCurrentPage(){<!--from -->
+                        window.location.href="mailto:?subject="+document.title+"&body="+escape(window.location.href);
+                    }
+                </script>
+                <button type="submit"> <a href="javascript:emailCurrentPage()">Email this page!</a></button>
+
+
+
+                {{-- Success Alert --}}
             @if(Session::has('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Success:</strong> {{ Session::get('success') }}
@@ -135,6 +143,7 @@
             
 </div>
 
-            </div> 
+            </div>
+
     @endsection
 

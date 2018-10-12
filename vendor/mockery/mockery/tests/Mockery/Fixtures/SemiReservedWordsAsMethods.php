@@ -42,6 +42,7 @@ class SemiReservedWordsAsMethods
     function throw() {}
     function array() {}
     function print() {}
+    function email() {}
     function echo() {}
     function require() {}
     function require_once() {}
