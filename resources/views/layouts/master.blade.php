@@ -480,10 +480,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2018-2019 <a href="#"> My Transition Explorer </a>.</strong>
-    All rights reserved.
-  </footer>
+ 
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -492,7 +489,10 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+<footer class="main-footer">
+  <strong>Copyright &copy; 2018-2019 <a href="#"> My Transition Explorer </a>.</strong>
+  All rights reserved.
+</footer>
 <!-- REQUIRED SCRIPTS -->
 <script src="/js/app.js"></script>
 
