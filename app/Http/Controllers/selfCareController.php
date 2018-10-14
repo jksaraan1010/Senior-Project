@@ -8,6 +8,6 @@ class selfCareController extends Controller
 {
     public function index()
     {
-        return view('Modules.selfCare');
+        return view('selfCare');
     }
 }

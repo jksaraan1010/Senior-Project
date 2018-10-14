@@ -19,7 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('Modules/selfCare', 'selfCareController@index');
+Route::get('/selfCare', 'selfCareController@index')->name('selfCare');
+Route::get('/healthAwareness', 'HealthAwarenessController@index')->name('healthAwareness');
+Route::get('/communication', 'communicationController@index')->name('communication');
+
 
 
 //Route::get('/survey', 'SurveyController@getQuestions');

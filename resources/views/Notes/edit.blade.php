@@ -1,26 +1,30 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
+@extends('layouts.pageTemplate')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <title>Notes to Self</title>
+@section('content')
 
+ <!-- Content Header (Page header) -->
+ <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Notes To Self</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"> Notes To Self </li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <div class="container">
+            <div class="container-fluid">
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-</head>
-
-<body>
-
-<div class="container">
     <div class="col-md-offset-2 col-xs-8">
-        <div class="row">
-            <h3> Notes to Self </h3>
-        </div>
+    
         {{-- Success Alert --}}
         @if(Session::has('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -63,8 +67,8 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value='Update Note' class='btn btn-success btn-lg'>
-                    <a href="{{ route('notes.index')}}" class='btn btn-danger btn-lg pull-right'>Go Back</a>
+                    <input type="submit" value='Update Note' class='btn btn-primary'>
+                    <a href="{{ route('notes.index')}}" class='btn btn-danger pull-right'>Go Back</a>
                 </div>
             </form>
         </div>
@@ -72,7 +76,4 @@
 
     </div>
 </div>
-</body>
-</html>
-
-
+@endsection
