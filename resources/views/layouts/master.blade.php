@@ -8,6 +8,8 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/app.css"> 
+  <!-- bottom Script is for quiz/adminlte, yeahyea-->
+  <link rel="stylesheet" href="{{asset('adminlte/css/app.css')}}"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
@@ -22,7 +24,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="{{url('home')}}" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -226,7 +228,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="home">Home</a></li>
               <li class="breadcrumb-item active"> Dashboard </li>
             </ol>
           </div><!-- /.col -->
@@ -495,6 +497,9 @@
 </footer>
 <!-- REQUIRED SCRIPTS -->
 <script src="/js/app.js"></script>
+
+<!-- bottom Script is for quiz/adminlte-->
+<script src="{{asset('adminlte/js/app.js')}}"></script>
 
 </body>
 </html>
