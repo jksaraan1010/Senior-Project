@@ -3,15 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Validator;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
-use App\Role;
-use App\Permission;
-
-
+use App\Role ;
+use Carbon\Carbon;
 class RegisterController extends Controller
 {
     /*
@@ -28,7 +24,7 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
+     * Where to redirect users after login / registration.
      *
      * @var string
      */
@@ -43,6 +39,11 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+    public function showRegistrationForm()
+    {
+        $roles = Role::where('id','<>',1)->get();
+        return view('auth.register',compact('roles'));
+    }
 
     /**
      * Get a validator for an incoming registration request.
@@ -53,81 +54,27 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'dob' => 'required',
-            'role' => 'required',
-            'terms' => 'required',
-        ]);
+            'name'     => 'required|max:255',
+            'email'    => 'required|email|max:255|unique:users',
+            'password' => 'required|min:6|confirmed',
+            ]);
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return User
      */
     protected function create(array $data)
     {
+        $dates = new Carbon($data['dob']);
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'dob' => date('Y-m-d',strtotime($data['dob'])),
-            'role' => $data['role'],
-            'terms' => $data['terms'],
-        ]);
-
-
-        $this->syncPermissions($data, $user);
-
-        return $user;
-
-
-    }
-
-    private function syncPermissions(array $data, $user)
-    {
-        // Get the submitted roles
-        // echo "<pre>";
-        // print_r($data);
-        // print_r($user);
-        //exit;
-        $roles = isset($data['role']) ? $data['role'] : [];
-        $permissions = isset($data['permissions']) ? $data['permissions'] : [];
-        
-        // Get the roles
-        //$roles = Role::find($roles);
-        $roles = Role::where('name','=',$roles)->first();
-
-        
-        //  echo '<pre>';
-        // // print_r($user->toArray());
-        // print_r($roles->toArray());
-        // print_r($permissions);
-        //  exit;
-
-        // check for current role changes
-        if( ! $user->hasAllRoles( $roles ) ) {
-            //echo 'ss';exit;
-            // reset all direct permissions for user
-            $user->permissions()->sync([]);
-        } else {
-            //echo 'ee';exit;
-            // handle permissions
-            $user->syncPermissions($permissions);
-        }
-       // exit;
-
-        $user->syncRoles($roles);
-
-        // echo '<pre>';
-        // print_r($user->toArray());
-        // exit;
-
-        return $user;
+            'name'     => $data['name'],
+            'email'    => $data['email'],
+            'password' => bcrypt($data['password']),
+            'dob' => $dates->format('Y-m-d') ,
+            'role_id'=> $data['role']
+            ]);
     }
 }
-
-

@@ -105,7 +105,7 @@
           </li>
 
             <li class="nav-item">
-            <a href="{{ route('events.index') }}" class="nav-link active">
+            <a href="{{ url('events.index') }}" class="nav-link active">
               <i class="nav-icon fa fa-calendar-alt">  </i>
               <p>
                 Reminders
@@ -194,7 +194,7 @@
           <a href="#" class="nav-link"
              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
              <i class="nav-icon fas fa-power-off"></i>  <p> Log Out </p>
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                 @csrf
              </form>
              </p>

@@ -38,7 +38,7 @@
           <a href="#" class="nav-link"
              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
              <i class="nav-icon fas fa-home"></i> 
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                 @csrf
              </form>
              </p>
@@ -68,7 +68,7 @@
           <a href="#" class="nav-link"
              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
              <i class="nav-icon fas fa-sign-out-alt"></i> 
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                 @csrf
              </form>
              </p>
@@ -131,7 +131,7 @@
             </a>
           </li>
 
-        <li class="nav-item has-treeview">
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
               <p>
@@ -141,13 +141,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="{{url('tests')}}" class="nav-link">
                   <i class="nav-icon fas fa-pen"></i>
                   <p>Take Survey</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="{{url('results')}}" class="nav-link">
                   <i class="nav-icon fas fa-chart-line"></i>
                   <p>View Past Results</p>
                 </a>
@@ -155,7 +155,30 @@
             </ul>
           </li>
 
-
+          <li class="nav-item">
+            <a href="{{url('topics')}}" class="nav-link">
+             <i class="nav-icon fas fa-book"></i>
+             <p>
+              Topics
+            </p>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{url('questions')}}" class="nav-link">
+           <i class="nav-icon fas fa-question"></i>
+           <p>
+           Questions
+          </p>
+       </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url('questions_options')}}" class="nav-link">
+         <i class="nav-icon fas fa-check-square"></i>
+         <p>
+          Question Options
+        </p>
+      </a>
+    </li>
 
          <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">

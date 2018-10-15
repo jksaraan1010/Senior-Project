@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Question;
+use App\Result;
+use App\Test;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +28,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $questions = Question::count();
+        $users = User::where('role_id',2)->count();
+        $quizzes = Test::count();
         return view('home');
     }
 }

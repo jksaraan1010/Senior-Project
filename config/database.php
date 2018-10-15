@@ -13,6 +13,7 @@ return [
     |
     */
 
+    'fetch' => PDO::FETCH_OBJ,
     'default' => env('DB_CONNECTION', 'mysql'),
 
     /*

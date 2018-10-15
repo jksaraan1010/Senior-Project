@@ -73,8 +73,8 @@
                                    different steps and milestones related to transitioning to adult care. </p>
                                 <br>
                     
-                                <a href="{{ route('register') }}" class="btn btn-blue btn-rounded blue-text font-weight-bold ml-lg-0">Create An Account</a>
-                                <a href="{{ route('login') }}" class="btn btn-outline-white btn-rounded font-weight-bold" >Log In</a>
+                                <a href="{{ url('register') }}" class="btn btn-blue btn-rounded blue-text font-weight-bold ml-lg-0">Create An Account</a>
+                                <a href="{{ url('login') }}" class="btn btn-outline-white btn-rounded font-weight-bold" >Log In</a>
                                         
 
                             </div>

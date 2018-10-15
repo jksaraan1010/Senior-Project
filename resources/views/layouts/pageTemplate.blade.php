@@ -22,7 +22,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="home" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -36,7 +36,7 @@
           <a href="#" class="nav-link"
              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
              <i class="nav-icon fas fa-home"></i> 
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                 @csrf
              </form>
              </p>
@@ -66,7 +66,7 @@
           <a href="#" class="nav-link"
              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
              <i class="nav-icon fas fa-sign-out-alt"></i> 
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                 @csrf
              </form>
              </p>
@@ -129,30 +129,7 @@
             </a>
           </li>
 
-        <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-edit"></i>
-              <p>
-                Survey
-                <i class="fa fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
-                  <i class="nav-icon fas fa-pen"></i>
-                  <p>Take Survey</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="nav-icon fas fa-chart-line"></i>
-                  <p>View Past Results</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
+   
 
 
          <li class="nav-item">
@@ -166,7 +143,7 @@
 
 
          <li class="nav-item">
-         <a href="{{ route('notes.index') }}" class="nav-link">
+         <a href="{{ url('notes.index') }}" class="nav-link">
          <i class="nav-icon fa fa-clipboard-list"></i>
               <p>
                  Notes
