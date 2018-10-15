@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/Timeline', 'TimelineController@index')->name('Timeline');
 Route::get('/selfCare', 'selfCareController@index')->name('selfCare');
 Route::get('/healthAwareness', 'HealthAwarenessController@index')->name('healthAwareness');
 Route::get('/communication', 'communicationController@index')->name('communication');

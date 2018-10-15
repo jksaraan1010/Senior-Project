@@ -181,7 +181,7 @@
     </li>
 
          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+         <a href="{{ route('Timeline') }}" class="nav-link">
               <i class="nav-icon fa fa-heartbeat"></i>
               <p>
                 Timeline
