@@ -1,76 +1,142 @@
-@extends('layouts.pageTemplate')
+@extends('layouts.master')
 
 @section('content')
+  <!-- Main content -->
+  <section class="content">
 
- <!-- Content Header (Page header) -->
- <div class="content-header">
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+     <div class="container-fluid">
+       <div class="row mb-2">
+         <div class="col-sm-6">
+           <h1 class="m-0 text-dark">Self-Care Module</h1>
+         </div><!-- /.col -->
+         <div class="col-sm-6">
+           <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item"><a href="#">Home</a></li>
+             <li class="breadcrumb-item active"> Self-Care Module </li>
+           </ol>
+         </div><!-- /.col -->
+       </div><!-- /.row -->
+     </div><!-- /.container-fluid -->
+   </div>
+   <!-- /.content-header -->
+   <div class="container">
+           <div class="container-fluid">
+               
+                   
+                       <input type="button" 
+                       onClick="window.print()" 
+                       value="Print This Page"/>
+                       <br>
+
+          
+
+  <br>
+
+    <!-- Main content -->
+    <div class="content">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Self Care Module</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"> Self Care Module </li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-    <div class="container">
-            <div class="container-fluid">
-            <div class="container">
 
-<!--Section: About-->
-<section id="about" class="section info-section mb-5 mt-5 pt-4">
+     <div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title">
+            <i class="fas fa-hand-holding-heart"></i>
+              Self-Care
+            </h3>
+          </div>
+          <div class="card-body">
 
-    <!--First row-->
-    <div class="row pt-5">
-
-        <!--First column-->
-        <div class="col-md-7 mb-2 smooth-scroll wow fadeIn" data-wow-delay="0.2s">
-
-            <!--Heading-->
-            <h2 class="mb-3 font-weight-bold">We Provide High Quality services</h2>
-            <!--Description-->
-            <h4 class="mb-5 dark-grey-text">Visit Our New Clinic in New York.</h4>
-            <!--Content-->
-            <p class="grey-text" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam, dicta
-                ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque delectus, beatae maxime
-                temporibus maiores quibusdam quasi. Rem magnam ad perferendis iusto sint tempora ea voluptatibus
-                iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit quia velit.
-            </p>
-
-            <p class="grey-text" align="justify">Qui expedita sit quo, maxime molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Nemo animi soluta ratione quisquam, dicta ab cupiditate iure eaque repellendus voluptatum.
-            </p>
-            <br>
-            <!--Button-->
-            <a href="#home" class="btn btn-rounded btn-blue mb-4">Contact Us Now</a>
-
+            <div class="row">
+              
+              <p> Maintain a diary with your 
+                  health records and can keep it with you at all times.</p>
+            
+              
+            </div>
+            <!-- /.row -->
+            
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
         </div>
-        <!--/First column-->
+        <!-- /.card -->
 
-        <!--Second column-->
-        <div class="col-lg-4 flex-center ml-lg-auto col-md-5 mb-5 wow fadeIn" data-wow-delay="0.3s">
-
-            <!--Image-->
-            <img src="https://mdbootstrap.com/img/Photos/Vertical/People/img%20%282%29.jpg" class="img-fluid z-depth-1">
-
+            <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                <i class="fas fa-heart"></i>
+                  Taking Care of Yourself
+                </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <ul>
+                  <li>Ask you parents and your doctor 
+                      if you have restriction for any food or activity.</li>
+                  <li>Remember your allergies!</li>
+                  <li>Learn to put together a simple meal for yourself.</li>
+                  <li>Try doing the daily chores by yourself.</li>    
+                </ul>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- ./col -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                <i class="fas fa-prescription"></i>
+                  Taking Medications
+                </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <ul>
+                  <li>Make a list of your medications, 
+                      dose and frequency (how many times in a day).</li>
+                  <li>Take your medications yourself! Try to 
+                      remember and avoid using reminders for medications. </li>
+                  <li>Ask your parent what pharmacy you use and make
+                       a note in your diary.</li>
+                  <li>Try to refill your own medication 
+                      at the pharmacy next time.</li>
+                </ul>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- ./col -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                <i class="fas fa-taxi"></i>
+                  Transportation
+                </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <ul>
+                  <li>Learn how to contact the transportation.</li>
+                  <li>At the next doctor’s visit, try calling in for 
+                      transportation yourself.</li>
+                </ul>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- ./col -->
         </div>
-        <!--/Second column-->
-
-    </div>
-    <!--/First row-->
-
-</section>
-<!--Section: About-->
-
+        <!-- /.row -->
+ </div>
 </div>
-
-
-
-
     @endsection
+
