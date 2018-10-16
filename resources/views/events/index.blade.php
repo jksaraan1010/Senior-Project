@@ -273,49 +273,130 @@
    <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
+
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title">Draggable Events</h4>
+                <h3 class="card-title text-center">Event Options</h3>
+              </div>
+              <div class="card-body">
+                    
+                <!-- Button trigger modal -->
+                  <div class="text-center">
+                         <a href="/add" class="btn btn-primary btn-rounded mb-4" data-toggle="modal" data-target="#addModal">Add Event</a>
+                  </div>
+
+                  <div class="text-center">
+                      <a href="/edit" class="btn btn-secondary btn-rounded mb-4" data-toggle="modal" data-target="#editModal">Edit Event</a>
+                  </div>
+                </div>
+            </div>
+
+
+<!-- Add Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Add Event</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+            <form action="{{route('events.store')}}" method="post">
+                    {{csrf_field()}}
+                    <div>
+                         <label for=""> Enter Event Name</label>
+                         <input class="form-control" name="newEventName" type="text" placeholder="Event Name">
+                    </div>
+                     <div>
+                        <label for=""> Enter Event Start Time</label>
+                         <input class="form-control" name="newEventStartDate" type="datetime-local" placeholder="Event Start Time">
+                     </div>
+                    <div>
+                         <label for=""> Enter Event End Time</label>
+                         <input class="form-control" name="newEventEndDate" type="datetime-local" placeholder="Event End Time">
+                    </div>
+                    
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-block btn-success"> Add Event </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Edit Event</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+            <table class="table table-striped table-hover table-responsive-md">
+              <thead class="table-primary">
+                 <tr>
+                     <th scope="col"> Event Name</th>
+                     <th scope="col"> Start Time</th>
+                     <th scope="col"> End Time </th>
+                     <th scope="col"> Edit</th>
+                    <th scope="col"> Delete</th>
+                 </tr>
+              </thead>
+        @foreach($events as $event)
+            <tbody>
+            <tr>
+                <td>{{$event->event_name}}</td>
+                <td>{{$event->start_date}}</td>
+                <td>{{$event->end_date}}</td>
+
+                <th><a href="{{action('EventsController@edit',$event['id'])}}" class="btn btn-success"> Edit</a>
+                </th>
+                <th>
+                    <form method="post" action="{{action('EventsController@destroy', $event['id'])}}">
+                        {{csrf_field()}}
+                        <input type="hidden" name="_method" value="Delete" />
+                        <button type="submit" class="btn btn-danger" > Delete </button>
+                    </form>
+                </th>
+            </tr>
+            </tbody>
+        @endforeach
+    </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title text-center">Draggable Events</h4>
               </div>
               <div class="card-body">
                 <!-- the events -->
                 <div id="external-events">
-                  <div class="external-event bg-success">Take Survey</div>
-                  <div class="external-event bg-info">Specialist Appointment</div>
-                  <div class="external-event bg-primary">Primary Doctor Appointment</div>
-                  <div class="external-event bg-danger">Take Medication</div>
+                  <div class="external-event bg-info text-center">Take Survey</div>
+                  <div class="external-event bg-primary text-center">Specialist Appointment</div>
+                  <div class="external-event bg-success text-center">Primary Doctor Appointment</div>
+                  <div class="external-event bg-secondary text-center">Take Medication</div>
                 </div>
               </div>
               <!-- /.card-body -->
             </div>
-            <!-- /. box -->
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Event Options</h3>
-              </div>
-              <div class="card-body">
-                <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
-                  <!--<button type="button" id="color-chooser-btn" class="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown">Color <span class="caret"></span></button>-->
-                  <ul class="fc-color-picker" id="color-chooser">
-                  <li><a class="btn btn-primary" href="/add">Add </a></li>
-                  <li><a class="btn btn-warning" href="/edit">Edit </a></li>
-                    <li><a class="btn btn-danger" href="/delete">Delete </a></li>
-
-                  </ul>
-                </div>
-               
-                <div>
-
-                  <div >
-                
-                  </div>
-                 
-                </div>
-                <!-- /input-group -->
-              </div>
-            </div>
           </div>
-          <!-- /.col -->
+            <!-- /. box -->
+
+
+
+
           <div class="col-md-9">
             <div class="card card-primary">
               <div class="card-body p-0">
@@ -327,10 +408,17 @@
               <!-- /.card-body -->
             </div>
             <!-- /. box -->
+            
           </div>
           <!-- /.col -->
+
         </div>
         <!-- /.row -->
+
+     
+
+
+         
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
