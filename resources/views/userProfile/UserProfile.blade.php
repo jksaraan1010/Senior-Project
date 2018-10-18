@@ -5,4 +5,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 @section('content')
+<h3>{{ Auth::user()->email }}</h3>
+<h1></h1>
+<h3>{{ Auth::user()->name }}</h3>
+
 @endsection

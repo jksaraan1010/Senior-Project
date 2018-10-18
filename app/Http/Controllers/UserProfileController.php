@@ -9,6 +9,7 @@ class UserProfileController extends Controller
 {
     Public Function index()
     {
+        
         return view('userProfile.UserProfile');
     }
 }
