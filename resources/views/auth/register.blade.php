@@ -6,7 +6,10 @@
 <title>Registration Page</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+ 
+<link href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="{{asset('adminlte/css/font-awesome.min.css')}}">
 <!-- Ionicons -->
@@ -18,13 +21,38 @@
 <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
 <!-- Google Font: Source Sans Pro -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<style type="text/css">
+   html, body {
+      height: 100%;
+    }
+    .flex-fill {
+    flex:1;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed; }
+
+    </style>
+
+
+
 </head>
 <body class="hold-transition register-page">
-  <div class="register-box">
+<div style="background-image: url('/registimg.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
+  <div class="mask d-flex flex-grow-1 justify-content-center align-items-center rgba-blue-strong">
+<div class="register-box">
     <div class="register-logo">
        <!-- landing url go below -->
-      <a href=""><b>My Transition Explorer  </b></a>
+      <a class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3"><b>My Transition Explorer  </b></a>
     </div>
+    
 
     <div class="card">
       <div class="card-body register-card-body">
@@ -121,6 +149,8 @@
     </div><!-- /.card -->
   </div>
   <!-- /.register-box -->
+</div>
+</section>
 
   <!-- jQuery -->
   <script src="{{asset('adminlte/js/jquery.min.js')}}"></script>
@@ -150,4 +180,6 @@
     });
     
   </script>
+</div>
+  </div>
 </body></html>

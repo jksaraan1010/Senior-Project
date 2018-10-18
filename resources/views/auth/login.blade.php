@@ -7,7 +7,9 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
  
- 
+  <link href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}" rel="stylesheet">
   <!-- Font Awesome -->
  <link rel="stylesheet" href="{{asset('adminlte/css/font-awesome.min.css')}}">
  <!-- Ionicons -->
@@ -18,12 +20,35 @@
  <link rel="stylesheet" href="{{asset('adminlte/css/blue.css')}}">
  <!-- Google Font: Source Sans Pro -->
  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+ <style type="text/css">
+   html, body {
+      height: 100%;
+    }
+    .flex-fill {
+    flex:1;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed; }
+
+    </style>
+
+
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" >
+<div style="background-image: url('/registerimg.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
+  <div class="mask d-flex flex-grow-1 justify-content-center align-items-center rgba-blue-strong">
 <div class="login-box">
  <div class="login-logo">
    <!-- landing url go below -->
-  <a href=""><b>My Transition Explorer  </b></a> </div>
+  <a class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3"><b>My Transition Explorer  </b></a> </div>
  <!-- /.login-logo -->
  <div class="card">
    <div class="card-body login-card-body">
@@ -72,7 +97,7 @@
  </div>
 </div>
 <!-- /.login-box -->
-
+  
 <!-- jQuery -->
 <script src="{{asset('adminlte/js/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
@@ -89,5 +114,25 @@
  })
 </script>
 
+    <!-- JQuery -->
+    <script type="text/javascript" src="./public/Landing-Page-Template-Bootstrap-master/js/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="./public/Landing-Page-Template-Bootstrap-master/js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="./public/Landing-Page-Template-Bootstrap-master/js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="./public/Landing-Page-Template-Bootstrap-master/js/mdb.min.js"></script>
+
+    <script>
+      
+        // Material Select Initialization
+        $(document).ready(function () {
+            $('.mdb-select').material_select();
+        });
+</div>
+</div>
 
 </body></html>

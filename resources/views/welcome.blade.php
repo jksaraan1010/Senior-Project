@@ -59,23 +59,25 @@
             <div class="mask rgba-blue-strong">
                 <div class="container h-100 d-flex justify-content-center align-items-center">
                     <div class="row flex-center pt-5 mt-3">
+                    
         
                         <div class="col-md-12 col-lg-6 text-center text-md-left margins">
-                        <div class="white-text text center">
-                        <h2 class="h1 font-weight-bold mt-md-5 mt-0">My Transition Explorer</h2>
+                        <div class="container white-text text center">
+                        <h2 class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3">My Transition Explorer</h2>
                         <div class="content d-flex justify-content-center align-items-center">
-                             <img src="{{url('MTE.PNG')}}" alt="Image" width="250" height="200"/>
+                             <img src="{{url('logo.jpeg')}}" alt="Image" width="250" height="250"/>
 
                        </div>
                        <br>
-                                <p>An Application who's main goal is to assist patients with transitioning
-                                   to adult care by creating an application that reminds patients of 
-                                   different steps and milestones related to transitioning to adult care. </p>
-                                <br>
-                    
-                                <a href="{{ url('register') }}" class="btn btn-blue btn-rounded blue-text font-weight-bold ml-lg-0">Create An Account</a>
+                                <h5 class="text-center w-responsive font-weight-bold mx-auto mb-5">An Application who's main goal is to assist young patients with transitioning
+                                   from pediatric care to adult care, through reminders of different steps and milestones related to the transition! </h5>
+                                
+       
+                             <div class="content d-flex justify-content-center align-items-center">
+
+                                <a href="{{ url('register') }}" class=" btn btn-blue btn-rounded blue-text font-weight-bold ml-lg-0">Create An Account</a>
                                 <a href="{{ url('login') }}" class="btn btn-outline-white btn-rounded font-weight-bold" >Log In</a>
-                                        
+                             </div>   
 
                             </div>
                       
@@ -162,23 +164,13 @@
                 <div class="container text-center white-text">
                     <h3 class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3">Save Time and Energy</h3>
 
-                    <!--First row-->
-                    <div class="row text-white text-center ">
-
-                        <!--First column-->
-                        <div class="col-md-3 mt-2">
                             <h4 class="white-text font-weight-bold">Create A New Account</h4>
                             <p>Free to use</p>
                             <p>Optimized for congenital heart disease patients ages 13-25</p>
                             <p>Track your milestones</p>
                             <p>View modules on topics you do not understand</p>
                             <br>
-                        </div>
-                        <!--/First column-->
-
-                    </div>
-                    <!--/First row-->
-
+                       
                 </div>
             </div>
         </div>
@@ -200,6 +192,7 @@
             </div>
         </div>    
         <!-- Copyright-->
+        
         <div class="footer-copyright py-3 text-center">
             <div class="container-fluid">
                 © 2018-2019 Copyright: <a href=""> My Transition Explorer </a>
