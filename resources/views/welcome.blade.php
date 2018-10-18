@@ -69,10 +69,9 @@
 
                        </div>
                        <br>
-                                <h5 class="text-center w-responsive font-weight-bold mx-auto mb-5">An Application who's main goal is to assist young patients with transitioning
+                                <h5 class="text-center w-responsive mx-auto mb-8">An Application who's main goal is to assist young patients with transitioning
                                    from pediatric care to adult care, through reminders of different steps and milestones related to the transition! </h5>
                                 
-       
                              <div class="content d-flex justify-content-center align-items-center">
 
                                 <a href="{{ url('register') }}" class=" btn btn-blue btn-rounded blue-text font-weight-bold ml-lg-0">Create An Account</a>
