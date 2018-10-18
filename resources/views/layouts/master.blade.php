@@ -105,13 +105,13 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-          <router-link to="/profile" class="nav-link">
-            <i class="nav-icon fas fa-user"></i>
-            <p>
-                Profile
-             </p>
-          </router-link>
-       </li>
+         <a href="{{ route('UserProfile') }}" class="nav-link">
+              <i class="nav-icon fa fa-heartbeat"></i>
+              <p>
+                User Profile
+              </p>
+            </a>
+          </li>
 
                <li class="nav-item">
           <router-link to="/dashboard" class="nav-link">
