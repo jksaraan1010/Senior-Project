@@ -13,36 +13,41 @@
         <?php //dd($questions) ?>
     @if(count($questions) > 0)
         <div class="panel-body">
-        <?php $i = 1; ?>
-        @foreach($questions as $question)
-            @if ($i > 1) <hr /> @endif
-            <div class="row">
+        
+        @foreach($questions as $title => $group_questions)
+        
+        <fieldset>
+            <caption>{{ $title }}</caption>
+        
+            @foreach($group_questions as $question)
+            
+            <div class="row" style="padding-left: 40px;">
                 <div class="col-xs-12 form-group">
                     <div class="form-group">
-                        <strong>Question {{ $i }}.<br />{!! nl2br($question->question_text) !!}</strong>
-
-                        @if ($question->code_snippet != '')
-                            <div class="code_snippet">{!! $question->code_snippet !!}</div>
-                        @endif
+                        <strong>Question {{ $loop->iteration }}.<br />{!! nl2br($question->question_text) !!}</strong>
 
                         <input
                             type="hidden"
-                            name="questions[{{ $i }}]"
+                            name="questions[{{ '_' . camel_case($title) . '_' . $loop->iteration }}]"
                             value="{{ $question->id }}">
-                    @foreach($question->options as $option)
-                        <br>
-                        <label class="radio-inline">
-                            <input
-                                type="radio"
-                                name="answers[{{ $question->id }}]"
-                                value="{{ $option->id }}">
-                            {{ $option->option }}
-                        </label>
-                    @endforeach
+                    
+                            @foreach($question->options as $option)
+                                <br>
+                                <label class="radio-inline">
+                                    <input
+                                        type="radio"
+                                        name="answers[{{ $question->id }}]"
+                                        value="{{ $option->id }}">
+                                    {{ $option->option }}
+                                </label>
+                            @endforeach
                     </div>
                 </div>
             </div>
-        <?php $i++; ?>
+        
+        @endforeach
+        <fieldset>
+        
         @endforeach
         </div>
     @endif

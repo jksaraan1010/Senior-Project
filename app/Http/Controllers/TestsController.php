@@ -23,20 +23,11 @@ class TestsController extends Controller
     {
         // $topics = Topic::inRandomOrder()->limit(10)->get();
 
-        $questions = Question::inRandomOrder()->limit(20)->get();
-        foreach ($questions as &$question) {
-            $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
-        }
+        //:::::: get questions grouped by topic title and send it to the view
+        $questions = Question::with('options')->get()->groupBy(function ($item, $key) { 
+            return $item->topic->title;
+        });
 
-        /*
-        foreach ($topics as $topic) {
-            if ($topic->questions->count()) {
-                $questions[$topic->id]['topic'] = $topic->title;
-                $questions[$topic->id]['questions'] = $topic->questions()->inRandomOrder()->first()->load('options')->toArray();
-                shuffle($questions[$topic->id]['questions']['options']);
-            }
-        }
-        */
 
         return view('tests.create', compact('questions'));
     }

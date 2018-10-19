@@ -24,7 +24,7 @@
                             <td>{{ $result->user->name}} ({{$result->user->email}})</td>
                             @endif
                                 <td>{{ $result->created_at->format('d M Y H:i:A') }}</td>
-                                <td>{{ $result->result }}/10</td>
+                                <td>{{ $result->result }}/{{$total_questions}}</td>
                                 <td>
                                     <a href="{{ route('results.show',[$result->id]) }}" class="btn btn-xs btn-primary">@lang('general.view')</a>
                                 </td>

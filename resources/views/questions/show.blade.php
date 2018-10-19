@@ -15,11 +15,10 @@
 					<div class="col-md-6">
 						<table class="table table-bordered table-striped">
 							<tr><th>@lang('general.questions.fields.topic')</th>
+								
 								<td>{{ $question->topic->title or '' }}</td></tr><tr><th>@lang('general.questions.fields.question-text')</th>
 								<td>{!! $question->question_text !!}</td></tr><tr><th>@lang('general.questions.fields.code-snippet')</th>
-								<td>{!! $question->code_snippet !!}</td></tr><tr><th>@lang('general.questions.fields.answer-explanation')</th>
-								<td>{!! $question->answer_explanation !!}</td></tr><tr><th>@lang('general.questions.fields.more-info-link')</th>
-								<td>{{ $question->more_info_link }}</td></tr>
+								
 							</table>
 						</div>
 					</div>

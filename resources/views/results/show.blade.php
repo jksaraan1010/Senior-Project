@@ -17,14 +17,15 @@
                         </tr>
                         <tr>
                             <th>@lang('general.results.fields.result')</th>
-                            <td>{{ $test->result }}/10</td>
+                            <td>{{ $test->result }}/{{$total_questions}}</td>
                         </tr>
                     </table>
-                <?php $i = 1 ?>
-                @foreach($results as $result)
-                    <table class="table table-bordered table-striped">
+                @foreach($topics_results as $topic => $results)
+                <h2>{{ $topic }} ({{ $results->where('correct', 1)->count() . '/' . $results->count() }})</h2>
+                @foreach($results as $result)    
+                <table class="table table-bordered table-striped">
                         <tr class="test-option{{ $result->correct ? '-true' : '-false' }}">
-                            <th style="width: 10%">Question #{{ $i }}</th>
+                            <th style="width: 10%">Question #{{ $loop->iteration }}</th>
                             <th>{{ $result->question->question_text or '' }}</th>
                         </tr>
                         @if ($result->question->code_snippet != '')
@@ -48,19 +49,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Answer Explanation</td>
-                            <td>
-                            {!! $result->question->answer_explanation  !!}
-                                @if ($result->question->more_info_link != '')
-                                    <br>
-                                    <br>
-                                    Read more:
-                                    <a href="{{ $result->question->more_info_link }}" target="_blank">{{ $result->question->more_info_link }}</a>
-                                @endif
-                            </td>
+                          
                         </tr>
                     </table>
-                <?php $i++ ?>
+                    @endforeach 
                 @endforeach
                 </div>
   </div>
