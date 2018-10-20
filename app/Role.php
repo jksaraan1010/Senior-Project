@@ -20,7 +20,6 @@ class Role extends Model
     {
         parent::boot();
 
-        Role::observe(new \App\Observers\UserActionsObserver);
     }
     
 }

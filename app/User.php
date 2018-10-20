@@ -27,7 +27,6 @@ class User extends Authenticatable
     {
         parent::boot();
 
-        User::observe(new \App\Observers\UserActionsObserver);
     }
 
     /**

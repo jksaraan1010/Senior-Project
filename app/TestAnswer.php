@@ -22,7 +22,6 @@ class TestAnswer extends Model
     {
         parent::boot();
 
-        TestAnswer::observe(new \App\Observers\UserActionsObserver);
     }
 
     public function question()

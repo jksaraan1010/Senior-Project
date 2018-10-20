@@ -24,7 +24,6 @@ class Question extends Model
     {
         parent::boot();
 
-        Question::observe(new \App\Observers\UserActionsObserver);
     }
 
     /**

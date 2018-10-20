@@ -20,7 +20,6 @@ class Test extends Model
     {
         parent::boot();
 
-        Test::observe(new \App\Observers\UserActionsObserver);
     }
 
     public function user()

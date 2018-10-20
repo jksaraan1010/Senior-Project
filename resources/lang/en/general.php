@@ -15,7 +15,7 @@ return [
 	'back_to_list' => 'Back to list',
 	'dashboard' => 'Dashboard',
 	'delete' => 'Delete',
-	'quickadmin_title' => 'LaraQuiz',
+	'admin_title' => 'LaraQuiz',
 
 	'user-management' => [
 		'title' => 'User Management',
@@ -24,7 +24,7 @@ return [
 	],
 
     'test' => [
-        'new' => 'New Quiz',
+        'new' => 'New Survey',
     ],
 
 	'roles' => [
@@ -45,15 +45,6 @@ return [
 		],
 	],
 
-	'user-actions' => [
-		'title' => 'User actions',
-		'fields' => [
-			'user' => 'User',
-			'action' => 'Action',
-			'action-model' => 'Action model',
-			'action-id' => 'Action id',
-		],
-	],
 
 	'topics' => [
 		'title' => 'Topics',
@@ -93,8 +84,8 @@ return [
 		],
 	],
 
-	'laravel-quiz' => 'New Laravel Quiz',
-	'quiz' => 'Answer these 10 questions. There\'s no time limit.',
+
+	'quiz' => 'Answer these questions. There\'s no time limit.',
 	'submit_quiz' => 'Submit answers',
 	'view-result' => 'View result',
 

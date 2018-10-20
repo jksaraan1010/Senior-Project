@@ -24,7 +24,6 @@ class Result extends Model
     {
         parent::boot();
 
-        Result::observe(new \App\Observers\UserActionsObserver);
     }
 
     /**

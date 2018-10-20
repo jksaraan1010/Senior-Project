@@ -20,7 +20,6 @@ class Topic extends Model
     {
         parent::boot();
 
-        Topic::observe(new \App\Observers\UserActionsObserver);
     }
 
     public function questions()

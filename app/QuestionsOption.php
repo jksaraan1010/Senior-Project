@@ -22,7 +22,6 @@ class QuestionsOption extends Model
     {
         parent::boot();
 
-        QuestionsOption::observe(new \App\Observers\UserActionsObserver);
     }
 
     /**
