@@ -55,7 +55,7 @@
     <header>
 
         <!--Intro Section-->
-        <section class="view intro-2" style="background-image: url('/main.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <section class="view intro-2" style="background-image: url('https://mdbootstrap.com/img/Others/doctor.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <div class="mask rgba-blue-strong">
                 <div class="container h-100 d-flex justify-content-center align-items-center">
                     <div class="row flex-center pt-5 mt-3">
@@ -119,61 +119,82 @@
                 <div class="row features-big my-4 text-center">
                     <!--First column-->
                     <div class="col-md-4 mb-4" >
-                        <div class="card hoverable">
+                        <div class="card hoverable h-100">
                             <i class="fa fa-edit blue-text mt-3 fa-3x my-4"></i>
                             <h5 class="font-weight-bold mb-4">Transition Survey</h5>
-                            <p class="grey-text font-small mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam
-                                minima assumenda deleniti hic.</p fa-3x mb-4>
+                            <p class="grey-text font-small mx-3">A simple easy to understand survey which focuses on three major areas in your transition: Self-Care, 
+                                Health Awareness, and Communication. Take this survey every 3-6 months for best results.</p fa-3x mb-4>
                         </div>
                     </div>
                     <!--/First column-->
 
                     <!--Second column-->
                     <div class="col-md-4 mb-4">
-                        <div class="card hoverable">
+                        <div class="card hoverable h-100">
                             <i class="fa fa-heartbeat blue-text mt-3 fa-3x my-4"></i>
                             <h5 class="font-weight-bold mb-4">Milestones Timeline</h5>
-                            <p class="grey-text font-small mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam
-                                minima assumenda deleniti hic.</p>
+                            <p class="grey-text font-small mx-3">Milestones help keep us on track! See your personalized timeline change
+                                everytime you take the survey!
+                            </p>
                         </div>
                     </div>
                     <!--/Second column-->
 
                     <!--Third column-->
-                    <div class="col-md-4 mb-1">
-                        <div class="card hoverable">
-                            <i class="fa fa-calendar blue-text mt-3 fa-3x my-4"></i>
-                            <h5 class="font-weight-bold mb-4">Reminders Calendar</h5>
-                            <p class="grey-text font-small mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam
-                                minima assumenda deleniti hic.</p>
+                    <div class="col-md-4 mb-4">
+                        <div class="card hoverable h-100">
+                            <i class="fa fa-line-chart blue-text mt-3 fa-3x my-4"></i>
+                            <h5 class="font-weight-bold mb-4">Graphical Transition</h5>
+                            <p class="grey-text font-small mx-3">See your improvements overtime as you take  
+                                 the transition survey in graphical format.</p>
                         </div>
                     </div>
                     <!--/Third column-->
                 </div>
                 <!--/First row-->
 
+                <!--First row-->
+                <div class="row features-big my-4 text-center">
+                    <!--First column-->
+                    <div class="col-md-4 mb-4" >
+                        <div class="card hoverable h-100">
+                            <i class="fa fa-book blue-text mt-3 fa-3x my-4"></i>
+                            <h5 class="font-weight-bold mb-4">Educational Modules</h5>
+                            <p class="grey-text font-small mx-3">Learn about how to take care of yourself, communicate and how to be aware of your health problems.</p fa-3x mb-4>
+                        </div>
+                    </div>
+                    <!--/First column-->
+
+                    <!--Second column-->
+                    <div class="col-md-4 mb-4">
+                        <div class="card hoverable h-100">
+                            <i class="fa fa-clipboard-listblue-text mt-3 fa-3x my-4"></i>
+                            <h5 class="font-weight-bold mb-4">Notes</h5>
+                            <p class="grey-text font-small mx-3"> Do you need to add a quick note or question to ask your doctor the next time you see him/ her?
+                                The notes to self section allows you to create, edit and delete as many notes as you want!
+                            </p>
+                        </div>
+                    </div>
+                    <!--/Second column-->
+
+                    <!--Third column-->
+                    <div class="col-md-4 mb-4">
+                        <div class="card hoverable h-100">
+                            <i class="fa fa-calendar blue-text mt-3 fa-3x my-4"></i>
+                            <h5 class="font-weight-bold mb-4">Reminders Calendar</h5>
+                            <p class="grey-text font-small mx-3">A calendar where you can add your appointments, 
+                                or add reminders to yourself!
+                            </p>
+                        </div>
+                    </div>
+                    <!--/Third column-->
+                </div>
+                <!--/First row-->
+
+
             </section>
             <!--/Section: Features v.1-->
         </div>
-
-
-        <!--Streak-->
-        <div class="streak streak-photo streak-long-2" style="background-image: url('https://mdbootstrap.com/img/Others/doctor.jpg');">
-            <div class="flex-center mask rgba-blue-strong">
-                <div class="container text-center white-text">
-                    <h3 class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3">Save Time and Energy</h3>
-
-                            <h4 class="white-text font-weight-bold">Create A New Account</h4>
-                            <p>Free to use</p>
-                            <p>Optimized for congenital heart disease patients ages 13-25</p>
-                            <p>Track your milestones</p>
-                            <p>View modules on topics you do not understand</p>
-                            <br>
-                       
-                </div>
-            </div>
-        </div>
-        <!--/Streak-->
 
         
 
