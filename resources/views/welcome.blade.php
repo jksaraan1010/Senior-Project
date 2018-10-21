@@ -168,7 +168,7 @@
                     <!--Second column-->
                     <div class="col-md-4 mb-4">
                         <div class="card hoverable h-100">
-                            <i class="fa fa-clipboard-listblue-text mt-3 fa-3x my-4"></i>
+                            <i class="fa fa-sticky-note blue-text mt-3 fa-3x my-4"></i>
                             <h5 class="font-weight-bold mb-4">Notes</h5>
                             <p class="grey-text font-small mx-3"> Do you need to add a quick note or question to ask your doctor the next time you see him/ her?
                                 The notes to self section allows you to create, edit and delete as many notes as you want!

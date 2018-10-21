@@ -65,7 +65,7 @@
 
             <div class="row">
           <div class="col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-link"></i>
@@ -93,7 +93,7 @@
 
 
           <div class="col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-user-md"></i>

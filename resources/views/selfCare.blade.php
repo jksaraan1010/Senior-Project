@@ -65,7 +65,7 @@
 
             <div class="row">
           <div class="col-md-4">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-heart"></i>
@@ -88,7 +88,7 @@
           </div>
           <!-- ./col -->
           <div class="col-md-4">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-prescription"></i>
@@ -114,7 +114,7 @@
           </div>
           <!-- ./col -->
           <div class="col-md-4">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-taxi"></i>
@@ -137,6 +137,7 @@
         </div>
         <!-- /.row -->
  </div>
+ <br>
 </div>
     @endsection
 

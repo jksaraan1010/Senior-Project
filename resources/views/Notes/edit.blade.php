@@ -2,8 +2,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @section('content')
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+  <!-- Main content -->
+  <section class="content"> 
+   
  <!-- Content Header (Page header) -->
  <div class="content-header">
       <div class="container-fluid">
@@ -24,42 +25,53 @@
     <div class="container">
             <div class="container-fluid">
 
-    <div class="col-md-offset-2 col-xs-8">
-    
-        {{-- Success Alert --}}
-        @if(Session::has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Success:</strong> {{ Session::get('success') }}
+                {{-- Success Alert --}}
+            @if(Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success:</strong> {{ Session::get('success') }}
 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        @endif
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
 
-        {{-- If the page has any errors passed to it --}}
-        @if(count($errors) > 0)
+            {{-- If the page has any errors passed to it --}}
+            @if(count($errors) > 0)
 
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Errors:</strong>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Errors:</strong>
 
-                <ul>
-                    @foreach($errors->all() as $error)
+                    <ul>
+                        @foreach($errors->all() as $error)
 
-                        <li>{{ $error }}</li>
+                            <li>{{ $error }}</li>
 
-                    @endforeach
-                </ul>
+                        @endforeach
+                    </ul>
 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
-        @endif
+            @endif
 
-        <div class="row">
-            <form action="{{ route('notes.update', [$notesUnderEdit->id]) }}" method='POST'>
+<br>
+<br>
+ <!-- Main content -->
+ <div class="content">
+      <div class="container-fluid">
+
+<div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title">Update Note</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+              <form action="{{ route('notes.update', [$notesUnderEdit->id]) }}" method="POST">
                 {{ csrf_field() }}
                 <input type="hidden" name='_method' value='put'>
 
@@ -72,9 +84,13 @@
                     <a href="{{ route('notes.index')}}" class='btn btn-danger pull-right'>Go Back</a>
                 </div>
             </form>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
         </div>
+        <!-- /.card -->
 
-
-    </div>
-</div>
 @endsection

@@ -2,8 +2,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @section('content')
- <!-- Content Wrapper. Contains page content -->
- <div class="content-wrapper">
+  <!-- Main content -->
+  <section class="content"> 
    
  <!-- Content Header (Page header) -->
  <div class="content-header">
@@ -72,6 +72,10 @@
 
 <br>
 <br>
+ <!-- Main content -->
+ <div class="content">
+      <div class="container-fluid">
+
 <div class="card card-default">
           <div class="card-header">
             <h3 class="card-title">Add A New Note</h3>
@@ -102,10 +106,10 @@
         </div>
         <!-- /.card -->
 
-            </div>
+           
 
             @if (count($storedNotes) > 0)
-<!-- /.row -->
+
 <div class="row">
           <div class="col-12">
             <div class="card card-default">
@@ -140,12 +144,10 @@
               <!-- /.card-body -->
      </div>
             <!-- /.card -->
-</div>
-
-            
-</div>
-
             </div>
+ <br>
+</div>
+                
 
     @endsection
 

@@ -65,7 +65,7 @@
 
             <div class="row">
           <div class="col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-notes-medical"></i>
@@ -97,7 +97,7 @@
 
 
           <div class="col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-prescription-bottle"></i>
@@ -127,9 +127,10 @@
           </div>
           <!-- ./col -->
 </div>
+<br>
         <div class="row">
           <div class="col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-file-medical-alt"></i>
@@ -161,7 +162,7 @@
 
 
            <div class="col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <h3 class="card-title">
                 <i class="fas fa-syringe"></i>
@@ -185,6 +186,7 @@
         </div>
         <!-- /.row -->
  </div>
+ <br>
 </div>
     @endsection
 
