@@ -24,8 +24,8 @@ Route::get('/UserProfile', 'UserProfileController@index')->name('UserProfile');
 Route::get('/selfCare', 'selfCareController@index')->name('selfCare');
 Route::get('/healthAwareness', 'HealthAwarenessController@index')->name('healthAwareness');
 Route::get('/communication', 'communicationController@index')->name('communication');
-
-
+Route::get('ResultTable', 'ResultTableController@SurveyResultTable');
+Route::get('ResultGraph', 'ResultGraphController@SurveyResultGraph');
 
 //Route::get('/survey', 'SurveyController@getQuestions');
 //Route::get('survey/{sectionId}', 'SurveyController@getQuestions');
