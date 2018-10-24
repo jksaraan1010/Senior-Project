@@ -2,8 +2,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @section('content')
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+  <!-- Main content -->
+  <section class="content"> 
+   
  <!-- Content Header (Page header) -->
  <div class="content-header">
       <div class="container-fluid">
@@ -23,31 +24,74 @@
     <!-- /.content-header -->
     <div class="container">
             <div class="container-fluid">
-<div class="container">
-    <table class="table table-striped table-bordered table-hover">
-        <thead class="thead-light">
-        <tr>
-            <th> Name</th>
-            <th> Start Time</th>
-            <th> End Time </th>
-            <th> Edit</th>
-            <th> Delete</th>
-        </tr>
-        </thead>
-        @foreach($events as $event)
+
+                {{-- Success Alert --}}
+            @if(Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success:</strong> {{ Session::get('success') }}
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
+            {{-- If the page has any errors passed to it --}}
+            @if(count($errors) > 0)
+
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Errors:</strong>
+
+                    <ul>
+                        @foreach($errors->all() as $error)
+
+                            <li>{{ $error }}</li>
+
+                        @endforeach
+                    </ul>
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+            @endif
+
+<br>
+<br>
+ <!-- Main content -->
+ <div class="content">
+      <div class="container-fluid">
+      <div class="row">
+          <div class="col-12">
+            <div class="card card-default">
+              <div class="card-header">
+                <h3 class="card-title">Events</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table id="events" class="table table-hover">
+                  <tr>
+                  <th> Event Name</th>
+                  <th> Start Date and Time</th>
+                  <th> End Date and Time </th>
+                  <th> Edit</th>
+                  <th> Delete</th>
+                  </tr>
+                  @foreach($events as $event)
             <tbody>
             <tr>
                 <td>{{$event->event_name}}</td>
                 <td>{{$event->start_date}}</td>
                 <td>{{$event->end_date}}</td>
 
-                <th><a href="{{action('EventsController@edit',$event['id'])}}" class="btn btn-success"> Edit</a>
+                <th><a href="{{action('EventsController@edit', $event['id'])}}" class="btn btn-primary btn-rounded mb-4">Edit</a>
                 </th>
                 <th>
                     <form method="post" action="{{action('EventsController@destroy', $event['id'])}}">
                         {{csrf_field()}}
                         <input type="hidden" name="_method" value="Delete" />
-                        <button type="submit" class="btn btn-danger" > Delete </button>
+                        <button type="submit" class="btn btn-danger btn-rounded mb-4"> Delete  </button>
                     </form>
                 </th>
             </tr>
@@ -55,5 +99,15 @@
         @endforeach
     </table>
 
+              <!-- /.card-body -->
+     </div>
+            <!-- /.card -->
+            </div>
 </div>
-@endsection
+</div>
+</div>
+</div>          
+    @endsection
+
+
+        

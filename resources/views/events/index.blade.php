@@ -8,12 +8,17 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/app.css"> 
+ 
+  <script src="./node_modules/fullcalendar/dist/fullcalendar.min.js"></script>
+
+ 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+    {!! $calendar_details->script() !!}
+    
     <link rel="stylesheet"  href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
-
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -267,9 +272,14 @@
 
                         @endforeach
                     </ul>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     @endif
+                </div>
 
    <br>
+
    <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
@@ -286,94 +296,11 @@
                   </div>
 
                   <div class="text-center">
-                      <a href="/edit" class="btn btn-secondary btn-rounded mb-4" data-toggle="modal" data-target="#editModal">Edit Event</a>
+                      <a href="/edit" class="btn btn-secondary btn-rounded mb-4">Edit Event</a>
                   </div>
                 </div>
             </div>
 
-
-<!-- Add Modal -->
-<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Add Event</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mx-3">
-            <form action="{{route('events.store')}}" method="post">
-                    {{csrf_field()}}
-                    <div>
-                         <label for=""> Enter Event Name</label>
-                         <input class="form-control" name="newEventName" type="text" placeholder="Event Name">
-                    </div>
-                     <div>
-                        <label for=""> Enter Event Start Time</label>
-                         <input class="form-control" name="newEventStartDate" type="datetime-local" placeholder="Event Start Time">
-                     </div>
-                    <div>
-                         <label for=""> Enter Event End Time</label>
-                         <input class="form-control" name="newEventEndDate" type="datetime-local" placeholder="Event End Time">
-                    </div>
-                    
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-block btn-success"> Add Event </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- Edit Modal -->
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Edit Event</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mx-3">
-            <table class="table table-striped table-hover table-responsive-md">
-              <thead class="table-primary">
-                 <tr>
-                     <th scope="col"> Event Name</th>
-                     <th scope="col"> Start Time</th>
-                     <th scope="col"> End Time </th>
-                     <th scope="col"> Edit</th>
-                    <th scope="col"> Delete</th>
-                 </tr>
-              </thead>
-        @foreach($events as $event)
-            <tbody>
-            <tr>
-                <td>{{$event->event_name}}</td>
-                <td>{{$event->start_date}}</td>
-                <td>{{$event->end_date}}</td>
-
-                <th><a href="{{action('EventsController@edit',$event['id'])}}" class="btn btn-success"> Edit</a>
-                </th>
-                <th>
-                    <form method="post" action="{{action('EventsController@destroy', $event['id'])}}">
-                        {{csrf_field()}}
-                        <input type="hidden" name="_method" value="Delete" />
-                        <button type="submit" class="btn btn-danger" > Delete </button>
-                    </form>
-                </th>
-            </tr>
-            </tbody>
-        @endforeach
-    </table>
-            </div>
-        </div>
-    </div>
-</div>
 
 
             <div class="card">
@@ -402,8 +329,7 @@
               <div class="card-body p-0">
                 <!-- THE CALENDAR -->
                 <div id="calendar"></div>
-                {!! $calendar->calendar() !!}
-                 {!! $calendar->script() !!}
+                {!! $calendar_details->calendar() !!}
               </div>
               <!-- /.card-body -->
             </div>
@@ -415,7 +341,58 @@
         </div>
         <!-- /.row -->
 
-     
+
+<!-- Add Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Add Event</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+           
+            {!! Form::open(array('route' => 'events.store','method'=>'post','files'=>'true')) !!}
+                    
+                      <div>
+                        <div class="form-group">
+                            {!! Form::label('event_name','Enter Event Name:') !!}
+                            <div>
+                            {!! Form::text('event_name', null, ['class' => 'form-control']) !!}
+                            </div>
+                        </div>
+                      </div>
+ 
+                      <div>
+                        <div class="form-group">
+                          {!! Form::label('start_date','Start Date and Time:') !!}
+                          <div>
+                          {!! Form::input('dateTime-local', 'start_date', null, ['class' => 'form-control']) !!}
+                          </div>
+                        </div>
+                      </div>
+ 
+                      <div>
+                        <div class="form-group">
+                          {!! Form::label('end_date','End Date and Time:') !!}
+                          <div class="">
+                          {!! Form::input('dateTime-local', 'end_date', null, ['class' => 'form-control']) !!}
+                          </div>
+                        </div>
+                      </div>
+ 
+                      <div class="modal-footer d-flex justify-content-center">
+                      {!! Form::submit('Add Event',['class'=>'btn btn-block btn-primary']) !!}
+                      </div>
+                    </div>
+                   {!! Form::close() !!}
+
+            </div>   
+        </div>
+    </div>
+</div>     
 
 
          

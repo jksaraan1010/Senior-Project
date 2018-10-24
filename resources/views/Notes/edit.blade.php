@@ -92,5 +92,6 @@
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
-
+</div>
+</div>
 @endsection

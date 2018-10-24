@@ -1,9 +1,11 @@
+
 @extends('layouts.master')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @section('content')
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+  <!-- Main content -->
+  <section class="content"> 
+   
  <!-- Content Header (Page header) -->
  <div class="content-header">
       <div class="container-fluid">
@@ -24,33 +26,84 @@
     <div class="container">
             <div class="container-fluid">
 
-<div class="container">
-    <form action="{{action('EventsController@update',$id)}}" method="post">
+                {{-- Success Alert --}}
+            @if(Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success:</strong> {{ Session::get('success') }}
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
+            {{-- If the page has any errors passed to it --}}
+            @if(count($errors) > 0)
+
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Errors:</strong>
+
+                    <ul>
+                        @foreach($errors->all() as $error)
+
+                            <li>{{ $error }}</li>
+
+                        @endforeach
+                    </ul>
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+            @endif
+
+<br>
+<br>
+ <!-- Main content -->
+ <div class="content">
+      <div class="container-fluid">
+
+<div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title">Update Event</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+              <form action="{{action('EventsController@update', $eventsUnderEdit['id'])}}" method="post">
         {{csrf_field()}}
-        <div style="margin-top:5%;">
-            <h1> Update Event</h1>
-            <hr>
             <input type="hidden" name="_method" value="Update" />
             <div class="form-group">
                 <label> Name of Event </label>
-                <input type="text" class="'form-control" name="event_name" placeholder="Event Name" value="{{$events->event_name}}">
+                <input type="text" class="form-control" name="event_name" placeholder="Event Name" value="{{$eventsUnderEdit->event_name}}">
             </div>
 
             <div class="form-group">
                 <label> Start Time of Event </label>
-                <input type="datetime-local" class="'form-control" name="start_date" placeholder="Event Start Time" value="{{$events->event_name}}">
+                <input type="datetime-local" class="form-control" name="start_date" placeholder="Event Start Time" value="{{$eventsUnderEdit->start_date}}">
             </div>
 
             <div class="form-group">
-                <label> End Time of Event </label>
-                <input type="datetime-local" class="'form-control" name="end_date" placeholder="Event End Time" value="{{$events->event_name}}">
+                <label> End Time of Event    </label>
+                <input type="datetime-local" class="form-control" name="end_date" placeholder="Event End Time" value="{{$eventsUnderEdit->end_date}}">
             </div>
 
             {{ method_field('put') }}
-
-            <button type="submit" name="submit" class="btn btn-warning"> Update Event </button>
-
+            <div class="form-group">
+                    <input type="submit" value="Update Event" class="btn btn-primary">
+                    <a href="{{ route('events.index')}}" class='btn btn-danger pull-right'>Go Back</a>
+                </div>
+            </form>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
         </div>
-    </form>
-</div>
+        <!-- /.card -->
+
 @endsection
+

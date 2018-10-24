@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Events;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 use Auth;
 use Validator;
 use Calendar;
@@ -18,21 +19,20 @@ class EventsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $events = Events::all();
-        $event = [];
-
-        foreach($events as $row){
-            $event[] = \Calendar::event(
-                $row->event_name,
+    { 
+        $events = Events::get();
+        $event_list = [];
+        foreach ($events as $key => $event) {
+            $event_list[] = Calendar::event(
+                $event->event_name,
                 true,
-                new \DateTime($row->start_date),
-                new \DateTime($row->end_date. '+1 day'),
-                $row->id);
+                new \DateTime($event->start_date),
+                new \DateTime($event->end_date.' +1 day')
+            );
         }
-
-        $calendar = \Calendar::addEvents($event);
-        return view('events.index', compact('events','calendar'));
+        $calendar_details = Calendar::addEvents($event_list); 
+ 
+        return view('events.index', compact('calendar_details') );
 
     }
 
@@ -52,25 +52,30 @@ class EventsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function display(){
-        return view('events.add' );
-    }
+  
     public function store(Request $request)
     {
-       $this->validate($request,[
-           'event_name' => 'required|min:3|max:255',
-           'start_date' => 'required',
-           'end_date' => 'required',
+        $validator = Validator::make($request->all(), [
+            'event_name' => 'required|min:3|max:255',
+            'start_date' => 'required',
+            'end_date' => 'required'
         ]);
-        $events =new Events();
+ 
+        if ($validator->fails()) {
+        	\Session::flash('Warning','Please enter valid event details!');
+            return Redirect::to('/events')->withInput()->withErrors($validator);
+        }
+ 
+        $event = new Events;
 
-        $events->event_name = $request->newEventName;
-        $events->start_date = $request->newEventStartDate;
-        $events->end_date = $request->newEventEndDate;
-        $events->save();
-
-
-        return redirect()->route('events');
+        $event->event_name = $request['event_name'];
+        $event->start_date = $request['start_date'];
+        $event->end_date = $request['end_date'];
+       
+        $event->save();
+ 
+        \Session::flash('Success','Event added successfully!');
+        return Redirect::to('/events');
     }
 
     /**
@@ -81,7 +86,7 @@ class EventsController extends Controller
      */
     public function show()
     {
-        $events = Events::all();
+        $events = Events::orderBy('start_date', 'asc')->get();
         return view('events.edit')->with('events', $events);
     }
 
@@ -93,7 +98,7 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
-        $events = Events::find($id);
+        $events = Events::findOrFail($id);
         return view('events.update')->with('eventsUnderEdit', $events);;
 
     }
@@ -113,14 +118,14 @@ class EventsController extends Controller
             'end_date' => 'required',
         ]);
 
-        $events = Events::find($id);
+        $events = Events::findOrFail($id);
 
         $events->event_name = $request->input('event_name');
         $events->start_date = $request->input('start_date');
         $events->end_date = $request->input('end_date');
         $events->save();
+        \Session::flash('Success','Event updated successfully!');
         return redirect()->route('events.index');
-
 
     }
 
@@ -133,8 +138,9 @@ class EventsController extends Controller
     public function destroy($id)
     {
 
-        $events = Events::find($id);
+        $events = Events::findOrFail($id);
         $events->delete();
+        \Session::flash('Success','Event deleted successfully!');
         return redirect('events');
     }
 }
