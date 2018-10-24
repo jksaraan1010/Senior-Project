@@ -49,7 +49,7 @@
 <script>
     $('.datetime').datetimepicker({
         autoclose: true,
-        dateFormat: "{{ config('app.date_format_js') }}",
+  
         timeFormat: "hh:mm:ss"
     });
 </script>
