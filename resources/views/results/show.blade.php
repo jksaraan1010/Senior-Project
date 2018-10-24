@@ -8,12 +8,12 @@
                         @if(Auth::user()->isAdmin())
                         <tr>
                             <th>@lang('general.results.fields.user')</th>
-                            <td>{{ $test->user->name or '' }} ({{ $test->user->email or '' }})</td>
+                            <td>{{ $test->user->name}}</td>
                         </tr>
                         @endif
                         <tr>
                             <th>@lang('general.results.fields.date')</th>
-                            <td>{{ $test->created_at or '' }}</td>
+                            <td>{{ $test->created_at}}</td>
                         </tr>
                         <tr>
                             <th>@lang('general.results.fields.result')</th>
@@ -28,12 +28,6 @@
                             <th style="width: 10%">Question #{{ $loop->iteration }}</th>
                             <th>{{ $result->question->question_text or '' }}</th>
                         </tr>
-                        @if ($result->question->code_snippet != '')
-                            <tr>
-                                <td>Code snippet</td>
-                                <td><div class="code_snippet">{!! $result->question->code_snippet !!}</div></td>
-                            </tr>
-                        @endif
                         <tr>
                             <td>Options</td>
                             <td>
