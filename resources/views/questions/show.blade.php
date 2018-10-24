@@ -16,13 +16,8 @@
 						<table class="table table-bordered table-striped">
 							<tr><th>@lang('general.questions.fields.topic')</th>
 								
-<<<<<<< HEAD
-								<td>{{ $question->topic->title or '' }}</td></tr><tr><th>@lang('general.questions.fields.question-text')</th>
-								<td>{!! $question->question_text !!}</td></tr><tr>
-=======
 								<td>{{ $question->topic->title}}</td></tr><tr><th>@lang('general.questions.fields.question-text')</th>
 								<td>{!! $question->question_text !!}</td>
->>>>>>> a53dfd1f625d22f5fac2b63f6458e28f34ae70ef
 								
 							</table>
 						</div>
