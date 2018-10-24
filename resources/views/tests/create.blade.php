@@ -22,58 +22,57 @@
      </div><!-- /.container-fluid -->
    </div>
    <!-- /.content-header -->
-   <div class="container">
-           <div class="container-fluid">
- 
+   <div class="content-header">
+      <div class="container-fluid">
+    <h3 class="page-title">@lang('Survey')</h3>
     {!! Form::open(['method' => 'POST', 'route' => ['tests.store']]) !!}
-    <div class="box box-primary">
-        <div class="box-header with-border">
-            <h6 class="box-title">
-                @lang('general.quiz')
-             </h6>
-         </div>
-         <?php //dd($questions) ?>
-    @if(count($questions) > 0)
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @lang('general.quiz')
+        </div>
+        <?php //dd($questions) ?>
+        @if(count($questions) > 0)
         <div class="panel-body">
         
         @foreach($questions as $title => $group_questions)
         
         <fieldset>
-        <h4><span class="label label-primary">{{ $title }}</span></h4>
-        @foreach($group_questions as $question)
+            <caption>{{ $title }}</caption>
+            @foreach($group_questions as $question)
+            
+            <div class="row" style="padding-left: 40px;">
+                <div class="col-xs-12 form-group">
+                    <div class="form-group">
+                        <strong>Question {{ $loop->iteration }}.<br />{!! nl2br($question->question_text) !!}</strong>
+                         <input
+                            type="hidden"
+                            name="questions[{{ '_' . camel_case($title) . '_' . $loop->iteration }}]"
+                            value="{{ $question->id }}">
+                    
+                            @foreach($question->options as $option)
+                                <br>
+                                <label class="radio-inline">
+                                    <input
+                                        type="radio"
+                                        name="answers[{{ $question->id }}]"
+                                        value="{{ $option->id }}">
+
+                                          {{ $option->option }}
+                                </label>
+                            @endforeach
+                    </div>
+                </div>
+            </div>
         
-
-         <table class=" table table-striped table-hover table-question">
-                <thead class="bg-primary">
-                    <th class="text-left" width="20%">Question {{ $loop->iteration }}</th>
-                        <th class="text-left">
-                           {!! nl2br($question->question_text) !!} 
-                        </th>                            
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-left"></td>
-                         <td class="text-left">
-                         @foreach($question->options as $option)
-                             <div class="icheck">
-                                 <label>
-                                    <input type="radio" name="answers[{{ $question->id }}]" value="{{ $option->id }}">
-                                    {{ $option->option }}
-                                 </label>
-                             </div>
-                             @endforeach
-                          </td>
-                    </tr>
-                </tbody>  
-                @endforeach 
-         </table>
-         @endforeach
-        <br>
-         @endif
-
-    {!! Form::submit(trans('general.submit_quiz'), ['class' => 'btn btn-block btn-primary']) !!}
+        @endforeach
+        <fieldset>
+        
+        @endforeach
+        </div>
+    @endif
+    </div>
+    {!! Form::submit(trans('general.submit_quiz'), ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
-    <br>
     </div>
     </div>
 @stop

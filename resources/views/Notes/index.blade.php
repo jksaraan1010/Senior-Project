@@ -5,6 +5,7 @@
   <!-- Main content -->
   <section class="content"> 
    
+   
  <!-- Content Header (Page header) -->
  <div class="content-header">
       <div class="container-fluid">
@@ -24,19 +25,6 @@
     <!-- /.content-header -->
     <div class="container">
             <div class="container-fluid">
-
-                        <input type="button" 
-                        onClick="window.print()" 
-                        value="Print This Page"/>
-
-                <script language="javascript">
-                    function emailCurrentPage(){<!--from -->
-                        window.location.href="mailto:?subject="+document.title+"&body="+escape(window.location.href);
-                    }
-                </script>
-                <button type="submit"> <a href="javascript:emailCurrentPage()">Email this page!</a></button>
-
-
 
                 {{-- Success Alert --}}
             @if(Session::has('success'))
@@ -69,15 +57,25 @@
                 </div>
 
             @endif
-            </div>
-                </div>
 
-<br> <br>
+                         <input type="button" 
+                        onClick="window.print()" 
+                        value="Print This Page"/>
+
+                <script language="javascript">
+                    function emailCurrentPage(){<!--from -->
+                        window.location.href="mailto:?subject="+document.title+"&body="+escape(window.location.href);
+                    }
+                </script>
+                <button type="submit"> <a href="javascript:emailCurrentPage()">Email this page</a></button>
+
+<br>
+<br>
  <!-- Main content -->
  <div class="content">
       <div class="container-fluid">
 
-        <div class="card card-default">
+<div class="card card-default">
           <div class="card-header">
             <h3 class="card-title">Add A New Note</h3>
             <div class="card-tools">
@@ -142,11 +140,8 @@
               <!-- /.card-body -->
           </div>
             <!-- /.card -->
-       </div>
-    </div>
 </div>
 </div>
-
-</section>
-    @endsection
-
+</div>
+</div>
+@endsection
