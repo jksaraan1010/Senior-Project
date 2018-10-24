@@ -17,7 +17,7 @@
 							<tr><th>@lang('general.questions.fields.topic')</th>
 								
 								<td>{{ $question->topic->title or '' }}</td></tr><tr><th>@lang('general.questions.fields.question-text')</th>
-								<td>{!! $question->question_text !!}</td></tr><tr><th>@lang('general.questions.fields.code-snippet')</th>
+								<td>{!! $question->question_text !!}</td></tr><tr>
 								
 							</table>
 						</div>

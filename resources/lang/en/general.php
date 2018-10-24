@@ -58,7 +58,6 @@ return [
 		'fields' => [
 			'topic' => 'Topic',
 			'question-text' => 'Question text',
-			'code-snippet' => 'Code snippet',
 			'answer-explanation' => 'Answer explanation',
 			'more-info-link' => 'More info link',
 		],
@@ -85,8 +84,8 @@ return [
 	],
 
 
-	'quiz' => 'Answer these questions. There\'s no time limit.',
-	'submit_quiz' => 'Submit answers',
-	'view-result' => 'View result',
+	'quiz' => 'Please answer the following questions to the best of your ability. There are no right or wrong Answers. There\'s no time limit for this survey.',
+	'submit_quiz' => 'Submit Answers',
+	'view-result' => 'View Result',
 
 ];

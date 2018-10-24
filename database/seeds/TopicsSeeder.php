@@ -13,7 +13,7 @@ class TopicsSeeder extends Seeder
     {
         DB::table('topics')->insert(
 
-            ['title'=> 'Self Care',
+            ['title'=> 'Self-Care',
                 ]);
         DB::table('topics')->insert(
 

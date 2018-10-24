@@ -170,7 +170,7 @@
               <li class="nav-item">
               <a href="{{ route('selfCare') }}"class="nav-link">
                   <i class="nav-icon fas fa-hand-holding-heart"></i>
-                  <p>Self Care</p>
+                  <p>Self-Care</p>
                 </a>
               </li>
               <li class="nav-item">

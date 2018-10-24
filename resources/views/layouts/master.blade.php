@@ -21,13 +21,13 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i> Menu</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('home')}}" class="nav-link">Home</a>
+        
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+       
       </li>
     </ul>
 
@@ -35,39 +35,22 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-          <a href="#" class="nav-link"
-             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-             <i class="nav-icon fas fa-home"></i> 
-             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
-                @csrf
-             </form>
-             </p>
+          <a href="{{url('home')}}" class="nav-link" >
+             <i class="nav-icon fas fa-home" title="Home"></i> 
           </a>
       </li>
    
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="nav-icon fa fa-bell"></i>
+          <i class="nav-icon fa fa-bell" title="Notifications"></i>
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fa fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
       </li>
-
-
 
       <li class="nav-item">
           <a href="#" class="nav-link"
              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-             <i class="nav-icon fas fa-sign-out-alt"></i> 
+             <i class="nav-icon fas fa-sign-out-alt" title="Log Out"></i> 
              <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                 @csrf
              </form>
@@ -83,17 +66,18 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href=" " class="brand-link">
-      <img src="mte.ico" alt="mte Logo" class="brand-image img-circle "
-           style="opacity: .8">
-      <span class="brand-text font-weight-light"> My Transition <br> Explorer</span>
+    <a href="{{url('home')}}" class="brand-link  bg-primary">
+      <img src="mte.ico" alt="mte Logo" class="brand-image img-circle">
+      <span class="text-lg-center font-weight-bold"> My Transition <br>  Explorer</span>
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      
+        <div class="image">
+          <img src="403.svg" class="img-circle elevation-2" alt="User Image">
+        </div>
       <div class="info">    
           <a href="#" class=" d-block"> {{ Auth::user()->name }}</a>
         </div>
@@ -108,21 +92,13 @@
                @if(!Auth::user()->isAdmin())
                <li class="nav-item">
          <a href="{{ route('UserProfile') }}" class="nav-link">
-              <i class="nav-icon fa fa-heartbeat"></i>
+              <i class="nav-icon fa fa-user"></i>
               <p>
                 User Profile
               </p>
             </a>
           </li>
-          
-               <li class="nav-item">
-          <router-link to="/dashboard" class="nav-link">
-             <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-              </p>
-              </router-link>
-          </li>
+
 
             <li class="nav-item">
             <a href="{{ route('events.index') }}" class="nav-link">
@@ -151,8 +127,14 @@
               </li>
               <li class="nav-item">
                 <a href="{{url('results')}}" class="nav-link">
+                  <i class="nav-icon fas fa-check-circle"></i>
+                  <p>View Results</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('results')}}" class="nav-link">
                   <i class="nav-icon fas fa-chart-line"></i>
-                  <p>View Past Results</p>
+                  <p>View Graphical Results</p>
                 </a>
               </li>
             </ul>
@@ -235,8 +217,6 @@
           </li>
 
       
-         
-          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -266,6 +246,21 @@
 </footer>
 <!-- REQUIRED SCRIPTS -->
 <script src="/js/app.js"></script>
+<script>
+ /** add active class and stay opened when selected */
+var url = window.location;
+
+// for sidebar menu entirely but not cover treeview
+$('ul.sidebar-menu a').filter(function() {
+   return this.href == url;
+}).parent().addClass('active');
+
+// for treeview
+$('ul.treeview-menu a').filter(function() {
+   return this.href == url;
+}).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
+    </script>
+
 
 <!-- bottom Script is for quiz/adminlte-->
 <script src="{{asset('adminlte/js/app.js')}}"></script>
