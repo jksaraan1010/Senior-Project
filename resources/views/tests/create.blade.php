@@ -24,20 +24,22 @@
    <!-- /.content-header -->
    <div class="content-header">
       <div class="container-fluid">
-    <h3 class="page-title">@lang('Survey')</h3>
     {!! Form::open(['method' => 'POST', 'route' => ['tests.store']]) !!}
+    <div class="box-header with-border">
+         <h5 class="box-title"> @lang('general.quiz') </h5>
+    </div>
+   
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.quiz')
-        </div>
         <?php //dd($questions) ?>
         @if(count($questions) > 0)
         <div class="panel-body">
         
         @foreach($questions as $title => $group_questions)
         
+        <br>
         <fieldset>
-            <caption>{{ $title }}</caption>
+            <h5 class="text-primary">{{ $title }}</h5>
+            <br>
             @foreach($group_questions as $question)
             
             <div class="row" style="padding-left: 40px;">
@@ -71,7 +73,7 @@
         </div>
     @endif
     </div>
-    {!! Form::submit(trans('general.submit_quiz'), ['class' => 'btn btn-danger']) !!}
+    {!! Form::submit(trans('general.submit_quiz'), ['class' => 'btn btn-block btn-primary']) !!}
     {!! Form::close() !!}
     </div>
     </div>

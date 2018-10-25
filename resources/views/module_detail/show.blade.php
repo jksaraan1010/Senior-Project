@@ -25,7 +25,7 @@
     <div class="row">
     @forelse($module->module_detail as $key => $value)
       <div class="col-md-6">
-        <div class="card h-100 module_detail_card">
+        <div class="card module_detail_card">
           <div class="card-block">
             <div class="module_detail_title">
               <h2 class="card-title">{{$value->title}}</h2>
@@ -38,7 +38,7 @@
           </div>
         </div>
     </div>
-    <br>
+    
     @empty
     @endforelse
     </div>
@@ -48,7 +48,7 @@
  
 </div>
 @stop
-<br>
+
 @section('javascript')
 @parent
 <script src="{{ url('adminlte/js') }}/timepicker.js"></script>
