@@ -322,5 +322,113 @@
 <!-- bottom Script is for quiz/adminlte-->
 <script src="{{asset('adminlte/js/app.js')}}"></script>
 <script src="{{asset('adminlte/ckeditor/ckeditor.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+        <?php if(isset($graphJsonSection1) && isset($graphJsonSection2) && isset($graphJsonSection3)) { ?>
+    var jsonResultCodeSection1 = <?php echo $graphJsonSection1;?>;
+    var resultCode = [];
+    $.each(jsonResultCodeSection1, function(key, val) {
+        $.each(val, function(k, v) {
+            resultCode += v + ",";
+        });
+    });
+    resultCode = resultCode.replace(/,\s*$/, "");
+    var arrayResultcodeSection1 = JSON.parse("[" + resultCode + "]");
+    var jsonResultCodeSection2 = <?php echo $graphJsonSection2;?>;
+    var resultCode = [];
+    $.each(jsonResultCodeSection2, function(key, val) {
+        $.each(val, function(k, v) {
+            resultCode += v + ",";
+        });
+    });
+    resultCode = resultCode.replace(/,\s*$/, "");
+    var arrayResultcodeSection2 = JSON.parse("[" + resultCode + "]");
+    var jsonResultCodeSection3 = <?php echo $graphJsonSection3;?>;
+    var resultCode = [];
+    $.each(jsonResultCodeSection3, function(key, val) {
+        $.each(val, function(k, v) {
+            resultCode += v + ",";
+        });
+    });
+    resultCode = resultCode.replace(/,\s*$/, "");
+    var arrayResultcodeSection3 = JSON.parse("[" + resultCode + "]");
+
+    var jsonDateTaken = <?php echo $graphDateJson; ?>;
+    var dateTaken = [];
+    $.each(jsonDateTaken, function(key, val) {
+        $.each(val, function(k, v) {
+            dateTaken += '"' + v + '"' + ",";
+        });
+    });
+    dateTaken = dateTaken.replace(/,\s*$/, "");
+    var arrayDateTaken = JSON.parse("[" + dateTaken + "]");
+    var lineChartTest = document.getElementById("line-chart").getContext("2d");
+    new Chart(lineChartTest, {
+        type: 'line',
+        data: {
+            labels: arrayDateTaken,
+            datasets: [{
+                data: arrayResultcodeSection1,
+                label: "Self Care Score",
+                borderColor: "#8205DE",
+                fill: true,
+                borderColor: 'rgba(153, 163, 164 , 0.75)',
+                backgroundColor: 'rgba(153, 163, 164, 0.3)',
+                pointBorderColor: 'rgba(153, 163, 164, 0)',
+                pointBackgroundColor: 'rgba(153, 163, 164, 0.9)',
+                pointBorderWidth: 1
+                //backgroundColor:"#C8F6FA"
+            },
+                {
+                    data: arrayResultcodeSection2,
+                    label: "Health Awareness Score",
+                    borderColor: "#738976",
+                    fill: true,
+                    borderColor: 'rgba(41, 128, 185, 0.75)',
+                    backgroundColor: 'rgba(41, 128, 185, 0.3)',
+                    pointBorderColor: 'rgba(41, 128, 185, 0)',
+                    pointBackgroundColor: 'rgba(41, 128, 185, 0.9)',
+                    pointBorderWidth: 1
+
+                    //backgroundColor:"#E1E5E6"
+                },
+                {
+                    data: arrayResultcodeSection3,
+                    label: "Communication Score",
+                    borderColor: "#B03449",
+                    fill: true,
+                    borderColor: 'rgba(255,160,122, 0.75)',
+                    backgroundColor: 'rgba(255,160,122, 0.3)',
+                    pointBorderColor: 'rgba(255,160,122, 0)',
+                    pointBackgroundColor: 'rgba(255,160,122, 0.9)',
+                    pointBorderWidth: 1
+                }
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Survey Scores Over Time'
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        stepSize: 1
+                    }
+                }]
+            },
+            responsive: true
+        },
+    });
+    <?php } ?>
+
+
+</script>
+
+
+
+
 </body>
 </html>
