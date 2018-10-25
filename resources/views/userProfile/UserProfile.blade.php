@@ -171,7 +171,7 @@
   </div>
   <div class="form-group">
 </div>
-  <button type="submit" class="btn btn-block  btn-primary">Update User Information</button>
+  <button type="submit" class="btn btn-block  btn-primary">Update Doctor Information</button>
 </div>
  
 
