@@ -26,7 +26,7 @@
                 <table class="table table-bordered table-striped">
                         <tr class="test-option{{ $result->correct ? '-true' : '-false' }}">
                             <th style="width: 10%">Question #{{ $loop->iteration }}</th>
-                            <th>{{ $result->question->question_text or '' }}</th>
+                            <th>{{ $result->question->question_text }}</th>
                         </tr>
                         <tr>
                             <td>Options</td>

@@ -320,26 +320,8 @@
            </div>
 
 
-
-           <div class="card">
-             <div class="card-header">
-               <h4 class="card-title text-center">Draggable Events</h4>
-             </div>
-             <div class="card-body">
-               <!-- the events -->
-               <div id="external-events">
-                 <div class="external-event bg-info text-center">Take Survey</div>
-                 <div class="external-event bg-primary text-center">Specialist Appointment</div>
-                 <div class="external-event bg-success text-center">Primary Doctor Appointment</div>
-                 <div class="external-event bg-secondary text-center">Take Medication</div>
-               </div>
-             </div>
-             <!-- /.card-body -->
-           </div>
          </div>
            <!-- /. box -->
-
-
 
 
          <div class="col-md-9">

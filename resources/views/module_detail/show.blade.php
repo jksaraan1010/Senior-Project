@@ -24,7 +24,7 @@
 
     <div class="row">
     @forelse($module->module_detail as $key => $value)
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="card module_detail_card">
           <div class="card-block">
             <div class="module_detail_title">
