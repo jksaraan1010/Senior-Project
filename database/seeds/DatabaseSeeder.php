@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TopicsSeeder::class);
         $this->call(QuestionsSeeder::class);
         $this->call(QuestionsOptionSeeder::class);
+        $this->call(ModuleSeeder::class);
+
 
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');

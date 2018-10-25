@@ -89,4 +89,13 @@ return [
 	'submit_quiz' => 'Submit Answers',
 	'view-result' => 'View Result',
 
+	'module_detail' => [
+		'title' => 'Module Details',
+		'fields' => [
+			'title' => 'Title',
+			'description' => 'Description',
+		],
+	],
+
+
 ];

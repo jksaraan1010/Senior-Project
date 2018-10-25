@@ -1,3 +1,7 @@
+<?php 
+  $module = \App\Module::All(); //get all records review tables 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +15,24 @@
     <!-- bottom Script is for quiz/adminlte, yeahyea-->
     <link rel="stylesheet" href="{{asset('adminlte/css/app.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    
+    <style type="text/css">
+        .module_detail_card{
+          padding: 20px!important;
+        }
+        .card-title {
+          margin-bottom: 1.75rem;
+              font-size: 20px;
+          font-weight: 900;
+       /*   border-bottom: 1px solid black;*/
+        }
+        .module_detail_title{
+         border-bottom: 1px solid #E2E2E2;
+        }
+        .module_detail_description{
+          margin-top: 20px;
+        }
+      </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper" id="app">
@@ -210,8 +231,28 @@
                             </p>
                         </a>
                     </li>
-
-
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon fa fa-book"></i>
+                          <p>
+                            Modules
+                            <i class="fa fa-angle-left right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          @forelse($module as $key => $value)
+                            <li class="nav-item">
+                              <a href="{{ route('module_detail.index',['id' => $value->id]) }}" class="nav-link">
+                                <i class="nav-icon fas fa-comments"></i>
+                                <p>{{$value->name}}</p>
+                              </a>
+                            </li>
+                          @empty
+                          @endforelse  <!-- added file -->
+                          
+                        </ul>
+                      </li>
+<!--
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fa fa-book"></i>
@@ -243,7 +284,7 @@
                     </li>
 
 
-
+                -->
 
                 </ul>
             </nav>
@@ -280,6 +321,6 @@
 
 <!-- bottom Script is for quiz/adminlte-->
 <script src="{{asset('adminlte/js/app.js')}}"></script>
-
+<script src="{{asset('adminlte/ckeditor/ckeditor.js')}}"></script>
 </body>
 </html>

@@ -74,4 +74,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('questions_options_mass_destroy', ['uses' => 'QuestionsOptionsController@massDestroy', 'as' => 'questions_options.mass_destroy']);
     Route::resource('results', 'ResultsController');
     Route::post('results_mass_destroy', ['uses' => 'ResultsController@massDestroy', 'as' => 'results.mass_destroy']);
+
+
+
+//module
+    //Route::resource('module', 'ModuleDetailController');
+    Route::get('module_detail_index/{id}', 'ModuleDetailController@index')->name('module_detail.index');
+    Route::get('module_detail_create/{id}', 'ModuleDetailController@create')->name('module_detail.create');
+    Route::post('module_detail_store', 'ModuleDetailController@store')->name('module_detail.store');
+    Route::get('module_detail_edit/{id}', 'ModuleDetailController@edit')->name('module_detail.edit');
+    Route::any('module_detail_update/{id}', 'ModuleDetailController@update')->name('module_detail.update');
+    Route::any('module_detail_destroy/{id}', 'ModuleDetailController@destroy')->name('module_detail.destroy');
+    Route::post('module_detail_destroy', ['uses' => 'ModuleDetailController@massDestroy', 'as' => 'module_detail.mass_destroy']);
+    Route::get('module_detail_show/{id}', 'ModuleDetailController@show')->name('module_detail.show');
+
+
+
 });
