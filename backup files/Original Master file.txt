@@ -503,3 +503,43 @@
 
 </body>
 </html>
+
+
+
+10/25/18 
+stored by yeahyea uddin
+
+
+<!--
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-book"></i>
+                            <p>
+                                Modules
+                                <i class="fa fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('healthAwareness') }}" class="nav-link">
+                                    <i class="nav-icon fas fa-briefcase-medical"></i>
+                                    <p>Health Awareness</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('selfCare') }}"class="nav-link">
+                                    <i class="nav-icon fas fa-hand-holding-heart"></i>
+                                    <p>Self Care</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('communication') }}" class="nav-link">
+                                    <i class="nav-icon fas fa-comments"></i>
+                                    <p>Communication</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                -->

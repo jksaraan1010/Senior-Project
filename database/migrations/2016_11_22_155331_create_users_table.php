@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->integer('role_id')->unsigned()->nullable();
             $table->foreign('role_id', 'fk_253_role_role_id_user')->references('id')->on('roles');
             $table->string('remember_token')->nullable();
-            $table->date('dob');
+           // $table->date('dob');
             $table->timestamps();
             $table->softDeletes();
 

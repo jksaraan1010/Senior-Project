@@ -125,6 +125,7 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
+                         
                     <li class="nav-item">
                         <a href="{{ route('UserProfile') }}" class="nav-link">
                             <i class="nav-icon fa fa-heartbeat"></i>
@@ -133,7 +134,7 @@
                             </p>
                         </a>
                     </li>
-
+                    @if(!Auth::user()->isAdmin())
                     <li class="nav-item">
                         <router-link to="/dashboard" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -151,7 +152,7 @@
                             </p>
                         </a>
                     </li>
-
+                    @endif
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fa fa-edit"></i>
@@ -167,6 +168,7 @@
                                     <p>Take Survey</p>
                                 </a>
                             </li>
+                            @if(!Auth::user()->isAdmin())
                             <li class="nav-item">
                                 <a href="{{url('results')}}" class="nav-link">
                                     <i class="nav-icon fas fa-chart-line"></i>
@@ -184,10 +186,11 @@
                                     <p>View Graph </p>
                                 </a>
                             </li>
+                            @endif
                         </ul>
                     </li>
 
-
+                 @if(Auth::user()->isAdmin())
                     <li class="nav-item">
                         <a href="{{url('topics')}}" class="nav-link">
                             <i class="nav-icon fas fa-book"></i>
@@ -212,6 +215,86 @@
                             </p>
                         </a>
                     </li>
+                    
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon fa fa-book"></i>
+                          <p>
+                            Module
+                            <i class="fa fa-angle-left right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          @forelse($module as $key => $value)
+                            <li class="nav-item">
+                              <a href="{{ route('module_detail.index',['id' => $value->id]) }}" class="nav-link">
+                                <i class="nav-icon fas fa-comments"></i>
+                                <p>{{$value->name}}</p>
+                              </a>
+                            </li>
+                          @empty
+                          @endforelse  <!-- added file -->
+                          
+                        </ul>
+                      </li>
+
+
+                      @if(!Auth::user()->isAdmin())
+                      <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon fa fa-users"></i>
+                          <p>
+                            User Management
+                            <i class="fa fa-angle-left right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a href="{{url('roles')}}" class="nav-link">
+                              <i class="nav-icon fas fa-database"></i>
+                              <p>Roles</p>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="{{url('users')}}" class="nav-link">
+                              <i class="nav-icon fas fa-user-circle"></i>
+                              <p>Users</p>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="{{url('user_actions')}}" class="nav-link">
+                              <i class="nav-icon fas fa-sticky-note"></i>
+                              <p>User Actions</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      @endif
+                      @else
+                      <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon fa fa-book"></i>
+                          <p>
+                            module
+                            <i class="fa fa-angle-left right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          @forelse($module as $key => $value)
+                            <li class="nav-item">
+                              <a href="{{ route('module_detail.show',['id' => $value->id]) }}" class="nav-link">
+                                <i class="nav-icon fas fa-comments"></i>
+                                <p>{{$value->name}}</p>
+                              </a>
+                            </li>
+                          @empty
+                          @endforelse
+                        </ul>
+                      </li>
+
+                    @endif
+                    
+                    @if(!Auth::user()->isAdmin())
 
                     <li class="nav-item">
                         <a href="{{ route('Timeline') }}" class="nav-link">
@@ -231,60 +314,8 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon fa fa-book"></i>
-                          <p>
-                            Modules
-                            <i class="fa fa-angle-left right"></i>
-                          </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                          @forelse($module as $key => $value)
-                            <li class="nav-item">
-                              <a href="{{ route('module_detail.index',['id' => $value->id]) }}" class="nav-link">
-                                <i class="nav-icon fas fa-comments"></i>
-                                <p>{{$value->name}}</p>
-                              </a>
-                            </li>
-                          @empty
-                          @endforelse  <!-- added file -->
-                          
-                        </ul>
-                      </li>
-<!--
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-book"></i>
-                            <p>
-                                Modules
-                                <i class="fa fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('healthAwareness') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-briefcase-medical"></i>
-                                    <p>Health Awareness</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('selfCare') }}"class="nav-link">
-                                    <i class="nav-icon fas fa-hand-holding-heart"></i>
-                                    <p>Self Care</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('communication') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-comments"></i>
-                                    <p>Communication</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                -->
+                
+@endif
 
                 </ul>
             </nav>
@@ -432,3 +463,4 @@
 
 </body>
 </html>
+@stack('js')

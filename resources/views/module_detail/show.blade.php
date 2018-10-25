@@ -6,14 +6,15 @@
   <div class="container-fluid">
     <div class="row">
     <div class="col-md-12">
-        <h3 class="page-title">({{$module->name}})</h3>
+        <h3 class="page-title">{{$module->name}}</h3>
         <div class="card module_detail_card">
           <div class="card-block">
             <div class="module_detail_title">
               <h2 class="card-title">{{$module->name}}</h2>
             </div>
             <div class="module_detail_description">
-              <p class="card-text">Review this {{$module->name}}</p>
+              <p class="card-text">Maintain a diary with your 
+                health records and can keep it with you at all times.</p>
             </div>
           </div>
         </div>

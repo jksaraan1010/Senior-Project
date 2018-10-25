@@ -100,7 +100,8 @@
               <span class="fa fa-lock input-group-text"></span>
             </div>
           </div>
-          <div class="input-group mb-3">
+
+       <!--   <div class="input-group mb-3">
             <input type="text" class="dob form-control{{ $errors->has('dob') ? ' is-invalid' : '' }}" name="dob" value="{{ old('dob') }}" required autofocus placeholder="Enter Date Of Birth">
 
             <div class="input-group-append">
@@ -111,7 +112,7 @@
               <strong>{{ $errors->first('dob') }}</strong>
             </span>
             @endif
-          </div>
+          </div> -->
           <div class="input-group mb-3">
             <select name="role" class="form-control"  required>
               @foreach($roles as $role)
