@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <!-- saved from url=(0065)https://adminlte.io/themes/dev/AdminLTE/pages/examples/login.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
   <title>Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
  
-  <link href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}">
   <!-- Material Design Bootstrap -->
-  <link href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}">
   <!-- Font Awesome -->
  <link rel="stylesheet" href="{{asset('adminlte/css/font-awesome.min.css')}}">
  <!-- Ionicons -->
@@ -19,7 +21,7 @@
  <!-- iCheck -->
  <link rel="stylesheet" href="{{asset('adminlte/css/blue.css')}}">
  <!-- Google Font: Source Sans Pro -->
- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
  <style type="text/css">
    html, body {
       height: 100%;
@@ -44,7 +46,7 @@
 </head>
 <body class="hold-transition login-page" >
 <div style="background-image: url('/registerimg.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
-  <div class="mask d-flex flex-grow-1 justify-content-center align-items-center rgba-blue-strong">
+  <div class="mask d-flex flex-grow-1  align-items-center rgba-blue-strong">
 <div class="login-box">
  <div class="login-logo">
    <!-- landing url go below -->
@@ -132,6 +134,7 @@
         $(document).ready(function () {
             $('.mdb-select').material_select();
         });
+        </script>
 </div>
 </div>
 
