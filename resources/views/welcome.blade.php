@@ -58,18 +58,16 @@
         <section class="view intro-2" style="background-image: url('https://mdbootstrap.com/img/Others/doctor.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <div class="mask rgba-blue-strong">
                 <div class="container h-100 d-flex justify-content-center align-items-center">
-                    <div class="row flex-center pt-5 mt-3">
-                    
-        
+                    <div class="row flex-center pt-5 mt-1">
                         <div class="col-md-12 col-lg-6 text-center text-md-left margins">
                         <div class="container white-text text center">
-                        <h2 class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3">My Transition Explorer</h2>
-                        <div class="content d-flex justify-content-center align-items-center">
-                             <img src="{{url('logo.jpeg')}}" alt="Image" width="250" height="250"/>
+                        <h2 class="text-center text-white text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h2>
+                        <div class="content d-flex justify-content-center align-items-center mb-3">
+                             <img src="{{url('logo.jpeg')}}" alt="Image" width="200" height="200"/>
 
                        </div>
-                       <br>
-                                <h5 class="text-center w-responsive mx-auto mb-8">An Application who's main goal is to assist young patients with transitioning
+                       
+                                <h5 class="text-center w-responsive mx-auto mb-3">An Application that assists young patients with transitioning
                                    from pediatric care to adult care, through reminders of different steps and milestones related to the transition! </h5>
                                 
                              <div class="content d-flex justify-content-center align-items-center">
@@ -109,11 +107,12 @@
                 to adult physicians, who are tasked with caring for potentially complicated 
                 new patients, as many of them had multiple surgeries, medications, and 
                 complications of their underlying disease. The "transition" period from
-                 ages 13 to 25 is a difficult period for patients as they move from one
-                  physician to another and researchers have shown that adolescents and 
-                  young adults with chronic medical conditions can have increased
-                   hospitalizations and loss of follow up as they transition to an 
-                   adult provider. </p>
+                ages 13 to 25 is a difficult period for patients as they move from one
+                physician to another and researchers have shown that adolescents and 
+                young adults with chronic medical conditions can have increased
+                hospitalizations and loss of follow up as they transition to an 
+                adult provider. This application will help young patients with transitioning
+                from pediatric care to adult care.  </p>
 
                 <!--First row-->
                 <div class="row features-big my-4 text-center">
