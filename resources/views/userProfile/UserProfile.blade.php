@@ -108,6 +108,7 @@
         <option value="DIAGRD">Diagnostic Radiology</option>
         <option value="ERMD">Emergency Medicine</option>
         <option value="FMLY">Family Medicine</option>
+        <option value="GEN">General</option>
         <option value="INT">Internal Medicine</option>
         <option value="MEDGEN">Medical Genetics</option>
         <option value="NEUR">Neurology</option>
@@ -122,6 +123,7 @@
         <option value="RADONC">Radiation Oncology</option>
         <option value="SRG">Surgery</option>
         <option value="URG">Urology</option>
+        <option value="OTHER">Other</option>
       </select>
     </div>
   <div class="form-group">
