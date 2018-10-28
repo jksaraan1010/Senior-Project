@@ -9,9 +9,9 @@
                     @if(Auth::user()->isAdmin())
                         <th>@lang('general.results.fields.user')</th>
                     @endif
-                        <th>@lang('general.results.fields.date')</th>
-                        <th>Result</th>
-                        <th>&nbsp;</th>
+                        <th>Date Taken</th>
+                        <th>Survey Result</th>
+                        <th>View Detailed Results</th>
                     </tr>
                 </thead>
 
