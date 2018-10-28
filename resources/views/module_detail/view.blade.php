@@ -3,25 +3,23 @@
 @section('content')
 <div class="content-header">
 	<div class="container-fluid">
-		<h3 class="page-title">({{$module->name}}) @lang('general.module_detail.title')</h3>
+		<h3 class="page-title">{{$module->name}} @lang('general.module_detail.title')</h3>
 
 		<p>
 			<a href="{{ route('module_detail.create',['id'=>$module->id]) }}" class="btn btn-success">@lang('general.add_new')</a>
 		</p>
 
 		<div class="panel panel-default">
-			<div class="panel-heading">
-				@lang('general.list')
-			</div>
+			
 
 			<div class="panel-body">
 				<table class="table table-bordered table-striped {{ count($module->module_detail) > 0 ? 'datatable' : '' }} dt-select">
 					<thead>
 						<tr>
-							<th style="text-align:center;"><input type="checkbox" id="select-all" /></th>
+							<th style="text-align:center;"></th>
 							<th>@lang('general.module_detail.fields.title')</th>
 							<th>@lang('general.module_detail.fields.description')</th>
-							<th>&nbsp;</th>
+							<th>Options</th>
 						</tr>
 					</thead>
 					

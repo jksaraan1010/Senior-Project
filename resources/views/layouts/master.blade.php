@@ -460,3 +460,4 @@ responsive: true
 
 </body>
 </html>
+@stack('js')
