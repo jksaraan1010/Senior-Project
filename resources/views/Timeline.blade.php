@@ -6,7 +6,8 @@
 
 @section('content')
 <link rel="stylesheet" href="{{asset('css/tmline.css')}}">
- 
+
+<button type="submit"> <a href="/Mail">Email this page</a></button>
 
 <div class="container">
       <div class="timeline">

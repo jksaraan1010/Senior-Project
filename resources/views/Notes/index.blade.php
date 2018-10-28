@@ -61,13 +61,10 @@
                          <input type="button" 
                         onClick="window.print()" 
                         value="Print This Page"/>
+                <button type="submit"> <a href="/Mail">Email this page</a></button>
 
-                <script language="javascript">
-                    function emailCurrentPage(){<!--from -->
-                        window.location.href="mailto:?subject="+document.title+"&body="+escape(window.location.href);
-                    }
-                </script>
-                <button type="submit"> <a href="javascript:emailCurrentPage()">Email this page</a></button>
+
+
 
 <br>
 <br>

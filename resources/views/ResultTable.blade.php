@@ -9,7 +9,10 @@
           integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
 </head>
+
 <body>
+<button type="submit"> <a href="/Mail">Email this page</a></button>
+
 <div class="container">
     <h2>Survey Results Table</h2>
 
@@ -20,7 +23,7 @@
             <th scope="row">Date Taken</th>
             @foreach($tableDate as $row)
                 <td>
-                    {{date('m-d-Y', strtotime($row->dateTaken))}}
+                    {{$row->dateTaken}}
                 </td>
             @endforeach
         </tr>

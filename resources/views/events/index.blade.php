@@ -264,9 +264,11 @@
                        <input type="button" 
                        onClick="window.print()" 
                        value="Print This Page"/>
-                       <br>
 
-           {{-- Success Alert --}}
+               <button type="submit"> <a href="/Mail">Email this page</a></button>
+
+
+               {{-- Success Alert --}}
            @if(Session::has('success'))
                <div class="alert alert-success alert-dismissible fade show" role="alert">
                    <strong>Success:</strong> {{ Session::get('success') }}
