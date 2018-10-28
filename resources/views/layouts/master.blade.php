@@ -88,8 +88,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{url('home')}}" class="brand-link  bg-primary">
-        <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle">
-      <span class="text-lg-center font-weig-bold"> My Transition <br>    Explorer</span>
+        <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle elevation-3">
+      <span class="brand-text text-lg-center font-weig-bold"> My Transition <br>    Explorer</span>
     </a>
 
     <!-- Sidebar -->
@@ -100,7 +100,7 @@
             <img src='{{ asset("/403.svg")}}'  class="img-circle elevation-2" alt="User Image">
         </div>
       <div class="info">    
-          <a href="#" class=" d-block"> {{ Auth::user()->name }}</a>
+          <a href="{{ route('UserProfile') }}" class=" d-block"> {{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -259,7 +259,7 @@
                           @forelse($module as $key => $value)
                             <li class="nav-item">
                               <a href="{{ route('module_detail.show',['id' => $value->id]) }}" class="nav-link">
-                                <i class="nav-icon fas fa-comments"></i>
+                                <i class="nav-icon fas fa-hand-holding-heart"></i>
                                 <p>{{$value->name}}</p>
                               </a>
                             </li>
