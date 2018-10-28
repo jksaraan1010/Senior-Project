@@ -57,17 +57,15 @@ return [
 		'title' => 'Questions',
 		'fields' => [
 			'topic' => 'Topic',
-			'question-text' => 'Question text',
-			'code-snippet' => 'Code snippet',
-			'answer-explanation' => 'Answer explanation',
-			'more-info-link' => 'More info link',
+			'question-text' => 'Question Text',
+			
 		],
 	],
 
 	'questions-options' => [
 		'title' => 'Questions Options',
 		'fields' => [
-			'question' => 'question',
+			'question' => 'Question',
 			'option' => 'Option',
 			'correct' => 'Correct',
 		],
