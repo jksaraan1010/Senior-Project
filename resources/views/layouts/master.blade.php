@@ -89,7 +89,7 @@
     <!-- Brand Logo -->
     <a href="{{url('home')}}" class="brand-link  bg-primary">
         <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle elevation-3">
-      <span class="brand-text text-lg-center font-weig-bold"> My Transition <br>    Explorer</span>
+      <span class="brand-text text-lg-center font-weight-bold"> My Transition <br>    Explorer</span>
     </a>
 
     <!-- Sidebar -->
@@ -196,7 +196,7 @@
                         <a href="#" class="nav-link">
                           <i class="nav-icon fa fa-book"></i>
                           <p>
-                            Module
+                            Modules
                             <i class="fa fa-angle-left right"></i>
                           </p>
                         </a>
@@ -251,7 +251,7 @@
                         <a href="#" class="nav-link">
                           <i class="nav-icon fa fa-book"></i>
                           <p>
-                            module
+                            Modules
                             <i class="fa fa-angle-left right"></i>
                           </p>
                         </a>
