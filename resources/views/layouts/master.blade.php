@@ -89,7 +89,7 @@
     <!-- Brand Logo -->
     <a href="{{url('home')}}" class="brand-link  bg-primary">
         <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle">
-      <span class="text-lg-center font-weight-bold"> My Transition <br>  Explorer</span>
+      <span class="text-lg-center font-weig-bold"> My Transition <br>    Explorer</span>
     </a>
 
     <!-- Sidebar -->
@@ -152,7 +152,7 @@
                                 </a>
                             <li class="nav-item">
                                 <a href="{{url('ResultTable')}}" class="nav-link">
-                                    <i class="nav-icon fas fa-chart-line"></i>
+                                    <i class="nav-icon fas fa-table"></i>
                                     <p>View Table </p>
                                 </a>
                             </li>

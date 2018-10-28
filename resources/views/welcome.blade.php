@@ -210,12 +210,10 @@
                     
             </div>
         </div>    
-        <!-- Copyright-->
-        
-        <div class="footer-copyright py-3 text-center">
-            <div class="container-fluid">
-                © 2018-2019 Copyright: <a href=""> My Transition Explorer </a>
-            </div>
+        <!-- Copyright-->        
+     <div class="footer-copyright py-3 text-center">
+        <strong>Copyright &copy; 2018-2019 <a href="#"> My Transition Explorer </a>.</strong>
+    All rights reserved.
         </div>
         <!--/.Copyright -->
 
