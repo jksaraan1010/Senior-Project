@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/homeAdmin', 'HomeAdminController@index')->name('homeAdmin');
 Route::get('/Timeline', 'TimelineController@index')->name('Timeline');
 Route::get('/UserProfile', 'UserProfileController@index')->name('UserProfile');
 Route::get('/selfCare', 'selfCareController@index')->name('selfCare');

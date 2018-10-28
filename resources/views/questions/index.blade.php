@@ -14,7 +14,7 @@
             <table class="table table-bordered table-striped {{ count($questions) > 0 ? 'datatable' : '' }} dt-select">
                 <thead>
                     <tr>
-                        <th style="text-align:center;"></th>
+                        
                         <th>@lang('general.questions.fields.topic')</th>
                         <th>@lang('general.questions.fields.question-text')</th>
                         <th>&nbsp;</th>
@@ -25,7 +25,7 @@
                     @if (count($questions) > 0)
                         @foreach ($questions as $question)
                             <tr data-entry-id="{{ $question->id }}">
-                                <td></td>
+                                
                                 <td>{{ $question->topic->title }}</td>
                                 <td>{!! $question->question_text !!}</td>
                                 <td>

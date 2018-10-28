@@ -10,17 +10,14 @@
 		</p>
 
 		<div class="panel panel-default">
-			<div class="panel-heading">
-				@lang('general.list')
-			</div>
-
+			
 			<div class="panel-body">
 				<table class="table table-bordered table-striped {{ count($topics) > 0 ? 'datatable' : '' }} dt-select">
 					<thead>
 						<tr>
-							<th style="text-align:center;"><input type="checkbox" id="select-all" /></th>
+						
 							<th>@lang('general.topics.fields.title')</th>
-							<th>&nbsp;</th>
+							<th>Topics Options</th>
 						</tr>
 					</thead>
 					
@@ -28,7 +25,7 @@
 						@if (count($topics) > 0)
 						@foreach ($topics as $topic)
 						<tr data-entry-id="{{ $topic->id }}">
-							<td></td>
+							
 							<td>{{ $topic->title }}</td>
 							<td>
 								<a href="{{ route('topics.show',[$topic->id]) }}" class="btn btn-xs btn-primary">@lang('general.view')</a>
