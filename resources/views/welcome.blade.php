@@ -57,7 +57,7 @@
         <!--Intro Section-->
         <section class="view intro-2" style="background-image: url('https://mdbootstrap.com/img/Others/doctor.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <div class="mask rgba-blue-strong">
-                <div class="container h-100 d-flex justify-content-center align-items-center">
+                <div class="container h-100 justify-content-center align-items-center">
                     <div class="row flex-center pt-5 mt-1">
                         <div class="col-md-12 col-lg-6 text-center text-md-left margins">
                         <div class="container white-text text center">

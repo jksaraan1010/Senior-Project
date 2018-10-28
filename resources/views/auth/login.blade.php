@@ -6,21 +6,30 @@
   
 
   <title>Log in</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-  <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}">
-  <!-- Font Awesome -->
- <link rel="stylesheet" href="{{asset('adminlte/css/font-awesome.min.css')}}">
- <!-- Ionicons -->
- <link rel="stylesheet" href="{{asset('adminlte/css/ionicons.min.css')}}">
- <!-- Theme style -->
- <link rel="stylesheet" href="{{asset('adminlte/css/adminlte.min.css')}}">
- <!-- iCheck -->
- <link rel="stylesheet" href="{{asset('adminlte/css/blue.css')}}">
- <!-- Google Font: Source Sans Pro -->
+ <!-- Tell the browser to be responsive to screen width -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+ <!-- Font Awesome -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<title>Log in</title>
+<!-- Tell the browser to be responsive to screen width -->
+
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+{{-- <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}"> --}}
+<!-- Material Design Bootstrap -->
+<link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}">
+<!-- Font Awesome -->
+{{-- <link rel="stylesheet" href="{{asset('adminlte/css/font-awesome.min.css')}}"> --}}
+<!-- Ionicons -->
+{{-- <link rel="stylesheet" href="{{asset('adminlte/css/ionicons.min.css')}}"> --}}
+<!-- Theme style -->
+<link rel="stylesheet" href="{{asset('adminlte/css/adminlte.min.css')}}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('adminlte/css/blue.css')}}">
+<!-- Google Font: Source Sans Pro -->
 
  <style type="text/css">
    html, body {
