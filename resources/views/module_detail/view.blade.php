@@ -16,7 +16,7 @@
 				<table class="table table-bordered table-striped {{ count($module->module_detail) > 0 ? 'datatable' : '' }} dt-select">
 					<thead>
 						<tr>
-							<th style="text-align:center;"></th>
+							
 							<th>@lang('general.module_detail.fields.title')</th>
 							<th>@lang('general.module_detail.fields.description')</th>
 							<th>Options</th>
@@ -27,7 +27,7 @@
 						@if (count($module->module_detail) > 0)
 						@foreach ($module->module_detail as $value)
 						<tr data-entry-id="{{ $value->id }}">
-							<td></td>
+							
 							<td>{{ $value->title }}</td>
 							<td>{!! $value->description !!}</td>
 							<td>
