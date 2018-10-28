@@ -37,6 +37,8 @@
 <button type="submit"> <a href="/Mail">Email this page</a></button>
 <br>
 <div class="container">
+
+<h1 align="center" >13-15</h1>
       <div class="timeline">
         <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
           <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
@@ -66,7 +68,7 @@
             </label>
         </div>
           <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time>13-15</time>
+            <time></time>
           </div>
         </div>
 
@@ -141,6 +143,16 @@
           </div>
         </div>
 
+
+      </div>
+    </div>
+
+<hr>
+<h1 align="center" >15-17</h1>
+<div class="container">
+<div class="timeline">
+        
+            
         <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
           <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
             <h3 class=" text-light">Self-Care</h3>
@@ -172,7 +184,7 @@
             </label>
          </div>
           <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time>15-17</time>
+            <time></time>
           </div>
         </div>
 
@@ -247,8 +259,16 @@
             <time></time>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
+<hr border-top: 1px solid red;>
+<h1 align="center" >17-19</h1>
+<div class="container">
+<div class="timeline">
+        
+            
+<div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
           <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
             <h3 class=" text-light">Self-Care</h3>
             <label class="container">Know how to get your medications refilled 
@@ -280,7 +300,7 @@
           </div>
           
           <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time>17-19</time>
+            <time></time>
           </div>
         </div>
 
@@ -355,7 +375,11 @@
             <time></time>
           </div>
         </div>
-
       </div>
     </div>
+
+
+    
+
+    
 @endsection

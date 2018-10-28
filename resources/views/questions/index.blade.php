@@ -17,7 +17,7 @@
                         <th style="text-align:center;"></th>
                         <th>@lang('general.questions.fields.topic')</th>
                         <th>@lang('general.questions.fields.question-text')</th>
-                        <th>Question Option</th>
+                        <th>&nbsp;</th>
                     </tr>
                 </thead>
                 
