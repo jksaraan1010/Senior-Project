@@ -117,7 +117,6 @@
         <option value="PATH">Pathology</option>
         <option value="PED">Pediatrics</option>
         <option value="REHAB">Physical Medicine and Rehabilitation</option>
-        <option value="IA">Iowa (IA)</option>
         <option value="PREV">Preventative Medicine</option>
         <option value="PSYCH">Psychiatry</option>
         <option value="RADONC">Radiation Oncology</option>
