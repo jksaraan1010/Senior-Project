@@ -49,11 +49,11 @@
     <input type="text" class="form-control" id="disabledInput" placeholder="{{ Auth::user()->email }}" disabled>
   </div>
     <div class="form-group col-md-6">   
-      <label for="disabledInput1">User Name</label>
+      <label for="disabledInput1">Name</label>
       <input type="text" class="form-control" id="disabledInput1" placeholder="{{ Auth::user()->name }}" disabled>
     </div>
     <div class="form-group col-md-6">
-      <label for="updateUserName">Update User Name</label>
+      <label for="updateUserName">Update Name</label>
       <input type="text" class="form-control" id="updateUserName" placeholder="{{ Auth::user()->name }}">
     </div>
     <div class="form-group col-md-6">   
@@ -79,6 +79,10 @@
               <button type="button" class="btn btn-tool" data-widget=""><i class="fa fa-plus"></i></button>
             </div>
 </div>
+
+
+
+
 <!-- /.card-header -->
 <div class="card-body">
     <div class="row">
@@ -92,9 +96,35 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="inputSpeciality">Speciality</label>
-    <input type="text" class="form-control" id="inputSpeciality" placeholder="Cardiologist">
+    <label for="inputSpeciality">Phone Number</label>
+    <input type="text" class="form-control" id="inputNumber" placeholder="123-456-7890">
   </div>
+  <div class="form-group ">
+      <label for="inputSpecialty">Specialty</label>
+      <select id="inputState" class="form-control">
+        <option value="AM">Allergy and Immunology</option>
+        <option value="ANSTH">Anesthesiology</option>
+        <option value="DRM">Dermatology</option>
+        <option value="DIAGRD">Diagnostic Radiology</option>
+        <option value="ERMD">Emergency Medicine</option>
+        <option value="FMLY">Family Medicine</option>
+        <option value="INT">Internal Medicine</option>
+        <option value="MEDGEN">Medical Genetics</option>
+        <option value="NEUR">Neurology</option>
+        <option value="NUCMD">Nuclear Medicine</option>
+        <option value="OBSTGYN">Obstetrics and Gynecology</option>
+        <option value="OPT">Opthalmology</option>
+        <option value="PATH">Pathology</option>
+        <option value="PED">Pediatrics</option>
+        <option value="REHAB">Physical Medicine and Rehabilitation</option>
+        <option value="IA">Iowa (IA)</option>
+        <option value="PREV">Preventative Medicine</option>
+        <option value="PSYCH">Psychiatry</option>
+        <option value="RADONC">Radiation Oncology</option>
+        <option value="SRG">Surgery</option>
+        <option value="URG">Urology</option>
+      </select>
+    </div>
   <div class="form-group">
     <label for="inputAddress">Office Address</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
