@@ -61,12 +61,7 @@
           </a>
       </li>
    
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="nav-icon fa fa-bell" title="Notifications"></i>
-        </a>
-      </li>
+     
 
       <li class="nav-item">
           <a href="#" class="nav-link"
@@ -89,7 +84,7 @@
     <!-- Brand Logo -->
     <a href="{{url('home')}}" class="brand-link  bg-primary">
         <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle elevation-3">
-      <span class="brand-text text-lg-center font-weig-bold"> My Transition <br>    Explorer</span>
+      <span class="brand-text text-lg-center font-weight-bold"> My Transition <br>    Explorer</span>
     </a>
 
     <!-- Sidebar -->
@@ -196,7 +191,7 @@
                         <a href="#" class="nav-link">
                           <i class="nav-icon fa fa-book"></i>
                           <p>
-                            Module
+                            Modules
                             <i class="fa fa-angle-left right"></i>
                           </p>
                         </a>
@@ -251,7 +246,7 @@
                         <a href="#" class="nav-link">
                           <i class="nav-icon fa fa-book"></i>
                           <p>
-                            module
+                            Modules
                             <i class="fa fa-angle-left right"></i>
                           </p>
                         </a>
@@ -270,7 +265,7 @@
 
                     @endif
                     
-                    @if(!Auth::user()->isAdmin())
+                 
 
                     <li class="nav-item">
                         <a href="{{ route('Timeline') }}" class="nav-link">
@@ -281,7 +276,7 @@
                         </a>
                     </li>
 
-
+                    @if(!Auth::user()->isAdmin())
                     <li class="nav-item">
                         <a href="{{ route('notes.index') }}" class="nav-link">
                             <i class="nav-icon fa fa-clipboard-list"></i>
@@ -389,51 +384,51 @@ labels: arrayDateTaken,
 datasets: [{
 data:arrayResultcodeTotal,
 label: "Total Score",
-borderColor: "#8205DE",
-fill: true,
-borderColor: 'rgba(219, 147, 30 , 0.75)',
-backgroundColor: 'rgba(219, 147, 30, 0.3)',
-pointBorderColor: 'rgba(219, 147, 30, 0)',
-pointBackgroundColor: 'rgba(219, 147, 30, 0.9)',
-pointBorderWidth: 1
-//backgroundColor:"#C8F6FA"
+    borderColor: "#061CD1",
+    fill: true,
+    borderColor: 'rgba(6, 28, 209   , 0.75)',
+    backgroundColor: 'rgba(6, 28, 209  , 0.3)',
+    pointBorderColor: 'rgba(6, 28, 209  , 0)',
+    pointBackgroundColor: 'rgba(6, 28, 209  , 0.9)',
+    pointBorderWidth: 1
 },
 {
 data: arrayResultcodeSection1,
 label: "Self Care Score",
-borderColor: "#8205DE",
-fill: true,
-borderColor: 'rgba(200, 4, 214 , 0.75)',
-backgroundColor: 'rgba(200, 4, 214, 0.3)',
-pointBorderColor: 'rgba(200, 4, 214, 0)',
-pointBackgroundColor: 'rgba(200, 4, 214, 0.9)',
-pointBorderWidth: 1
+    borderColor: "#212F3D",
+    fill: true,
+    borderColor: 'rgba(33, 47, 61, 0.75)',
+    backgroundColor: 'rgba(33, 47, 61 , 0.3)',
+    pointBorderColor: 'rgba(33, 47, 61, 0)',
+    pointBackgroundColor: 'rgba(33, 47, 61 , 0.9)',
+    pointBorderWidth: 1
 //backgroundColor:"#C8F6FA"
 },
 
 {
 data: arrayResultcodeSection2,
 label: "Health Awareness Score",
-borderColor: "#738976",
-fill: true,
-borderColor: 'rgba(41, 128, 185, 0.75)',
-backgroundColor: 'rgba(41, 128, 185, 0.3)',
-pointBorderColor: 'rgba(41, 128, 185, 0)',
-pointBackgroundColor: 'rgba(41, 128, 185, 0.9)',
-pointBorderWidth: 1
+    borderColor: "#D10615",
+    fill: true,
+    borderColor: 'rgba(209, 6, 21  , 0.75)',
+    backgroundColor: 'rgba(209, 6, 21  , 0.3)',
+    pointBorderColor: 'rgba(209, 6, 21  , 0)',
+    pointBackgroundColor: 'rgba(209, 6, 21  , 0.9)',
+    pointBorderWidth: 1
+
 
 //backgroundColor:"#E1E5E6"
 },
 {
 data: arrayResultcodeSection3,
 label: "Communication Score",
-borderColor: "#B03449",
-fill: true,
-borderColor: 'rgba(41, 188, 75, 0.75)',
-backgroundColor: 'rgba(41, 188, 75, 0.3)',
-pointBorderColor: 'rgba(41, 188, 75, 0)',
-pointBackgroundColor: 'rgba(41, 188, 75, 0.9)',
-pointBorderWidth: 1
+    borderColor: "#117A65",
+    fill: true,
+    borderColor: 'rgba(17, 122, 101  , 0.75)',
+    backgroundColor: 'rgba(17, 122, 101  , 0.3)',
+    pointBorderColor: 'rgba(17, 122, 101  , 0)',
+    pointBackgroundColor: 'rgba(17, 122, 101  , 0.9)',
+    pointBorderWidth: 1
 }
 ]
 },

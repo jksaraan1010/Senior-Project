@@ -8,10 +8,6 @@
 		{!! Form::model($topic, ['method' => 'PUT', 'route' => ['topics.update', $topic->id]]) !!}
 
 		<div class="panel panel-default">
-			<div class="panel-heading">
-				@lang('general.edit')
-			</div>
-
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-xs-12 form-group">

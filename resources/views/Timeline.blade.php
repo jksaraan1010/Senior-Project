@@ -38,7 +38,7 @@
 <br>
 <div class="container">
 
-<h1 align="center" >13-15</h1>
+<h1 align="center" >Ages 13-15</h1>
       <div class="timeline">
         <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
           <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
@@ -148,7 +148,7 @@
     </div>
 
 <hr>
-<h1 align="center" >15-17</h1>
+<h1 align="center" >Ages 15-17</h1>
 <div class="container">
 <div class="timeline">
         
@@ -262,12 +262,13 @@
       </div>
     </div>
 
-<hr>
-<h1 align="center" >17-19</h1>
+
+<hr border-top: 1px solid red;>
+<h1 align="center" >Ages 17-19</h1>
+
 <div class="container">
 <div class="timeline">
-        
-            
+
 <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
           <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
             <h3 class=" text-light">Self-Care</h3>
@@ -377,9 +378,7 @@
         </div>
       </div>
     </div>
-
-
-    
-
-    
+</div>
+</div>
+</div>    
 @endsection

@@ -3,14 +3,11 @@
 @section('content')
 <div class="content-header">
   <div class="container-fluid">
-         <h3 class="page-title">({{$module->name}}) @lang('general.module_detail.title')</h3>
+         <h3 class="page-title">{{$module->name}} @lang('general.module_detail.title')</h3>
     {!! Form::open(['method' => 'POST', 'route' => ['module_detail.store']]) !!}
     <input type="hidden" name="module_id" value="{{$module->id}}">
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.create')
-        </div>
-
+    
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">

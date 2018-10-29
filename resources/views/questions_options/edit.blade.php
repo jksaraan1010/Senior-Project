@@ -8,9 +8,6 @@
     {!! Form::model($questions_option, ['method' => 'PUT', 'route' => ['questions_options.update', $questions_option->id]]) !!}
 
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.edit')
-        </div>
 
         <div class="panel-body">
             <div class="row">

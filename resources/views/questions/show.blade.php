@@ -6,9 +6,6 @@
 		<h3 class="page-title">@lang('general.questions.title')</h3>
 		
 		<div class="panel panel-default">
-			<div class="panel-heading">
-				@lang('general.view')
-			</div>
 			
 			<div class="panel-body">
 				<div class="row">
@@ -25,7 +22,7 @@
 
 					<p>&nbsp;</p>
 
-					<a href="{{ route('questions.index') }}" class="btn btn-default">@lang('general.back_to_list')</a>
+					<a href="{{ route('questions.index') }}" class="btn btn-primary">@lang('general.back_to_list')</a>
 				</div>
 			</div>
 		</div>

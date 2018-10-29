@@ -7,14 +7,11 @@
     {!! Form::open(['method' => 'POST', 'route' => ['questions_options.store']]) !!}
 
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.create')
-        </div>
-        
+ 
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('question_id', 'question*', ['class' => 'control-label']) !!}
+                    {!! Form::label('question_id', 'Question*', ['class' => 'control-label']) !!}
                     {!! Form::select('question_id', $questions, old('question_id'), ['class' => 'form-control']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('question_id'))

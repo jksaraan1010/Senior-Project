@@ -3,14 +3,12 @@
 @section('content')
 <div class="content-header">
   <div class="container-fluid">
-      <h3 class="page-title">({{$module_detail->module->name}})@lang('general.module_detail.title')</h3>
+      <h3 class="page-title">{{$module_detail->module->name}} @lang('general.module_detail.title')</h3>
     
     {!! Form::model($module_detail, ['method' => 'PUT', 'route' => ['module_detail.update', $module_detail->id]]) !!}
 
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.edit')
-        </div>
+
 
         <div class="panel-body">
             <div class="row">

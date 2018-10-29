@@ -8,9 +8,7 @@
     {!! Form::model($question, ['method' => 'PUT', 'route' => ['questions.update', $question->id]]) !!}
 
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.edit')
-        </div>
+       
 
         <div class="panel-body">
             <div class="row">
