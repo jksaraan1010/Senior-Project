@@ -270,7 +270,7 @@
 
                     @endif
                     
-                    @if(!Auth::user()->isAdmin())
+                 
 
                     <li class="nav-item">
                         <a href="{{ route('Timeline') }}" class="nav-link">
@@ -281,7 +281,7 @@
                         </a>
                     </li>
 
-
+                    @if(!Auth::user()->isAdmin())
                     <li class="nav-item">
                         <a href="{{ route('notes.index') }}" class="nav-link">
                             <i class="nav-icon fa fa-clipboard-list"></i>
