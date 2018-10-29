@@ -389,51 +389,51 @@ labels: arrayDateTaken,
 datasets: [{
 data:arrayResultcodeTotal,
 label: "Total Score",
-borderColor: "#8205DE",
-fill: true,
-borderColor: 'rgba(219, 147, 30 , 0.75)',
-backgroundColor: 'rgba(219, 147, 30, 0.3)',
-pointBorderColor: 'rgba(219, 147, 30, 0)',
-pointBackgroundColor: 'rgba(219, 147, 30, 0.9)',
-pointBorderWidth: 1
-//backgroundColor:"#C8F6FA"
+    borderColor: "#061CD1",
+    fill: true,
+    borderColor: 'rgba(6, 28, 209   , 0.75)',
+    backgroundColor: 'rgba(6, 28, 209  , 0.3)',
+    pointBorderColor: 'rgba(6, 28, 209  , 0)',
+    pointBackgroundColor: 'rgba(6, 28, 209  , 0.9)',
+    pointBorderWidth: 1
 },
 {
 data: arrayResultcodeSection1,
 label: "Self Care Score",
-borderColor: "#8205DE",
-fill: true,
-borderColor: 'rgba(200, 4, 214 , 0.75)',
-backgroundColor: 'rgba(200, 4, 214, 0.3)',
-pointBorderColor: 'rgba(200, 4, 214, 0)',
-pointBackgroundColor: 'rgba(200, 4, 214, 0.9)',
-pointBorderWidth: 1
+    borderColor: "#212F3D",
+    fill: true,
+    borderColor: 'rgba(33, 47, 61, 0.75)',
+    backgroundColor: 'rgba(33, 47, 61 , 0.3)',
+    pointBorderColor: 'rgba(33, 47, 61, 0)',
+    pointBackgroundColor: 'rgba(33, 47, 61 , 0.9)',
+    pointBorderWidth: 1
 //backgroundColor:"#C8F6FA"
 },
 
 {
 data: arrayResultcodeSection2,
 label: "Health Awareness Score",
-borderColor: "#738976",
-fill: true,
-borderColor: 'rgba(41, 128, 185, 0.75)',
-backgroundColor: 'rgba(41, 128, 185, 0.3)',
-pointBorderColor: 'rgba(41, 128, 185, 0)',
-pointBackgroundColor: 'rgba(41, 128, 185, 0.9)',
-pointBorderWidth: 1
+    borderColor: "#D10615",
+    fill: true,
+    borderColor: 'rgba(209, 6, 21  , 0.75)',
+    backgroundColor: 'rgba(209, 6, 21  , 0.3)',
+    pointBorderColor: 'rgba(209, 6, 21  , 0)',
+    pointBackgroundColor: 'rgba(209, 6, 21  , 0.9)',
+    pointBorderWidth: 1
+
 
 //backgroundColor:"#E1E5E6"
 },
 {
 data: arrayResultcodeSection3,
 label: "Communication Score",
-borderColor: "#B03449",
-fill: true,
-borderColor: 'rgba(41, 188, 75, 0.75)',
-backgroundColor: 'rgba(41, 188, 75, 0.3)',
-pointBorderColor: 'rgba(41, 188, 75, 0)',
-pointBackgroundColor: 'rgba(41, 188, 75, 0.9)',
-pointBorderWidth: 1
+    borderColor: "#117A65",
+    fill: true,
+    borderColor: 'rgba(17, 122, 101  , 0.75)',
+    backgroundColor: 'rgba(17, 122, 101  , 0.3)',
+    pointBorderColor: 'rgba(17, 122, 101  , 0)',
+    pointBackgroundColor: 'rgba(17, 122, 101  , 0.9)',
+    pointBorderWidth: 1
 }
 ]
 },
