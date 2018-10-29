@@ -262,7 +262,7 @@
       </div>
     </div>
 
-<hr border-top: 1px solid red;>
+<hr>
 <h1 align="center" >17-19</h1>
 <div class="container">
 <div class="timeline">
