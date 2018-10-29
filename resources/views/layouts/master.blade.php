@@ -61,12 +61,7 @@
           </a>
       </li>
    
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="nav-icon fa fa-bell" title="Notifications"></i>
-        </a>
-      </li>
+     
 
       <li class="nav-item">
           <a href="#" class="nav-link"

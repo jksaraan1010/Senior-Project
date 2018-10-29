@@ -17,7 +17,7 @@
                         
                         <th>@lang('general.questions.fields.topic')</th>
                         <th>@lang('general.questions.fields.question-text')</th>
-                        <th>&nbsp;</th>
+                        <th>Question Options</th>
                     </tr>
                 </thead>
                 
