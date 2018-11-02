@@ -27,26 +27,71 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-                <div class="chart-container" style="position: relative; height:10vh; width:100vh;">
+          <div class="card" style="width: 45rem; height:25rem">
+  <div class="card-body">
+    <h5 class="card-title">Survey Results Graph</h5>
+    <p class="card-text"> <div class="chart-container" style="position: relative; height:10vh; width:100vh;">
                     <canvas id="line-chart"></canvas>
-                </div>
-                <div class="col-lg-3 col-xs-6">
-                    <div class="small-box bg-aqua height:10vh; width:100vh;">
-                        <div class="inner">
-                            <h2>Results Graph</h2>
-                            <p>Survey Results Graph</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-bag"></i>
-                        </div>
-                        <a href="ResultGraph" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div></p>
+  </div>
+</div>
+<div class="card" style="width: 45rem; height:30rem">
+  <div class="card-body">
+    <h5 class="card-title">Survey Results Table</h5>
+    <p class="card-text"> <table class="table table-striped table-hover table-bordered">
 
+<tbody>
+<tr>
+    <th scope="row">Date Taken</th>
+    @foreach($tableDate as $row)
+        <td>
+            {{$row->dateTaken}}
+        </td>
+    @endforeach
+</tr>
+<tr>
+    <th scope="row">Self Care Score</th>
+    @foreach($tableSection1 as $row)
+        <td>
+            {{$row->result}}
+        </td>
+    @endforeach
+</tr>
+<tr>
+    <th scope="row">Health Awareness Score</th>
+    @foreach($tableSection2 as $row)
+        <td>
+            {{$row->result}}
+        </td>
+    @endforeach
+</tr>
+<tr>
+    <th scope="row">Communication Score</th>
+    @foreach($tableSection3 as $row)
+        <td>
+            {{$row->result}}
+        </td>
+    @endforeach
+</tr>
+<tr>
+    <th scope="row">Total Score</th>
+
+    @foreach($tableForScores as $row)
+        <td class="text-bold">
+            {{$row->result}}
+        </td>
+    @endforeach
+</tr>
+</tbody>
+</table>
+             </p>
+  </div>
+</div>
+
+               
                     </div>
-
-
-
-                </div>
-                <div>
+                   </div>
+             
             
     </section>
   

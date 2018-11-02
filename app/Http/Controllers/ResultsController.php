@@ -6,7 +6,11 @@ use Auth;
 use App\Test;
 use App\Question;
 use App\TestAnswer;
+use App\Topic;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 use App\Http\Requests\StoreResultsRequest;
 use App\Http\Requests\UpdateResultsRequest;
 
@@ -54,9 +58,9 @@ class ResultsController extends Controller
         }
 
         $topics = $results->pluck('question.topic'); // get all topic in the quiz questions
-        
-        $topics = $topics->pluck('title', 'id'); // get topics title and id
 
+        $topics = $topics->pluck('title', 'id'); // get topics title and id
+        
         $topics_results = []; // to hold topic and it's question collection
 
         foreach($topics as $topic_id => $title){ //loop through each topics
@@ -69,7 +73,7 @@ class ResultsController extends Controller
             $topics_results[$title] = $topic_results; //save topics asnswers into an array using topic name as index
         }
         $total_questions =  Question::all()->count();
-        return view('results.show', compact('test', 'results', 'topics_results', 'total_questions')); // add topics_results array to view, it holds topic title and it's results
+        return view('results.show', compact('section1Score', 'section2Score', 'section3Score','test', 'results', 'topics_results', 'total_questions')); // add topics_results array to view, it holds topic title and it's results
     }
     
 }

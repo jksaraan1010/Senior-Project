@@ -20,8 +20,26 @@
                             <td>{{ $test->result }}/{{$total_questions}}</td>
                         </tr>
                     </table>
+                
                 @foreach($topics_results as $topic => $results)
                 <h2>{{ $topic }} ({{ $results->where('correct', 1)->count() . '/' . $results->count() }})</h2>
+                <h4> You have scored low in the following sections. Please Review The Modules.  </h4>
+                @if( $results->where('correct', 1)->count()  != 4)
+                <h4>
+                <a href="/selfCare" >Please Review Self Care Module For More Understanding </a>
+                </h4>
+                @endif
+                @if( $results->where('correct', 1)->count()  != 4)
+                <h4>
+                <a href="/healthAwareness" >Please Review Health Awareness Module For More Understanding </a>
+                </h4>
+                @endif
+                @if( $results->where('correct', 1)->count() != 4)
+                <h4>
+                <a href="/communication" >Please Review Communication Module For More Understanding </a>
+                </h4>
+                @endif
+
                 @foreach($results as $result)    
                 <table class="table table-bordered table-striped">
                         <tr class="test-option{{ $result->correct ? '-true' : '-false' }}">
