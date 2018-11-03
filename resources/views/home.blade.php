@@ -44,61 +44,105 @@
         <div class="row">
           <!-- Left col -->
           <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="width: 60rem;height:30rem;" >
               <div class="card-header bg-success">
                 <h5> <i class="fas fa-chart-line"></i> Survey Results Graph</h5>
               </div>
               <!-- /.card-header -->
-              <div class="card-body p-0">
+              <div class="card-body p-12 ">
                 <div class="d-md-flex">
-                  <div class="p-1 flex-1" style="overflow: hidden">  Place Graph here
+                  <div class="chart-container" style="position: relative; height:10vh; width:100vh;">
+                    <canvas id="line-chart"></canvas>
+                </div>
+                <a href="ResultGraph">View Full Survey Results Graph</a>
 
                   </div><!-- /.card-pane-right -->
                 </div><!-- /.d-md-flex -->
               </div>
+
               <!-- /.card-body -->
               <div class="card-footer text-center">
     
-              <a href="#">View Full Survey Results Graph</a>
               </div>
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->
-            
+            </div>
             <!-- TABLE: LATEST ORDERS -->
-            <div class="card">
+            <div class="card" style="width: 60rem;height:26rem;">
               <div class="card-header bg-danger">
                 <h5><i class="fas fa-table"></i> Survey Results Table</h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="table-responsive">
+                <div class="p-1 flex-1" style="overflow: hidden"> 
+
                   <table class="table m-0">
-                    <thead>
-                    <tr>
-                      <th>Place table here</th>
-                      <th></th>
-                      <th></th>
-                      <th></th>
-                    </tr>
-                    </thead>
                     <tbody>
                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td> </td>
-                    </tr>
+            <th scope="row">Date Taken</th>
+            @foreach($tableDate as $row)
+                <td>
+                    {{$row->dateTaken}}
+                </td>
+            @endforeach
+        </tr>
+        <tr>
+            <th scope="row">Self Care Score</th>
+
+            @foreach($tableSection12 as $row)
+                <td>
+                {{$row->result}}
+                    {{$row->attempt}}
+                </td>
+            @endforeach
+        </tr>
+        <tr>
+            <th scope="row">Self Care Score</th>
+            @foreach($tableSection1 as $row)
+                <td>
+                    {{$row->result}}
+                </td>
+            @endforeach
+        </tr>
+        <tr>
+            <th scope="row">Health Awareness Score</th>
+            @foreach($tableSection2 as $row)
+                <td>
+                    {{$row->result}}
+                </td>
+            @endforeach
+        </tr>
+        <tr>
+            <th scope="row">Communication Score</th>
+            @foreach($tableSection3 as $row)
+                <td>
+                    {{$row->result}}
+                </td>
+            @endforeach
+        </tr>
+        <tr>
+            <th scope="row">Total Score</th>
+
+            @foreach($tableForScores as $row)
+                <td class="text-bold">
+                    {{$row->result}}
+                </td>
+            @endforeach
+        </tr>
                    
                     </tbody>
                   </table>
+
                 </div>
+
                 <!-- /.table-responsive -->
               </div>
               <!-- /.card-body -->
               <div class="card-footer text-center">
-    
-              <a href="#">View All Survey Results</a>
+              <a href="ResultTable">View All Survey Results</a>
+
               </div>
               <!-- /.card-footer -->
             </div>

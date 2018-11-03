@@ -46,6 +46,12 @@ class ResultsController extends Controller
      */
     public function show($id)
     {
+        
+        
+        $Section2 = DB::select('SELECT COUNT(id) as result, test_id as attempt FROM `test_answers`WHERE question_id in (1,2,3,4) AND correct = 1  AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY ( test_id) ');
+
+        
+        
         $test = Test::find($id)->load('user');
 
         if ($test) {
@@ -62,7 +68,8 @@ class ResultsController extends Controller
         $topics = $topics->pluck('title', 'id'); // get topics title and id
         
         $topics_results = []; // to hold topic and it's question collection
-
+        //dd($section_id_json);
+        
         foreach($topics as $topic_id => $title){ //loop through each topics
            
             //get topic testanswers using topic id
@@ -73,7 +80,7 @@ class ResultsController extends Controller
             $topics_results[$title] = $topic_results; //save topics asnswers into an array using topic name as index
         }
         $total_questions =  Question::all()->count();
-        return view('results.show', compact('section1Score', 'section2Score', 'section3Score','test', 'results', 'topics_results', 'total_questions')); // add topics_results array to view, it holds topic title and it's results
+        return view('results.show', compact('section_id_json','section1Score', 'section2Score', 'section3Score','test', 'results', 'topics_results', 'total_questions')); // add topics_results array to view, it holds topic title and it's results
     }
     
 }

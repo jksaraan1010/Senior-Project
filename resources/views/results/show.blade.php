@@ -20,27 +20,28 @@
                             <td>{{ $test->result }}/{{$total_questions}}</td>
                         </tr>
                     </table>
-                
+                    
                 @foreach($topics_results as $topic => $results)
-                <h5 class="text-primary">{{ $topic }} ({{ $results->where('correct', 1)->count() . '/' . $results->count() }})</h5>
-                
-                <h4> You have scored low in the following sections. Please Review The Modules.  </h4>
-                @if( $results->where('correct', 1)->count()  != 4)
-                <h4>
+                <h4 class="text-primary">{{ $topic }} ({{ $results->where('correct', 1)->count() . '/' . $results->count() }})</h4>
+                <h5> You have scored low in the following sections. Please Review The Modules.  </h5>
+               
+                @if($section_id_json == 1 || $results->where('correct', 1)->count()  != 4)
+                <h5>
                 <a href="" >Please Review Self Care Module For More Understanding </a>
-                </h4>
+                </h5>
                 @endif
-                @if( $results->where('correct', 1)->count()  != 4)
-                <h4>
+                @if($section_id_json == 2 || $results->where('correct', 1)->count()  != 4)
+                <h5>
                 <a href="" >Please Review Health Awareness Module For More Understanding </a>
-                </h4>
+                </h5>
                 @endif
-                @if( $results->where('correct', 1)->count() != 4)
-                <h4>
+                @if($section_id_json == 3 || $results->where('correct', 1)->count() != 4)
+                <h5>
                 <a href="" >Please Review Communication Module For More Understanding </a>
-                </h4>
+                </h5>
                 @endif
-
+              
+</script>
                 @foreach($results as $result)    
                 <table class="table table-bordered table-striped">
                         <tr class="bg-primary test-option{{ $result->correct ? '-true' : '-false' }}">
@@ -66,7 +67,8 @@
                         </tr>
                     </table>
                     @endforeach 
-                @endforeach
+                    @endforeach 
+
                 </div>
   </div>
 </div>

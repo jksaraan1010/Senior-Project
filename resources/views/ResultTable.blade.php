@@ -50,17 +50,19 @@
                 </td>
             @endforeach
         </tr>
+       
         <tr>
             <th scope="row">Self Care Score</th>
-            @foreach($tableSection1 as $row)
+            @foreach($tableSection12 as $row)
                 <td>
                     {{$row->result}}
+
                 </td>
             @endforeach
         </tr>
         <tr>
             <th scope="row">Health Awareness Score</th>
-            @foreach($tableSection2 as $row)
+            @foreach(  $tableSection13 as $row)
                 <td>
                     {{$row->result}}
                 </td>
@@ -68,7 +70,7 @@
         </tr>
         <tr>
             <th scope="row">Communication Score</th>
-            @foreach($tableSection3 as $row)
+            @foreach( $tableSection14 as $row)
                 <td>
                     {{$row->result}}
                 </td>
