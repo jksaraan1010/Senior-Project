@@ -13,19 +13,19 @@
       <!-- Tell the browser to be responsive to screen width -->
       <!-- Ionicons -->
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-      {{-- 
+     
       <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}">
-      --}}
+   
       <!-- Material Design Bootstrap -->
       <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}">
       <!-- Font Awesome -->
-      {{-- 
+   
       <link rel="stylesheet" href="{{asset('adminlte/css/font-awesome.min.css')}}">
-      --}}
+ 
       <!-- Ionicons -->
-      {{-- 
+ 
       <link rel="stylesheet" href="{{asset('adminlte/css/ionicons.min.css')}}">
-      --}}
+  
       <!-- Theme style -->
       <link rel="stylesheet" href="{{asset('adminlte/css/adminlte.min.css')}}">
       <!-- iCheck -->
@@ -49,13 +49,14 @@
          background-attachment: fixed; }
          .invalid-feedback {
          display: block;
+         }
       </style>
    </head>
    <body class="hold-transition register-page">
       <div style="background-image: url('/registimg.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
          <div class="mask d-flex flex-grow-1 align-items-center rgba-blue-strong">
             <div class="register-box">
-               <div class="register-logo">
+               <div class="">
                   <!-- landing url go below -->
                   <a class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3"><b>My Transition Explorer </b></a>
                </div>

@@ -13,19 +13,19 @@
       <!-- Tell the browser to be responsive to screen width -->
       <!-- Ionicons -->
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-      {{-- 
+   
       <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}">
-      --}}
+     
       <!-- Material Design Bootstrap -->
       <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}">
       <!-- Font Awesome -->
-      {{-- 
+   
       <link rel="stylesheet" href="{{asset('adminlte/css/font-awesome.min.css')}}">
-      --}}
+   
       <!-- Ionicons -->
-      {{-- 
+    
       <link rel="stylesheet" href="{{asset('adminlte/css/ionicons.min.css')}}">
-      --}}
+    
       <!-- Theme style -->
       <link rel="stylesheet" href="{{asset('adminlte/css/adminlte.min.css')}}">
       <!-- iCheck -->
@@ -47,8 +47,9 @@
          width: 100%;
          height: 100%;
          background-attachment: fixed; }
+
          .invalid-feedback {
-         display: block;
+         display: block; 
          }
       </style>
    </head>
@@ -56,9 +57,9 @@
       <div style="background-image: url('/registerimg.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
          <div class="mask d-flex flex-grow-1  align-items-center rgba-blue-strong">
             <div class="login-box">
-               <div class="login-logo">
+               <div class="">
                   <!-- landing url go below -->
-                  <a class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3"><b>My Transition Explorer  </b></a> 
+                  <h2 class="text-center text-white text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h2>
                </div>
                <!-- /.login-logo -->
                <div class="card">
