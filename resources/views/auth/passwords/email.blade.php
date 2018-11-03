@@ -53,12 +53,12 @@
       </style>
    </head>
    <body class="hold-transition reset-page" >
-      <div style="background-image: url('/registerimg.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
+      <div style="background-image: url('/forgot.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
          <div class="mask d-flex flex-grow-1  align-items-center rgba-blue-strong">
             <div class="login-box">
-               <div align ="center">
-               
-                  <a class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3"><b>My Transition Explorer  </b></a> 
+            <div class="">
+                  <!-- landing url go below -->
+                  <h2 class="text-center text-white text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h2>
                </div>
          
                <div class="card">
@@ -97,6 +97,7 @@
                            
                         </div>
                      </form>
+                     <br>
                      <p class="mb-2">
                         <a href="{{url('login')}}" class="input-group-append">I already have a membership</button>
                         </p>
