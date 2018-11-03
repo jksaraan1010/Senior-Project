@@ -95,7 +95,7 @@
             <img src='{{ asset("/403.svg")}}'  class="img-circle elevation-2" alt="User Image">
         </div>
       <div class="info">    
-          <a href="{{ route('UserProfile') }}" class=" d-block"> {{ Auth::user()->name }}</a>
+          <a href="#" class=" d-block"> {{ Auth::user()->name }}</a>
         </div>
       </div>
 

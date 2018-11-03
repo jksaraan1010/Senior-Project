@@ -64,7 +64,7 @@
                <!-- /.login-logo -->
                <div class="card">
                   <div class="card-body login-card-body">
-                     <p class="login-box-msg">Sign in to start your session</p>
+                     <p class="login-box-msg">Sign In To Start Your Session</p>
                      @if(Session::has('success'))
                      <div class="alert alert-success alert-styled-left alert-arrow-left alert-bordered">
                         <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>

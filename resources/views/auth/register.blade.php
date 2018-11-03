@@ -56,17 +56,17 @@
       <div style="background-image: url('/registimg.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
          <div class="mask d-flex flex-grow-1 align-items-center rgba-blue-strong">
             <div class="register-box">
-               <div class="">
+            <div class="">
                   <!-- landing url go below -->
-                  <a class="text-center text-white text-uppercase font-weight-bold mt-5 mb-5 pt-3"><b>My Transition Explorer </b></a>
+                  <h2 class="text-center text-white text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h2>
                </div>
                <div class="card">
                   <div class="card-body register-card-body">
-                     <p class="login-box-msg">Register a new membership</p>
+                     <p class="login-box-msg">Register A New Membership</p>
                      <form action="{{url('register')}}" method="post">
                         @csrf
                         <div class="input-group mb-3">
-                           <input type="text" class="form-control" placeholder="Full name" name="name" required>
+                           <input type="text" class="form-control" placeholder="Full Name" name="name" required>
                            <div class="input-group-append">
                               <span class="fa fa-user input-group-text"></span>
                            </div>
@@ -77,7 +77,7 @@
                            @endif
                         </div>
                         <div class="input-group mb-3">
-                           <input type="email" class="form-control" placeholder="Email" required name="email">
+                           <input type="email" class="form-control" placeholder="Email Address" required name="email">
                            <div class="input-group-append">
                               <span class="fa fa-envelope input-group-text"></span>
                            </div>
@@ -88,7 +88,7 @@
                            @endif
                         </div>
                         <div class="input-group mb-3">
-                           <input type="password" name="password" class="form-control" placeholder="Password" required>
+                           <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
                            <div class="input-group-append">
                               <span class="fa fa-lock input-group-text"></span>
                            </div>
@@ -99,7 +99,7 @@
                            @endif
                         </div>
                         <div class="input-group mb-3">
-                           <input id="password-confirm" type="password" name="password_confirmation" class="form-control" placeholder="Retype password" required>
+                           <input id="password-confirm" type="password" name="password_confirmation" class="form-control" placeholder="Enter Password Again" required>
                            <div class="input-group-append">
                               <span class="fa fa-lock input-group-text"></span>
                            </div>
