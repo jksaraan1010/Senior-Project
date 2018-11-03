@@ -26,9 +26,9 @@
       <div class="container-fluid">
     {!! Form::open(['method' => 'POST', 'route' => ['tests.store']]) !!}
     <div class="box-header with-border">
-         <h5 class="box-title"> @lang('general.quiz') </h5>
+         <strong class="box-title"> @lang('general.quiz') </strong>
     </div>
-   
+   <br>
     <div class="panel panel-default">
         <?php //dd($questions) ?>
         @if(count($questions) > 0)
@@ -36,16 +36,15 @@
         
         @foreach($questions as $title => $group_questions)
         
-        <br>
         <fieldset>
             <h5 class="text-primary">{{ $title }}</h5>
-            <br>
+          
             @foreach($group_questions as $question)
             
-            <div class="row" style="padding-left: 40px;">
+            <div class="row" style="padding-left: 20px;">
                 <div class="col-xs-12 form-group">
                     <div class="form-group">
-                        <strong>Question {{ $loop->iteration }}.<br />{!! nl2br($question->question_text) !!}</strong>
+                        <strong>Question # {{ $loop->iteration }}: {!! nl2br($question->question_text) !!}</strong>
                          <input
                             type="hidden"
                             name="questions[{{ '_' . camel_case($title) . '_' . $loop->iteration }}]"
