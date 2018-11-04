@@ -9,15 +9,13 @@ use Google_Client;
 use Google_Service_Calendar;
 use Google_Service_Calendar_Event;
 use Google_Service_Calendar_EventDateTime;
-use Illuminate\Http\Request;
-
 class googleCalendarController extends Controller
 {
     protected $client;
     public function __construct()
     {
         $client = new Google_Client();
-        $client->setAuthConfig('client_secret.json');
+        $client->setAuthConfig('credentials.json');
         $client->addScope(Google_Service_Calendar::CALENDAR);
         $guzzleClient = new \GuzzleHttp\Client(array('curl' => array(CURLOPT_SSL_VERIFYPEER => false)));
         $client->setHttpClient($guzzleClient);
@@ -46,7 +44,7 @@ class googleCalendarController extends Controller
     public function oauth()
     {
         session_start();
-        $rurl = action('gCalendarController@oauth');
+        $rurl = action('googleCalendarController@oauth');
         $this->client->setRedirectUri($rurl);
         if (!isset($_GET['code'])) {
             $auth_url = $this->client->createAuthUrl();

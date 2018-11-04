@@ -85,7 +85,7 @@
             <img src='{{ asset("/403.svg")}}'  class="img-circle elevation-2" alt="User Image">
         </div>
       <div class="info">    
-          <a href="{{ route('UserProfile') }}" class=" d-block"> {{ Auth::user()->name }}</a>
+          <a href="#" class=" d-block"> {{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -375,6 +375,22 @@
                </div>
            </div>
 
+           <div class="card">
+              <div class="card-header">
+                <h3 class="card-title text-center">Draggable Events</h3>
+              </div>
+              <div class="card-body">
+                <!-- the events -->
+                <div id="external-events">
+                  <div class="external-event bg-success">Take Survey</div>
+                  <div class="external-event bg-warning">Specialist Appointment</div>
+                  <div class="external-event bg-info">Primary Doctor Appointment</div>
+                  <div class="external-event bg-primary">Take Medication</div>
+                  <div class="external-event bg-danger">Review Modules</div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
 
          </div>
            <!-- /. box -->
@@ -400,15 +416,15 @@
 
 <!-- Add Modal -->
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-   <div class="modal-dialog" role="document">
+   <div class="modal-dialog modal-sm" role="document">
        <div class="modal-content">
-           <div class="modal-header text-center">
-               <h4 class="modal-title w-100 font-weight-bold">Add Event</h4>
+           <div class="modal-header text-center bg-primary">
+               <h4 class="modal-title w-100 font-weight-bold">Add An Event</h4>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                    <span aria-hidden="true">&times;</span>
                </button>
            </div>
-           <div class="modal-body mx-3">
+           <div class="modal-body mx-2">
           
            {!! Form::open(array('route' => 'events.store','method'=>'post','files'=>'true')) !!}
                    
@@ -477,7 +493,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
     <link rel="stylesheet"  href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
 
 </body>
 </html>

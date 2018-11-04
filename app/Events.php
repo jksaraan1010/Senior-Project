@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Calendar;
 
 class Events extends Model
 {
@@ -16,7 +17,7 @@ class Events extends Model
      */
     public function isAllDay()
     {
-        return (bool)$this->all_day;
+        return (bool)$this->False;
     }
 
     	/**

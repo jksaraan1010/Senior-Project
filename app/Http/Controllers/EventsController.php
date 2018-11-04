@@ -25,9 +25,17 @@ class EventsController extends Controller
         foreach ($events as $key => $event) {
             $event_list[] = Calendar::event(
                 $event->event_name,
-                true,
+                false, //full day event
                 new \DateTime($event->start_date),
-                new \DateTime($event->end_date.' +1 day')
+                new \DateTime($event->end_date),
+                $event->id,
+                    [
+                    'backgroundColor' =>'#0984e3', 
+                    'borderColor' => '#0984e3', 
+                    'textColor' => 'white',
+                    'editable' => 'true',
+                    'droppable' => 'true',
+                  ]
             );
         }
         $calendar_details = Calendar::addEvents($event_list); 

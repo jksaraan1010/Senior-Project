@@ -40,6 +40,10 @@ Route::get('/add', 'EventsController@display');
 Route::get('/edit', 'EventsController@show');
 Route::get('/delete', 'EventsController@show');
 
+Route::get("/calendar", function(){
+return view('Calendar.index');
+});
+
 Route::resource('notes', 'NotesController');
 
 // Authentication Routes...
