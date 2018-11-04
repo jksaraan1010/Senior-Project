@@ -61,11 +61,7 @@
                          <input type="button" 
                         onClick="window.print()" 
                         value="Print This Page"/>
-                <button type="submit"> <a href="/Mail">Email this page</a></button>
-
-
-
-
+                <button type="submit"> <a href="/Email">Email this page</a></button>
 <br>
 <br>
  <!-- Main content -->

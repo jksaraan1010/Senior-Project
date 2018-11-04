@@ -26,7 +26,8 @@ Route::get('/healthAwareness', 'HealthAwarenessController@index')->name('healthA
 Route::get('/communication', 'communicationController@index')->name('communication');
 Route::get('ResultTable', 'ResultTableController@SurveyResultTable');
 Route::get('ResultGraph', 'ResultGraphController@SurveyResultGraph');
-Route::get('Mail', 'MailController@index');
+Route::get('Email','MailController@index' );
+Route::post('send', 'MailController@send');
 //Route::get('/survey', 'SurveyController@getQuestions');
 //Route::get('survey/{sectionId}', 'SurveyController@getQuestions');
 Route::get('survey', 'SurveyController@index');
