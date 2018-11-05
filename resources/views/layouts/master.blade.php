@@ -199,7 +199,7 @@
                           @forelse($module as $key => $value)
                             <li class="nav-item">
                               <a href="{{ route('module_detail.index',['id' => $value->id]) }}" class="nav-link">
-                              <i class="nav-icon fas fa-hand-holding-heart"></i>
+                              <i class="nav-icon fas fa-book-reader"></i>
                                 <p>{{$value->name}}</p>
                               </a>
                             </li>
@@ -254,7 +254,7 @@
                           @forelse($module as $key => $value)
                             <li class="nav-item">
                               <a href="{{ route('module_detail.show',['id' => $value->id]) }}" class="nav-link">
-                                <i class="nav-icon fas fa-hand-holding-heart"></i>
+                              <i class="nav-icon fas fa-book-reader"></i>
                                 <p>{{$value->name}}</p>
                               </a>
                             </li>

@@ -42,13 +42,9 @@ class NotesController extends Controller
         ]);
         $note = new Note;
         $note->name = $request->newNoteName;
-
         $note->save();
-
         return redirect()->route('notes.index');
-
     }
-
 
     /**
      * Display the specified resource.

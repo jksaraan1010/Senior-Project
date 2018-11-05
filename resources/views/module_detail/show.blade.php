@@ -26,42 +26,51 @@
               <div class="container-fluid">
   
 
-<div class="content-header">
-  <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-12">
-        <div class="card module_detail_card">
-          <div class="card-block">
-            <div class="module_detail_title">
-              <h2 class="card-title">{{$module->name}}</h2>
-            </div>
-            <div class="module_detail_description">
-              <p class="card-text">Maintain a diary with your 
-                health records and can keep it with you at all times.</p>
-            </div>
+  <div class="card card-default">
+          <div class="card-header bg-primary">
+            <h5>
+            <i class="fas fa-book-reader"></i>
+            {{$module->name}}
+            </h5>
           </div>
-        </div>
-    </div>
-    </div>
+          <div class="card-body">
 
-
-    <div class="row">
-    @forelse($module->module_detail as $key => $value)
-      <div class="col-md-12">
-        <div class="card module_detail_card">
-          <div class="card-block">
-            <div class="module_detail_title">
-              <h2 class="card-title">{{$value->title}}</h2>
+            <div class="row">
+              
+              <p>  Maintain a diary with your 
+                  health records and can keep it with you at all times.</p>
             </div>
-            <div class="module_detail_description">
+            <!-- /.row -->
+            
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+
+ <div class="row">
+ @forelse($module->module_detail as $key => $value)
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header bg-primary">
+                <h5>
+                <i class="fas fa-book-reader"></i>
+                {{$value->title}}
+                </h5>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
               <p class="card-text">
                 {!!$value->description!!}
               </p>
+              </div>
+              <!-- /.card-body -->
             </div>
+            <!-- /.card -->
           </div>
-        </div>
-    </div>
-    
+          <!-- ./col -->
+  
     @empty
     @endforelse
     </div>
