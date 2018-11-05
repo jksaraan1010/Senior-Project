@@ -106,7 +106,7 @@
                          with font-awesome or any other icon font library -->
                          
                     <li class="nav-item">
-                        <a href="{{ route('UserProfile') }}" class="nav-link">
+                        <a href="{{ route('userProfile.index') }}" class="nav-link">
                             <i class="nav-icon fa fa-heartbeat"></i>
                             <p>
                                 User Profile

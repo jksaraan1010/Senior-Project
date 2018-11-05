@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\DocInfo' => $baseDir . '/app/DocInfo.php',
     'App\\Events' => $baseDir . '/app/Events.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -18,7 +19,9 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\EventsController' => $baseDir . '/app/Http/Controllers/EventsController.php',
     'App\\Http\\Controllers\\HealthAwarenessController' => $baseDir . '/app/Http/Controllers/HealthAwarenessController.php',
+    'App\\Http\\Controllers\\HomeAdminController' => $baseDir . '/app/Http/Controllers/HomeAdminController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\MailController' => $baseDir . '/app/Http/Controllers/MailController.php',
     'App\\Http\\Controllers\\ModuleDetailController' => $baseDir . '/app/Http/Controllers/ModuleDetailController.php',
     'App\\Http\\Controllers\\NotesController' => $baseDir . '/app/Http/Controllers/NotesController.php',
     'App\\Http\\Controllers\\QuestionsController' => $baseDir . '/app/Http/Controllers/QuestionsController.php',
@@ -30,8 +33,8 @@ return array(
     'App\\Http\\Controllers\\TestsController' => $baseDir . '/app/Http/Controllers/TestsController.php',
     'App\\Http\\Controllers\\TimelineController' => $baseDir . '/app/Http/Controllers/TimelineController.php',
     'App\\Http\\Controllers\\TopicsController' => $baseDir . '/app/Http/Controllers/TopicsController.php',
-    'App\\Http\\Controllers\\UserProfileController' => $baseDir . '/app/Http/Controllers/UserProfileController.php',
     'App\\Http\\Controllers\\UsersController' => $baseDir . '/app/Http/Controllers/UsersController.php',
+    'App\\Http\\Controllers\\googleCalendarController' => $baseDir . '/app/Http/Controllers/googleCalendarController.php',
     'App\\Http\\Controllers\\selfCareController' => $baseDir . '/app/Http/Controllers/selfCareController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Admin' => $baseDir . '/app/Http/Middleware/Admin.php',

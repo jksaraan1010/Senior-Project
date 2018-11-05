@@ -491,6 +491,7 @@ class ComposerStaticInit6967a8ed0b928591d7545521972ac975
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\DocInfo' => __DIR__ . '/../..' . '/app/DocInfo.php',
         'App\\Events' => __DIR__ . '/../..' . '/app/Events.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -502,7 +503,9 @@ class ComposerStaticInit6967a8ed0b928591d7545521972ac975
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EventsController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventsController.php',
         'App\\Http\\Controllers\\HealthAwarenessController' => __DIR__ . '/../..' . '/app/Http/Controllers/HealthAwarenessController.php',
+        'App\\Http\\Controllers\\HomeAdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeAdminController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\MailController' => __DIR__ . '/../..' . '/app/Http/Controllers/MailController.php',
         'App\\Http\\Controllers\\ModuleDetailController' => __DIR__ . '/../..' . '/app/Http/Controllers/ModuleDetailController.php',
         'App\\Http\\Controllers\\NotesController' => __DIR__ . '/../..' . '/app/Http/Controllers/NotesController.php',
         'App\\Http\\Controllers\\QuestionsController' => __DIR__ . '/../..' . '/app/Http/Controllers/QuestionsController.php',
@@ -514,8 +517,8 @@ class ComposerStaticInit6967a8ed0b928591d7545521972ac975
         'App\\Http\\Controllers\\TestsController' => __DIR__ . '/../..' . '/app/Http/Controllers/TestsController.php',
         'App\\Http\\Controllers\\TimelineController' => __DIR__ . '/../..' . '/app/Http/Controllers/TimelineController.php',
         'App\\Http\\Controllers\\TopicsController' => __DIR__ . '/../..' . '/app/Http/Controllers/TopicsController.php',
-        'App\\Http\\Controllers\\UserProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserProfileController.php',
         'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
+        'App\\Http\\Controllers\\googleCalendarController' => __DIR__ . '/../..' . '/app/Http/Controllers/googleCalendarController.php',
         'App\\Http\\Controllers\\selfCareController' => __DIR__ . '/../..' . '/app/Http/Controllers/selfCareController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Admin' => __DIR__ . '/../..' . '/app/Http/Middleware/Admin.php',

@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/homeAdmin', 'HomeAdminController@index')->name('homeAdmin');
 Route::get('/Timeline', 'TimelineController@index')->name('Timeline');
-Route::get('/UserProfile', 'UserProfileController@index')->name('UserProfile');
+Route::resource('userProfile', 'UserProfileController');
 Route::get('/selfCare', 'selfCareController@index')->name('selfCare');
 Route::get('/healthAwareness', 'HealthAwarenessController@index')->name('healthAwareness');
 Route::get('/communication', 'communicationController@index')->name('communication');
