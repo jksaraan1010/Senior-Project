@@ -93,6 +93,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('module_detail_destroy', ['uses' => 'ModuleDetailController@massDestroy', 'as' => 'module_detail.mass_destroy']);
     Route::get('module_detail_show/{id}', 'ModuleDetailController@show')->name('module_detail.show');
 
+    //terms
+    Route::resource('terms', 'TermsController');
 
+
+
+
+});
+
+Route::get('terms_show', 'FrontController@Terms_show')->name('terms.show');
+
+
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('view:clear');
+    $exitCode = Artisan::call('config:cache');
+    $exitCode = Artisan::call('cache:clear');
 
 });

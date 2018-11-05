@@ -186,6 +186,12 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('terms.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-comments"></i>
+                            <p>Terms and Condition</p>
+                        </a>
+                    </li>
                     
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -262,6 +268,12 @@
                           @endforelse
                         </ul>
                       </li>
+                      <li class="nav-item">
+                        <a href="{{ route('terms.show') }}" class="nav-link">
+                            <i class="nav-icon fas fa-comments"></i>
+                            <p>Terms and Condition</p>
+                        </a>
+                    </li>
 
                     @endif
                     

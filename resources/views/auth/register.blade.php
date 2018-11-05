@@ -133,13 +133,9 @@
                         </div>
                         <div class="row">
                            <div class="col-8">
-                              <div class="checkbox icheck">
+                              <div class="checkbox">
                                  <label>
-                                    <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
-                                       <input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;" required>
-                                       <ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
-                                    </div>
-                                    I agree to the <a href="">terms</a>
+                                  <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> I agree to the <a href="{{ route('terms.show') }}">terms</a>
                                  </label>
                               </div>
                            </div>
