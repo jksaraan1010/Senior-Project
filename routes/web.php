@@ -30,9 +30,11 @@ Route::get('Email','MailController@index' );
 Route::post('send', 'MailController@send');
 //Route::get('/survey', 'SurveyController@getQuestions');
 //Route::get('survey/{sectionId}', 'SurveyController@getQuestions');
-Route::get('survey', 'SurveyController@index');
-Route::get('survey/questions/{sectionId}', 'SurveyController@getQuestions');
+//Route::get('survey', 'SurveyController@index');
+//Route::get('survey/questions/{sectionId}', 'SurveyController@getQuestions');
 //Route::post('survey/questions/{sectionId}', 'SurveyController@saveAnswers');
+
+
 
 
 Route::resource('events', 'EventsController');

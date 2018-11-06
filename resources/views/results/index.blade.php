@@ -3,7 +3,7 @@
 @section('content')
  <!-- Main content -->
  <section class="content"> 
-   
+ <input type="button" onClick="window.print()" value="Print This Page"/>
    
    <!-- Content Header (Page header) -->
    <div class="content-header">

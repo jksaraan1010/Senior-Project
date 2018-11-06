@@ -8,7 +8,7 @@
 <!-- Main content -->
  <section class="content"> 
    
-   
+ <input type="button" onClick="window.print()" value="Print This Page"/>
    <!-- Content Header (Page header) -->
    <div class="content-header">
         <div class="container-fluid">
@@ -32,9 +32,13 @@
 </head>
 
 
+
 <link rel="stylesheet" href="{{asset('css/tmline.css')}}">
 
+
+
 <button type="submit"> <a href="/Mail">Email this page</a></button>
+
 <br>
 <div class="container">
 
@@ -381,4 +385,6 @@
 </div>
 </div>
 </div>    
+
+
 @endsection
