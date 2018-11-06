@@ -28,7 +28,7 @@
 <div class="content-header">
   <div class="container-fluid">
        <table class="table table-bordered table-striped {{ count($results) > 0 ? 'datatable' : '' }}">
-                <thead>
+                <thead class="bg-primary">
                     <tr>
                     @if(Auth::user()->isAdmin())
                         <th>@lang('general.results.fields.user')</th>
