@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div class="content-header">
 	<div class="container-fluid">
 		<h3 class="page-title">{{$module->name}} @lang('general.module_detail.title')</h3>

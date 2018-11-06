@@ -17,7 +17,9 @@
                 <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
                 <li class="breadcrumb-item active"> {{$module->name}} Module</li>
               </ol>
+              <input type="button" onClick="window.print()" value="Print This Page"/>
             </div><!-- /.col -->
+            
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>

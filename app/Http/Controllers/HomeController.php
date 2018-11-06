@@ -11,6 +11,7 @@ use App\Question;
 use App\Result;
 use App\Test;
 use App\User;
+use App\TestAnswer;
 
 class HomeController extends Controller
 {
@@ -31,6 +32,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $results = TestAnswer::where('user_id', auth()->id())->orderBy('id', 'desc')->take(12)->get();
+
         $questions = Question::count();
         $users = User::where('role_id',2)->count();
         $quizzes = Test::count();
@@ -71,7 +74,7 @@ class HomeController extends Controller
         //$Section2 = DB::select('SELECT COUNT(id) as result, (created_at) as dateTaken FROM `test_answers`WHERE question_id in (5,6,7,8) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at) ');
         //$Section3 = DB::select('SELECT COUNT(id) as result, (created_at) as dateTaken FROM `test_answers`WHERE question_id in (9,10,11,12) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at) ');
 
-        return \View::make('home')->with('tableSection12', $tableSection12)->with('tableForScores', $tableForScores)->with('tableSection1', $tableSection1)->with('tableSection2', $tableSection2)->with('tableSection3', $tableSection3)->with('tableDate', $tableDate)->with('graphJsonSection1', $graphJsonSection1)->with('graphDateJson', $graphDateJson)->with('graphJsonSection2', $graphJsonSection2)->with('graphJsonSection3', $graphJsonSection3)->with('graphJsonTotal', $graphJsonTotal);
+        return \View::make('home')->with('results', $results)->with('tableSection12', $tableSection12)->with('tableForScores', $tableForScores)->with('tableSection1', $tableSection1)->with('tableSection2', $tableSection2)->with('tableSection3', $tableSection3)->with('tableDate', $tableDate)->with('graphJsonSection1', $graphJsonSection1)->with('graphDateJson', $graphDateJson)->with('graphJsonSection2', $graphJsonSection2)->with('graphJsonSection3', $graphJsonSection3)->with('graphJsonTotal', $graphJsonTotal);
 
         //return view('home');
     }

@@ -10,7 +10,7 @@
  <!-- Main content -->
  <section class="content"> 
    
-   
+ 
    <!-- Content Header (Page header) -->
    <div class="content-header">
         <div class="container-fluid">
@@ -34,6 +34,7 @@
 </head>
 
 <body>
+<input type="button" onClick="window.print()" value="Print This Page"/>
 <button type="submit"> <a href="/Mail">Email this page</a></button>
 
 <div class="container">

@@ -6,6 +6,8 @@
 
 @section('content')
 
+
+
 {{-- BEGIN: Display doctor information --}}
 <h1> Doctor Information</h1>
     @if(count($docinfo) > 0)
