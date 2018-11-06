@@ -84,9 +84,11 @@
         <div class="image">
             <img src='{{ asset("/403.svg")}}'  class="img-circle elevation-2" alt="User Image">
         </div>
+
       <div class="info">    
           <a href="#" class=" d-block"> {{ Auth::user()->name }}</a>
         </div>
+
       </div>
 
 
@@ -104,8 +106,13 @@
                         </a>
                     </li>        
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a href="{{ route('UserProfile') }}" class="nav-link">
                             <i class="nav-icon fas fa-user-circle"></i>
+=======
+                        <a href="{{ route('userProfile.index') }}" class="nav-link">
+                            <i class="nav-icon fa fa-heartbeat"></i>
+>>>>>>> c6487b21b1c62921f55360832caec450b166f72e
                             <p>
                                 User Profile
                             </p>

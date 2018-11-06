@@ -3,41 +3,44 @@
 @section('content')
 <div class="content-header">
 	<div class="container-fluid">
-		<h3 class="page-title">{{$module->name}} @lang('general.module_detail.title')</h3>
+		<h3 class="page-title">@lang('general.terms.title')</h3>
 
 		<p>
-			<a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>
-			<a href="{{ route('module_detail.create',['id'=>$module->id]) }}" class="btn btn-success">@lang('general.add_new')</a>
+			@if(count($terms) > 0)
+			@else
+			<a href="{{ route('terms.create') }}" class="btn btn-success">@lang('general.add_new')</a>
+			@endif
+			
 		</p>
 
 		<div class="panel panel-default">
-			
+		
 
 			<div class="panel-body">
-				<table class="table table-bordered table-striped {{ count($module->module_detail) > 0 ? 'datatable' : '' }} dt-select">
+				<table class="table table-bordered table-striped {{ count($terms) > 0 ? 'datatable' : '' }} dt-select">
 					<thead>
 						<tr>
 							
-							<th>@lang('general.module_detail.fields.title')</th>
-							<th>@lang('general.module_detail.fields.description')</th>
+					
+							<th>@lang('general.terms.fields.description')</th>
 							<th>Options</th>
 						</tr>
+						
 					</thead>
 					
 					<tbody>
-						@if (count($module->module_detail) > 0)
-						@foreach ($module->module_detail as $value)
+						@if (count($terms) > 0)
+						@foreach ($terms as $value)
 						<tr data-entry-id="{{ $value->id }}">
-							
-							<td>{{ $value->title }}</td>
+						
 							<td>{!! $value->description !!}</td>
 							<td>
-								<a href="{{ route('module_detail.edit',['id'=> $value->id]) }}" class="btn btn-xs btn-info">@lang('general.edit')</a>
+								<a href="{{ route('terms.edit',['id'=> $value->id]) }}" class="btn btn-xs btn-info">@lang('general.edit')</a>
 								{!! Form::open(array(
 									'style' => 'display: inline-block;',
 									'method' => 'DELETE',
 									'onsubmit' => "return confirm('".trans("general.are_you_sure")."');",
-									'route' => ['module_detail.destroy', $value->id])) !!}
+									'route' => ['terms.destroy', $value->id])) !!}
 									{!! Form::submit(trans('general.delete'), array('class' => 'btn btn-xs btn-danger')) !!}
 									{!! Form::close() !!}
 								</td>
@@ -50,6 +53,7 @@
 							@endif
 						</tbody>
 					</table>
+					<a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>
 				</div>
 			</div>
 		</div>
@@ -58,9 +62,7 @@
 
 	@section('javascript')
 	@parent
-	<script>
-		window.route_mass_crud_entries_destroy = '{{ route('module_detail.mass_destroy') }}';
-	</script>
+	
 	<script src="{{ url('adminlte/js') }}/timepicker.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.js"></script>
 	<script src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>

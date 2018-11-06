@@ -113,8 +113,13 @@
                         </a>
                     </li>    
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a href="{{ route('UserProfile') }}" class="nav-link">
                             <i class="nav-icon fas fa-user-circle"></i>
+=======
+                        <a href="{{ route('userProfile.index') }}" class="nav-link">
+                            <i class="nav-icon fa fa-heartbeat"></i>
+>>>>>>> c6487b21b1c62921f55360832caec450b166f72e
                             <p>
                                 User Profile
                             </p>
@@ -193,6 +198,12 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('terms.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-comments"></i>
+                            <p>Terms and Condition</p>
+                        </a>
+                    </li>
                     
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -269,6 +280,12 @@
                           @endforelse
                         </ul>
                       </li>
+                      <li class="nav-item">
+                        <a href="{{ route('terms.show') }}" class="nav-link">
+                            <i class="nav-icon fas fa-comments"></i>
+                            <p>Terms and Condition</p>
+                        </a>
+                    </li>
 
                     @endif
                     

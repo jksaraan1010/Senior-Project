@@ -262,8 +262,10 @@
       </div>
     </div>
 
+
 <hr border-top: 1px solid red;>
 <h1 align="center" >Ages 17-19</h1>
+
 <div class="container">
 <div class="timeline">
 

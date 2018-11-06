@@ -505,6 +505,7 @@ class ComposerStaticInit6967a8ed0b928591d7545521972ac975
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\DocInfo' => __DIR__ . '/../..' . '/app/DocInfo.php',
         'App\\Events' => __DIR__ . '/../..' . '/app/Events.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -530,7 +531,6 @@ class ComposerStaticInit6967a8ed0b928591d7545521972ac975
         'App\\Http\\Controllers\\TestsController' => __DIR__ . '/../..' . '/app/Http/Controllers/TestsController.php',
         'App\\Http\\Controllers\\TimelineController' => __DIR__ . '/../..' . '/app/Http/Controllers/TimelineController.php',
         'App\\Http\\Controllers\\TopicsController' => __DIR__ . '/../..' . '/app/Http/Controllers/TopicsController.php',
-        'App\\Http\\Controllers\\UserProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserProfileController.php',
         'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
         'App\\Http\\Controllers\\googleCalendarController' => __DIR__ . '/../..' . '/app/Http/Controllers/googleCalendarController.php',
         'App\\Http\\Controllers\\selfCareController' => __DIR__ . '/../..' . '/app/Http/Controllers/selfCareController.php',

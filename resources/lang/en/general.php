@@ -94,6 +94,14 @@ return [
 			'description' => 'Description',
 		],
 	],
-
+	
+	'terms' => 
+	[
+		'title' => 'Terms',
+		'fields' => 
+		[
+			'description' => 'Description',
+		],
+	],
 
 ];
