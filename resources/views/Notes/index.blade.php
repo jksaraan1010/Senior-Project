@@ -122,7 +122,7 @@
                      <form action="{{ route('notes.destroy', ['notes'=>$storedNotes->id]) }}" method='post'>
                                     {{ csrf_field() }}
                          <input type="hidden" name='_method' value='Delete'>
-                         <input type="submit" class='btn btn-danger' value='Delete'>
+                         <input type="submit" class='btn btn-danger' value='Delete'> 
                     </form>
                      </td>
                     </tr>

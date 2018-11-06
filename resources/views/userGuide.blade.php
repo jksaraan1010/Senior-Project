@@ -161,7 +161,22 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                
+                <p>  The transition survey is a simple and easy to understand survey which focuses on
+                  three main areas in your transition: 
+                  <ul>
+                   <li> Self-Care.</li>
+                   <li> Health Awareness.</li>
+                   <li> Communication. </li>
+                 </ul>
+                </p>
+                <p> The Survey consists of 12 questions, and should be taken once every 3-6 months.
+                </p>
+                <p> Once the Survey has been taken, and submitted, you will be taken to a detailed guide 
+                 of your survey results. The guide will contain the total survey score, as well as 
+                 as a breakdown of the score in each of the sections of the survey. 
+                 A link to the appropriate module will be available to review for each 
+                 concern area.
+             </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -181,7 +196,11 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-               
+              <p> You've take the survey, now you would like to review your current and 
+                  past results, what should you do? The view past results page gives you an opportunity to view
+                the date taken for a past survey as well as the total score for that survey. If you would like to 
+              view  more detailed results of the survey, which include a breakdown of the sections, as well as the 
+            questions click on 'view'.</p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -198,7 +217,18 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-               
+              <p> If you've take at least one survey, and want to quickly view the results of current 
+                and past results in an easy to read table format, the survey results table page contains 
+                the following areas:
+                <ul>
+                   <li>Survey Date Taken.</li>
+                   <li> Self-Care Score.</li>
+                   <li> Health Awareness Score.</li>
+                   <li> Communication Score.</li>
+                   <li> Total Score.</li>
+                 </ul>
+
+              </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -219,7 +249,17 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                
+              <p> If you've take at least one survey, and want to quickly view the results of current 
+                and past results in a graph format, the survey results graph page will graph your results 
+                over time in the following areas:
+                <ul>
+                   <li>Total Score.</li>
+                   <li> Self-Care Score.</li>
+                   <li> Health Awareness Score.</li>
+                   <li> Communication Score.</li>
+                    </ul>
+
+              </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -236,7 +276,14 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-               
+               <p>The main purpose of this application is to guide you in your transition from pediatric care to 
+                 adult care. The Self-Care Module consists of guiding lessons in the following three areas:
+                 <ul>
+                   <li>Taking Care of Yourself.</li>
+                   <li> Taking Medications.</li>
+                   <li> Transportation.</li>
+                 </ul>
+               </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -256,14 +303,20 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-               
+              <p>The main purpose of this application is to guide you in your transition from pediatric care to 
+                 adult care. The Communication Module consists of guiding lessons in the following three areas:
+                 <ul>
+                   <li>General Communication.</li>
+                   <li> Transition.</li>
+                 </ul>
+               </p>
               </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
           </div>
           <!-- ./col -->
-  
+ 
           <div class="col-md-6">
             <div class="card h-100">
               <div class="card-header bg-primary">
@@ -274,7 +327,15 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                
+              <p>The main purpose of this application is to guide you in your transition from pediatric care to 
+                 adult care. The Health Awareness Module consists of guiding lessons in the following three areas:
+                 <ul>
+                   <li>Medical History.</li>
+                   <li> Medications.</li>
+                   <li> Insurance. </li>
+                   <li> What to do when I feel sick? </li>
+                 </ul>
+               </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -294,7 +355,25 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-               
+               <p>Milestones help keep us on track! The timeline serves as a milestone guiding 
+                 tracker in the following three areas:
+                 <ul>
+                   <li> Self-Care.</li>
+                   <li> Health Awareness.</li>
+                   <li> Communication. </li>
+                 </ul>
+                </p>
+                <p> The timeline milestones categorize the transition to adult care in three age 
+                  categories: 
+                  <ul>
+                   <li> Ages 13-15</li>
+                   <li> Ages 15-17</li>
+                   <li> Ages 17-19 </li>
+                 </ul>
+              </p>
+              <p>As you take the survey, categoties that you've passed will be checked off, while
+                categoties that need to be worked on will remain unchecked. The timeline will be updated
+              based on the latest survey taken. </p>
               </div>
               <!-- /.card-body -->
             </div>
