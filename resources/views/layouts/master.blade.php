@@ -104,7 +104,18 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
-                 <li class="nav-item">
+                         @if(Auth::user()->isAdmin())
+                         <li class="nav-item">
+                        <a href="{{ route('adminGuide') }}" class="nav-link">
+                            <i class="nav-icon fas fa-info-circle"></i>
+                            <p>
+                                Admin Guide
+                            </p>
+                        </a>
+                    </li>  
+                    @endif
+                 
+                         <li class="nav-item">
                         <a href="{{ route('userGuide') }}" class="nav-link">
                             <i class="nav-icon fas fa-info-circle"></i>
                             <p>
@@ -121,7 +132,7 @@
                         </a>
                     </li>
                     @if(!Auth::user()->isAdmin())
-                   
+                 
                     <li class="nav-item">
                         <a href="{{ route('events.index') }}" class="nav-link">
                             <i class="nav-icon fa fa-calendar-alt">  </i>

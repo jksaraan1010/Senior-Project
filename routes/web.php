@@ -48,6 +48,7 @@ Route::get('/delete', 'EventsController@show');
 //});
 
 Route::get('/userGuide', 'userGuideController@index')->name('userGuide');
+Route::get('/adminGuide', 'adminGuideController@index')->name('adminGuide');
 
 Route::resource('notes', 'NotesController');
 

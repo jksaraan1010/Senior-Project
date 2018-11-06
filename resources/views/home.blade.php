@@ -7,10 +7,74 @@
         <div class="container-fluid">
             <br>
         <div class="callout callout">
-                  <p> Welcome {{ Auth::user()->name }}!</p>
+                  <h5 class="text-primary"> Welcome {{ Auth::user()->name }}!</h5>
                 </div>
          
-       
+       <!-- Small boxes (Stat box) -->
+       <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h4>User </h4>
+
+                <h4>Guide</h4>
+              </div>
+              <div class="icon">
+              <i class="fas fa-info-circle"></i>
+              </div>
+              <a href="{{ route('userGuide') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+              <h4>Take  </h4>
+
+              <h4>Survey</h4>
+              </div>
+              <div class="icon">
+              <i class="fas fa-pen"></i>
+              </div>
+              <a href="{{url('tests')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
+              <h4>Some</h4>
+
+              <h4>page</h4>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+              <h4>Reminders </h4>
+
+              <h4>Calendar</h4>
+              </div>
+              <div class="icon">
+              <i class="fas fa-calendar-alt"></i>
+              </div>
+              <a href="{{ route('events.index') }}"class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+
         <!-- Main row -->
         <div class="row">
           <!-- Left col -->
