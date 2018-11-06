@@ -43,9 +43,11 @@ Route::get('/add', 'EventsController@display');
 Route::get('/edit', 'EventsController@show');
 Route::get('/delete', 'EventsController@show');
 
-Route::get("/calendar", function(){
-return view('Calendar.index');
-});
+//Route::get("/calendar", function(){
+//return view('Calendar.index');
+//});
+
+Route::get('/userGuide', 'userGuideController@index')->name('userGuide');
 
 Route::resource('notes', 'NotesController');
 
@@ -95,6 +97,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('module_detail_destroy', ['uses' => 'ModuleDetailController@massDestroy', 'as' => 'module_detail.mass_destroy']);
     Route::get('module_detail_show/{id}', 'ModuleDetailController@show')->name('module_detail.show');
 
+    //terms
+    Route::resource('terms', 'TermsController');
 
+
+
+
+});
+
+Route::get('terms_show', 'FrontController@Terms_show')->name('terms.show');
+
+
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('view:clear');
+    $exitCode = Artisan::call('config:cache');
+    $exitCode = Artisan::call('cache:clear');
 
 });

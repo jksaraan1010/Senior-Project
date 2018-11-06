@@ -104,10 +104,17 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
-                         
+                 <li class="nav-item">
+                        <a href="{{ route('userGuide') }}" class="nav-link">
+                            <i class="nav-icon fas fa-info-circle"></i>
+                            <p>
+                                User Guide
+                            </p>
+                        </a>
+                    </li>    
                     <li class="nav-item">
                         <a href="{{ route('userProfile.index') }}" class="nav-link">
-                            <i class="nav-icon fa fa-heartbeat"></i>
+                            <i class="nav-icon fas fa-user-circle"></i>
                             <p>
                                 User Profile
                             </p>
@@ -186,6 +193,12 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('terms.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-comments"></i>
+                            <p>Terms and Condition</p>
+                        </a>
+                    </li>
                     
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -262,6 +275,12 @@
                           @endforelse
                         </ul>
                       </li>
+                      <li class="nav-item">
+                        <a href="{{ route('terms.show') }}" class="nav-link">
+                            <i class="nav-icon fas fa-comments"></i>
+                            <p>Terms and Condition</p>
+                        </a>
+                    </li>
 
                     @endif
                     

@@ -6,6 +6,7 @@
        <h3 class="page-title">@lang('general.questions.title')</h3>
 
     <p>
+            <a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>
         <a href="{{ route('questions.create') }}" class="btn btn-success">@lang('general.add_new')</a>
     </p>
 
