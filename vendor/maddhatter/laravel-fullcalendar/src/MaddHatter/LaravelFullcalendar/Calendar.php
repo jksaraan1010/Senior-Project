@@ -28,6 +28,7 @@ class Calendar
      * @var array
      */
     protected $defaultOptions = [
+        'themeSystem' => 'bootstrap4',
         'header' => [
             'left' => 'prev,next today',
             'center' => 'title',

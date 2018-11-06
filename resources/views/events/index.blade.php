@@ -95,10 +95,17 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
-                         
+                         <li class="nav-item">
+                        <a href="{{ route('userGuide') }}" class="nav-link">
+                            <i class="nav-icon fas fa-info-circle"></i>
+                            <p>
+                                User Guide
+                            </p>
+                        </a>
+                    </li>        
                     <li class="nav-item">
                         <a href="{{ route('UserProfile') }}" class="nav-link">
-                            <i class="nav-icon fa fa-heartbeat"></i>
+                            <i class="nav-icon fas fa-user-circle"></i>
                             <p>
                                 User Profile
                             </p>
@@ -190,7 +197,7 @@
                           @forelse($module as $key => $value)
                             <li class="nav-item">
                               <a href="{{ route('module_detail.index',['id' => $value->id]) }}" class="nav-link">
-                              <i class="nav-icon fas fa-hand-holding-heart"></i>
+                              <i class="nav-icon fas fa-book-reader"></i>
                                 <p>{{$value->name}}</p>
                               </a>
                             </li>
@@ -245,7 +252,7 @@
                           @forelse($module as $key => $value)
                             <li class="nav-item">
                               <a href="{{ route('module_detail.show',['id' => $value->id]) }}" class="nav-link">
-                                <i class="nav-icon fas fa-hand-holding-heart"></i>
+                              <i class="nav-icon fas fa-book-reader"></i>
                                 <p>{{$value->name}}</p>
                               </a>
                             </li>
@@ -357,10 +364,9 @@
   <div class="container-fluid">
        <div class="row">
          <div class="col-md-3">
-
            <div class="card">
-             <div class="card-header">
-               <h3 class="card-title text-center">Event Options</h3>
+             <div class="card-header bg-primary">
+               <h5 class="text-center"> <i class="fas fa-calendar-alt"></i> Event Options</h5>
              </div>
              <div class="card-body">
                    
@@ -374,23 +380,6 @@
                  </div>
                </div>
            </div>
-
-           <div class="card">
-              <div class="card-header">
-                <h3 class="card-title text-center">Draggable Events</h3>
-              </div>
-              <div class="card-body">
-                <!-- the events -->
-                <div id="external-events">
-                  <div class="external-event bg-success">Take Survey</div>
-                  <div class="external-event bg-warning">Specialist Appointment</div>
-                  <div class="external-event bg-info">Primary Doctor Appointment</div>
-                  <div class="external-event bg-primary">Take Medication</div>
-                  <div class="external-event bg-danger">Review Modules</div>
-                </div>
-              </div>
-              <!-- /.card-body -->
-            </div>
 
          </div>
            <!-- /. box -->

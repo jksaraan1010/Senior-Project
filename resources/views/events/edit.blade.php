@@ -65,8 +65,8 @@
       <div class="row">
           <div class="col-12">
             <div class="card card-default">
-              <div class="card-header">
-                <h3 class="card-title">List of Events</h3>
+              <div class="card-header bg-primary">
+                <h5> <i class="fas fa-calendar"></i> List of Events</h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">

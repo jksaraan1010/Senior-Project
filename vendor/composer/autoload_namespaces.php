@@ -14,5 +14,7 @@ return array(
     'JakubOnderka\\PhpConsoleHighlighter' => array($vendorDir . '/jakub-onderka/php-console-highlighter/src'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
+    'ComponentInstaller' => array($vendorDir . '/robloach/component-installer/src'),
     'Barryvdh' => array($vendorDir . '/barryvdh/reflection-docblock/src'),
+    'Assetic' => array($vendorDir . '/kriswallsmith/assetic/src'),
 );

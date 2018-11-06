@@ -69,8 +69,8 @@
       <div class="container-fluid">
 
 <div class="card card-default">
-          <div class="card-header">
-            <h3 class="card-title">Add A New Note</h3>
+          <div class="card-header bg-primary">
+            <h5><i class="fas fa-marker"></i> Add A New Note</h5>
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
             </div>
@@ -103,8 +103,8 @@
     <div class="row">
           <div class="col-12">
             <div class="card card-default">
-              <div class="card-header">
-                <h3 class="card-title">List of Notes</h3>
+              <div class="card-header bg-primary">
+                <h5><i class="fas fa-clipboard-list"></i> List of Notes</h5>
              </div>
               <!-- /.card-header -->
          <div class="card-body table-responsive p-0">

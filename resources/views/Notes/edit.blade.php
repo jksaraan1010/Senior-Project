@@ -65,8 +65,8 @@
       <div class="container-fluid">
 
 <div class="card card-default">
-          <div class="card-header">
-            <h3 class="card-title">Update Note</h3>
+          <div class="card-header bg-primary">
+            <h5><i class="fas fa-edit"></i> Update Note</h5>
           </div>
           <!-- /.card-header -->
           <div class="card-body">

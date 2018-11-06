@@ -10,35 +10,6 @@
                   <p> Welcome {{ Auth::user()->name }}!</p>
                 </div>
          
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header bg-primary">
-                <h5> <i class="fas fa-book-reader"></i>  How To Use My Transition Explorer</h5>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="collapse">
-                    <i class="fa fa-minus"></i>
-                  </button>
-                
-                  <button type="button" class="btn btn-tool" data-widget="remove">
-                    <i class="fa fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <p>Steps </p>
-                  <!-- /.col -->
-              </div>
-              <!-- ./card-body -->
-              
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
        
         <!-- Main row -->
         <div class="row">
