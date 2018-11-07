@@ -145,12 +145,93 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
-                Place timeline here
+              <!-- begin timeline-->
+              <link rel="stylesheet" href="{{asset('css/tmlinehome.css')}}">
+              <div class="container">
+
+  <h1 align="center" >Ages 13-15</h1>
+      <div class="timeline">
+        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
+          <div class="col-10  order-3 order-md-1 timeline-content">
+            <h3 class=" text-light">Self-Care</h3>
+            <label class="container">Start taking medication by yourself without reminders 
+            
+              
+              
+            </label> 
+            <label class="container">Learn to be comfortable taking care of yourself
+            
+            
+              
+             
+            </label>
+        </div>
+          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
+            <time></time>
+          </div>
+        </div>
+
+        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
+          <div class="col-10 order-3 order-md-1 timeline-content">
+            <h3 class=" text-light">Health Awareness</h3>
+            <label class="container">Learn about your medical conditions and medications 
+            
+            
+              
+              
+              
+            </label>
+            <label class="container">Understand what complications may come from your medical conditions
+            
+            
+              
+              
+            </label>
+        </div>
+          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
+            <time></time>
+          </div>
+        </div>
+
+        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
+          <div class="col-10  order-3 order-md-1 timeline-content">
+            <h3 class=" text-light">Communication</h3>
+            <label class="container">Understand that you will see an adult doctor in the next few years 
+            
+            
+              
+              
+             
+            </label>
+            <label class="container">Start to speak with the doctor by yourself without help from family or friends
+           
+            
+              
+              
+              
+            </label>
+        </div>
+
+          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
+            <time></time>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-center">
+    <a href="{{ route('Timeline') }}">View Full Timeline</a>
+    </div>
+</div>
+
+
+              <!-- end timeline-->
+              
               </div>
               <!-- /.card-body -->
-              <div class="card-footer text-center">
-                <a href="#">View Full Timeline</a>
-              </div>
+              
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->
