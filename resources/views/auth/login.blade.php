@@ -76,7 +76,7 @@
                         {{Session::get('error')}}
                      </div>
                      @endif
-                     <form action="{{url('login')}}" method="post">
+                     <form action="{{route('login')}}" method="post">
                         @csrf
                         <div class="input-group mb-3">
                            <input type="email" class="form-control" name="email" placeholder="Email">
@@ -117,10 +117,10 @@
                         </div>
                      </form>
                      <p class="mb-1">
-                        <a href="{{ route('auth.password.reset') }}">I forgot my password</a>
+                        <a href="{{ route('password.request') }}">I forgot my password</a>
                      </p>
                      <p class="mb-0">
-                        <a href="{{ route('auth.register') }}" class="text-center">Register a new membership</a>
+                        <a href="{{ route('register') }}" class="text-center">Register a new membership</a>
                      </p>
                   </div>
                   <!-- /.login-card-body -->
