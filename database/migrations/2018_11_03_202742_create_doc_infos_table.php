@@ -25,7 +25,7 @@ class CreateDocInfosTable extends Migration
             $table->string('city')->nullable()->change();
             $table->string('state')->nullable()->change();
             $table->string('zip')->nullable()->change();
-            $table->timestamps()->nullable()->change();
+            $table->timestamps();
         });
     }
 
