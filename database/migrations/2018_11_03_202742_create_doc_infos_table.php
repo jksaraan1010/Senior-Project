@@ -17,14 +17,14 @@ class CreateDocInfosTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->nullable();
             $table->string('name');
-            $table->string('email')->nullable()->change();
-            $table->string('phone')->nullable()->change();
-            $table->string('specialty')->nullable()->change();
-            $table->string('address')->nullable()->change();
-            $table->string('address2')->nullable()->change();
-            $table->string('city')->nullable()->change();
-            $table->string('state')->nullable()->change();
-            $table->string('zip')->nullable()->change();
+            $table->string('email');
+            $table->string('phone');
+            $table->string('specialty');
+            $table->string('address');
+            $table->string('address2');
+            $table->string('city');
+            $table->string('state');
+            $table->string('zip');
             $table->timestamps();
         });
     }

@@ -6,7 +6,9 @@
 
 @section('content')
 
-
+<h1> Name: {{Auth::user()->name}} </h1>
+<h1> Email: {{Auth::user()->email}} </h1>
+<br>
 
 {{-- BEGIN: Display doctor information --}}
 <h1> Doctor Information</h1>

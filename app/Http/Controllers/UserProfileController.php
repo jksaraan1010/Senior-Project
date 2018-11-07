@@ -58,12 +58,7 @@ class UserProfileController extends Controller
 
         $docinfo->name = $request->name;
         
-        if ( !empty ( $request->specialty ) ) {
-            $docinfo->specialty = $request->specialty;
-        }
-        else{
-            $docinfo->specialty = "";
-        }
+       
 
         if ( !empty ( $request->email ) ) {
             $docinfo->email = $request->email;
@@ -113,7 +108,12 @@ class UserProfileController extends Controller
         else{
             $docinfo->zip = "";
         }
-        
+        if ( !empty ( $request->specialty ) ) {
+            $docinfo->specialty = $request->specialty;
+        }
+        else{
+            $docinfo->specialty = "";
+        }
        
         
         

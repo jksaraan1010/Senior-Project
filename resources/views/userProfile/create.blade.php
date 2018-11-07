@@ -21,7 +21,10 @@
     {{ Form::text('phone', null, array('class' => 'form-control')) }}
 
     {{Form::label('specialty', 'Specialty') }}
-    {{ Form::text('specialty', null, array('class' => 'form-control')) }}
+    {{Form::select('specialty', [
+    'L' => 'Large', 
+    'S' => 'Small',
+    ], 'S')}}
 
     {{Form::label('address', 'Address') }}
     {{ Form::text('address', null, array('class' => 'form-control')) }}
