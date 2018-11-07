@@ -8,6 +8,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Role ;
 use Carbon\Carbon;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
+
 class RegisterController extends Controller
 {
     /*
@@ -69,12 +72,16 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         //$dates = new Carbon($data['dob']);
-        return User::create([
+         $user = User::create([
             'name'     => $data['name'],
             'email'    => $data['email'],
             'password' => bcrypt($data['password']),
             //'dob' => $dates->format('Y-m-d') ,
             'role_id'=> $data['role']
             ]);
+
+            Mail::to($data['email'])->send(new WelcomeMail($user));
+
+            return $user;
     }
 }

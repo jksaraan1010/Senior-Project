@@ -56,7 +56,7 @@
                                     <input
                                         type="radio"
                                         name="answers[{{ $question->id }}]"
-                                        value="{{ $option->id }}">
+                                        value="{{ $option->id }}"required>
 
                                           {{ $option->option }}
                                 </label>
