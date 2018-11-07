@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Mail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Note;
 class NotesController extends Controller
 {
@@ -15,8 +16,11 @@ class NotesController extends Controller
    
      public function index()
     {
-        $note = Note::where('user_id', auth()->id());
-        $note = Note::orderBy('id', 'desc')->get();
+        $id = Auth::id();
+        //dd($id);
+        //$userId
+        $note = Note:: select('name')-> where('user_id', auth()->id())->get();
+      
 
         return view('notes.index') ->with('storedNotes', $note);
     }
@@ -43,6 +47,7 @@ class NotesController extends Controller
             'newNoteName'=>'required|min:3|max:255',
         ]);
         $note = new Note;
+        $note->user_id = Auth::user()->id;
         $note->name = $request->newNoteName;
         $note->save();
         return redirect()->route('notes.index');

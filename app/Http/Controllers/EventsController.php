@@ -6,7 +6,7 @@ use App\Events;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Validator;
 use Calendar;
 
@@ -20,7 +20,12 @@ class EventsController extends Controller
      */
     public function index()
     { 
-        $events = Events::get();
+        $id = Auth::id();
+        //dd($id);
+        //$userId
+        $events = Events:: select('event_name')-> where('user_id', auth()->id())->get();
+      
+       // $events = Events::get();
         $event_list = [];
         foreach ($events as $key => $event) {
             $event_list[] = Calendar::event(
@@ -64,6 +69,7 @@ class EventsController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
+            
             'event_name' => 'required|min:3|max:255',
             'start_date' => 'required',
             'end_date' => 'required'
@@ -75,7 +81,7 @@ class EventsController extends Controller
         }
  
         $event = new Events;
-
+        $event->user_id = Auth::user()->id;
         $event->event_name = $request['event_name'];
         $event->start_date = $request['start_date'];
         $event->end_date = $request['end_date'];

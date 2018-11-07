@@ -286,13 +286,7 @@
                           @endforelse
                         </ul>
                       </li>
-                      <li class="nav-item">
-                        <a href="{{ route('terms.show') }}" class="nav-link">
-                            <i class="nav-icon fas fa-comments"></i>
-                            <p>Terms and Condition</p>
-                        </a>
-                    </li>
-
+                     
                     @endif
                     
                  
@@ -342,8 +336,8 @@
 </div>
 <!-- ./wrapper -->
 <footer class="main-footer">
-    <strong>Copyright &copy; 2018-2019 <a href="#"> My Transition Explorer </a>.</strong>
-    All rights reserved.
+    <strong>Copyright &copy; 2018-2019 <a href="transitionexplorer.com"> My Transition Explorer </a>.
+    All rights reserved. <a href="{{ route('terms.show') }}" target="_blank"> Terms and Conditions </a>.</strong>
 </footer>
 
 <!-- REQUIRED SCRIPTS -->

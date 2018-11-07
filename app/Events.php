@@ -10,6 +10,11 @@ class Events extends Model
     protected $table = 'events';
     protected $fillable = ['event_name', 'start_date', 'end_date'];
 
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
     /**
      * Is it an all day event?
      *
