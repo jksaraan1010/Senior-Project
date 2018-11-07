@@ -6,6 +6,8 @@
 
 @section('content')
 
+
+
 {{ Form::model($docinfo, array('route' => array('userProfile.update', $docinfo->id), 'method' => 'PUT')) }}
 
     {{Form::label('name', 'Name') }}

@@ -28,8 +28,8 @@ class UserProfileController extends Controller
      */
     public function create()
     {
-
-        return view('userProfile.create');
+        $docinfo = DocInfo::where('user_id', auth()->id())->get();
+        return view('userProfile.create')->with('docinfo', $docinfo);
     }
 
     /**
@@ -46,7 +46,7 @@ class UserProfileController extends Controller
         $this->validate($request, array(
             'name' => 'required|max:255',
             'email' => 'email|max:255',
-            'zip' => 'numeric'
+            
         ));
 
         
@@ -55,15 +55,73 @@ class UserProfileController extends Controller
         $docinfo = new DocInfo;
 
         $docinfo->user_id = Auth::user()->id;
+
         $docinfo->name = $request->name;
-        $docinfo->email = $request->email;
-        $docinfo->phone = $request->phone;
-        $docinfo->specialty = $request->specialty;
-        $docinfo->address = $request->address;
-        $docinfo->address2 = $request->address2;
-        $docinfo->city = $request->city;
-        $docinfo->state = $request->state;
-        $docinfo->zip = $request->zip;
+        
+        if ( !empty ( $request->specialty ) ) {
+            $docinfo->specialty = $request->specialty;
+        }
+        else{
+            $docinfo->specialty = "";
+        }
+
+        if ( !empty ( $request->email ) ) {
+            $docinfo->email = $request->email;
+        }
+        else{
+            $docinfo->email = "";
+        }
+        
+        if ( !empty ( $request->phone ) ) {
+            $docinfo->phone = $request->phone;
+        }
+        else{
+            $docinfo->phone = "";
+        }
+
+        if ( !empty ( $request->address ) ) {
+            $docinfo->address = $request->address;
+        }
+        else{
+            $docinfo->address = "";
+        }
+
+        if ( !empty ( $request->address2 ) ) {
+            $docinfo->address2 = $request->address2;
+        }
+        else{
+            $docinfo->address2 = "";
+        }
+
+        if ( !empty ( $request->city ) ) {
+            $docinfo->city = $request->city;
+        }
+        else{
+            $docinfo->city = "";
+        }
+
+        if ( !empty ( $request->state ) ) {
+            $docinfo->state = $request->state;
+        }
+        else{
+            $docinfo->state = "";
+        }
+
+        if ( !empty ( $request->zip ) ) {
+            $docinfo->zip = $request->zip;
+        }
+        else{
+            $docinfo->zip = "";
+        }
+        
+       
+        
+        
+        
+        
+        
+        
+        
         $docinfo->save();
 
         //redirect
@@ -90,6 +148,7 @@ class UserProfileController extends Controller
     public function edit($id)
     {
         $docinfo = DocInfo::find($id);
+        
 
         return view('userProfile.edit')->with('docinfo', $docinfo);
     }
@@ -107,7 +166,7 @@ class UserProfileController extends Controller
         $this->validate($request, array(
             'name' => 'required|max:255',
             'email' => 'email|max:255',
-            'zip' => 'numeric'
+            
         ));
 
         
@@ -117,14 +176,64 @@ class UserProfileController extends Controller
 
         
         $docinfo->name = $request->name;
-        $docinfo->email = $request->email;
-        $docinfo->phone = $request->phone;
-        $docinfo->specialty = $request->specialty;
-        $docinfo->address = $request->address;
-        $docinfo->address2 = $request->address2;
-        $docinfo->city = $request->city;
-        $docinfo->state = $request->state;
-        $docinfo->zip = $request->zip;
+
+
+        if ( !empty ( $request->specialty ) ) {
+            $docinfo->specialty = $request->specialty;
+        }
+        else{
+            $docinfo->specialty = "";
+        }
+
+        if ( !empty ( $request->email ) ) {
+            $docinfo->email = $request->email;
+        }
+        else{
+            $docinfo->email = "";
+        }
+        
+        if ( !empty ( $request->phone ) ) {
+            $docinfo->phone = $request->phone;
+        }
+        else{
+            $docinfo->phone = "";
+        }
+
+        if ( !empty ( $request->address ) ) {
+            $docinfo->address = $request->address;
+        }
+        else{
+            $docinfo->address = "";
+        }
+
+        if ( !empty ( $request->address2 ) ) {
+            $docinfo->address2 = $request->address2;
+        }
+        else{
+            $docinfo->address2 = "";
+        }
+
+        if ( !empty ( $request->city ) ) {
+            $docinfo->city = $request->city;
+        }
+        else{
+            $docinfo->city = "";
+        }
+
+        if ( !empty ( $request->state ) ) {
+            $docinfo->state = $request->state;
+        }
+        else{
+            $docinfo->state = "";
+        }
+
+        if ( !empty ( $request->zip ) ) {
+            $docinfo->zip = $request->zip;
+        }
+        else{
+            $docinfo->zip = "";
+        }
+        
         $docinfo->save();
 
         //redirect

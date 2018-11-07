@@ -6,6 +6,10 @@
 
 @section('content')
 
+@if(count($docinfo) > 4)
+<h1>No more doctors can be added<h1>
+<a href="{{route('userProfile.index')}}" class='btn btn-primary'>Back to User Profile</a>
+@else
 {{ Form::open(array('route' => 'userProfile.store')) }}
     {{Form::label('name', 'Name') }}
     {{ Form::text('name', null, array('class' => 'form-control')) }}
@@ -37,6 +41,6 @@
     {{ Form::submit('Add Doctor Information', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
 
 {{ Form::close() }}
-
+@endif
  
 @endsection
