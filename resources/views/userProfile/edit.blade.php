@@ -6,7 +6,7 @@
 
 @section('content')
 
-
+@if($docinfo->user_id == Auth::user()->id )
 
 {{ Form::model($docinfo, array('route' => array('userProfile.update', $docinfo->id), 'method' => 'PUT')) }}
 
@@ -119,7 +119,9 @@
     {{ Form::submit('Add Doctor Information', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
 
 {{ Form::close() }}
-
-
+@else
+<h1>You cannot edit this doctor information<h1>
+<a href="{{route('userProfile.index')}}" class='btn btn-primary'>Back to User Profile</a>
+@endif
 
 @endsection
