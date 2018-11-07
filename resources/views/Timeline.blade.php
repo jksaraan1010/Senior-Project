@@ -8,7 +8,7 @@
 <!-- Main content -->
  <section class="content"> 
    
- <input type="button" onClick="window.print()" value="Print This Page"/>
+ <input type="button" onClick="window.print()" value="Print This Page"/> 
    <!-- Content Header (Page header) -->
    <div class="content-header">
         <div class="container-fluid">
@@ -42,7 +42,7 @@
 <br>
 <div class="container">
 
-<h1 align="center" >Ages 13-15</h1>
+  <h1 align="center" >Ages 13-15</h1>
       <div class="timeline">
         <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
           <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
@@ -150,7 +150,8 @@
 
       </div>
     </div>
-
+  </div>
+</div>
 <hr>
 <h1 align="center" >Ages 15-17</h1>
 <div class="container">

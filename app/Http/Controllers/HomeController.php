@@ -56,25 +56,18 @@ class HomeController extends Controller
         //dd($graphJsonTotal);
         //dd($graphJsonTotal);
         $graphJsonSection1 = json_encode($graphSection1);
-
         $graphJsonSection2 = json_encode($graphSection2);
         $graphJsonSection3 = json_encode($graphSection3);
         $graphDateJson = json_encode($graphDate);
-
         $id = Auth::id();
-        $tableForScores = Test::select('result')->where('user_id', auth()->id())->orderBy('id', 'desc')->take(5)->get();
-        $tableDate = DB::select('SELECT (DATE_FORMAT(created_at,"%m-%d-%Y")) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND correct = 1  AND user_id= '.$id.'  GROUP BY (created_at) ORDER BY (created_at) DESC LIMIT 5 ');
-        $tableSection1 = DB::select('SELECT COUNT(id) as result, TIME (created_at) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at) DESC LIMIT 5 ');
-        $tableSection12 = DB::select('SELECT COUNT(id) as result, test_id as attempt, TIME(created_at) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at),( test_id) ORDER BY (created_at),( test_id) DESC LIMIT 5 ');
-        //dd($tableSection12);
-        $tableSection2 = DB::select('SELECT COUNT(id) as result, (created_at) as dateTaken FROM `test_answers`WHERE question_id in (5,6,7,8) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at) DESC LIMIT 5 ');
-        $tableSection3 = DB::select('SELECT COUNT(id) as result, (created_at) as dateTaken FROM `test_answers`WHERE question_id in (9,10,11,12) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at) DESC LIMIT 5 ');
-        //$Scores = Test::select('result')->where('user_id', auth()->id())->get();
-       // $Section1 = DB::select('SELECT COUNT(id) as result, (created_at) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at');
-        //$Section2 = DB::select('SELECT COUNT(id) as result, (created_at) as dateTaken FROM `test_answers`WHERE question_id in (5,6,7,8) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at) ');
-        //$Section3 = DB::select('SELECT COUNT(id) as result, (created_at) as dateTaken FROM `test_answers`WHERE question_id in (9,10,11,12) AND correct = 1  AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at) ');
+        $tableForScores = Test::where('user_id', auth()->id())->orderBy('id', 'desc')->take(5)->get();
 
-        return \View::make('home')->with('results', $results)->with('tableSection12', $tableSection12)->with('tableForScores', $tableForScores)->with('tableSection1', $tableSection1)->with('tableSection2', $tableSection2)->with('tableSection3', $tableSection3)->with('tableDate', $tableDate)->with('graphJsonSection1', $graphJsonSection1)->with('graphDateJson', $graphDateJson)->with('graphJsonSection2', $graphJsonSection2)->with('graphJsonSection3', $graphJsonSection3)->with('graphJsonTotal', $graphJsonTotal);
+        $tableDate = DB::select('SELECT (DATE_FORMAT(created_at,"%m-%d-%Y")) as dateTaken FROM `test_answers`WHERE created_at between created_at and created_at + 0.05 and question_id in (1,2,3,4) AND correct = 1  AND user_id= '.$id.'  GROUP BY (created_at) ORDER BY (created_at) DESC LIMIT 5');
+        $tableSection12 = DB::select('SELECT COUNT(id) as result, test_id as attempt FROM `test_answers`WHERE question_id in (1,2,3,4) AND correct = 1  AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY ( test_id) DESC LIMIT 5 ');
+        $tableSection13 = DB::select('SELECT COUNT(id) as result, test_id as attempt FROM `test_answers`WHERE question_id in (5,6,7,8) AND correct = 1  AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY ( test_id) DESC LIMIT 5');
+        $tableSection14 = DB::select('SELECT COUNT(id) as result, test_id as attempt FROM `test_answers`WHERE question_id in (9,10,11,12) AND correct = 1  AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY ( test_id) DESC LIMIT 5 ');
+
+        return \View::make('home')->with('results', $results)->with('tableSection12', $tableSection12)->with('tableSection13', $tableSection13)->with('tableSection14', $tableSection14)->with('tableForScores', $tableForScores)->with('tableDate', $tableDate)->with('graphJsonSection1', $graphJsonSection1)->with('graphDateJson', $graphDateJson)->with('graphJsonSection2', $graphJsonSection2)->with('graphJsonSection3', $graphJsonSection3)->with('graphJsonTotal', $graphJsonTotal);
 
         //return view('home');
     }
