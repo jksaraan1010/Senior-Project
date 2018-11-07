@@ -44,7 +44,7 @@
     <P> Terms and Condition</a>
   </div>
 
-  <div class="content-header">
+  <div class="card-body login-card-body">
   <div class="container-fluid">
     <div class="row">
     <div class="col-md-12">
