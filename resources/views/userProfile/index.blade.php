@@ -9,6 +9,10 @@
 <h1> Name: {{Auth::user()->name}} </h1>
 <h1> Email: {{Auth::user()->email}} </h1>
 <br>
+<p class="mb-1">
+<a href="{{ route('password.request') }}">I forgot my password</a>
+ </p>
+<br>
 
 {{-- BEGIN: Display doctor information --}}
 <h1> Doctor Information</h1>
