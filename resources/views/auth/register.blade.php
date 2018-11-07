@@ -63,7 +63,7 @@
                <div class="card">
                   <div class="card-body register-card-body">
                      <p class="login-box-msg">Register A New Membership</p>
-                     <form action="{{url('register')}}" method="post">
+                     <form action="{{route('register')}}" method="post">
                         @csrf
                         <div class="input-group mb-3">
                            <input type="text" class="form-control" placeholder="Full Name" name="name" required>
