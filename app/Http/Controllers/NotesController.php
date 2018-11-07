@@ -12,8 +12,10 @@ class NotesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   
+     public function index()
     {
+        $note = Note::where('user_id', auth()->id());
         $note = Note::orderBy('id', 'desc')->get();
 
         return view('notes.index') ->with('storedNotes', $note);
