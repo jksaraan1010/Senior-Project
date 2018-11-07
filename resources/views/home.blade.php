@@ -85,7 +85,10 @@
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="d-md-flex">
-                  <div class="p-1 flex-1" style="overflow: hidden">  Place Graph here
+                  <div class="p-1 flex-1" style="overflow: hidden">  
+                   <div class="chart-container">
+                    <canvas id="line-chart"></canvas>
+                </div>
                   </div><!-- /.card-pane-right -->
                 </div><!-- /.d-md-flex -->
               </div>
@@ -109,7 +112,7 @@
                   <table class="table m-0">
                     <thead>
                     <tr>
-                      <th>Place table here</th>
+                      <th></th>
                       <th></th>
                       <th></th>
                       <th></th>
@@ -117,11 +120,48 @@
                     </thead>
                     <tbody>
                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td> </td>
-                    </tr>
+            <th scope="row">Date Taken</th>
+            @foreach($tableDate as $row)
+                <td>
+                    {{$row->dateTaken}}
+                </td>
+            @endforeach
+        </tr>
+       
+        <tr>
+            <th scope="row">Self Care Score</th>
+            @foreach($tableSection12 as $row)
+                <td>
+                    {{$row->result}}
+
+                </td>
+            @endforeach
+        </tr>
+        <tr>
+            <th scope="row">Health Awareness Score</th>
+            @foreach(  $tableSection13 as $row)
+                <td>
+                    {{$row->result}}
+                </td>
+            @endforeach
+        </tr>
+        <tr>
+            <th scope="row">Communication Score</th>
+            @foreach( $tableSection14 as $row)
+                <td>
+                    {{$row->result}}
+                </td>
+            @endforeach
+        </tr>
+        <tr>
+            <th scope="row">Total Score</th>
+
+            @foreach($tableForScores as $row)
+                <td class="text-bold">
+                    {{$row->result}}
+                </td>
+            @endforeach
+        </tr>
                    
                     </tbody>
                   </table>
