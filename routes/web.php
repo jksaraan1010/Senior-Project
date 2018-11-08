@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/homeAdmin', 'HomeAdminController@index')->name('homeAdmin');
+Route::get('/homeAdmin', 'HomeAdminController@index')->name('homeAdmin')->middleware('admin');
 Route::get('/Timeline', 'TimelineController@index')->name('Timeline');
 Route::resource('userProfile', 'UserProfileController');
 

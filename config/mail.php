@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => 'admin@admin.com',
-        'name' => 'MTE',
+        'name' => 'My Transition Explorer',
     ],
 
     /*

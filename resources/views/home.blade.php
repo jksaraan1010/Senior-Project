@@ -9,7 +9,7 @@
         <div class="callout callout">
                   <h5 class="text-primary"> Welcome {{ Auth::user()->name }}!</h5>
                 </div>
-         
+                @if(!Auth::user()->isAdmin())
        <!-- Small boxes (Stat box) -->
        <div class="row">
           <div class="col-lg-3 col-6">
@@ -284,7 +284,7 @@
 </div>               
        
     </section>
-  
+  @endif
            
 </div>
 @endsection

@@ -15,7 +15,7 @@ return [
 	'back_to_list' => 'Back to list',
 	'dashboard' => 'Dashboard',
 	'delete' => 'Delete',
-	'admin_title' => 'LaraQuiz',
+	'admin_title' => 'My Transition Explorer',
 
 	'user-management' => [
 		'title' => 'User Management',
