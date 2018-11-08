@@ -21,21 +21,31 @@
    <h1> Doctor Information</h1>
    @if(count($docinfo) > 0)
    @foreach($docinfo as $infos)
-   <h3> Name: {{$infos->name}}</h3>
-   <h3>Email: {{$infos->email}}</h3>
-   <h3>Phone Number: {{$infos->phone}}</h3>
-   <h3>Specialty: {{$infos->specialty}}</h3>
-   <h3>Address: {{$infos->address}}</h3>
-   <h3>Address 2: {{$infos->address2}}</h3>
-   <h3>City: {{$infos->city}}</h3>
-   <h3>State: {{$infos->state}}</h3>
-   <h3>Zip: {{$infos->zip}}</h3>
+   <div class="card" style="width: 50rem;">
+  <ul class="list-group list-group-flush">
+   <li class="list-group-item"> <font size="4" color="blue">Name: </font>{{$infos->name}}</li>
+   <li class="list-group-item"><font size="4" color="blue">Email: </font>{{$infos->email}}</li>
+   <li class="list-group-item"><font size="4" color="blue">Phone Number: </font>{{$infos->phone}}</li>
+   <li class="list-group-item"><font size="4" color="blue">Specialty: </font>{{$infos->specialty}}</li>
+   <li class="list-group-item"><font size="4" color="blue">Address: </font>{{$infos->address}}</li>
+   <li class="list-group-item"><font size="4" color="blue">Address 2: </font>{{$infos->address2}}</li>
+   <li class="list-group-item"><font size="4" color="blue">City: </font>{{$infos->city}}</li>
+   <li class="list-group-item"><font size="4" color="blue">State: </font>{{$infos->state}}</li>
+   <li class="list-group-item"><font size="4" color="blue">Zip: </font>{{$infos->zip}}</li>
+
+   <li class="list-group-item">
    <a href="{{ route('userProfile.edit', ['docinfo'=>$infos->id]) }}" class='btn btn-primary'>Edit</a>
+   </li>
+   
+   <li class="list-group-item">
    <form action="{{ route('userProfile.destroy', ['docinfo'=>$infos->id]) }}" method='post'>
       {{ csrf_field() }}
       <input type="hidden" name='_method' value='Delete'>
       <input type="submit" class='btn btn-danger' value='Delete'>
    </form>
+   </li>
+   </ul>
+   </div>
    <br>
    @endforeach
    @else   
