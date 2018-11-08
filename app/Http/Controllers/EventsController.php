@@ -20,12 +20,12 @@ class EventsController extends Controller
      */
     public function index()
     { 
-        $id = Auth::id();
+       // $id = Auth::id();
         //dd($id);
         //$userId
-        $events = Events:: select('event_name')-> where('user_id', auth()->id())->get();
+        //$events = Events:: select('event_name')-> where('user_id', auth()->id())->get();
       
-       // $events = Events::get();
+        $events = Events::get();
         $event_list = [];
         foreach ($events as $key => $event) {
             $event_list[] = Calendar::event(
@@ -81,7 +81,7 @@ class EventsController extends Controller
         }
  
         $event = new Events;
-        $event->user_id = Auth::user()->id;
+       // $event->user_id = Auth::user()->id;
         $event->event_name = $request['event_name'];
         $event->start_date = $request['start_date'];
         $event->end_date = $request['end_date'];

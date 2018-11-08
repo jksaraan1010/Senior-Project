@@ -3,19 +3,19 @@
 @section('content')
  <!-- Main content -->
  <section class="content"> 
- <input type="button" onClick="window.print()" value="Print This Page"/>
+
    
    <!-- Content Header (Page header) -->
    <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Survey Results</h1>
+              <h1 class="m-0 text-dark">Assessment Results</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
-                <li class="breadcrumb-item active"> Survey Results </li>
+                <li class="breadcrumb-item active"> Assessment Results </li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -24,7 +24,8 @@
       <!-- /.content-header -->
       <div class="container">
               <div class="container-fluid">
-  
+              <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
+ <button type="submit"> <a href="/Mail">Email this page</a></button>
 <div class="content-header">
   <div class="container-fluid">
        <table class="table table-bordered table-striped {{ count($results) > 0 ? 'datatable' : '' }}">
@@ -33,8 +34,8 @@
                     @if(Auth::user()->isAdmin())
                         <th>@lang('general.results.fields.user')</th>
                     @endif
-                        <th>Date Taken</th>
-                        <th>Survey Result</th>
+                        <th>Assessment Date Taken</th>
+                        <th>Assessment Result</th>
                         <th>View Detailed Results</th>
                     </tr>
                 </thead>

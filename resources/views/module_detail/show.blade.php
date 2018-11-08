@@ -17,17 +17,25 @@
                 <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
                 <li class="breadcrumb-item active"> {{$module->name}} Module</li>
               </ol>
-              <input type="button" onClick="window.print()" value="Print This Page"/>
+  
             </div><!-- /.col -->
             
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>
+
+
+
       <!-- /.content-header -->
       <div class="container">
               <div class="container-fluid">
-  
-
+              <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
+ <button type="submit"> <a href="/Mail">Email this page</a></button>
+ <br>
+ <br>
+ <!-- Main content -->
+ <div class="content">
+      <div class="container-fluid">
   <div class="card card-default">
           <div class="card-header bg-primary">
             <h5>
