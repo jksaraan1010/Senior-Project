@@ -100,7 +100,6 @@
        
              </div>
             </div>
- 
             <!-- jQuery -->
             <script src="{{asset('adminlte/js/jquery.min.js')}}"></script>
             <!-- Bootstrap 4 -->

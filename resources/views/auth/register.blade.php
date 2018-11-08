@@ -13,19 +13,13 @@
       <!-- Tell the browser to be responsive to screen width -->
       <!-- Ionicons -->
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-     
       <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/bootstrap.min.css') }}">
-   
       <!-- Material Design Bootstrap -->
       <link rel="stylesheet" href="{{ asset('Landing-Page-Template-Bootstrap-master/css/mdb.min.css') }}">
       <!-- Font Awesome -->
-   
       <link rel="stylesheet" href="{{asset('adminlte/css/font-awesome.min.css')}}">
- 
       <!-- Ionicons -->
- 
       <link rel="stylesheet" href="{{asset('adminlte/css/ionicons.min.css')}}">
-  
       <!-- Theme style -->
       <link rel="stylesheet" href="{{asset('adminlte/css/adminlte.min.css')}}">
       <!-- iCheck -->
@@ -56,7 +50,7 @@
       <div style="background-image: url('/registimg.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
          <div class="mask d-flex flex-grow-1 align-items-center rgba-blue-strong">
             <div class="register-box">
-            <div class="">
+               <div class="">
                   <!-- landing url go below -->
                   <h2 class="text-center text-white text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h2>
                </div>
@@ -104,18 +98,6 @@
                               <span class="fa fa-lock input-group-text"></span>
                            </div>
                         </div>
-                        <!--   <div class="input-group mb-3">
-                           <input type="text" class="dob form-control{{ $errors->has('dob') ? ' is-invalid' : '' }}" name="dob" value="{{ old('dob') }}" required autofocus placeholder="Enter Date Of Birth">
-                           
-                           <div class="input-group-append">
-                             <span class="fa fa-calendar input-group-text"></span>
-                           </div>
-                           @if ($errors->has('dob'))
-                           <span class="invalid-feedback" role="alert">
-                             <strong>{{ $errors->first('dob') }}</strong>
-                           </span>
-                           @endif
-                           </div> -->
                         <div class="input-group mb-3">
                            <select name="role" class="form-control"  required>
                               @foreach($roles as $role)
@@ -133,9 +115,9 @@
                         </div>
                         <div class="row">
                            <div class="col-8">
-                              <div class="checkbox">
+                              <div class="checkbox icheck">
                                  <label>
-                                  <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;" required><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> I agree to the <a href="{{ route('terms.show') }}" target="_blank">terms</a>
+                                 <input type="checkbox" required > I agree to the <a href="{{ route('terms.show') }}" target="_blank">terms</a>
                                  </label>
                               </div>
                            </div>
@@ -171,17 +153,6 @@
             })
          </script>
          <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-         <script type="text/javascript">
-            $(document).ready(function(){
-              $('.dob').datepicker({
-                format: 'yyyy-mm-dd',
-                changeMonth: true, 
-                changeYear: true, 
-                yearRange: '1950:2018',
-              });
-            });
-            
-         </script>
       </div>
       </div>
    </body>
