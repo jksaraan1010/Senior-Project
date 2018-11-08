@@ -102,10 +102,11 @@
               <!-- /.card-header -->
               <div class="card-body">
                <p>The user profile page is the page to go to when you need to update your 
-                 username or password. </p>
-                <p>This page also includes a section to add your doctor information. To add more doctors
-                 click on the plus sign, which will add another card for you. To update a doctor's information,
-                 simply go to the card of the doctor you would like to update his/ her information
+                 password and view account information </p>
+                <p>This page also includes a section to add your doctor information. To add new doctor information
+                at the bottom of the page. You must enter the name and email of your doctor, but any additional 
+                information is optional. After enetering information of 5 doctors, you will not be able to add any
+                more unless you delete one of your current doctors. You may also edit the information at any time.
         
                </p>
 
