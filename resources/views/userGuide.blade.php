@@ -25,14 +25,9 @@
    <div class="container">
            <div class="container-fluid">
                
-                   
-                       <input type="button" 
-                       onClick="window.print()" 
-                       value="Print This Page"/>
-                       <br>
-
-          
-
+           <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
+ <button type="submit"> <a href="/Mail">Email this page</a></button>
+    <br>
   <br>
 
     <!-- Main content -->
@@ -70,7 +65,7 @@
             <div class="card h-100">
               <div class="card-header bg-primary">
                 <h5>
-                <i class="fas fa-tachometer-alt"></i>
+                <i class="fas fa-home"></i>
                   Dashboard 
                 </h5>
               </div>
@@ -123,13 +118,13 @@
               <div class="card-header bg-primary">
                 <h5>
                 <i class="fas fa-calendar-alt"></i>
-                  Reminder's Calendar
+                  Calendar
                 </h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
               <p> A useful tool to keep track of your events 
-                is a calendar. The reminder's calendar includes a calendar, which can be viewed in a monthly,
+                is a calendar. The  calendar includes a calendar, which can be viewed in a monthly,
               weekly or daily layout. </P>
               <p>To Add an event to the calendar simply go to the event options box on the left of the calendar
                 and click on 'Add Event'. A popup will appear, asking you to Enter the Event's information. Once you're 
@@ -140,10 +135,10 @@
             <p> To edit an event simply go to the event options box on the left of the calendar
                 and click on 'Edit Event'. This will take you to a new page, where you will see all your events sorted by the oldest start date and time. 
               If you would like to delete an event, click on 'Delete' button next to the event and it will be deleted.
-              You will then be directed to the main reminder's calendar page. If you do not want to delete the event, and edit it instead, 
+              You will then be directed to the main calendar page. If you do not want to delete the event, and edit it instead, 
               locate the event and click on the 'Edit' button. This will take you to another page where you can update the event information. 
-             Once you've updated the event click on the 'Update Event' button, which will update the event and take you back to the main Reminder's calendar page.
-            If you've decided not to update the event simply click on the 'Go Back' button which will take you back to the Reminder's Calendar Page.  </p>
+             Once you've updated the event click on the 'Update Event' button, which will update the event and take you back to the main calendar page.
+            If you've decided not to update the event simply click on the 'Go Back' button which will take you back to the Calendar Page.  </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -156,12 +151,12 @@
               <div class="card-header bg-primary">
                 <h5>
                 <i class="fas fa-pen"></i>
-                  Survey- Take Survey 
+                  Assessment- Take Assessment 
                 </h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <p>  The transition survey is a simple and easy to understand survey which focuses on
+                <p>  The transition Assessment is a simple and easy to understand Assessment which focuses on
                   three main areas in your transition: 
                   <ul>
                    <li> Self-Care.</li>
@@ -169,11 +164,11 @@
                    <li> Communication. </li>
                  </ul>
                 </p>
-                <p> The Survey consists of 12 questions, and should be taken once every 3-6 months.
+                <p> The Assessment consists of 12 questions, and should be taken once every 3-6 months.
                 </p>
-                <p> Once the Survey has been taken, and submitted, you will be taken to a detailed guide 
-                 of your survey results. The guide will contain the total survey score, as well as 
-                 as a breakdown of the score in each of the sections of the survey. 
+                <p> Once the assessment has been taken, and submitted, you will be taken to a detailed guide 
+                 of your assessment results. The guide will contain the total assessment score, as well as 
+                 as a breakdown of the score in each of the sections of the assessment. 
                  A link to the appropriate module will be available to review for each 
                  concern area.
              </p>
@@ -191,15 +186,15 @@
               <div class="card-header bg-primary">
                 <h5>
                 <i class="fas fa-check-circle"></i>
-                  Survey- View Past Results
+                  Assessment- View Past Results
                 </h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <p> You've take the survey, now you would like to review your current and 
+              <p> You've take the assessment, now you would like to review your current and 
                   past results, what should you do? The view past results page gives you an opportunity to view
-                the date taken for a past survey as well as the total score for that survey. If you would like to 
-              view  more detailed results of the survey, which include a breakdown of the sections, as well as the 
+                the date taken for a past assessment as well as the total score for that assessment. If you would like to 
+              view  more detailed results of the assessment, which include a breakdown of the sections, as well as the 
             questions click on 'view'.</p>
               </div>
               <!-- /.card-body -->
@@ -212,16 +207,16 @@
               <div class="card-header bg-primary">
                 <h5>
                 <i class="fas fa-table"></i>
-                  Survey- View Table
+                  Assessment- View Table
                 </h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <p> If you've take at least one survey, and want to quickly view the results of current 
-                and past results in an easy to read table format, the survey results table page contains 
+              <p> If you've take at least one assessment, and want to quickly view the results of current 
+                and past results in an easy to read table format, the assessment results table page contains 
                 the following areas:
                 <ul>
-                   <li>Survey Date Taken.</li>
+                   <li>Assessment Date Taken.</li>
                    <li> Self-Care Score.</li>
                    <li> Health Awareness Score.</li>
                    <li> Communication Score.</li>
@@ -244,13 +239,13 @@
               <div class="card-header bg-primary">
                 <h5>
                 <i class="fas fa-chart-line"></i>
-                  Survey- View Graph 
+                  Assessment- View Graph 
                 </h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <p> If you've take at least one survey, and want to quickly view the results of current 
-                and past results in a graph format, the survey results graph page will graph your results 
+              <p> If you've take at least one assessment, and want to quickly view the results of current 
+                and past results in a graph format, the assessment results graph page will graph your results 
                 over time in the following areas:
                 <ul>
                    <li>Total Score.</li>
@@ -371,9 +366,9 @@
                    <li> Ages 17-19 </li>
                  </ul>
               </p>
-              <p>As you take the survey, categoties that you've passed will be checked off, while
+              <p>As you take the assessment, categoties that you've passed will be checked off, while
                 categoties that need to be worked on will remain unchecked. The timeline will be updated
-              based on the latest survey taken. </p>
+              based on the latest assessment taken. </p>
               </div>
               <!-- /.card-body -->
             </div>

@@ -8,7 +8,7 @@
 <!-- Main content -->
  <section class="content"> 
    
- <input type="button" onClick="window.print()" value="Print This Page"/> 
+
    <!-- Content Header (Page header) -->
    <div class="content-header">
         <div class="container-fluid">
@@ -27,17 +27,16 @@
       </div>
       <!-- /.content-header -->
       <div class="container">
+
               <div class="container-fluid">
-  
 </head>
 
-
+ <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
+ <button type="submit"> <a href="/Mail">Email this page</a></button>
 
 <link rel="stylesheet" href="{{asset('css/tmline.css')}}">
 
 
-
-<button type="submit"> <a href="/Mail">Email this page</a></button>
 
 <br>
 <div class="container">

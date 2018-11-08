@@ -95,7 +95,7 @@
               <!-- /.card-body -->
               <div class="card-footer text-center">
     
-              <a href="#">View Full Survey Results Graph</a>
+              <a href="{{url('ResultGraph')}}">View Full Survey Results Graph</a>
               </div>
               <!-- /.card-footer -->
             </div>
@@ -110,17 +110,10 @@
               <div class="card-body p-0">
                 <div class="table-responsive">
                   <table class="table m-0">
-                    <thead>
-                    <tr>
-                      <th></th>
-                      <th></th>
-                      <th></th>
-                      <th></th>
-                    </tr>
-                    </thead>
+        
                     <tbody>
                     <tr>
-            <th scope="row">Date Taken</th>
+            <th scope="row">Assessment Date Taken</th>
             @foreach($tableDate as $row)
                 <td>
                     {{$row->dateTaken}}
@@ -171,7 +164,7 @@
               <!-- /.card-body -->
               <div class="card-footer text-center">
     
-              <a href="#">View All Survey Results</a>
+              <a href="{{url('ResultTable')}}">View All Survey Results</a>
               </div>
               <!-- /.card-footer -->
             </div>
@@ -189,20 +182,14 @@
               <link rel="stylesheet" href="{{asset('css/tmlinehome.css')}}">
               <div class="container">
 
-  <h1 align="center" >Ages 13-15</h1>
+  <h4 align="center" >Ages 13-15</h4>
       <div class="timeline">
         <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
           <div class="col-10  order-3 order-md-1 timeline-content">
             <h3 class=" text-light">Self-Care</h3>
             <label class="container">Start taking medication by yourself without reminders 
-            
-              
-              
             </label> 
             <label class="container">Learn to be comfortable taking care of yourself
-            
-            
-              
              
             </label>
         </div>
