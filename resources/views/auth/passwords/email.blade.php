@@ -62,48 +62,43 @@
                </div>
          
                <div class="card">
-                  <div class="card-body">
-                     <p align ="center">Reset Password</p>
-                     @if(Session::has('success'))
-                     <div class="alert alert-success alert-styled-left alert-arrow-left alert-bordered">
-                        <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
-                        {{Session::get('success')}}
-                     </div>
-                     @elseif(Session::has('error'))  
-                     <div class="alert alert-danger alert-styled-left alert-arrow-left alert-bordered">
-                        <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
-                        {{Session::get('error')}}
-                     </div>
-                     @endif
-                     <form method="POST" action="{{ url('password/email') }}">
-                        @csrf
+                <div class="card-body">
+                   <p align ="center">Reset Password</p>
+                   @if (session('status'))
+                   <div class="alert alert-success" role="alert">
+                       {{ session('status') }}
+                   </div>
+               @endif
 
-                        <div class="input-group mb-3">
-                           <input type="email" class="form-control" name="email" placeholder="Email">
-                           <div class="input-group-append">
-                              <span class="fa fa-envelope input-group-text"></span>
-                           </div>
-                           @if ($errors->has('email'))
-                           <span class="invalid-feedback">
-                           <strong>{{ $errors->first('email') }}</strong>
-                           </span>
-                           @endif
-                        </div>
-                   
-                        <div class="row">
-                           <div class="col-12">
-                              <button type="submit" class="btn btn-primary btn-block btn-flat">Send Password Reset Link</button>
-                           </div>
-                           
-                        </div>
-                     </form>
-                     <br>
-                     <p class="mb-2">
-                        <a href="{{url('login')}}" class="input-group-append">I already have a membership</button>
-                        </p>
-                  </div>
-         
-               </div>
+                   <form method="POST" action="{{ url('password/email') }}">
+                      @csrf
+
+                      <div class="input-group mb-3">
+                         <input type="email" class="form-control" name="email" placeholder="Email">
+                         <div class="input-group-append">
+                            <span class="fa fa-envelope input-group-text"></span>
+                         </div>
+                         @if ($errors->has('email'))
+                         <span class="invalid-feedback" role="alert">
+                          <strong>{{ $errors->first('email') }}</strong>
+                         </span>
+                         @endif
+                      </div>
+                 
+                      <div class="row">
+                         <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block btn-flat">Send Password Reset Link</button>
+                         </div>
+                         
+                      </div>
+                   </form>
+                   <br>
+                   <p class="mb-2">
+                      <a href="{{url('login')}}" class="input-group-append">I already have a membership</button>
+                      </p>
+                </div>
+       
+             </div>
             </div>
  
             <!-- jQuery -->
