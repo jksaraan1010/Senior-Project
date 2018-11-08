@@ -59,7 +59,7 @@
             @endif
 
  <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="/Mail">Email this page</a></button>
+ <button type="submit"> <a href="/MailEvents">Email this page</a></button>
 <br>
 <br>
  <!-- Main content -->

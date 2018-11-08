@@ -28,6 +28,8 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->view('EmailTest')->subject('Test Email');
+        $storedNotes = DB::select('SELECT name FROM notes');
+        return $this->view('EmailNotes')->with('storedNotes', $storedNotes)->subject('Test Email');
+   
     }
 }
