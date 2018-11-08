@@ -328,7 +328,7 @@
                        onClick="window.print()" 
                        value="Print This Page"/>
 
-               <button type="submit"> <a href="/Mail">Email this page</a></button>
+               <button type="submit"> <a href="/EmailEvents">Email this page</a></button>
 
 
                {{-- Success Alert --}}

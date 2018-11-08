@@ -35,7 +35,7 @@
 
 <body>
 <input type="button" onClick="window.print()" value="Print This Page"/>
-<button type="submit"> <a href="/Mail">Email this page</a></button>
+<button type="submit"> <a href="/EmailTable">Email this page</a></button>
 
 <div class="container">
     <h2>Survey Results Table</h2>

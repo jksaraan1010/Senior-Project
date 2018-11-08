@@ -24,8 +24,12 @@ Route::resource('userProfile', 'UserProfileController');
 
 Route::get('ResultTable', 'ResultTableController@SurveyResultTable');
 Route::get('ResultGraph', 'ResultGraphController@SurveyResultGraph');
-Route::get('Email','MailController@index' );
-Route::post('send', 'MailController@send');
+Route::get('EmailNotes','MailController@index' );
+Route::post('sendNotes', 'MailController@send');
+Route::get('EmailEvents','MailEventsController@index' );
+Route::post('sendEvents', 'MailEventsController@send');
+Route::get('EmailTable','MailTableController@index' );
+Route::post('sendTable', 'MailTableController@send');
 //Route::get('/survey', 'SurveyController@getQuestions');
 //Route::get('survey/{sectionId}', 'SurveyController@getQuestions');
 //Route::get('survey', 'SurveyController@index');

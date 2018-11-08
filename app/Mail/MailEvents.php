@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\DB;
+class MailEvents extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        $EventDate = DB:: select('SELECT DATE(start_date) as startDate, DATE(end_date) as endDate FROM events');
+        $EventTime = DB::select('SELECT  cast(start_date as time(0)) as startTime, cast(end_date as time(0)) as endTime FROM events ');
+        $Events = DB::select('SELECT event_name FROM events');
+        return $this->view('EmailEvents')->with('Events', $Events)->with('EventTime', $EventTime)->with('EventDate', $EventDate)->subject('Test Email');
+    }
+}
