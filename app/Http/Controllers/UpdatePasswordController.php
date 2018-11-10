@@ -22,7 +22,7 @@ class UpdatePasswordController extends Controller
     {
         $request->validate([
             'oldpass' => ['required', new ValidPassword],
-            'newpass' => 'required',
+            'newpass' => 'required|min:6',
             'newpassconfirm' => 'required|same:newpass'
         ]);
 
@@ -32,7 +32,7 @@ class UpdatePasswordController extends Controller
 
 
 
-        return redirect()->route('userProfile.index');
+        return redirect()->route('userProfile.index')->withErrors(['Password Change Successful', 'The Message']);
 
     }
 }
