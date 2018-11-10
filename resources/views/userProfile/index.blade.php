@@ -11,9 +11,8 @@
                        
     <h3 class="profileHeader">  Name: {{Auth::user()->name}} </h3>
     <h3 class="profileHeader"> Email: {{Auth::user()->email}} </h3>
-    <p class="mb-1">
-            <a href="{{ route('password.request') }}">I forgot my password</a>
-         </p>
+    <a href="{{ route('updatePassword') }}">Change Password</a>
+    
 </div>
    @if(!Auth::user()->isAdmin())
    <br>

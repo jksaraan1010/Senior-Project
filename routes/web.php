@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/homeAdmin', 'HomeAdminController@index')->name('homeAdmin')->middleware('admin');
 Route::get('/Timeline', 'TimelineController@index')->name('Timeline');
 Route::resource('userProfile', 'UserProfileController');
+Route::get('/updatePassword', 'UpdatePasswordController@index')->name('updatePassword');
+Route::post('changePass', 'UpdatePasswordController@changePass');
 
 Route::get('ResultTable', 'ResultTableController@SurveyResultTable');
 Route::get('ResultGraph', 'ResultGraphController@SurveyResultGraph');
