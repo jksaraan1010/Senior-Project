@@ -32,11 +32,7 @@ Route::get('EmailEvents','MailEventsController@index' );
 Route::post('sendEvents', 'MailEventsController@send');
 Route::get('EmailTable','MailTableController@index' );
 Route::post('sendTable', 'MailTableController@send');
-//Route::get('/survey', 'SurveyController@getQuestions');
-//Route::get('survey/{sectionId}', 'SurveyController@getQuestions');
-//Route::get('survey', 'SurveyController@index');
-//Route::get('survey/questions/{sectionId}', 'SurveyController@getQuestions');
-//Route::post('survey/questions/{sectionId}', 'SurveyController@saveAnswers');
+
 
 
 
@@ -92,7 +88,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 //module
-    //Route::resource('module', 'ModuleDetailController');
+  
     Route::get('module_detail_index/{id}', 'ModuleDetailController@index')->name('module_detail.index');
     Route::get('module_detail_create/{id}', 'ModuleDetailController@create')->name('module_detail.create');
     Route::post('module_detail_store', 'ModuleDetailController@store')->name('module_detail.store');

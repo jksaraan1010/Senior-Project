@@ -7,9 +7,7 @@
     {!! Form::open(['method' => 'POST', 'route' => ['users.store']]) !!}
 
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.create')
-        </div>
+      
         
         <div class="panel-body">
             <div class="row">

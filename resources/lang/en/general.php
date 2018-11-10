@@ -35,7 +35,7 @@ return [
 	],
 
 	'users' => [
-		'title' => 'Users',
+		'title' => 'Current Users',
 		'fields' => [
 			'name' => 'Name',
 			'email' => 'Email',

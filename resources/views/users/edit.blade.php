@@ -8,9 +8,6 @@
     {!! Form::model($user, ['method' => 'PUT', 'route' => ['users.update', $user->id]]) !!}
 
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.edit')
-        </div>
 
         <div class="panel-body">
             <div class="row">
@@ -38,7 +35,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 form-group">
+                <div class="col-xs-12 form-group" disabled>
                     {!! Form::label('password', 'Password', ['class' => 'control-label']) !!}
                     {!! Form::password('password', ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
