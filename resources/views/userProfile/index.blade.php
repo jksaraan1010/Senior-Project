@@ -21,6 +21,11 @@
    <h1> Doctor Information</h1>
    @if(count($docinfo) > 0)
    @foreach($docinfo as $infos)
+
+
+
+
+   
    <div class="card" style="width: 50rem;">
   <ul class="list-group list-group-flush">
    <li class="list-group-item"> <font size="4" color="blue">Name: </font>{{$infos->name}}</li>
