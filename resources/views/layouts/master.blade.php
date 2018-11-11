@@ -234,7 +234,7 @@
                       </li>
 
 
-                      @if(!Auth::user()->isAdmin())
+                   
                       <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                           <i class="nav-icon fa fa-users"></i>
@@ -245,15 +245,16 @@
                         </a>
                         <ul class="nav nav-treeview">
                           <li class="nav-item">
-                            <a href="{{url('roles')}}" class="nav-link">
-                              <i class="nav-icon fas fa-database"></i>
-                              <p>Roles</p>
-                            </a>
-                          </li>
-                          <li class="nav-item">
                             <a href="{{url('users')}}" class="nav-link">
                               <i class="nav-icon fas fa-user-circle"></i>
                               <p>Users</p>
+                            </a>
+                          </li>
+                          @if(!Auth::user()->isAdmin())
+                          <li class="nav-item">
+                            <a href="{{url('roles')}}" class="nav-link">
+                              <i class="nav-icon fas fa-database"></i>
+                              <p>Roles</p>
                             </a>
                           </li>
                           <li class="nav-item">

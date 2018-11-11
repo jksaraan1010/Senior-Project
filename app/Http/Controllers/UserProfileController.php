@@ -21,6 +21,9 @@ class UserProfileController extends Controller
         return view('userProfile.index')->with('docinfo', $docinfo);
     }
 
+    
+
+   
     /**
      * Show the form for creating a new resource.
      *
@@ -49,7 +52,7 @@ class UserProfileController extends Controller
             
         ));
 
-        
+    
 
         //store in database
         $docinfo = new DocInfo;
@@ -127,6 +130,8 @@ class UserProfileController extends Controller
         //redirect
         return redirect()->route('userProfile.index');
     }
+
+    
 
     /**
      * Display the specified resource.

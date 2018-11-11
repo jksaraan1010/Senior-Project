@@ -17,7 +17,7 @@ class NotesController extends Controller
      public function index()
     {
        
-        $note = Note::orderBy('id', 'desc')->get();
+        $note = Note::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
       
         return view('notes.index') ->with('storedNotes', $note);
     }
@@ -44,6 +44,7 @@ class NotesController extends Controller
             'newNoteName'=>'required|min:3|max:255',
         ]);
         $note = new Note;
+        $note->user_id = Auth::user()->id;
         $note->name = $request->newNoteName;
         $note->save();
         return redirect()->route('notes.index');
