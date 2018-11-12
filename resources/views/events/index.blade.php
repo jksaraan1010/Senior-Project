@@ -405,7 +405,7 @@
    <div class="modal-dialog modal-sm" role="document">
        <div class="modal-content">
            <div class="modal-header text-center bg-primary">
-               <h4 class="modal-title w-100 font-weight-bold">Add An Event</h4>
+               <h5 class="modal-title w-100 ">Add An Event</h5>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                    <span aria-hidden="true">&times;</span>
                </button>
