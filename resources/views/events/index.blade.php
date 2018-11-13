@@ -119,7 +119,7 @@
                         <a href="{{ route('events.index') }}" class="nav-link">
                             <i class="nav-icon fa fa-calendar-alt">  </i>
                             <p>
-                                Reminders
+                                Calendar
                             </p>
                         </a>
                     </li>
@@ -128,7 +128,7 @@
                         <a href="#" class="nav-link">
                             <i class="nav-icon fa fa-edit"></i>
                             <p>
-                                Survey
+                                Assessment 
                                 <i class="fa fa-angle-left right"></i>
                             </p>
                         </a>
@@ -136,7 +136,7 @@
                             <li class="nav-item">
                                 <a href="{{url('tests')}}" class="nav-link">
                                     <i class="nav-icon fas fa-pen"></i>
-                                    <p>Take Survey</p>
+                                    <p>Take Assessment</p>
                                 </a>
                             </li>
                             @if(!Auth::user()->isAdmin())
@@ -465,8 +465,8 @@
 </div>
 <!-- ./wrapper -->
 <footer class="main-footer">
-  <strong>Copyright &copy; 2018-2019 <a href="#"> My Transition Explorer </a>.</strong>
-  All rights reserved.
+    <strong>Copyright &copy; 2018-2019 <a href="www.transitionexplorer.com" target="_blank"> My Transition Explorer </a>.
+    All rights reserved. <a href="{{ route('terms.show') }}" target="_blank"> Terms and Conditions </a>.</strong>
 </footer>
 <!-- REQUIRED SCRIPTS -->
 <script>

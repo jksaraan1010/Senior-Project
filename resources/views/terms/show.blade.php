@@ -49,13 +49,12 @@
    <body class="hold-transition register-page">
       <div style="background-image: url('/terms.jpg'); background-repeat: no-repeat; background-size: cover; height:100%;background-position: center center;">
          <div class="mask d-flex flex-grow-1 align-items-center rgba-blue-strong">
-            <div class="register-box">
-            <div class="">
-                        <!-- landing url go below -->
-                        <h2 class="text-center text-white text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h2>
-        </div>
-               <div class="card">
+         <div class="container h-100">
+              <div class="row h-100 justify-content-center align-items-center">
+               
+            <div class="card col-8">
                   <div class="card-body register-card-body">
+                  <h5 class="text-center text-blue text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h5>
                      <p class="login-box-msg">Terms & Conditions</p>
                      <div class="row">
                      <div class="terms_description">
@@ -65,7 +64,7 @@
             </div>
         </div>
                 <div>        
-            <a href="{{ url()->previous() }}" class="btn btn-block btn-danger">Back</a>
+            <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">Back</a>
                   </div>
                   <!-- /.form-box -->
                </div>
