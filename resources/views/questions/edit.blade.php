@@ -13,7 +13,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('topic_id', 'Topic*', ['class' => 'control-label']) !!}
+                    {!! Form::label('topic_id', 'Existing Topic', ['class' => 'control-label']) !!}
                     {!! Form::select('topic_id', $topics, old('topic_id'), ['class' => 'form-control']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('topic_id'))
@@ -23,6 +23,23 @@
                     @endif
                 </div>
             </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    <input type="hidden" name="topic_id" value="{{$question->topic_id}}">
+                    {!! Form::label('topic_id', 'Update Current Topic', ['class' => 'control-label']) !!}
+                    <input type="text" name="title" value="{{$question->topic->title}}" class="form-control">
+                    <p class="help-block"></p>
+                    @if($errors->has('title'))
+                    <p class="help-block">
+                        {{ $errors->first('title') }}
+                    </p>
+                    @endif
+                </div>
+            </div>
+
+
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('question_text', 'Question text*', ['class' => 'control-label']) !!}
