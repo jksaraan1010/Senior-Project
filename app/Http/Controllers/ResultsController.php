@@ -34,8 +34,11 @@ class ResultsController extends Controller
             $results = $results->where('user_id', '=', Auth::id());
         }
 
-        $total_questions =  Question::all()->count();
-        return view('results.index', compact('results', 'total_questions'));
+           return view('results.index', compact('results', 'total_questions','topics_results'),['controller' => $this]);
+    }
+
+    public function getTotalQuestion($id){
+        return $total_questions =  TestAnswer::where('user_id','=', Auth::id())->where('test_id','=',$id)->count();
     }
 
     /**
@@ -79,8 +82,7 @@ class ResultsController extends Controller
 
             $topics_results[$title] = $topic_results; //save topics asnswers into an array using topic name as index
         }
-        $total_questions =  Question::all()->count();
-        return view('results.show', compact('section_id_json','section1Score', 'section2Score', 'section3Score','test', 'results', 'topics_results', 'total_questions')); // add topics_results array to view, it holds topic title and it's results
+        $total_questions =  TestAnswer::where('user_id','=', Auth::id())->where('test_id','=',$id)->count();
+        return view('results.show', compact('test', 'results', 'topics_results', 'total_questions')); // add topics_results array to view, it holds topic title and it's results
     }
-    
 }

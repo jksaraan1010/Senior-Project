@@ -7,9 +7,7 @@
     {!! Form::open(['method' => 'POST', 'route' => ['questions.store']]) !!}
 
     <div class="panel panel-default">
-        <div class="panel-heading">
-            @lang('general.create')
-        </div>
+        
 
         <div class="panel-body">
             <div class="row">
@@ -21,6 +19,18 @@
                         <p class="help-block">
                             {{ $errors->first('topic_id') }}
                         </p>
+                    @endif
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-xs-12 form-group">
+                    Or
+                    {!! Form::text('title', old('title'), ['class' => 'form-control', 'placeholder' => 'Enter Topic name']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('title'))
+                    <p class="help-block">
+                        {{ $errors->first('title') }}
+                    </p>
                     @endif
                 </div>
             </div>

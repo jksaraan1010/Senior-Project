@@ -22,15 +22,13 @@
                     </table>
                     
                 @foreach($topics_results as $topic => $results)
-                <h4 class="text-primary">{{ $topic }} ({{ $results->where('correct', 1)->count() . '/' . $results->count() }})</h4>
-               
-               
+                <h4 class="text-primary">{{ $topic }} ({{ $results->where('correct', 1)->count() . '/' . $results->count() }})</h4>               
                 @foreach($results as $result)    
                 <table class="table table-bordered table-striped">
-                        <tr class="bg-primary test-option{{ $result->correct ? '-true' : '-false' }}">
-                            <th style="width: 15%">Question #{{ $loop->iteration }}</th>
-                            <th>{{ $result->question->question_text }}</th>
-                        </tr>
+                    <tr class="test-option{{ $result->correct ? '-true' : '-false' }}">
+                        <th style="width: 10%">Question #{{ $loop->iteration }}</th>
+                        <th>{{ $result->question->question_text or '' }}</th>
+                    </tr>
                         <tr>
                             <td>Options</td>
                             <td>

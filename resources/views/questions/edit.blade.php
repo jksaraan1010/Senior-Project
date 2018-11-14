@@ -36,6 +36,40 @@
                 </div>
             </div>
             
+@forelse($question->options as $key => $value)
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    <label for="option1" class="control-label">Option #{{$key + 1}}</label>
+                    <input placeholder="" name="option{{$key + 1}}" type="text" id="option{{$key + 1}}" class="form-control" value="{{$value->option}}">
+                    <p class="help-block"></p>
+                    @if($errors->has('question_text'))
+                        <p class="help-block">
+                            {{ $errors->first('question_text') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            @empty
+            @endif
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('correct', 'Correct', ['class' => 'control-label']) !!}
+                    <select id="correct" name="correct" class="form-control">
+                    @forelse($question->options as $key => $value)
+                        <option value="option{{$key + 1}}" @if($value->correct == 1) selected @endif>Option #{{$key + 1}}</option>
+                    @empty
+                    @endif
+                    </select>
+                    <p class="help-block"></p>
+                    @if($errors->has('correct'))
+                        <p class="help-block">
+                            {{ $errors->first('correct') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+
+            
         </div>
     </div>
 

@@ -196,6 +196,7 @@
                             </p>
                         </a>
                     </li>
+                      @if(!Auth::user()->isAdmin())
                     <li class="nav-item">
                         <a href="{{url('questions_options')}}" class="nav-link">
                             <i class="nav-icon fas fa-check-square"></i>
@@ -204,6 +205,7 @@
                             </p>
                         </a>
                     </li>
+                    @endif
                     <li class="nav-item">
                         <a href="{{ route('terms.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-comments"></i>
