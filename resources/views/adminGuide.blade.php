@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@if(Auth::user()->role_id == 1)
   <!-- Main content -->
   <section class="content">
 
@@ -407,5 +408,6 @@
  </div>
  <br>
 </div>
+@endif
     @endsection
 

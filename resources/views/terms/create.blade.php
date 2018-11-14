@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@if(Auth::user()->role_id == 1)
 <div class="content-header">
   <div class="container-fluid">
          <h3 class="page-title">@lang('general.terms.title')</h3>
@@ -51,3 +52,4 @@
   });
 </script>
 @endpush 
+@endif

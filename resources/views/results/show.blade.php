@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@if($test->user_id == Auth::user()->id )
 <div class="content-header">
   <div class="container-fluid">
                       <div class="col-md-12">
@@ -69,3 +70,4 @@
 </script>
 
 @stop
+@endif

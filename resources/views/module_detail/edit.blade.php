@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@if(Auth::user()->role_id == 1)
 <div class="content-header">
   <div class="container-fluid">
       <h3 class="page-title">{{$module_detail->module->name}} @lang('general.module_detail.title')</h3>
@@ -67,3 +68,4 @@
   });
 </script>
 @endpush 
+@endif
