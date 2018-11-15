@@ -2,6 +2,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @section('content')
+
   <!-- Main content -->
   <section class="content"> 
    
@@ -107,6 +108,7 @@
 </div>
 </div>
 </div>          
+
     @endsection
 
 
