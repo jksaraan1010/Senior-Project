@@ -6,6 +6,7 @@ use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Note;
+use Illuminate\Support\Facades\DB;
 class NotesController extends Controller
 {
     /**
@@ -16,9 +17,10 @@ class NotesController extends Controller
    
      public function index()
     {
-       
+        $id = Auth::id();
+
         $note = Note::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
-      
+
         return view('notes.index') ->with('storedNotes', $note);
     }
    

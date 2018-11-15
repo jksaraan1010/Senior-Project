@@ -20,6 +20,27 @@
                             <th>@lang('general.results.fields.result')</th>
                             <td>{{ $test->result }}/{{$total_questions}}</td>
                         </tr>
+                        </tr>
+                @foreach($topics_results as $topic => $results)
+                <tr>
+                    @if($results->where('correct', 1)->count() != $results->count())
+                    <th>{{ $topic }}</th>
+                    <td>
+                    Your score is low in {{ $topic }} section! Please go this
+                  
+                    @if ($topic == $selfCare[0]->title)
+                    <a href="/module_detail_show/1#/">Link </a>
+                    @elseif ($topic == $healthAwareness[0]->title)
+                    <a href="/module_detail_show/3#/">Link </a>
+                    @elseif ($topic == $communication[0]->title)
+                    <a href="/module_detail_show/2#/">Link </a>
+                    @else -
+                    @endif
+                    @endif
+                </td>
+                @endforeach
+
+                </tr>
                     </table>
                     
                 @foreach($topics_results as $topic => $results)

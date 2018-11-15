@@ -6,6 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class SendMail extends Mailable
 {
@@ -28,7 +30,9 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        $storedNotes = DB::select('SELECT name FROM notes');
+        $id = Auth::id();
+
+        $storedNotes = DB::select('SELECT name FROM notes ');
         return $this->view('EmailNotes')->with('storedNotes', $storedNotes)->subject('Test Email');
    
     }
