@@ -367,9 +367,6 @@
                    <li> Ages 17-19 </li>
                  </ul>
               </p>
-              <p>As you take the assessment, categoties that you've passed will be checked off, while
-                categoties that need to be worked on will remain unchecked. The timeline will be updated
-              based on the latest assessment taken. </p>
               </div>
               <!-- /.card-body -->
             </div>

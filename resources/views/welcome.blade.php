@@ -20,13 +20,20 @@
         .intro-2 {
           height: 100%;
         }
-
+        @media (min-width: 3000px) and (max-width: 550px) {
+            html,
+            body,
+            header,
+            .intro-2 {
+              height: 100%;
+            }
+        }
         @media (min-width: 560px) and (max-width: 740px) {
             html,
             body,
             header,
             .intro-2 {
-              height: 500px;
+              height: 100%;
             }
         }
         @media (min-width: 800px) and (max-width: 850px) {
@@ -34,7 +41,7 @@
             body,
             header,
             .intro-2 {
-              height: 500px;
+              height: 100%;
             }
         }
 
@@ -67,8 +74,8 @@
 
                        </div>
                        
-                                <h5 class="text-center w-responsive mx-auto mb-3">An Application that assists young patients with transitioning
-                                   from pediatric care to adult care, through reminders of different steps and milestones related to the transition! </h5>
+                                <p class="text-center w-responsive mx-auto mb-3">An Application that assists young patients with transitioning
+                                   from pediatric to adult care, through reminders of different steps and milestones related to the transition! </p>
                                 
                              <div class="content d-flex justify-content-center align-items-center">
 
@@ -95,7 +102,7 @@
             <section id="features" class="section feature-box mt-4 mb-5 pb-5">
 
                 <!--Section heading-->
-                <h3 class="text-center mb-5 mt-5 pt-5 font-weight-bold dark-grey-text">Why Use My Transition Explorer</h3>
+                <h3 class="text-center mb-5 mt-5 pt-5 font-weight-bold dark-grey-text">Why Use My Transition Explorer?</h3>
                 <!--Section sescription-->
                 <p class="text-center grey-text w-responsive mx-auto mb-5">
                 With the advent of medical advances over the past 60 years,
@@ -120,9 +127,9 @@
                     <div class="col-md-4 mb-4" >
                         <div class="card hoverable h-100">
                             <i class="fa fa-edit blue-text mt-3 fa-3x my-4"></i>
-                            <h5 class="font-weight-bold mb-4">Transition Survey</h5>
-                            <p class="grey-text font-small mx-3">A simple easy to understand survey which focuses on three major areas in your transition: Self-Care, 
-                                Health Awareness, and Communication. Take this survey every 3-6 months for best results.</p fa-3x mb-4>
+                            <h5 class="font-weight-bold mb-4">Transition Assessment</h5>
+                            <p class="grey-text font-small mx-3">A simple easy to understand assessment which focuses on three major areas in your transition: Self-Care, 
+                                Health Awareness, and Communication. Take this assessment every 3-6 months for best results.</p fa-3x mb-4>
                         </div>
                     </div>
                     <!--/First column-->
@@ -132,8 +139,8 @@
                         <div class="card hoverable h-100">
                             <i class="fa fa-heartbeat blue-text mt-3 fa-3x my-4"></i>
                             <h5 class="font-weight-bold mb-4">Milestones Timeline</h5>
-                            <p class="grey-text font-small mx-3">Milestones help keep us on track! See your personalized timeline change
-                                everytime you take the survey!
+                            <p class="grey-text font-small mx-3">Milestones help keep us on track! The timeline serves as a milestone guiding 
+                              tracker in the following three areas: Self-Care, Health Awareness and Communication.
                             </p>
                         </div>
                     </div>
@@ -145,7 +152,7 @@
                             <i class="fa fa-line-chart blue-text mt-3 fa-3x my-4"></i>
                             <h5 class="font-weight-bold mb-4">Graphical Transition</h5>
                             <p class="grey-text font-small mx-3">See your improvements overtime as you take  
-                                 the transition survey in graphical format.</p>
+                                 the transition assessment in graphical format.</p>
                         </div>
                     </div>
                     <!--/Third column-->
@@ -180,8 +187,8 @@
                     <div class="col-md-4 mb-4">
                         <div class="card hoverable h-100">
                             <i class="fa fa-calendar blue-text mt-3 fa-3x my-4"></i>
-                            <h5 class="font-weight-bold mb-4">Reminders Calendar</h5>
-                            <p class="grey-text font-small mx-3">A calendar where you can add your appointments, 
+                            <h5 class="font-weight-bold mb-4"> Calendar</h5>
+                            <p class="grey-text font-small mx-3">A calendar where you can add your appointments 
                                 or add reminders to yourself!
                             </p>
                         </div>
@@ -224,16 +231,16 @@
     <!-- SCRIPTS -->
 
     <!-- JQuery -->
-    <script type="text/javascript" src="./public/Landing-Page-Template-Bootstrap-master/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/Landing-Page-Template-Bootstrap-master/js/jquery-3.3.1.min.js"></script>
 
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="./public/Landing-Page-Template-Bootstrap-master/js/popper.min.js"></script>
+    <script type="text/javascript" src="/Landing-Page-Template-Bootstrap-master/js/popper.min.js"></script>
 
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="./public/Landing-Page-Template-Bootstrap-master/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Landing-Page-Template-Bootstrap-master/js/bootstrap.min.js"></script>
 
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="./public/Landing-Page-Template-Bootstrap-master/js/mdb.min.js"></script>
+    <script type="text/javascript" src="/Landing-Page-Template-Bootstrap-master/js/mdb.min.js"></script>
 
     <script>
       

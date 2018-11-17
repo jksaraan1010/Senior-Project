@@ -11,7 +11,10 @@
   <title> My Transition Explorer </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="stylesheet" href="/css/app.css"> 
+  
+
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -355,9 +358,7 @@
                    </button>
                    @endif
                </div>
-
-  <br>
-
+<br>
   <div class="container-fluid">
        <div class="row">
          <div class="col-md-3">
@@ -468,15 +469,6 @@
     <strong>Copyright &copy; 2018-2019 <a href="www.transitionexplorer.com" target="_blank"> My Transition Explorer </a>.
     All rights reserved. <a href="{{ route('terms.show') }}" target="_blank"> Terms and Conditions </a>.</strong>
 </footer>
-<!-- REQUIRED SCRIPTS -->
-<script>
-
-
-
-
-
-
-</script>
 
  
 <!-- REQUIRED SCRIPTS -->

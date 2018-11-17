@@ -45,9 +45,6 @@ Route::get('/add', 'EventsController@display');
 Route::get('/edit', 'EventsController@show');
 Route::get('/delete', 'EventsController@show');
 
-//Route::get("/calendar", function(){
-//return view('Calendar.index');
-//});
 
 Route::get('/userGuide', 'userGuideController@index')->name('userGuide');
 Route::get('/adminGuide', 'adminGuideController@index')->name('adminGuide');
