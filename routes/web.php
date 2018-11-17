@@ -32,8 +32,10 @@ Route::get('EmailEvents','MailEventsController@index' );
 Route::post('sendEvents', 'MailEventsController@send');
 Route::get('EmailTable','MailTableController@index' );
 Route::post('sendTable', 'MailTableController@send');
-
-
+Route::get('EmailModules','MailModulesController@index' );
+Route::post('sendModules', 'MailModulesController@send');
+Route::get('EmailResults','MailResultsController@index' );
+Route::post('sendResults', 'MailResultsController@send');
 
 
 

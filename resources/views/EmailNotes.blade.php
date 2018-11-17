@@ -6,14 +6,17 @@
 
 <body>
 Welcome to My Transition Explorer. We hope you enjoy using this application. Below are your notes!
-<br><br>
+<br><br>Notes:
 @foreach ($storedNotes as $row)
-    {{$row ->name}}
+   <br> {{$row ->name}}
 @endforeach
+<br>
+<br>
 
 
 Sincerely,
-<br>My Transition Explorer Team
+<br>
+My Transition Explorer Team
 
 </body>
 

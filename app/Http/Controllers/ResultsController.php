@@ -85,6 +85,7 @@ class ResultsController extends Controller
             $topics_results[$title] = $topic_results; //save topics asnswers into an array using topic name as index
         }
         $total_questions =  TestAnswer::where('user_id','=', Auth::id())->where('test_id','=',$id)->count();
+       
         return view('results.show', compact('selfCare', 'healthAwareness', 'communication','test', 'results', 'topics_results', 'total_questions')); // add topics_results array to view, it holds topic title and it's results
     }
 }

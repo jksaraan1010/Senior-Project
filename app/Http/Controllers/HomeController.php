@@ -55,7 +55,6 @@ class HomeController extends Controller
 
         $graphDateJson = json_encode($graphDate);
        
-
         $tableForScores = Test::select('result')->where('user_id', auth()->id())->orderBy('id', 'desc')->take(5)->get();
 
         $tableDate = DB::select('SELECT (DATE_FORMAT(created_at,"%m-%d-%Y")) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND user_id= '.$id.'  GROUP BY (created_at) ORDER BY (created_at) DESC LIMIT 5 ');

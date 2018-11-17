@@ -5,7 +5,6 @@
 </head>
 
 <body>
-<h2>Hello {{$user['name']}},</h2>
 
 Welcome to My Transition Explorer. We hope you enjoy using this application. You have these events coming up!
 <br><br>
@@ -25,7 +24,7 @@ Welcome to My Transition Explorer. We hope you enjoy using this application. You
    To:   {{$row ->endTime}}
     
 @endforeach
-
+<br>
 Sincerely,
 <br>My Transition Explorer Team
 
