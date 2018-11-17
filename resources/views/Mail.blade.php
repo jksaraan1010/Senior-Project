@@ -30,7 +30,7 @@
                     </div>
                 @endforeach
             @endif
-            <form action="send" method="POST">
+            <form action="sendNotes" method="POST">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <input type="email" class="form-control text-center" placeholder="Provide an email" name="email"><br>

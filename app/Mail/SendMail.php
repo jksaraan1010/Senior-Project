@@ -8,6 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Note;
 
 class SendMail extends Mailable
 {
@@ -32,7 +33,8 @@ class SendMail extends Mailable
     {
         $id = Auth::id();
 
-        $storedNotes = DB::select('SELECT name FROM notes ');
+        $storedNotes = Note::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
+
         return $this->view('EmailNotes')->with('storedNotes', $storedNotes)->subject('Test Email');
    
     }
