@@ -77,7 +77,7 @@
                   You will also see a home icon which is available in every page. Clicking this icon will return you back to the dashboard. 
                   Next to the home icon is the logout icon. Once you click this icon, you are logged out of the account. It is best to close
                   your browser once you've logged out of the application. <p>
-                <p>In the center of the page you will see several items such as the survey results graph or the Timeline
+                <p>In the center of the page you will see several items such as the assessment results graph or the Timeline
                     which will give you a gimpse of your results. To view the full page click on the view all link or go to the 
                   appropriate page from the sidebar. </p>
               </div>

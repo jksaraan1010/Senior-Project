@@ -34,7 +34,7 @@
                                 <td>{{ $user->role->title}}</td>
                                 <td>
                                     <!--<a href="{{ route('users.show',[$user->id]) }}" class="btn btn-xs btn-primary">@lang('general.view')</a> -->
-                                    <a href="{{ route('users.edit',[$user->id]) }}" class="btn btn-xs btn-info">@lang('general.edit')</a>
+                                    <a href="{{ route('users.edit',[$user->id]) }}" class="btn btn-xs btn-primary">@lang('general.edit')</a>
                                     {!! Form::open(array(
                                         'style' => 'display: inline-block;',
                                         'method' => 'DELETE',

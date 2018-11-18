@@ -36,7 +36,7 @@
 						
 							<td>{!! $value->description !!}</td>
 							<td>
-								<a href="{{ route('terms.edit',['id'=> $value->id]) }}" class="btn btn-xs btn-info">@lang('general.edit')</a>
+								<a href="{{ route('terms.edit',['id'=> $value->id]) }}" class="btn btn-xs btn-primary">@lang('general.edit')</a>
 								{!! Form::open(array(
 									'style' => 'display: inline-block;',
 									'method' => 'DELETE',
@@ -54,7 +54,6 @@
 							@endif
 						</tbody>
 					</table>
-					<a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>
 				</div>
 			</div>
 		</div>

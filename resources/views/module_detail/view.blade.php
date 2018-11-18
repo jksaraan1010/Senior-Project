@@ -7,7 +7,7 @@
 		<h3 class="page-title">{{$module->name}} @lang('general.module_detail.title')</h3>
 
 		<p>
-			<a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>
+	
 			<a href="{{ route('module_detail.create',['id'=>$module->id]) }}" class="btn btn-success">@lang('general.add_new')</a>
 		</p>
 
