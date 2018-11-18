@@ -28,7 +28,7 @@
       <div class="container">
               <div class="container-fluid">
               <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="/EmailModules">Email this page</a></button>
+ <button type="submit"> <a href="/EmailModules" target="_blank">Email this page</a></button>
  <br>
  <br>
  <!-- Main content -->

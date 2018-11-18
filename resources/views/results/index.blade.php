@@ -25,7 +25,7 @@
       <div class="container">
               <div class="container-fluid">
               <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="/EmailResults">Email this page</a></button>
+ <button type="submit"> <a href="/EmailResults" target="_blank">Email this page</a></button>
 <div class="content-header">
   <div class="container-fluid">
        <table class="table table-bordered table-striped {{ count($results) > 0 ? 'datatable' : '' }}">

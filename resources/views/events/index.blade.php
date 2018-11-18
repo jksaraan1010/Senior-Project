@@ -326,7 +326,7 @@
    <div class="container">
            <div class="container-fluid">
  <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="/EmailEvents">Email this page</a></button>
+ <button type="submit"> <a href="/EmailEvents"  target="_blank">Email this page</a></button>
 
 
                {{-- Success Alert --}}

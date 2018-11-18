@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="container" style="margin-top: 100px; width: 600px;">
-            <h2 class="text-center"> Email This Page To Anyone!</h2><br><br>
+            <h2 class="text-center"> Email Events! </h2><br><br>
             @if(session('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{session('success')}}
