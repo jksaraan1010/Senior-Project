@@ -39,33 +39,12 @@ Route::post('sendResults', 'MailResultsController@send');
 
 
 
-Route::resource('events', 'EventsController');
-Route::get('/add', 'EventsController@display');
-//Route::post('events','EventsController@store');
-Route::get('/edit', 'EventsController@show');
-Route::get('/delete', 'EventsController@show');
 
 
-Route::get('/userGuide', 'userGuideController@index')->name('userGuide');
-Route::get('/adminGuide', 'adminGuideController@index')->name('adminGuide');
 
-Route::resource('notes', 'NotesController');
 
-// Authentication Routes...
-//$this->get('login', 'Auth\LoginController@showLoginForm')->name('auth.login');
-//$this->post('login', 'Auth\LoginController@login')->name('auth.login');
 $this->post('logout', 'Auth\LoginController@logout')->name('auth.logout');
 
-
-// Registration Routes...
-//$this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('auth.register');
-//$this->post('register', 'Auth\RegisterController@register')->name('auth.register');
-
-// Password Reset Routes...
-//$this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('auth.password.reset');
-//$this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('auth.password.reset');
-//$this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('auth.password.email');
-//$this->post('password/reset', 'Auth\ResetPasswordController@reset')->name('auth.password.reset');
 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -83,8 +62,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('questions_options_mass_destroy', ['uses' => 'QuestionsOptionsController@massDestroy', 'as' => 'questions_options.mass_destroy']);
     Route::resource('results', 'ResultsController');
     Route::post('results_mass_destroy', ['uses' => 'ResultsController@massDestroy', 'as' => 'results.mass_destroy']);
+    Route::get('/userGuide', 'userGuideController@index')->name('userGuide');
+    Route::get('/adminGuide', 'adminGuideController@index')->name('adminGuide');
+    
+    Route::resource('notes', 'NotesController');
+    
 
-
+    Route::resource('events', 'EventsController');
+    Route::get('/add', 'EventsController@display');
+    
+    Route::get('/edit', 'EventsController@show');
+    Route::get('/delete', 'EventsController@show');
 
 //module
   
