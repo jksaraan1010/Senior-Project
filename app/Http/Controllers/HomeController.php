@@ -39,9 +39,9 @@ class HomeController extends Controller
         $quizzes = Test::count();
         $id = Auth::id();
         $graphTotal = Test::select('result')->where('user_id', auth()->id())->take(5)->get();      
-        $graphSection1 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY (id) DESC LIMIT 5');
-        $graphSection2 =DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (5,6,7,8) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY (id) DESC LIMIT 5');
-        $graphSection3 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (9,10,11,12) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY (id) DESC LIMIT 5');
+        $graphSection1 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id DESC LIMIT 5');
+        $graphSection2 =DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (5,6,7,8) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id DESC LIMIT 5');
+        $graphSection3 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (9,10,11,12) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id DESC LIMIT 5');
         
         $graphDate = DB::select('SELECT (DATE_FORMAT(created_at,"%m-%d-%Y")) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at) DESC LIMIT 5');
         
@@ -59,11 +59,11 @@ class HomeController extends Controller
 
         $tableDate = DB::select('SELECT (DATE_FORMAT(created_at,"%m-%d-%Y")) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND user_id= '.$id.'  GROUP BY (created_at) ORDER BY (created_at) DESC LIMIT 5 ');
        
-        $tableSection12 = DB::select('SELECT SUM(correct) as result, test_id as attempt FROM `test_answers` WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY (id) DESC LIMIT 5 ');
+        $tableSection12 = DB::select('SELECT SUM(correct) as result, test_id as attempt FROM `test_answers` WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id DESC LIMIT 5 ');
 
-        $tableSection13 = DB::select('SELECT SUM(correct) as result, test_id as attempt FROM `test_answers` WHERE question_id in (5,6,7,8) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY (id) DESC LIMIT 5 ');
+        $tableSection13 = DB::select('SELECT SUM(correct) as result, test_id as attempt FROM `test_answers` WHERE question_id in (5,6,7,8) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id DESC LIMIT 5 ');
 
-        $tableSection14 = DB::select('SELECT  SUM(correct) as result, test_id as attempt FROM `test_answers`WHERE question_id in (9,10,11,12) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY (id) DESC LIMIT 5  ');
+        $tableSection14 = DB::select('SELECT  SUM(correct) as result, test_id as attempt FROM `test_answers`WHERE question_id in (9,10,11,12) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id DESC LIMIT 5  ');
 
        
     
