@@ -36,9 +36,7 @@
       <div class="container">
               <div class="container-fluid">
   
-@if($errors->any())
-<h5>{{$errors->first()}}</h5>
-@endif
+
  <!-- Main content -->
  <div class="card card-default">
  <div class="card-header bg-primary">
