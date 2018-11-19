@@ -210,7 +210,7 @@
               <!-- /.card-header -->
               <div class="card-body p-0">
               <!-- begin timeline-->
-              <link rel="stylesheet" href="{{asset('css/tmlinehome.css')}}">
+              <link rel="stylesheet" href="{{asset('css/tmlinehome.css')}}" media="all">
               <div class="container">
 
   <h4 align="center" >Ages 13-15</h4>
