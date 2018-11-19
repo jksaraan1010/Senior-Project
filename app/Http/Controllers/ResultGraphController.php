@@ -12,9 +12,9 @@ class ResultGraphController extends Controller
     public function SurveyResultGraph(){
         $id = Auth::id();
         $graphTotal = Test::select('result')->where('user_id', auth()->id())->get();      
-        $graphSection1 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id ');
-        $graphSection2 =DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (5,6,7,8) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id ');
-        $graphSection3 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (9,10,11,12) AND user_id= '.$id.' GROUP BY ( test_id) ORDER BY id ');
+        $graphSection1 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY ( test_id) ');
+        $graphSection2 =DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (5,6,7,8) AND user_id= '.$id.' GROUP BY ( test_id)  ');
+        $graphSection3 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (9,10,11,12) AND user_id= '.$id.' GROUP BY ( test_id)  ');
         
         $graphDate = DB::select('SELECT (DATE_FORMAT(created_at,"%m-%d-%Y")) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at)');
         
