@@ -7,7 +7,15 @@
 <!-- Main content -->
 <section class="content"> 
    
-   
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
    <!-- Content Header (Page header) -->
    <div class="content-header">
         <div class="container-fluid">
@@ -70,6 +78,7 @@
                </button>
            </div>
            <div class="modal-body mx-2">
+          
           
                 {{ Form::open(array('url' => 'changePass', 'method' => 'post')) }}
                      <div>

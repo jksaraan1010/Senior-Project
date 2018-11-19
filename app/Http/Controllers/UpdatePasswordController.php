@@ -32,7 +32,7 @@ class UpdatePasswordController extends Controller
 
 
 
-        return redirect()->route('userProfile.index')->withErrors(['Password Change Successful', 'The Message']);
+        return redirect()->route('userProfile.index')->withErrors(['Password Change Successful']);
 
     }
 }
