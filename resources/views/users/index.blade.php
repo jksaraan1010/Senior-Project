@@ -35,13 +35,13 @@
                                 <td>
                                     <!--<a href="{{ route('users.show',[$user->id]) }}" class="btn btn-xs btn-primary">@lang('general.view')</a> -->
                                     <a href="{{ route('users.edit',[$user->id]) }}" class="btn btn-xs btn-primary">@lang('general.edit')</a>
-                                    {!! Form::open(array(
+                                   <!-- {!! Form::open(array(
                                         'style' => 'display: inline-block;',
                                         'method' => 'DELETE',
                                         'onsubmit' => "return confirm('".trans("general.are_you_sure")."');",
                                         'route' => ['users.destroy', $user->id])) !!}
                                     {!! Form::submit(trans('general.delete'), array('class' => 'btn btn-xs btn-danger')) !!}
-                                    {!! Form::close() !!}
+                                    {!! Form::close() !!} -->
                                 </td>
                             </tr>
                         @endforeach

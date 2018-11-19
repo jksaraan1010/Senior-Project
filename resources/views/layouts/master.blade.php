@@ -140,6 +140,24 @@
                                  <p>Take Assessment</p>
                               </a>
                            </li>
+                           @if(Auth::user()->isAdmin())
+                     <li class="nav-item">
+                        <a href="{{url('topics')}}" class="nav-link">
+                           <i class="nav-icon fas fa-book"></i>
+                           <p>
+                              Topics
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="{{url('questions')}}" class="nav-link">
+                           <i class="nav-icon fas fa-question"></i>
+                           <p>
+                              Questions
+                           </p>
+                        </a>
+                     </li>
+                     @endif
                            @if(!Auth::user()->isAdmin())
                            <li class="nav-item">
                               <a href="{{url('results')}}" class="nav-link">
@@ -169,33 +187,9 @@
                            </p>
                         </a>
                      </li>
+                     
+                 
                      @if(Auth::user()->isAdmin())
-                     <li class="nav-item">
-                        <a href="{{url('topics')}}" class="nav-link">
-                           <i class="nav-icon fas fa-book"></i>
-                           <p>
-                              Topics
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="{{url('questions')}}" class="nav-link">
-                           <i class="nav-icon fas fa-question"></i>
-                           <p>
-                              Questions
-                           </p>
-                        </a>
-                     </li>
-                     @if(!Auth::user()->isAdmin())
-                     <li class="nav-item">
-                        <a href="{{url('questions_options')}}" class="nav-link">
-                           <i class="nav-icon fas fa-check-square"></i>
-                           <p>
-                              Question Options
-                           </p>
-                        </a>
-                     </li>
-                     @endif
                      <li class="nav-item">
                         <a href="{{ route('terms.index') }}" class="nav-link">
                            <i class="nav-icon fas fa-comments"></i>
@@ -222,6 +216,13 @@
                            @endforelse  <!-- added file -->
                         </ul>
                      </li>
+                     <li class="nav-item">
+                        <a href="{{url('users')}}" class="nav-link">
+                           <i class="nav-icon fas fa-user-circle"></i>
+                           <p>Users Management</p>
+                        </a>
+                     </li>
+                     <!--
                      <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                            <i class="nav-icon fa fa-users"></i>
@@ -234,7 +235,7 @@
                            <li class="nav-item">
                               <a href="{{url('users')}}" class="nav-link">
                                  <i class="nav-icon fas fa-user-circle"></i>
-                                 <p>Users</p>
+                                 <p>Users Management</p>
                               </a>
                            </li>
                            @if(!Auth::user()->isAdmin())
@@ -253,7 +254,10 @@
                         </ul>
                      </li>
                      @endif
+                  -->
                      @else
+                  
+                     
                      <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                            <i class="nav-icon fa fa-book"></i>

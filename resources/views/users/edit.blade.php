@@ -24,8 +24,8 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('email', 'Email*', ['class' => 'control-label']) !!}
-                    {!! Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    {!! Form::label('email', 'Email*', ['class' => 'control-label', 'readonly' => 'true']) !!}
+                    {!! Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => '', 'readonly' => 'true']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('email'))
                         <p class="help-block">
@@ -35,9 +35,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 form-group" disabled>
-                    {!! Form::label('password', 'Password', ['class' => 'control-label']) !!}
-                    {!! Form::password('password', ['class' => 'form-control', 'placeholder' => '']) !!}
+                <div class="col-xs-12 form-group" >
+                    {!! Form::label('password', 'Password', ['class' => 'control-label', 'readonly' => 'true']) !!}
+                    {!! Form::password('password', ['class' => 'form-control', 'placeholder' => '', 'readonly' => 'true']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('password'))
                         <p class="help-block">
