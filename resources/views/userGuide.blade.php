@@ -25,15 +25,14 @@
    <div class="container">
            <div class="container-fluid">
                
-           <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="/Mail">Email this page</a></button>
-    <br>
-  <br>
-
-    <!-- Main content -->
+          <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
-
+      <br>
+      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
+ <a class="email-btn" href="/EmailUserGuide" target="_blank" >Email this page </a>
+  <br>
+<br>
      <div class="card card-default">
           <div class="card-header bg-primary">
             <h5>
@@ -80,6 +79,7 @@
                 <p>In the center of the page you will see several items such as the assessment results graph or the Timeline
                     which will give you a gimpse of your results. To view the full page click on the view all link or go to the 
                   appropriate page from the sidebar. </p>
+              
               </div>
               <!-- /.card-body -->
             </div>
@@ -140,6 +140,7 @@
               locate the event and click on the 'Edit' button. This will take you to another page where you can update the event information. 
              Once you've updated the event click on the 'Update Event' button, which will update the event and take you back to the main calendar page.
             If you've decided not to update the event simply click on the 'Go Back' button which will take you back to the Calendar Page.  </p>
+              
               </div>
               <!-- /.card-body -->
             </div>
@@ -391,6 +392,7 @@
                  on 'Go Back' to go back without updating your note. </p>
                 <p>If you would like to delete your note completely, click on the 'Delete' button next to the note. This will 
                   remove the note from your list. </p>
+              
               </div>
               <!-- /.card-body -->
             </div>

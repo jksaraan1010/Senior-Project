@@ -32,11 +32,13 @@
             </head>
 
             <body>
-                <input type="button" onClick="window.print()" value="Print This Page"/>
-                <button type="submit"> <a href="/EmailTable">Email this page</a></button>
-
-                <div class="container">
-                    <h2>Survey Results Table</h2>
+            <div class="container">
+                <div class="container-fluid">
+      <br>
+      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
+ <a class="email-btn" href="/EmailTable" target="_blank" >Email this page </a>
+  <br>
+<br>
 
                     <table class="table table-striped table-hover table-bordered">
 

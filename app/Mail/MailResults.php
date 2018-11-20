@@ -57,7 +57,7 @@ class MailResults extends Mailable
             $topics_results[$title] = $topic_results;
             $total_questions =  TestAnswer::where('user_id','=', Auth::id())->where('test_id','=',$id)->count();
 
-        return $this->view('EmailResults')->with('results', $results)->with('results',$results)->with('topics_results',$topics_results)->with('total_questions', $total_questions)->subject('Test Email');
+        return $this->view('EmailResults')->with('results', $results)->with('results',$results)->with('topics_results',$topics_results)->with('total_questions', $total_questions)->subject('Your Survey Results');
    
     }
 }

@@ -1,0 +1,17 @@
+.print-btn, .print-btn:hover, .print-btn:focus {
+    border: 1px solid;
+    padding: 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    background: #007bff;  
+    color: #ffffff; 
+}
+
+.email-btn, .email-btn:hover, .email-btn:focus {
+    border: 1px solid;
+    padding: 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    background: #007bff;    
+    color: #ffffff;
+}

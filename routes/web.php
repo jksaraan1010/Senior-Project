@@ -36,7 +36,10 @@ Route::get('EmailModules','MailModulesController@index' );
 Route::post('sendModules', 'MailModulesController@send');
 Route::get('EmailResults','MailResultsController@index' );
 Route::post('sendResults', 'MailResultsController@send');
-
+Route::get('EmailUserGuide','MailUserGuideController@index' );
+Route::post('sendUserGuide', 'MailUserGuideController@send');
+Route::get('EmailTimeline','MailTimelineController@index' );
+Route::post('sendTimeline', 'MailTimelineController@send');
 
 
 

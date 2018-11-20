@@ -13,7 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" href="/css/app.css"> 
-  
+  <link rel="stylesheet" href="/css/custom.css">
+
 
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -325,9 +326,10 @@
    <!-- /.content-header -->
    <div class="container">
            <div class="container-fluid">
- <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="/EmailEvents"  target="_blank">Email this page</a></button>
-
+           <br>
+      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
+ <a class="email-btn" href="/EmailEvents" target="_blank" >Email this page </a>
+ 
 
                {{-- Success Alert --}}
            @if(Session::has('success'))

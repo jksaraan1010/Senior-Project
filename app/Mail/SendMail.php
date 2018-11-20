@@ -35,7 +35,7 @@ class SendMail extends Mailable
 
         $storedNotes = Note::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
 
-        return $this->view('EmailNotes')->with('storedNotes', $storedNotes)->subject('Test Email');
+        return $this->view('EmailNotes')->with('storedNotes', $storedNotes)->subject('Your Notes');
    
     }
 }

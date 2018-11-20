@@ -23,9 +23,11 @@
       <!-- /.content-header -->
       <div class="container">
               <div class="container-fluid">
-  <input type="button" onClick="window.print()" value="Print This Page"/>
-    <button type="submit"> <a href="/Mail">Email this page</a></button>
-
+              <br>
+      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
+ <a class="email-btn" href="/EmailTable" target="_blank" >Email this page </a>
+  <br>
+<br>
     <div class="chart-container" style="position: relative; height:40vh; width:auto;">
         <canvas id="line-chart"></canvas>
     </div>

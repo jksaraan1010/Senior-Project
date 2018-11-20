@@ -24,10 +24,14 @@
       <!-- /.content-header -->
       <div class="container">
               <div class="container-fluid">
-              <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="/EmailResults" target="_blank">Email this page</a></button>
+              
 <div class="content-header">
   <div class="container-fluid">
+  <br>
+<a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
+ <a class="email-btn" href="/EmailResults" target="_blank" > Email this page </a>
+ 
+ <br> <br>
        <table class="table table-bordered table-striped {{ count($results) > 0 ? 'datatable' : '' }}">
                 <thead class="bg-primary">
                     <tr>

@@ -30,10 +30,14 @@
 
               <div class="container-fluid">
 </head>
+<div class="container">
 
- <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="#">Email this page</a></button>
-
+<div class="container-fluid">
+  <br>
+      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
+ <a class="email-btn" href="/EmailTimeline" target="_blank" >Email this page </a>
+  <br>
+<br>
 <link rel="stylesheet" href="{{asset('css/tmline.css')}}">
 
 

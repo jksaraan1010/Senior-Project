@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Input;
-use App\Mail\MailTimeline;
+use App\Mail\MailUserGuide;
 
-class MailTimelineController extends Controller
+class MailUserGuideController extends Controller
 {
     public function index(){
-        return view('MailTimeline');
+        return view('MailUserGuide');
        }
        
         public function send(Request $request)
@@ -19,7 +19,7 @@ class MailTimelineController extends Controller
             $data  = $this->validate($request, [
                 'email' => 'required'
             ]);
-         Mail::to($request->input('email'))->send(new MailTimeline());
+         Mail::to($request->input('email'))->send(new MailUserGuide());
          return redirect()->back()->with('success', 'Email sent successfully. Check your email.');
         }
 }

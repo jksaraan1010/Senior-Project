@@ -58,14 +58,16 @@
 
             @endif
 
- <button type="submit"> <a onClick="window.print()"> Print this page</a></button>
- <button type="submit"> <a href="/EmailNotes"  target="_blank">Email this page</a></button>
-<br>
+ 
 <br>
  <!-- Main content -->
  <div class="content">
       <div class="container-fluid">
-
+      <br>
+      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
+ <a class="email-btn" href="/EmailNotes" target="_blank" >Email this page </a>
+  <br>
+<br>
 <div class="card card-default">
           <div class="card-header bg-primary">
             <h5><i class="fas fa-marker"></i> Add A New Note</h5>

@@ -6,11 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\ModuleDetailController;
-use App\Module;
-class MailModules extends Mailable
+
+class MailTimeline extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -31,7 +28,7 @@ class MailModules extends Mailable
      */
     public function build()
     {
-        $module = Module::find(1);
-        return $this->view('EmailModules')->with('module', $module)->subject('Understanding Modules');
+        return $this->view('EmailTimeline')->subject('Timeline For Transition Process');
+
     }
 }
