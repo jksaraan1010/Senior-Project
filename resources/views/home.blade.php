@@ -14,7 +14,7 @@
        <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div class="small-box bg-secondary">
               <div class="inner">
                 <h4>User </h4>
 
@@ -29,7 +29,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-info">
               <div class="inner">
               <h4>Take  </h4>
 
@@ -59,7 +59,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-secondary">
               <div class="inner">
               <h4>Reminders </h4>
 
@@ -78,8 +78,8 @@
  <div class="row">
           <!-- Left col -->
           <div class="col-md-8">
-            <div class="card">
-              <div class="card-header bg-success">
+            <div class="card hoverable">
+              <div class="card-header bg-info">
                 <h5> <i class="fas fa-chart-line"></i> Survey Results Graph</h5>
               </div>
               <!-- /.card-header -->
@@ -101,9 +101,9 @@
             </div>
             <!-- /.card -->
             
-            <!-- TABLE: LATEST ORDERS -->
-            <div class="card">
-              <div class="card-header bg-danger">
+            <!-- TABLE: -->
+            <div class="card hoverable">
+              <div class="card-header bg-secondary">
                 <h5><i class="fas fa-table"></i> Survey Results Table</h5>
               </div>
               <!-- /.card-header -->
@@ -203,8 +203,8 @@
           </div>
           <!-- /.col -->
           <div class="col-md-4">
-            <div class="card">
-              <div class="card-header bg-info">
+            <div class="card hoverable">
+              <div class="card-header bg-primary">
                 <h5> <i class="fas fa-heartbeat"></i> Milestone Timeline</h5>
               </div>
               <!-- /.card-header -->
