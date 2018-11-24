@@ -2,7 +2,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @section('content')
-
+@if(Auth::user()->role_id != 1)
   <!-- Main content -->
   <section class="content"> 
    
@@ -107,7 +107,7 @@
 </div>
 </div>
 </div>          
-
+@endif
     @endsection
 
 

@@ -272,6 +272,7 @@
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
       <!-- Main content -->
+      @if(Auth::user()->role_id != 1)
       <section class="content">
          <!-- Content Header (Page header) -->
          <div class="content-header">
@@ -394,6 +395,7 @@
                   </div>
                </div>
       </section>
+      @endif
       </div>
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">

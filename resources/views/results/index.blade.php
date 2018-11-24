@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@if(Auth::user()->role_id != 1)
  <!-- Main content -->
  <section class="content"> 
 
@@ -87,5 +88,5 @@
         timeFormat: "hh:mm:ss"
     });
 </script>
-
+@endif
 @stop

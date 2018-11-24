@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('content')
+@if(Auth::user()->role_id != 1)
  <!-- Main content -->
  <section class="content"> 
    
@@ -31,4 +32,5 @@
     <div class="chart-container" style="position: relative; height:40vh; width:auto;">
         <canvas id="line-chart"></canvas>
     </div>
+    @endif
 @endsection
