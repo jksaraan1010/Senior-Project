@@ -8,7 +8,7 @@ use Calendar;
 class Events extends Model
 {
     protected $table = 'events';
-    protected $fillable = ['event_name', 'start_date', 'end_date'];
+    protected $fillable = ['event_name', 'event_time'];
 
 
     public function user()

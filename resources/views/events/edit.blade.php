@@ -74,8 +74,7 @@
                 <table id="events" class="table table-hover">
                   <tr>
                   <th> Event Name</th>
-                  <th> Start Date and Time</th>
-                  <th> End Date and Time </th>
+                  <th> Event Date and Time Range</th>
                   <th> Edit</th>
                   <th> Delete</th>
                   </tr>
@@ -83,8 +82,8 @@
             <tbody>
             <tr>
                 <td>{{$event->event_name}}</td>
-                <td>{{$event->start_date}}</td>
-                <td>{{$event->end_date}}</td>
+                <td>{{$event->event_time}}</td>
+               
 
                 <th><a href="{{action('EventsController@edit', $event['id'])}}" class="btn btn-primary btn-rounded mb-4">Edit</a>
                 </th>

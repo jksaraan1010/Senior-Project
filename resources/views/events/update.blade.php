@@ -82,14 +82,10 @@
             </div>
 
             <div class="form-group">
-                <label> Start Time of Event </label>
-                <input type="datetime-local" class="form-control" name="start_date" placeholder="Event Start Time" value="{{$eventsUnderEdit->start_date}}">
+                <label> Event Date and Time Range </label>
+                <input type="text" class="form-control" name="event_time" placeholder="Event Time" value="{{$eventsUnderEdit->event_time}}">
             </div>
-
-            <div class="form-group">
-                <label> End Time of Event    </label>
-                <input type="datetime-local" class="form-control" name="end_date" placeholder="Event End Time" value="{{$eventsUnderEdit->end_date}}">
-            </div>
+          
 
             {{ method_field('put') }}
             <div class="form-group">

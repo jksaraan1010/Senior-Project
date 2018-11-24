@@ -361,6 +361,7 @@
                    @endif
                </div>
 <br>
+
   <div class="container-fluid">
        <div class="row">
          <div class="col-md-3">
@@ -405,7 +406,7 @@
 
 <!-- Add Modal -->
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-   <div class="modal-dialog modal-sm" role="document">
+   <div class="modal-dialog" role="document">
        <div class="modal-content">
            <div class="modal-header text-center bg-primary">
                <h5 class="modal-title w-100 ">Add An Event</h5>
@@ -425,22 +426,12 @@
                            </div>
                        </div>
                      </div>
-
                      <div>
                        <div class="form-group">
-                         {!! Form::label('start_date','Start Date and Time:') !!}
-                         <div>
-                         {!! Form::input('dateTime-local', 'start_date', null, ['class' => 'form-control']) !!}
-                         </div>
-                       </div>
-                     </div>
-
-                     <div>
-                       <div class="form-group">
-                         {!! Form::label('end_date','End Date and Time:') !!}
-                         <div class="">
-                         {!! Form::input('dateTime-local', 'end_date', null, ['class' => 'form-control']) !!}
-                         </div>
+                           {!! Form::label('event_time','Enter Event Date and Time Range:') !!}
+                           <div>
+                           {!! Form::text('event_time', null, ['class' => 'form-control', 'id' => 'eventTime']) !!}
+                           </div>
                        </div>
                      </div>
 
@@ -480,6 +471,22 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
     <link rel="stylesheet"  href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+ <link rel="stylesheet" href="/daterangepicker/daterangepicker-bs3.css">
+
+<script type="text/javascript" src="/daterangepicker/daterangepicker.js"></script>
+
+
+<script>
+  $(function () {
+    $('#eventTime').daterangepicker({
+      timePicker         : true,
+      timePickerIncrement: 15,
+      format             : 'MM/DD/YYYY h:mm A'
+    })
+    
+  })
+</script>
 
 </body>
 </html>

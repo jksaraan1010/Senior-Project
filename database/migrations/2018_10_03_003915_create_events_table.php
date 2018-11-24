@@ -18,15 +18,15 @@ class CreateEventsTable extends Migration
             $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('event_name');
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->string('event_time');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
+     * $table->dateTime('start_date');
+           * $table->dateTime('end_date');
      * @return void
      */
     public function down()

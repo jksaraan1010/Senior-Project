@@ -71,8 +71,8 @@ class EventsController extends Controller
         $validator = Validator::make($request->all(), [
             
             'event_name' => 'required|min:3|max:255',
-            'start_date' => 'required',
-            'end_date' => 'required'
+            'event_time' => 'required',
+           
         ]);
  
         if ($validator->fails()) {
@@ -83,9 +83,9 @@ class EventsController extends Controller
         $event = new Events;
         $event->user_id = Auth::user()->id;
         $event->event_name = $request['event_name'];
-        $event->start_date = $request['start_date'];
-        $event->end_date = $request['end_date'];
+        $event->event_time = $request['event_time'];
        
+    
         $event->save();
  
         \Session::flash('Success','Event added successfully!');
@@ -128,15 +128,15 @@ class EventsController extends Controller
     {
         $this->validate($request,[
             'event_name' => 'required|min:3|max:255',
-            'start_date' => 'required',
-            'end_date' => 'required',
+            'event_time' => 'required',
+           
         ]);
 
         $events = Events::findOrFail($id);
 
         $events->event_name = $request->input('event_name');
-        $events->start_date = $request->input('start_date');
-        $events->end_date = $request->input('end_date');
+        $events->event_time = $request->input('event_time');
+    
         $events->save();
         \Session::flash('Success','Event updated successfully!');
         return redirect()->route('events.index');
