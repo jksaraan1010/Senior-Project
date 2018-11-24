@@ -58,7 +58,9 @@
   <a href="{{ route('updatePassword') }}" class="btn btn-primary" data-toggle="modal" data-target="#updateModal">Update Password</a>
   @if(!Auth::user()->isAdmin())
   @if(count($docinfo) < 5)
-  <a href="{{ route('userProfile.create') }}" class="btn btn-secondary" data-toggle="modal" data-target="#createModal">Add A New Doctor</a>
+  <a href="{{ route('userProfile.create') }}" class="btn btn-secondary" data-toggle="modal" data-target="#createModal" >Add A New Doctor</a>
+  @else
+  <a  class="btn btn-secondary" data-toggle="modal"  >Add A New Doctor</a>
   @endif
   @endif
 </div>
@@ -115,8 +117,9 @@
            </div>   
        </div>
    </div>    
-
-
+   @if(count($docinfo) > 4)
+<h3> No More Doctors Can Be Added</h3>
+@endif
 <!-- Create Doctor Modal -->
 <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
