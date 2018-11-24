@@ -14,11 +14,11 @@
                         @endif
                         <tr class="bg-primary">
                             <th>@lang('general.results.fields.date')</th>
-                            <td>{{ $test->created_at}}</td>
+                            <td>{{ $test->created_at->format('d M Y h:i A') }}</td>
                         </tr>
                         <tr>
                             <th>@lang('general.results.fields.result')</th>
-                            <td>{{ $test->result }}/{{$total_questions}}</td>
+                            <td>{{ $test->result }} out of {{$total_questions}}</td>
                         </tr>
                         </tr>
                 @foreach($topics_results as $topic => $results)
