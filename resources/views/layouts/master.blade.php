@@ -12,7 +12,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="/css/app.css">
       <link rel="stylesheet" href="/css/custom.css">
-
       <!-- bottom Script is for quiz/adminlte, yeahyea-->
       <link rel="stylesheet" href="{{asset('adminlte/css/app.css')}}">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -72,8 +71,8 @@
          <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="{{url('home')}}" class="brand-link  bg-primary">
-            <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle elevation-3">
-            <span class="brand-text text-lg-center font-weight-bold"> My Transition <br>    Explorer</span>
+            <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle elevation-2"  alt="mte Image"  style="opacity: .8">
+            <span class="brand-text font-weight-light" style="font-size:83%;">My Transition Explorer</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
@@ -142,30 +141,13 @@
                                  <p>Take Assessment</p>
                               </a>
                            </li>
-                           @if(Auth::user()->isAdmin())
-                     <li class="nav-item">
-                        <a href="{{url('topics')}}" class="nav-link">
-                           <i class="nav-icon fas fa-book"></i>
-                           <p>
-                              Topics
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="{{url('questions')}}" class="nav-link">
-                           <i class="nav-icon fas fa-question"></i>
-                           <p>
-                              Questions
-                           </p>
-                        </a>
-                     </li>
-                     @endif
                            @if(!Auth::user()->isAdmin())
                            <li class="nav-item">
                               <a href="{{url('results')}}" class="nav-link">
-                                 <i class="nav-icon fas fa-check-circle"></i>
+                                 <i class="nav-icon fas fa-chart-line"></i>
                                  <p>View Past Results</p>
                               </a>
+                           </li>
                            <li class="nav-item">
                               <a href="{{url('ResultTable')}}" class="nav-link">
                                  <i class="nav-icon fas fa-table"></i>
@@ -177,11 +159,31 @@
                                  <i class="nav-icon fas fa-chart-line"></i>
                                  <p>View Graph </p>
                               </a>
-                        </li><!-- Assessment-->
+                           </li>
+                           <!-- Assessment-->
+                           @endif
+                           @if(Auth::user()->isAdmin())
+                           <li class="nav-item">
+                              <a href="{{url('topics')}}" class="nav-link">
+                                 <i class="nav-icon fas fa-book"></i>
+                                 <p>
+                                    Topics
+                                 </p>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="{{url('questions')}}" class="nav-link">
+                                 <i class="nav-icon fas fa-question"></i>
+                                 <p>
+                                    Questions
+                                 </p>
+                              </a>
+                           </li>
                            @endif
                         </ul>
                      </li>
-                        <li class="nav-item">
+                     </li>
+                     <li class="nav-item">
                         <a href="{{ route('Timeline') }}" class="nav-link">
                            <i class="nav-icon fa fa-heartbeat"></i>
                            <p>
@@ -189,8 +191,6 @@
                            </p>
                         </a>
                      </li>
-                     
-                 
                      @if(Auth::user()->isAdmin())
                      <li class="nav-item">
                         <a href="{{ route('terms.index') }}" class="nav-link">
@@ -224,42 +224,7 @@
                            <p>Users Management</p>
                         </a>
                      </li>
-                     <!--
-                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                           <i class="nav-icon fa fa-users"></i>
-                           <p>
-                              User Management
-                              <i class="fa fa-angle-left right"></i>
-                           </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                              <a href="{{url('users')}}" class="nav-link">
-                                 <i class="nav-icon fas fa-user-circle"></i>
-                                 <p>Users Management</p>
-                              </a>
-                           </li>
-                           @if(!Auth::user()->isAdmin())
-                           <li class="nav-item">
-                              <a href="{{url('roles')}}" class="nav-link">
-                                 <i class="nav-icon fas fa-database"></i>
-                                 <p>Roles</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="{{url('user_actions')}}" class="nav-link">
-                                 <i class="nav-icon fas fa-sticky-note"></i>
-                                 <p>User Actions</p>
-                              </a>
-                           </li>
-                        </ul>
-                     </li>
-                     @endif
-                  -->
                      @else
-                  
-                     
                      <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                            <i class="nav-icon fa fa-book"></i>
@@ -291,7 +256,6 @@
                         </a>
                      </li>
                      @endif
-                  
                   </ul>
                </nav>
                <!-- /.sidebar-menu -->
@@ -310,12 +274,10 @@
          </aside>
          <!-- /.control-sidebar -->
       </div>
-      <!-- ./wrapper -->
       <footer class="main-footer">
          <strong>Copyright &copy; 2018-2019 <a href="www.transitionexplorer.com" target="_blank"> My Transition Explorer </a>.
          All rights reserved. <a href="{{ route('terms.show') }}" target="_blank"> Terms and Conditions </a>.</strong>
       </footer>
-      <!-- REQUIRED SCRIPTS -->
       <script src="/js/app.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
