@@ -1,8 +1,4 @@
 @extends('layouts.master')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 @section('content')
 <!-- Main content -->
@@ -34,8 +30,8 @@
 
 <div class="container-fluid">
   <br>
-      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
- <a class="email-btn" href="/EmailTimeline" target="_blank" >Email this page </a>
+  <a onClick="window.print()" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+  <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
   <br>
 <br>
 <link rel="stylesheet" href="{{asset('css/tmline.css')}}">

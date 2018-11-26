@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="csrf-token" content="{{ csrf_token() }}">
-      <title> My Transition Explorer </title>
+      <title>My Transition Explorer</title>
       <!-- Tell the browser to be responsive to screen width -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="/css/app.css">
@@ -71,8 +71,8 @@
          <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="{{url('home')}}" class="brand-link  bg-primary">
-            <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle elevation-2"  alt="mte Image"  style="opacity: .8">
-            <span class="brand-text font-weight-light" style="font-size:83%;">My Transition Explorer</span>
+            <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle elevation-2"  alt="mte Image" style="width:40px;height:40px;"  style="opacity: 5.8">
+            <span class="brand-text font-weight-bold" style="font-size:80%;">My Transition Explorer</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
@@ -82,7 +82,8 @@
                      <img src='{{ asset("/403.svg")}}'  class="img-circle elevation-2" alt="User Image">
                   </div>
                   <div class="info">    
-                     <a href="#" class=" d-block"> {{ Auth::user()->name }}</a>
+                     <a  href="{{ route('userProfile.index') }}" class=" d-block"> {{ Auth::user()->name }}</a>
+                    
                   </div>
                </div>
                <!-- Sidebar Menu -->
@@ -221,7 +222,7 @@
                      <li class="nav-item">
                         <a href="{{url('users')}}" class="nav-link">
                            <i class="nav-icon fas fa-user-circle"></i>
-                           <p>Users Management</p>
+                           <p>User Management</p>
                         </a>
                      </li>
                      @else
@@ -275,7 +276,7 @@
          <!-- /.control-sidebar -->
       </div>
       <footer class="main-footer text-center">
-         <strong>Copyright &copy; 2018-2019 <a href="www.transitionexplorer.com" target="_blank"> My Transition Explorer </a>.
+         <strong>Copyright &copy; 2018-2019 <a href="www.transitionexplorer.com" target="_blank">My Transition Explorer </a>.
          All rights reserved. <a href="{{ route('terms.show') }}" target="_blank"> Terms and Conditions </a>.</strong>
       </footer>
       <script src="/js/app.js"></script>
