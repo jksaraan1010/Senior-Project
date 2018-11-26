@@ -1,14 +1,9 @@
 @extends('layouts.master')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 @section('content')
 <!-- Main content -->
  <section class="content"> 
    
-
    <!-- Content Header (Page header) -->
    <div class="content-header">
         <div class="container-fluid">
@@ -38,213 +33,191 @@
  <a class="email-btn" href="/EmailTimeline" target="_blank" >Email this page </a>
   <br>
 <br>
-<link rel="stylesheet" href="{{asset('css/tmline.css')}}">
+  <!-- row -->
+  <div class="row">
+        <div class="col-md-12">
+          <!-- The time line -->
+          <ul class="timeline">
+            <!-- timeline time label -->
+            <li class="time-label">
+                  <span class="bg-primary">
+                    Ages 13-15
+                  </span>
+            </li>
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-stethoscope"></i>
 
-
-
-<br>
-<div class="container">
-
-  <h1 align="center" >Ages 13-15</h1>
-      <div class="timeline">
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Self-Care</h3>
-            <label class="container">Start taking medication by yourself without reminders 
-            
-            </label> 
-            <label class="container">Learn to be comfortable taking care of yourself
-            
-            
-            </label>
-        </div>
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
-
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Health Awareness</h3>
-            <label class="container">Learn about your medical conditions and medications 
-            
-            
+              <div class="timeline-item">
               
-            </label>
-            <label class="container">Understand what complications may come from your medical conditions
-            
-            
-              
-            </label>
-        </div>
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
+                <h3 class="timeline-header">Self-Care</h3>
 
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Communication</h3>
-            <label class="container">Understand that you will see an adult doctor in the next few years 
-            
-            
-            
-             
-            </label>
-            <label class="container">Start to speak with the doctor by yourself without help from family or friends
-           
-            
-              
-            </label>
-        </div>
-
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-</div>
-<hr>
-<h1 align="center" >Ages 15-17</h1>
-<div class="container">
-<div class="timeline">
+                <div class="timeline-body">
+                  <ul>
+                    <li> Start taking medication by yourself without reminders</li>
+                    <li> Learn to be comfortable taking care of yourself</li>
+                  </ul>
+                </div>
         
-            
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Self-Care</h3>
-            <label class="container">Be able to take medication by yourself without any help 
-           
-            
-            </label>
-            <label class="container">Feel comfortable taking care of yourself
-            
-            
-              
-            </label>
-         </div>
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-heartbeat"></i>
 
-      <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Health Awareness</h3>
-            <label class="container">Know your complete medical history and medications 
-            
-            
-              
-            </label>
-            <label class="container">Know what to do and who to talk to when you feel ill  
-           
-            
-              
-            </label>
-         </div>
-          
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
+              <div class="timeline-item">
+                
+                <h3 class="timeline-header"> Health Awareness</h3>
+                <div class="timeline-body">
+                  <ul>
+                    <li> Learn about your medical conditions and medications</li>
+                    <li> Understand what complications may come from your medical conditions</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-comments"></i>
 
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Communication</h3>
-            <label class="container">Be able to talk to your doctors and nurses by yourself
+              <div class="timeline-item">
             
-           
+                <h3 class="timeline-header">Communication</h3>
+
+                <div class="timeline-body">
+                  <ul>
+                    <li> Understand that you will see an adult doctor in the next few years</li>
+                    <li> Start to speak with the doctor by yourself without help from family or friends</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline time label -->
+            <li class="time-label">
+                  <span class="bg-primary">
+                    Ages 15-17
+                  </span>
+            </li>
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-stethoscope"></i>
+
+              <div class="timeline-item">
               
-            </label>
-            <label class="container">Know how to call the doctor's office if you feel ill  
+                <h3 class="timeline-header">Self-Care</h3>
+
+                <div class="timeline-body">
+                 <ul>
+                    <li> Be able to take medication by yourself without any help</li>
+                    <li> Feel comfortable taking care of yourself</li>
+                  </ul>
+                </div>
+        
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa  fa-heartbeat"></i>
+
+              <div class="timeline-item">
+                
+                <h3 class="timeline-header"> Health Awareness</h3>
+
+                <div class="timeline-body">
+                <ul>
+                    <li> Know your complete medical history and medications</li>
+                    <li> Know what to do and who to talk to when you feel ill</li>
+                  </ul>
+                </div>
+        
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-comments"></i>
+
+              <div class="timeline-item">
             
-           
+                <h3 class="timeline-header">Communication</h3>
+
+                <div class="timeline-body">
+                <ul>
+                    <li> Be able to talk to your doctors and nurses by yourself</li>
+                    <li> Know how to call the doctor's office if you feel ill</li>
+                  </ul>
+              </div>
+            </li>
+            <!-- END timeline item -->
+             <!-- timeline time label -->
+             <li class="time-label">
+                  <span class="bg-primary">
+                    Ages 17-19
+                  </span>
+            </li>
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-stethoscope"></i> 
+
+              <div class="timeline-item">
               
-            </label>
-         </div>
-          
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
+                <h3 class="timeline-header">Self-Care</h3>
+
+                <div class="timeline-body">
+                <ul>
+                    <li> Know how to get your medications refilled</li>
+                    <li> Know how to arrange for transportation to your doctor's appointment</li>
+                  </ul>
+                </div>
+        
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-heartbeat"></i>
+
+              <div class="timeline-item">
+                
+                <h3 class="timeline-header"> Health Awareness</h3>
+                <ul>
+                    <li> Learn what type of insurance you have and how to apply for it</li>
+                    <li> Know which doctors you need to see and why you are seeing them</li>
+                </ul>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-comments"></i>
+              <div class="timeline-item">
+            
+                <h3 class="timeline-header">Communication</h3>
+
+                <div class="timeline-body">
+                <ul>
+                    <li> Feel prepared to transition from your current doctor to an adult doctor</li>
+                    <li> Be able to schedule doctor's appointments by yourself</li>
+                </ul>
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+
+          </ul>
         </div>
+        <!-- /.col -->
       </div>
-    </div>
+      <!-- /.row -->
 
-
-<hr border-top: 1px solid red;>
-<h1 align="center" >Ages 17-19</h1>
-
-<div class="container">
-<div class="timeline">
-
-<div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Self-Care</h3>
-            <label class="container">Know how to get your medications refilled 
-            
-           
-              
-            </label>
-            <label class="container">Know how to arrange for transportation to your doctor's appointment
-            
-            
-              
-            </label>
-          </div>
-          
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
-
-      <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Health Awareness</h3>
-            <label class="container">Learn what type of insurance you have and how to apply for it  
-            
-            
-              
-            </label>
-            <label class="container">Know which doctors you need to see and why you are seeing them
-            
-           
-              
-            </label>
-          </div>
-          
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
-
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Communication</h3>
-            <label class="container">Feel prepared to transition from your current doctor to an adult doctor
-            
-            
-              
-            </label>
-            <label class="container">Be able to schedule doctor's appointments by yourself
-            
-            
-              
-            </label>
-          </div>
-          
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
       </div>
-    </div>
 </div>
-</div>
-</div>    
-
 
 @endsection

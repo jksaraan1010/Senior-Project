@@ -103,7 +103,7 @@
             
             <!-- TABLE: -->
             <div class="card hoverable">
-              <div class="card-header bg-primary">
+              <div class="card-header bg-success">
                 <h5><i class="fas fa-table"></i> Survey Results Table</h5>
               </div>
               <!-- /.card-header -->
@@ -204,80 +204,73 @@
           <!-- /.col -->
           <div class="col-md-4">
             <div class="card hoverable">
-              <div class="card-header bg-success">
+              <div class="card-header bg-primary">
                 <h5> <i class="fas fa-heartbeat"></i> Milestone Timeline</h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
               <!-- begin timeline-->
-              <link rel="stylesheet" href="{{asset('css/tmlinehome.css')}}">
-              <div class="container">
+              <br>
+      
+<h4 class="text-primary text-center">Ages 13-15</h4>
 
-  <h4 align="center" >Ages 13-15</h4>
-      <div class="timeline">
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10  order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Self-Care</h3>
-            <label class="container">Start taking medication by yourself without reminders 
-            </label> 
-            <label class="container">Learn to be comfortable taking care of yourself
-             
-            </label>
-        </div>
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
+             <br>
+              <!-- The time line -->
+          <ul class="timeline">
+            <!-- timeline time label -->
+      
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-stethoscope"></i>
 
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10 order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Health Awareness</h3>
-            <label class="container">Learn about your medical conditions and medications 
-            
-            
+              <div class="timeline-item">
               
-              
-              
-            </label>
-            <label class="container">Understand what complications may come from your medical conditions
-            
-            
-              
-              
-            </label>
-        </div>
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
+                <h3 class="timeline-header">Self-Care</h3>
 
-        <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
-          <div class="col-10  order-3 order-md-1 timeline-content">
-            <h3 class=" text-light">Communication</h3>
-            <label class="container">Understand that you will see an adult doctor in the next few years 
-            
-            
-              
-              
-             
-            </label>
-            <label class="container">Start to speak with the doctor by yourself without help from family or friends
-           
-            
-              
-              
-              
-            </label>
-        </div>
+                <div class="timeline-body">
+                  <ul>
+                    <li> Start taking medication by yourself without reminders</li>
+                    <li> Learn to be comfortable taking care of yourself</li>
+                  </ul>
+                </div>
+        
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-heartbeat"></i>
 
-          <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-            <time></time>
-          </div>
-        </div>
+              <div class="timeline-item">
+                
+                <h3 class="timeline-header"> Health Awareness</h3>
+                <div class="timeline-body">
+                  <ul>
+                    <li> Learn about your medical conditions and medications</li>
+                    <li> Understand what complications may come from your medical conditions</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-comments"></i>
 
+              <div class="timeline-item">
+            
+                <h3 class="timeline-header">Communication</h3>
 
-      </div>
-    </div>
+                <div class="timeline-body">
+                  <ul>
+                    <li> Understand that you will see an adult doctor in the next few years</li>
+                    <li> Start to speak with the doctor by yourself without help from family or friends</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
   </div>
   <div class="card-footer text-center">
     <a href="{{ route('Timeline') }}">View Full Timeline</a>
