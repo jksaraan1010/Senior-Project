@@ -29,8 +29,8 @@
     <div class="content">
       <div class="container-fluid">
       <br>
-      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
- <a class="email-btn" href="/EmailUserGuide" target="_blank" >Email this page </a>
+      <a onClick="window.print()" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+      <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
   <br>
 <br>
      <div class="card card-default">

@@ -1,8 +1,12 @@
 @extends('layouts.master')
+<!---
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+-->
+
 @section('content')
 <!-- Main content -->
 <section class="content"> 
@@ -402,7 +406,7 @@
     <form action="{{ route('userProfile.destroy', ['docinfo'=>$infos->id]) }}" method='post'>
       {{ csrf_field() }}
       <input type="hidden" name='_method' value='Delete'>
-      <input type="submit" class='btn btn-danger' value='Delete'>
+      <input type="submit" onclick="return confirm('Are you sure?')" class='btn btn-danger' value='Delete'>
    </form>
     </div>
   </div>

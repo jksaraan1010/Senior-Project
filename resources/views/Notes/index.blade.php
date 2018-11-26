@@ -65,8 +65,8 @@
  <div class="content">
       <div class="container-fluid">
       <br>
-      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
- <a class="email-btn" href="/EmailNotes" target="_blank" >Email this page </a>
+      <a onClick="window.print()" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+      <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
   <br>
 <br>
 <div class="card card-default">
@@ -123,7 +123,7 @@
                      <form action="{{ route('notes.destroy', ['notes'=>$storedNotes->id]) }}" method='post'>
                                     {{ csrf_field() }}
                          <input type="hidden" name='_method' value='Delete'>
-                         <input type="submit" class='btn btn-danger' value='Delete'> 
+                         <input type="submit" onclick="return confirm('Are you sure?')" class='btn btn-danger' value='Delete'> 
                     </form>
                      </td>
                     </tr>
