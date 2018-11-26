@@ -2,9 +2,24 @@
 
 @section('content')
 @if(Auth::user()->role_id == 1)
+
+<div class="content-header">
+     <div class="container-fluid">
+       <div class="row mb-2">
+         <div class="col-sm-6">
+           <h1 class="m-0 text-dark">{{$module_detail->module->name}} @lang('general.module_detail.title')</h1>
+         </div><!-- /.col -->
+         <div class="col-sm-6">
+           <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
+             <li class="breadcrumb-item active"> {{$module_detail->module->name}} @lang('general.module_detail.title') </li>
+           </ol>
+         </div><!-- /.col -->
+       </div><!-- /.row -->
+   
 <div class="content-header">
   <div class="container-fluid">
-      <h3 class="page-title">{{$module_detail->module->name}} @lang('general.module_detail.title')</h3>
+
     
     {!! Form::model($module_detail, ['method' => 'PUT', 'route' => ['module_detail.update', $module_detail->id]]) !!}
 
@@ -39,7 +54,7 @@
         </div>
     </div>
 
-    {!! Form::submit(trans('general.update'), ['class' => 'btn btn-danger']) !!}
+    {!! Form::submit(trans('general.update'), ['class' => 'btn btn-primary']) !!}
     {!! Form::close() !!}
   </div>
 </div>

@@ -2,8 +2,21 @@
 
 @section('content')
 <div class="content-header">
-	<div class="container-fluid">
-		<h3 class="page-title">@lang('general.topics.title')</h3>
+     <div class="container-fluid">
+       <div class="row mb-2">
+         <div class="col-sm-6">
+           <h1 class="m-0 text-dark">Assessment Topics</h1>
+         </div><!-- /.col -->
+         <div class="col-sm-6">
+           <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
+             <li class="breadcrumb-item active"> Assessment Topics</li>
+           </ol>
+         </div><!-- /.col -->
+	   </div><!-- /.row -->
+	   <br>
+	   <div class="content-header">
+
 		
 		{!! Form::model($topic, ['method' => 'PUT', 'route' => ['topics.update', $topic->id]]) !!}
 
@@ -25,7 +38,7 @@
 			</div>
 		</div>
 
-		{!! Form::submit(trans('general.update'), ['class' => 'btn btn-danger']) !!}
+		{!! Form::submit(trans('general.update'), ['class' => 'btn btn-primary']) !!}
 		{!! Form::close() !!}
 	</div>
 </div>

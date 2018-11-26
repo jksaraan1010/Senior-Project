@@ -2,9 +2,19 @@
 
 @section('content')
 <div class="content-header">
-  <div class="container-fluid">
-       <h3 class="page-title">@lang('general.questions.title')</h3>
-
+     <div class="container-fluid">
+       <div class="row mb-2">
+         <div class="col-sm-6">
+           <h1 class="m-0 text-dark">Assessment Questions</h1>
+         </div><!-- /.col -->
+         <div class="col-sm-6">
+           <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
+             <li class="breadcrumb-item active"> Assessment Questions</li>
+           </ol>
+         </div><!-- /.col -->
+	   </div><!-- /.row -->
+	   
     <p>
     
         <a href="{{ route('questions.create') }}" class="btn btn-success">@lang('general.add_new')</a>
@@ -31,7 +41,7 @@
                                 <td>{!! $question->question_text !!}</td>
                                 <td>
                                     <a href="{{ route('questions.show',[$question->id]) }}" class="btn btn-xs btn-primary">@lang('general.view')</a>
-                                    <a href="{{ route('questions.edit',[$question->id]) }}" class="btn btn-xs btn-info">@lang('general.edit')</a>
+                                    <a href="{{ route('questions.edit',[$question->id]) }}" class="btn btn-xs btn-secondary">@lang('general.edit')</a>
                                     {!! Form::open(array(
                                         'style' => 'display: inline-block;',
                                         'method' => 'DELETE',

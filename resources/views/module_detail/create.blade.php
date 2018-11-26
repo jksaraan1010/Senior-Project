@@ -3,8 +3,21 @@
 @section('content')
 @if(Auth::user()->role_id == 1)
 <div class="content-header">
+     <div class="container-fluid">
+       <div class="row mb-2">
+         <div class="col-sm-6">
+           <h1 class="m-0 text-dark">{{$module->name}} @lang('general.module_detail.title')</h1>
+         </div><!-- /.col -->
+         <div class="col-sm-6">
+           <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
+             <li class="breadcrumb-item active"> {{$module->name}} @lang('general.module_detail.title') </li>
+           </ol>
+         </div><!-- /.col -->
+       </div><!-- /.row -->
+   
+<div class="content-header">
   <div class="container-fluid">
-         <h3 class="page-title">{{$module->name}} @lang('general.module_detail.title')</h3>
     {!! Form::open(['method' => 'POST', 'route' => ['module_detail.store']]) !!}
     <input type="hidden" name="module_id" value="{{$module->id}}">
     <div class="panel panel-default">
@@ -37,7 +50,7 @@
         </div>
     </div>
 
-    {!! Form::submit(trans('general.save'), ['class' => 'btn btn-danger']) !!}
+    {!! Form::submit(trans('general.save'), ['class' => 'btn btn-primary']) !!}
     {!! Form::close() !!}
   </div>
 </div>

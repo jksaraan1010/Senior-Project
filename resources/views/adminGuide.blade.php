@@ -23,21 +23,18 @@
      </div><!-- /.container-fluid -->
    </div>
    <!-- /.content-header -->
-   <div class="container">
+ <!-- /.content-header -->
+ <div class="container">
            <div class="container-fluid">
-              
-                       <input type="button" 
-                       onClick="window.print()" 
-                       value="Print This Page"/>
-                       <br>
-
-          
-
-  <br>
-
-    <!-- Main content -->
+               
+          <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
+      <br>
+      <a class="print-btn" href="javascript:void(0)" onClick="window.print()"> Print this page</a>
+ <a class="email-btn" href="/EmailUserGuide" target="_blank" >Email this page </a>
+  <br>
+  <br>
 
      <div class="card card-default">
           <div class="card-header bg-primary">

@@ -2,10 +2,25 @@
 
 @section('content')
 @if(Auth::user()->role_id == 1)
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+     <div class="container-fluid">
+       <div class="row mb-2">
+         <div class="col-sm-6">
+           <h1 class="m-0 text-dark">Terms and Conditions</h1>
+         </div><!-- /.col -->
+         <div class="col-sm-6">
+           <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
+             <li class="breadcrumb-item active"> Terms and Conditions </li>
+           </ol>
+         </div><!-- /.col -->
+       </div><!-- /.row -->
+    
 <div class="content-header">
   <div class="container-fluid">
-      <h3 class="page-title">@lang('general.terms.title')</h3>
-    
+      <div>
     {!! Form::model($terms, ['method' => 'PUT', 'route' => ['terms.update', $terms->id]]) !!}
 
     <div class="panel panel-default">
