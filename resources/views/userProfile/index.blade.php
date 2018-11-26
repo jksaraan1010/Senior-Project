@@ -7,15 +7,7 @@
 <!-- Main content -->
 <section class="content"> 
    
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+
    <!-- Content Header (Page header) -->
    <div class="content-header">
         <div class="container-fluid">
@@ -35,7 +27,37 @@
       <!-- /.content-header -->
       <div class="container">
               <div class="container-fluid">
-  
+              {{-- Success Alert --}}
+            @if(Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success:</strong> {{ Session::get('success') }}
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
+            {{-- If the page has any errors passed to it --}}
+            @if(count($errors) > 0)
+
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Errors:</strong>
+
+                    <ul>
+                        @foreach($errors->all() as $error)
+
+                            <li>{{ $error }}</li>
+
+                        @endforeach
+                    </ul>
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+            @endif
 
  <!-- Main content -->
  <div class="card card-default">
@@ -54,6 +76,8 @@
       <input type="text" class="form-control"  placeholder="{{ Auth::user()->email }}" disabled>
     </div>
 </div>
+
+
 <div class="col-12 text-center">
   <a href="{{ route('updatePassword') }}" class="btn btn-primary" data-toggle="modal" data-target="#updateModal">Update Password</a>
   @if(!Auth::user()->isAdmin())
