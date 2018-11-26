@@ -6,7 +6,6 @@
   <!-- Main content -->
   <section class="content"> 
    
-   
  <!-- Content Header (Page header) -->
  <div class="content-header">
       <div class="container-fluid">
@@ -21,13 +20,14 @@
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-    <div class="container">
-            <div class="container-fluid">
-
-                {{-- Success Alert --}}
+    <!-- /.content-header -->          
+ <!-- Main content -->
+ <div class="content">
+      <div class="container-fluid">
+      <a onClick="window.print()" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+      <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
+  <br>
+  {{-- Success Alert --}}
             @if(Session::has('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Success:</strong> {{ Session::get('success') }}
@@ -58,16 +58,6 @@
                 </div>
 
             @endif
-
- 
-<br>
- <!-- Main content -->
- <div class="content">
-      <div class="container-fluid">
-      <br>
-      <a onClick="window.print()" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-      <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
-  <br>
 <br>
 <div class="card card-default">
           <div class="card-header bg-primary">

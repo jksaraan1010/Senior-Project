@@ -19,12 +19,7 @@
            </ol>
          </div><!-- /.col -->
        </div><!-- /.row -->
-     </div><!-- /.container-fluid -->
-   </div>
-   <!-- /.content-header -->
-   <div class="container">
-           <div class="container-fluid">
-               
+              
           <!-- Main content -->
     <div class="content">
       <div class="container-fluid">

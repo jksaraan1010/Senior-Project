@@ -19,14 +19,7 @@
              <li class="breadcrumb-item active"> Admin Guide </li>
            </ol>
          </div><!-- /.col -->
-       </div><!-- /.row -->
-     </div><!-- /.container-fluid -->
-   </div>
-   <!-- /.content-header -->
- <!-- /.content-header -->
- <div class="container">
-           <div class="container-fluid">
-               
+       </div><!-- /.row -->           
           <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
