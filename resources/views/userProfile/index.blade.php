@@ -27,7 +27,6 @@
       <!-- /.content-header -->
       <div class="container">
               <div class="container-fluid">
-<<<<<<< HEAD
               {{-- Success Alert --}}
             @if(Session::has('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -60,18 +59,6 @@
 
             @endif
 
-=======
-  
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
->>>>>>> 41d3b04d958bce3502620c6da7946190d7cc254b
  <!-- Main content -->
  <div class="card card-default">
  <div class="card-header bg-primary">
