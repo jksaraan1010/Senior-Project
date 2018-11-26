@@ -68,9 +68,9 @@
                     <div class="row flex-center pt-5 mt-1">
                         <div class="col-md-12 col-lg-6 text-center text-md-left margins">
                         <div class="container white-text text center">
-                        <h2 class="text-center text-white text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h2>
+                        <h3 class="text-center text-white text-uppercase font-weight-bold mt-1 mb-2 pt-3">My Transition Explorer</h3>
                         <div class="content d-flex justify-content-center align-items-center mb-3">
-                             <img src="{{url('logo.jpeg')}}" alt="Image" width="200" height="200"/>
+                             <img src="{{url('logo.jpeg')}}" alt="Image" width="180" height="180"/>
 
                        </div>
                        
