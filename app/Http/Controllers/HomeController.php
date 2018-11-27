@@ -32,7 +32,7 @@ class HomeController extends Controller
         $users = User::where('role_id',2)->count();
         $quizzes = Test::count();
         $id = Auth::id();
-        $graphTotal = Test::select('result')->where('user_id', auth()->id())->orderBy('id', 'desc')->take(5)->get();
+        $graphTotal = Test::select('result')->where('user_id', auth()->id())->take(5)->get();
         $graphSection1 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY ( test_id) DESC LIMIT 5 ');
         $graphSection2 =DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (5,6,7,8) AND user_id= '.$id.' GROUP BY ( test_id) DESC LIMIT 5 ');
         $graphSection3 = DB::select('SELECT SUM(correct) as result FROM `test_answers` WHERE question_id in (9,10,11,12) AND user_id= '.$id.' GROUP BY ( test_id) DESC LIMIT 5');
