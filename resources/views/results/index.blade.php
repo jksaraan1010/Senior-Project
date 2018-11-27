@@ -26,7 +26,7 @@
 <!-- /.content-header -->
 <div class="container">
       <a onClick="window.print()" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-      <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
+      <a href= "/EmailResults" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
       <br> 
       <table class="table table-bordered table-striped {{ count($results) > 0 ? 'datatable' : '' }}">
          <thead class="bg-primary">

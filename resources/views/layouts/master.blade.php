@@ -276,7 +276,7 @@
          <!-- /.control-sidebar -->
       </div>
       <footer class="main-footer text-center">
-         <strong>Copyright &copy; 2018-2019 <a href="www.transitionexplorer.com" target="_blank">My Transition Explorer </a>.
+         <strong>Copyright &copy; 2018-2019 <a href="https://www.transitionexplorer.com/" target="_blank">My Transition Explorer </a>.
          All rights reserved. <a href="{{ route('terms.show') }}" target="_blank"> Terms and Conditions </a>.</strong>
       </footer>
       <script src="/js/app.js"></script>
