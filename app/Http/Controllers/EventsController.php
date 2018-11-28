@@ -84,7 +84,16 @@ class EventsController extends Controller
         $event->user_id = Auth::user()->id;
         $event->event_name = $request['event_name'];
         $event->event_time = $request['event_time'];
-       
+        $Date = $request['event_time'];
+
+        //Begin start date string operations
+        $start = substr($Date, 0, 19);
+        $event->start_date = $start;
+        //End start date string operations
+        //Begin end date string operations
+        $end = substr($Date, 21);
+        $event->end_date = $end;
+        //End end date string operations
     
         $event->save();
  
@@ -136,6 +145,16 @@ class EventsController extends Controller
 
         $events->event_name = $request->input('event_name');
         $events->event_time = $request->input('event_time');
+
+        $Date = $request['event_time'];
+        //Begin start date string operations
+        $start = substr($Date, 0, 19);
+        $events->start_date = $start;
+        //End start date string operations
+        //Begin end date string operations
+        $end = substr($Date, 21);
+        $events->end_date = $end;
+        //End end date string operations
     
         $events->save();
         \Session::flash('Success','Event updated successfully!');
