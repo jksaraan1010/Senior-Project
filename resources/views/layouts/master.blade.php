@@ -83,7 +83,6 @@
                   </div>
                   <div class="info">    
                      <a  href="{{ route('userProfile.index') }}" class=" d-block"> {{ Auth::user()->name }}</a>
-                    
                   </div>
                </div>
                <!-- Sidebar Menu -->
@@ -152,13 +151,13 @@
                            <li class="nav-item">
                               <a href="{{url('ResultTable')}}" class="nav-link">
                                  <i class="nav-icon fas fa-table"></i>
-                                 <p>View Table </p>
+                                 <p>Results Table </p>
                               </a>
                            </li>
                            <li class="nav-item">
                               <a href="{{url('ResultGraph')}}" class="nav-link">
                                  <i class="nav-icon fas fa-chart-line"></i>
-                                 <p>View Graph </p>
+                                 <p>Results Graph </p>
                               </a>
                            </li>
                            <!-- Assessment-->
