@@ -29,7 +29,7 @@ class ResultGraphController extends Controller
         $graphDate = DB::select('SELECT (DATE_FORMAT(created_at,"%m-%d-%Y")) as 
         dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND 
         user_id= '.$id.' GROUP BY (created_at) ORDER BY (created_at)');
-        //all the queries we do json encode to make them 
+        
         $graphJsonTotal = json_encode($graphTotal);
        
         $graphJsonSection1 = json_encode($graphSection1);

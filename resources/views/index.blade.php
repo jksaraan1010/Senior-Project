@@ -119,7 +119,8 @@
                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                   <h2>Easy to Use &amp; Customize</h2>
                   <p class="lead mb-0">Landing Page is just HTML and CSS 
-                  with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                  with a splash of SCSS for users who demand some deeper 
+                  customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
                </div>
             </div>
          </div>
@@ -144,7 +145,8 @@
                      src="img/testimonials-2.jpg" alt="">
                      <h5>Fred S.</h5>
                      <p class="font-weight-light mb-0">"Bootstrap is amazing.
-                      I've been using it to create lots of super nice landing pages."</p>
+                      I've been using it to create lots of super nice landing 
+                      pages."</p>
                   </div>
                </div>
                <div class="col-lg-4">

@@ -49,7 +49,10 @@
                                 @endforeach
                             </tr>
                             <?php $total = count($tableDate); ?>
-                            <?php $total_tblSection12 = count($tableSection12); $total_tblSection13 = count($tableSection13); $total_tblSection14 = count($tableSection14); $final_total = count($tableForScores); ?>
+                            <?php $total_tblSection12 = count($tableSection12); 
+                            $total_tblSection13 = count($tableSection13); 
+                            $total_tblSection14 = count($tableSection14); 
+                            $final_total = count($tableForScores); ?>
                             <tr>
                                 <th scope="row">Self Care Score</th>
                                

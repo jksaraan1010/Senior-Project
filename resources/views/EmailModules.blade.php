@@ -4,7 +4,8 @@
       <title>Welcome to My Transition </title>
    </head>
    <body>
-      Welcome to My Transition Explorer. We hope you enjoy using this application. Below are the Modules!
+      Welcome to My Transition Explorer. We hope you enjoy using this application. 
+      Below are the Modules!
       <br><br>
       <p>  Maintain a diary with your 
          health records and can keep it with you at all times.
@@ -12,6 +13,7 @@
       <br>         
       <h2> Communication </h2>
       <h3>Communication Essentials</h3>
+      
       <ul>
          <li> Know your doctor’s name and the phone number for their office.</li>
          <li> If you see more than one doctor, understand what concern does each 
@@ -19,7 +21,7 @@
          <li> For your next visit, ask your parent/guardian to let you call the 
               doctor’s office and set up the appointment.  </li>
          <li> At the appointment, ask your parent/guardian to let you talk with 
-              the doctor.</li>
+              the doctor. </li>
          <li> Ask questions about your health, medication and anything else you 
               would like to know.</li>
          <li> Learn how to reach out to transportation. Try calling 

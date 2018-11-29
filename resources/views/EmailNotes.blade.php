@@ -11,6 +11,7 @@
       <br> {{$row ->name}}
       @endforeach
       <br>
+      
       <br>
       Sincerely,
       <br>

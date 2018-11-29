@@ -17,6 +17,7 @@
                </td>
                @endforeach
             </tr>
+            
             <?php $total = count($tableDate); ?>
             <?php $total_tblSection12 = count($tableSection12); 
             $total_tblSection13 = count($tableSection13); 
