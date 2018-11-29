@@ -65,6 +65,8 @@ Route::get('EmailResults','MailResultsController@index' );
 Route::post('sendResults', 'MailResultsController@send');
 Route::get('EmailUserGuide','MailUserGuideController@index' );
 Route::post('sendUserGuide', 'MailUserGuideController@send');
+Route::get('EmailAdminGuide', 'MailAdminGuideController@index');
+Route::post('sendAdminGuide', 'MailAdminGuideController@send');
 Route::get('EmailTimeline','MailTimelineController@index' );
 Route::post('sendTimeline', 'MailTimelineController@send');
 });
