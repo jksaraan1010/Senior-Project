@@ -49,7 +49,7 @@ class TestsController extends Controller
 
         foreach ($request->input('questions', []) as $key => $question) {
             $status = 0;
-
+        
             if ($request->input('answers.'.$question) != null
                 && QuestionsOption::find($request->input('answers.'.$question))->correct
             ) {
@@ -64,7 +64,7 @@ class TestsController extends Controller
                 'correct'     => $status,
             ]);
         }
-
+    
         $test->update(['result' => $result]);
 
         return redirect()->route('results.show', [$test->id]);
