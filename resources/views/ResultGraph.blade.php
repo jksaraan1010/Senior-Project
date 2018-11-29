@@ -26,7 +26,7 @@
               <div class="container-fluid">
               <br>
               <a onClick="window.print()" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-              <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
+              <a href= "/EmailGraph" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
   <br>
 <br>
     <div class="chart-container" style="position: relative; height:40vh; width:auto;">

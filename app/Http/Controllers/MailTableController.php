@@ -22,6 +22,7 @@ class MailTableController extends Controller
                 'email' => 'required'
             ]);
          Mail::to($request->input('email'))->send(new MailTable());
-         return redirect()->back()->with('success', 'Email sent successfully. Check your email.');
+         return redirect()->back()->with('success', 'Email sent successfully. 
+         Check your email.');
         }
 }

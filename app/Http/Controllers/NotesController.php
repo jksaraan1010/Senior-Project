@@ -19,7 +19,8 @@ class NotesController extends Controller
     {
         $id = Auth::id();
 
-        $note = Note::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
+        $note = Note::where('user_id', Auth::user()->id)->orderBy('id', 'desc')
+        ->get();
 
         return view('notes.index') ->with('storedNotes', $note);
     }

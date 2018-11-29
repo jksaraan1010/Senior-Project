@@ -13,14 +13,15 @@ class ResultTableController extends Controller
     {
         $id = Auth::id();
 
-        $tableForScores = Test::select('result')->where('user_id', auth()->id())->get();
+        $tableForScores = Test::select('result')->where('user_id', auth()->id())
+        ->get();
 
         $tableDate = DB::select('SELECT (DATE_FORMAT(created_at,"%m-%d-%Y")) as dateTaken FROM `test_answers`WHERE question_id in (1,2,3,4) AND user_id= '.$id.'  GROUP BY (created_at) ORDER BY (created_at) ');
-       
+       //tableSection12 is query for self care section
         $tableSection12 = DB::select('SELECT SUM(correct) as result, test_id as attempt FROM `test_answers` WHERE question_id in (1,2,3,4) AND user_id= '.$id.' GROUP BY ( test_id)  ');
-
+       //tableSection13 is query for health awareness section
         $tableSection13 = DB::select('SELECT SUM(correct) as result, test_id as attempt FROM `test_answers` WHERE question_id in (5,6,7,8) AND user_id= '.$id.' GROUP BY ( test_id)  ');
-
+       //tableSection14 is query for communication section
         $tableSection14 = DB::select('SELECT  SUM(correct) as result, test_id as attempt FROM `test_answers`WHERE question_id in (9,10,11,12) AND user_id= '.$id.' GROUP BY ( test_id)  ');
 
        

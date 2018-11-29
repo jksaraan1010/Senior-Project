@@ -21,7 +21,8 @@ class MailEventsController extends Controller
                 'email' => 'required'
             ]);
          Mail::to($request->input('email'))->send(new MailEvents());
-         return redirect()->back()->with('success', 'Email sent successfully. Check your email.');
+         return redirect()->back()->with('success', 'Email sent successfully. 
+         Check your email.');
         }
 }
 

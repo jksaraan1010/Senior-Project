@@ -157,7 +157,8 @@ class QuestionsController extends Controller
     public function show($id)
     {
         $relations = [
-            'topics' => \App\Topic::get()->pluck('title', 'id')->prepend('Please select', ''),
+            'topics' => \App\Topic::get()->pluck('title', 'id')
+            ->prepend('Please select', ''),
         ];
 
         $question = Question::findOrFail($id);
