@@ -128,7 +128,7 @@ class UserProfileController extends Controller
         $docinfo->save();
 
         //redirect
-        return redirect()->route('userProfile.index');
+        return redirect()->route('userProfile.index')->with('success', 'Doctor Added');
     }
 
     
@@ -242,7 +242,7 @@ class UserProfileController extends Controller
         $docinfo->save();
 
         //redirect
-        return redirect()->route('userProfile.index');
+        return redirect()->route('userProfile.index')->with('success', 'Doctor Updated');
     }
 
     /**

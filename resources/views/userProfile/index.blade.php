@@ -111,27 +111,27 @@
                 {{ Form::open(array('url' => 'changePass', 'method' => 'post')) }}
                      <div>
                        <div class="form-group">
-                       {{Form::label('oldpass', 'Current Password') }}
+                       {{Form::label('OldPassword', 'Current Password') }}
                            <div>
-                           {{ Form::password('oldpass', null, array('class' => 'form-control')) }}
+                           {{ Form::password('OldPassword', null, array('class' => 'form-control')) }}
                            </div>
                        </div>
                      </div>
 
                      <div>
                        <div class="form-group">
-                       {{Form::label('newpass', 'New Password') }}
+                       {{Form::label('NewPassword', 'New Password') }}
                          <div>
-                         {{ Form::password('newpass', null, array('class' => 'form-control')) }}
+                         {{ Form::password('NewPassword', null, array('class' => 'form-control')) }}
                          </div>
                        </div>
                      </div>
 
                      <div>
                        <div class="form-group">
-                       {{Form::label('newpassconfirm', 'Confirm New Password') }}
+                       {{Form::label('NewPasswordConfirmed', 'Confirm New Password') }}
                          <div class="">
-                         {{ Form::password('newpassconfirm', null, array('class' => 'form-control')) }}
+                         {{ Form::password('NewPasswordConfirmed', null, array('class' => 'form-control')) }}
                          </div>
                        </div>
                      </div>
