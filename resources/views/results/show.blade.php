@@ -26,17 +26,18 @@
                     @if($results->where('correct', 1)->count() != $results->count())
                     <th>{{ $topic }}</th>
                     <td>
-                    Your score is low in {{ $topic }} section! Please go this
+                    You need to learn more about 
                   
                     @if ($topic == $selfCare[0]->title)
-                    <a href="/module_detail_show/1#/">Link </a>
+                    <a href="/module_detail_show/1#/">Self Care </a>
                     @elseif ($topic == $healthAwareness[0]->title)
-                    <a href="/module_detail_show/3#/">Link </a>
+                    <a href="/module_detail_show/3#/">Health Awareness</a>
                     @elseif ($topic == $communication[0]->title)
-                    <a href="/module_detail_show/2#/">Link </a>
+                    <a href="/module_detail_show/2#/">Communication </a>
                     @else -
                     @endif
                     @endif
+                    section! 
                 </td>
                 @endforeach
 
