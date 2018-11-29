@@ -80,7 +80,7 @@
           <div class="col-md-8">
             <div class="card hoverable">
               <div class="card-header bg-primary">
-                <h5> <i class="fas fa-chart-line"></i> Survey Results Graph</h5>
+                <h5> <i class="fas fa-chart-line"></i> Assessment Results Graph</h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
@@ -95,7 +95,7 @@
               <!-- /.card-body -->
               <div class="card-footer text-center">
     
-              <a href="{{url('ResultGraph')}}">View Full Survey Results Graph</a>
+              <a href="{{url('ResultGraph')}}">View Full Assessment Results Graph</a>
               </div>
               <!-- /.card-footer -->
             </div>
@@ -104,7 +104,7 @@
             <!-- TABLE: -->
             <div class="card hoverable">
               <div class="card-header bg-success">
-                <h5><i class="fas fa-table"></i> Survey Results Table</h5>
+                <h5><i class="fas fa-table"></i> Assessment Results Table</h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
@@ -123,7 +123,7 @@
                             <?php $total = count($tableDate); ?>
                             <?php $total_tblSection12 = count($tableSection12); $total_tblSection13 = count($tableSection13); $total_tblSection14 = count($tableSection14); $final_total = count($tableForScores); ?>
                             <tr>
-                                <th scope="row">Self Care Score</th>
+                                <th scope="row">Self-Care Score</th>
                                 @for($i=$total_tblSection12;$i<=($total);$i++)
                                 @if($i<=$total_tblSection12)
                                 @foreach($tableSection12 as $row)
@@ -195,7 +195,7 @@
               <!-- /.card-body -->
               <div class="card-footer text-center">
     
-              <a href="{{url('ResultTable')}}">View All Survey Results</a>
+              <a href="{{url('ResultTable')}}">View All Assessment Results</a>
               </div>
               <!-- /.card-footer -->
             </div>

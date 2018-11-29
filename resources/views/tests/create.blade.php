@@ -24,6 +24,37 @@
    <!-- /.content-header -->
    <div class="content-header">
       <div class="container-fluid">
+      {{-- Success Alert --}}
+            @if(Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success:</strong> {{ Session::get('success') }}
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
+            {{-- If the page has any errors passed to it --}}
+            @if(count($errors) > 0)
+
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Errors:</strong>
+
+                    <ul>
+                        @foreach($errors->all() as $error)
+
+                            <li>{{ $error }}</li>
+
+                        @endforeach
+                    </ul>
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+            @endif
     {!! Form::open(['method' => 'POST', 'route' => ['tests.store']]) !!}
     <div class="box-header with-border">
          <strong class="box-title"> @lang('general.quiz') </strong>
