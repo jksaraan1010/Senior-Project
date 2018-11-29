@@ -33,7 +33,7 @@
                     @elseif ($topic == $healthAwareness[0]->title)
                     <a href="/module_detail_show/3#/">Health Awareness</a>
                     @elseif ($topic == $communication[0]->title)
-                    <a href="/module_detail_show/2#/">Communication </a>
+                    <a href="/module_detail_show/2#/">Communications </a>
                     @else -
                     @endif
                     @endif
