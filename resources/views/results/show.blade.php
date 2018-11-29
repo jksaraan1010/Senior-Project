@@ -29,7 +29,7 @@
                     You need to learn more about 
                   
                     @if ($topic == $selfCare[0]->title)
-                    <a href="/module_detail_show/1#/">Self Care </a>
+                    <a href="/module_detail_show/1#/">Self-Care </a>
                     @elseif ($topic == $healthAwareness[0]->title)
                     <a href="/module_detail_show/3#/">Health Awareness</a>
                     @elseif ($topic == $communication[0]->title)
@@ -37,7 +37,7 @@
                     @else -
                     @endif
                     @endif
-                    section! 
+                    section
                 </td>
                 @endforeach
 
