@@ -21,13 +21,13 @@ class UpdatePasswordController extends Controller
     public function changePass(Request $request)
     {
         $request->validate([
-            'oldpass' => ['required', new ValidPassword],
-            'newpass' => 'required|min:6',
-            'newpassconfirm' => 'required|same:newpass'
+            'OldPassword' => ['required', new ValidPassword],
+            'NewPassword' => 'required|min:6',
+            'NewPasswordConfirmed' => 'required|same:NewPassword'
         ]);
 
         $user = User::find(Auth::user()->id);
-        $user->password = Hash::make($request->newpass);
+        $user->password = Hash::make($request->NewPassword);
         $user->save();
 
 
