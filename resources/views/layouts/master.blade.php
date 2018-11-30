@@ -15,6 +15,9 @@
       <!-- bottom Script is for quiz/adminlte, yeahyea-->
       <link rel="stylesheet" href="{{asset('adminlte/css/app.css')}}">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <!-- print css -->
+      <link rel="stylesheet" type="text/css" href="print.css" />
+      <link rel="stylesheet" type="text/css" href="styleForPrint.css" />
       <style type="text/css">
          .module_detail_card{
          padding: 20px!important;

@@ -17,16 +17,45 @@
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
               <li class="breadcrumb-item active"> Notes To Self </li>
+              
             </ol>
+            <br>
+            <br>
+    
           </div><!-- /.col -->
         </div><!-- /.row -->
     <!-- /.content-header -->          
  <!-- Main content -->
  <div class="content">
       <div class="container-fluid">
-      <a onClick="window.print()" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-      <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
+      <a onclick="PrintDoc()" target="_blank" class="btn btn-default">
+      <i class="fa fa-print"></i> Print</a>
+      
+      
+  <script type="text/javascript">
+    function PrintDoc() {
+
+var toPrint = document.getElementById('printarea');
+
+var popupWin = window.open('', '_blank', 'width=350,height=150,location=no,left=200px');
+
+popupWin.document.open();
+
+popupWin.document.write('<html><title>::Preview::</title><link rel="stylesheet" type="text/css" href="print.css" /></head><body onload="window.print()">')
+
+popupWin.document.write(toPrint.innerHTML);
+
+popupWin.document.write('</html>');
+
+popupWin.document.close();
+
+}
+    </script>
+
+  <a href= "/EmailNotes" onclick="return true;" target="_blank" class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
   <br>
+      <br>
+
   {{-- Success Alert --}}
             @if(Session::has('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -59,7 +88,8 @@
 
             @endif
 <br>
-<div class="card card-default">
+
+<div class="card card-default"  >
           <div class="card-header bg-primary">
             <h5><i class="fas fa-marker"></i> Add A New Note</h5>
             <div class="card-tools">
@@ -93,7 +123,7 @@
 
     <div class="row">
           <div class="col-12">
-            <div class="card card-default">
+            <div class="card card-default"  id="printarea">
               <div class="card-header bg-primary">
                 <h5><i class="fas fa-clipboard-list"></i> List of Notes</h5>
              </div>
@@ -123,6 +153,7 @@
              </div>
               <!-- /.card-body -->
           </div>
+
             <!-- /.card -->
 </div>
 </div>

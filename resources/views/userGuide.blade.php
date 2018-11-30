@@ -20,11 +20,32 @@
 </div>
 <!-- /.row -->
 <!-- Main content -->
-<div class="content">
+<div class="content" id="printarea">
    <div class="container-fluid">
       <br>
-      <a onClick="window.print()" target="_blank" class="btn btn-default">
+      <a onclick="PrintDoc()" target="_blank" class="btn btn-default">
       <i class="fa fa-print"></i> Print</a>
+
+
+    <script type="text/javascript">
+    function PrintDoc() {
+
+var toPrint = document.getElementById('printarea');
+
+var popupWin = window.open('', '_blank', 'width=350,height=150,location=no,left=200px');
+
+popupWin.document.open();
+
+popupWin.document.write('<html><title>::Preview::</title><link rel="stylesheet" type="text/css" href="print.css" /></head><body onload="window.print()">')
+
+popupWin.document.write(toPrint.innerHTML);
+
+popupWin.document.write('</html>');
+
+popupWin.document.close();
+
+}
+    </script>
       <a href= "/EmailUserGuide" onclick="return true;" target="_blank" 
          class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
       <br>
