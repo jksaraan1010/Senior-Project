@@ -48,7 +48,7 @@ class UserProfileController extends Controller
         //validate the data
         $this->validate($request, array(
             'name' => 'required|max:255',
-            'email' => 'email|max:255',
+            
             
         ));
 
@@ -170,7 +170,7 @@ class UserProfileController extends Controller
         //validate the data
         $this->validate($request, array(
             'name' => 'required|max:255',
-            'email' => 'email|max:255',
+            
             
         ));
 
