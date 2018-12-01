@@ -78,13 +78,12 @@ popupWin.document.close();
                <div class="card-header bg-primary">
                   <h5>
                      <i class="fas fa-home"></i>
-                     Dashboard 
+                     Home  
                   </h5>
                </div>
                <!-- /.card-header -->
                <div class="card-body">
-                  <p>This is the home page of the application. Everytime you 
-                     login you will land in this page.On the top you will see a 
+                  <p>Everytime you login you will land in this page.On the top you will see a 
                      Menu. The menu will open a side bar in which you can click 
                      on a specific page, and you will be taken to that page. You 
                      will also see a home icon which is available in every page.
@@ -93,11 +92,10 @@ popupWin.document.close();
                      this icon, you are logged out of the account. It is best to
                      close your browser once you've logged out of the application. 
                   <p>
-                  <p>In the center of the page you will see several items such 
-                     as the assessment results graph or the Timeline which will 
-                     give you a gimpse of your results. To view the full page 
-                     click on the view all link or go to the appropriate page 
-                     from the sidebar. 
+                  <p>In the center of the page you will see several wedgits, such as 
+                     the assessment results graph a portion the Timeline. To view the full
+                      page click on the view all link or go to the appropriate page from 
+                      the sidebar.
                   </p>
                </div>
                <!-- /.card-body -->
@@ -118,13 +116,12 @@ popupWin.document.close();
                   <p>The user profile page is the page to go to when you need to 
                      update your password and view account information 
                   </p>
-                  <p>This page also includes a section to add your doctor 
-                     information. To add new doctor information at the bottom of 
-                     the page. You must enter the name and email of your doctor,
-                     but any additional information is optional. After enetering 
-                     information of 5 doctors, you will not be able to add any
-                     more unless you delete one of your current doctors. You may
-                     also edit the information at any time.
+                  <p>This page also includes a section to add your doctor information. 
+                     To add new doctor information at the bottom of the page. You must 
+                     enter the name of your doctor, but any additional information is
+                      optional. After entering information of 5 doctors, you will not be
+                       able to add any more unless you delete one of your current doctors. 
+                       You may also edit the information at any time.
                   </p>
                </div>
                <!-- /.card-body -->
@@ -250,7 +247,7 @@ popupWin.document.close();
                <div class="card-header bg-primary">
                   <h5>
                      <i class="fas fa-table"></i>
-                     Assessment- View Table
+                     Assessment- Results Table
                   </h5>
                </div>
                <!-- /.card-header -->
@@ -282,7 +279,7 @@ popupWin.document.close();
                <div class="card-header bg-primary">
                   <h5>
                      <i class="fas fa-chart-line"></i>
-                     Assessment- View Graph 
+                     Assessment- Results Graph 
                   </h5>
                </div>
                <!-- /.card-header -->

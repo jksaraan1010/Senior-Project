@@ -60,15 +60,15 @@
               <div class="card-header bg-primary">
                 <h5>
                 <i class="fas fa-tachometer-alt"></i>
-                  Dashboard 
+                  Home
                 </h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <p>This is the home page of the application. Everytime you login you will land in this page.
+                <p> Everytime you login you will land in this page.
                   On the top you will see a Menu. The menu will open a side bar in which you can click on a specific page, 
                   and you will be taken to that page.
-                  You will also see a home icon which is available in every page. Clicking this icon will return you back to the dashboard. 
+                  You will also see a home icon which is available in every page. Clicking this icon will return you back to the homepage. 
                   Next to the home icon is the logout icon. Once you click this icon, you are logged out of the account. It is best to close
                   your browser once you've logged out of the application. <p>
   
@@ -88,8 +88,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-               <p>The user profile page is the page to go to when you need to update your 
-                 username or password. </p>
+               <p>The user profile page is the page to go to when you need to update your password and view account information</p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -299,18 +298,17 @@
               <div class="card-header bg-primary">
                 <h5>
                 <i class="fas fa-users"></i>
-                  User Management-Users
+                  User Management
                 </h5>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-               <p>This is the page where the admin can see the current users of the application. 
-                 Names, email adresses as well as roles can be viewed. The admin can also 
-                 edit or delete a user.  By editing a user, the admin can change the user's name, 
-                 email address, password (passwords are encrypted and cannot be seen by anyone).
-                 The admin can also change the role of the user: administrator, patient or family member. In addition, the admin can add a new user.
-
-            
+               <p>This is the page where the admin can see the current users
+                  of the application. Names, email addresses as well as roles 
+                  can be viewed. The admin can also edit a user’s role to an 
+                  administrator, patient or family member. In addition, the admin
+                   can add a new user. The admin cannot however view or edit passwords
+                    (passwords are encrypted and cannot be seen by anyone).
                 </p>
                 
               </div>
