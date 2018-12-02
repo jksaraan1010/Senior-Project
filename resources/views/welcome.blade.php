@@ -242,13 +242,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="/Landing-Page-Template-Bootstrap-master/js/mdb.min.js"></script>
 
-    <script>
-      
-        // Material Select Initialization
-        $(document).ready(function () {
-            $('.mdb-select').material_select();
-        });
-    </script>
+ 
     
 
 </body>

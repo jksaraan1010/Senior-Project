@@ -124,9 +124,7 @@ class TopicsController extends Controller
     }
     public function addNewTopic(Request $request)
     {
-        // echo "<pre>";
-        // print_r($request->all());
-        // exit;
+       
         $topic = new Topic();
         $topic->title = $request->topic_name;
         if($topic->save())
@@ -137,7 +135,5 @@ class TopicsController extends Controller
         {
             echo json_encode(array('status' => 'error'));
         }
-      
-
-}
+    }
 }

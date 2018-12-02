@@ -125,15 +125,6 @@
                 <script src="{{asset('adminlte/js/bootstrap.bundle.min.js')}}"></script>
                 <!-- iCheck -->
                 <script src="{{asset('adminlte/js/icheck.min.js')}}"></script>
-                <script>
-                    $(function () {
-                      $('input').iCheck({
-                        checkboxClass: 'icheckbox_square-blue',
-                        radioClass   : 'iradio_square-blue',
-                        increaseArea : '20%' // optional
-                      })
-                    })
-                </script>
                 <!-- JQuery -->
                 <script type="text/javascript" src="/Landing-Page-Template-Bootstrap-master/js/jquery-3.3.1.min.js"></script>
                 <!-- Bootstrap tooltips -->
@@ -142,12 +133,7 @@
                 <script type="text/javascript" src="/Landing-Page-Template-Bootstrap-master/js/bootstrap.min.js"></script>
                 <!-- MDB core JavaScript -->
                 <script type="text/javascript" src="/Landing-Page-Template-Bootstrap-master/js/mdb.min.js"></script>
-                <script>
-                    // Material Select Initialization
-                    $(document).ready(function () {
-                        $('.mdb-select').material_select();
-                    });
-                </script>
+               
             </div>
         </div>
     </body>
