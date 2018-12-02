@@ -281,14 +281,12 @@
          <strong>Copyright &copy; 2018-2019 <a href="https://www.transitionexplorer.com/" target="_blank">My Transition Explorer </a>.
          All rights reserved. <a href="{{ route('terms.show') }}" target="_blank"> Terms and Conditions </a>.</strong>
       </footer>
-      <script src="/js/app.js"></script>
+    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <!-- bottom Script is for quiz/adminlte-->
       <script src="{{asset('adminlte/js/app.js')}}"></script>
       <script src="{{asset('adminlte/ckeditor/ckeditor.js')}}"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script>
          <?php if(isset($graphJsonTotal)&& isset($graphJsonSection1) && isset($graphJsonSection2) && isset($graphJsonSection3)) { ?>
          var jsonResultCodeTotal = <?php echo $graphJsonTotal;?>;
@@ -414,6 +412,7 @@
          <?php } ?>
              
       </script>
+      @yield('javascript')
    </body>
 </html>
 @stack('js')

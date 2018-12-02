@@ -14,7 +14,7 @@ class MailUserGuideController extends Controller
         return view('MailUserGuide');
        }
        
-        public function send(Request $request)
+    public function send(Request $request)
         {
             $data  = $this->validate($request, [
                 'email' => 'required'

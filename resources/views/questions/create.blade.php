@@ -20,132 +20,204 @@
    <div class="container-fluid">
       {!! Form::open(['method' => 'POST', 'route' => ['questions.store']]) !!}
       <div class="panel panel-default">
-         <div class="panel-body">
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  {!! Form::label('topic_id', 'Topic*', ['class' => 'control-label']) !!}
-                  {!! Form::select('topic_id', $topics, old('topic_id'), ['class' => 'form-control','required' => '' ]) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('topic_id'))
-                  <p class="help-block">
-                     {{ $errors->first('topic_id') }}
-                  </p>
-                  @endif
-               </div>
+            <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            {!! Form::label('topic_id', 'Topic*', ['class' => 'control-label']) !!}
+                            {!! Form::select('topic_id', $topics, old('topic_id'), ['class' => 'form-control topic_dropdown','required' => '' ]) !!}
+        
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#add_new_topic_model">Add New topic</a>
+        
+                            <p class="help-block"></p>
+                            @if($errors->has('topic_id'))
+                                <p class="help-block">
+                                    {{ $errors->first('topic_id') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
+            
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            {!! Form::label('question_text', 'Question text*', ['class' => 'control-label']) !!}
+                            {!! Form::textarea('question_text', old('question_text'), ['class' => 'form-control ', 'required' => '', 'placeholder' => '']) !!}
+                            <p class="help-block"></p>
+                            @if($errors->has('question_text'))
+                                <p class="help-block">
+                                    {{ $errors->first('question_text') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            {!! Form::label('option1', 'Option #1', ['class' => 'control-label']) !!}
+                            {!! Form::text('option1', old('option1'), ['class' => 'form-control quation_option ', 'data-id' => '1' ,'placeholder' => '']) !!}
+                            <p class="help-block"></p>
+                            @if($errors->has('option1'))
+                                <p class="help-block">
+                                    {{ $errors->first('option1') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            {!! Form::label('option2', 'Option #2', ['class' => 'control-label']) !!}
+                            {!! Form::text('option2', old('option2'), ['class' => 'form-control quation_option', 'data-id' => '2', 'placeholder' => '']) !!}
+                            <p class="help-block"></p>
+                            @if($errors->has('option2'))
+                                <p class="help-block">
+                                    {{ $errors->first('option2') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            {!! Form::label('option3', 'Option #3', ['class' => 'control-label']) !!}
+                            {!! Form::text('option3', old('option3'), ['class' => 'form-control quation_option', 'data-id' => '3', 'placeholder' => '']) !!}
+                            <p class="help-block"></p>
+                            @if($errors->has('option3'))
+                                <p class="help-block">
+                                    {{ $errors->first('option3') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            {!! Form::label('option4', 'Option #4', ['class' => 'control-label']) !!}
+                            {!! Form::text('option4', old('option4'), ['class' => 'form-control quation_option', 'data-id' => '4', 'placeholder' => '']) !!}
+                            <p class="help-block"></p>
+                            @if($errors->has('option4'))
+                                <p class="help-block">
+                                    {{ $errors->first('option4') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            {!! Form::label('option5', 'Option #5', ['class' => 'control-label']) !!}
+                            {!! Form::text('option5', old('option5'), ['class' => 'form-control quation_option', 'data-id' => '5', 'placeholder' => '']) !!}
+                            <p class="help-block"></p>
+                            @if($errors->has('option5'))
+                                <p class="help-block">
+                                    {{ $errors->first('option5') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                          {{--  {!! Form::label('correct', 'Correct', ['class' => 'control-label']) !!}
+                            {!! Form::select('correct', $correct_options, old('correct'), ['class' => 'form-control correct_option_dropdown']) !!} --}}
+                            <select id="correct" name="correct" class="form-control correct_option_dropdown">
+                                
+                            </select>
+                            <p class="help-block"></p>
+                            @if($errors->has('correct'))
+                                <p class="help-block">
+                                    {{ $errors->first('correct') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
+        
+                </div>
             </div>
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  Or
-                  {!! Form::text('title', old('title'), ['class' => 'form-control', 'placeholder' => 'Enter Topic name']) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('title'))
-                  <p class="help-block">
-                     {{ $errors->first('title') }}
-                  </p>
-                  @endif
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  {!! Form::label('question_text', 'Question text*', ['class' => 'control-label']) !!}
-                  {!! Form::textarea('question_text', old('question_text'), ['class' => 'form-control ', 'required' => '', 'placeholder' => '']) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('question_text'))
-                  <p class="help-block">
-                     {{ $errors->first('question_text') }}
-                  </p>
-                  @endif
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  {!! Form::label('option1', 'Option #1', ['class' => 'control-label']) !!}
-                  {!! Form::text('option1', old('option1'), ['class' => 'form-control ', 'placeholder' => '']) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('option1'))
-                  <p class="help-block">
-                     {{ $errors->first('option1') }}
-                  </p>
-                  @endif
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  {!! Form::label('option2', 'Option #2', ['class' => 'control-label']) !!}
-                  {!! Form::text('option2', old('option2'), ['class' => 'form-control ', 'placeholder' => '']) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('option2'))
-                  <p class="help-block">
-                     {{ $errors->first('option2') }}
-                  </p>
-                  @endif
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  {!! Form::label('option3', 'Option #3', ['class' => 'control-label']) !!}
-                  {!! Form::text('option3', old('option3'), ['class' => 'form-control ', 'placeholder' => '']) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('option3'))
-                  <p class="help-block">
-                     {{ $errors->first('option3') }}
-                  </p>
-                  @endif
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  {!! Form::label('option4', 'Option #4', ['class' => 'control-label']) !!}
-                  {!! Form::text('option4', old('option4'), ['class' => 'form-control ',  'placeholder' => '']) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('option4'))
-                  <p class="help-block">
-                     {{ $errors->first('option4') }}
-                  </p>
-                  @endif
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  {!! Form::label('option5', 'Option #5', ['class' => 'control-label']) !!}
-                  {!! Form::text('option5', old('option5'), ['class' => 'form-control ', 'placeholder' => '']) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('option5'))
-                  <p class="help-block">
-                     {{ $errors->first('option5') }}
-                  </p>
-                  @endif
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xs-12 form-group">
-                  {!! Form::label('correct', 'Correct', ['class' => 'control-label']) !!}
-                  {!! Form::select('correct', $correct_options, old('correct'), ['class' => 'form-control']) !!}
-                  <p class="help-block"></p>
-                  @if($errors->has('correct'))
-                  <p class="help-block">
-                     {{ $errors->first('correct') }}
-                  </p>
-                  @endif
-               </div>
-            </div>
-         </div>
-      </div>
-      {!! Form::submit(trans('general.save'), ['class' => 'btn btn-primary']) !!}
-      {!! Form::close() !!}
-   </div>
-</div>
-@stop
-@section('javascript')
-@parent
-<script src="{{ url('adminlte/js') }}/timepicker.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.js"></script>
-<script src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
-<script>
-   $('.datetime').datetimepicker({
-       autoclose: true,
-       dateFormat: "{{ config('app.date_format_js') }}",
-       timeFormat: "hh:mm:ss"
-   });
-</script>
-@stop
+        
+            {!! Form::submit(trans('general.save'), ['class' => 'btn btn-danger']) !!}
+            {!! Form::close() !!}
+          </div>
+        </div>
+        
+        
+        <!-- Add new Topic Modal -->
+                <div class="modal fade in" id="add_new_topic_model">
+                  <div class="modal-dialog">
+                    <form  method="post" action="{{route('add.new.topic.ajax')}}" id="addNewTopicForm">
+                    @csrf
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span></button>
+                        <!-- <h3 class="modal-title">Default Modal</h3> -->
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <label class="col-md-3 text-left">Topic<span class="asterisk">*</span></label>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" name="topic_name" required="" placeholder="Enter Topic Name">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                      </div>
+                    </div>
+                </form>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+                </div>
+        
+        
+        
+        @endsection
+        
+        @section('javascript')
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // alert($('.quation_option').length);
+                $(document.body).on('change','.quation_option',function(){
+                    var html = '';
+                    $(".quation_option").each(function() {
+                        if($(this).val() !== ''){
+                            var index = $(this).attr('data-id');
+                            html += '<option value="option'+index+'">Option #'+index+'</option>';
+                        }
+                    });
+                    $(".correct_option_dropdown").html(html);
+                    // console.log(html);
+                });
+        
+        
+                $("#addNewTopicForm").submit(function(e){
+        
+                    e.preventDefault();
+                    var _token = $("input[name='_token']").val();
+                    var topic_name = $("input[name='topic_name']").val();
+                    var url = $(this).attr('action');
+                    var me = $(this);
+        
+                      $.ajax({
+                           type: "POST",
+                           url: url,
+                           data: {topic_name:topic_name, _token:_token},
+                           dataType:'json',
+                           success: function( data ) {
+                            if(data.status == 'success'){
+                                $("#add_new_topic_model").modal('hide');
+                                me[0].reset();
+                                var option = '<option value="'+data.id+'">'+topic_name+'</option>';
+                                $(".topic_dropdown").append(option);
+                                $('.topic_dropdown option[value="'+data.id+'"]').prop('selected', true)
+        
+                            }else{
+                                alert('Error');
+                            }
+                           }
+                       });
+        
+                });
+        
+        
+            });
+        </script>
+        @parent
+        
+        @endsection
+        
