@@ -20,6 +20,7 @@ Route::post('roles_mass_destroy', ['uses' => 'RolesController@massDestroy', 'as'
 Route::resource('users', 'UsersController');
 Route::post('users_mass_destroy', ['uses' => 'UsersController@massDestroy', 'as' => 'users.mass_destroy']);
 Route::resource('topics', 'TopicsController');
+Route::post('add_new_topic', 'TopicsController@addNewTopic')->name('add.new.topic.ajax');
 Route::post('topics_mass_destroy', ['uses' => 'TopicsController@massDestroy', 'as' => 'topics.mass_destroy']);
 Route::resource('questions', 'QuestionsController');
 Route::post('questions_mass_destroy', ['uses' => 'QuestionsController@massDestroy', 'as' => 'questions.mass_destroy']);
