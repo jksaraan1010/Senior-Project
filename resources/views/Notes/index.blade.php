@@ -89,6 +89,9 @@ popupWin.document.close();
             @endif
 <br>
 
+
+
+
 <div class="card card-default"  >
           <div class="card-header bg-primary">
             <h5><i class="fas fa-marker"></i> Add A New Note</h5>
@@ -100,14 +103,15 @@ popupWin.document.close();
           <div class="card-body">
             <div class="row">
               <div class="col-md-6">
-                <form class="form-inline" action="{{ route('notes.store') }}" method="post">
+                <form action="{{ route('notes.store') }}" method="post">
                     {{csrf_field()}}
-                    <div class="col">
-                        <input class="form-control" type="text" name="newNoteName" placeholder="Enter a new note">
+                    
+                    <div class="form-group">
+                        <input type="text" name="newNoteName" class='form-control input-lg' placeholder="Enter a new note">
                     </div>
 
-                    <div class="col">
-                        <input class="btn btn-success btn-block" type="submit" value="Add Note">
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Add Note">
                     </div>
                 </form>
               </div>
