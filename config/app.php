@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'EST',
     'date_format' => 'Y-m-d',
     'date_format_js' => 'yy-mm-dd',
 
