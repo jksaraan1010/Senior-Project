@@ -70,14 +70,17 @@
                 <h5> <i class="fas fa-calendar"></i> List of Events</h5>
               </div>
               <!-- /.card-header -->
+
               <div class="card-body table-responsive p-0">
-                <table id="events" class="table table-hover">
+                <table id="events" class="table table-bordered">
+                <thead>
                   <tr>
                   <th> Event Name</th>
                   <th> Event Date and Time Range</th>
                   <th> Edit</th>
                   <th> Delete</th>
                   </tr>
+                </thead>
                   @foreach($events as $event)
             <tbody>
             <tr>

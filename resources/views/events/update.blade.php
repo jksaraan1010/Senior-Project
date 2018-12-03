@@ -83,7 +83,7 @@
 
             <div class="form-group">
                 <label> Event Date and Time Range </label>
-                <input type="text" class="form-control" name="event_time" placeholder="Event Time" value="{{$eventsUnderEdit->event_time}}">
+                <input type="text" class="form-control" name="event_time" placeholder="Event Time" id="eventTime" value="{{$eventsUnderEdit->event_time}}">
             </div>
           
 
@@ -101,6 +101,25 @@
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
+
 @endif
+<script src="/js/app.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+      <link rel="stylesheet"  href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="/daterangepicker/daterangepicker-bs3.css">
+      <script type="text/javascript" src="/daterangepicker/daterangepicker.js"></script>
+      <script>
+         $(function () {
+           $('#eventTime').daterangepicker({
+             timePicker         : true,
+             timePickerIncrement: 15,
+             format             : 'MM/DD/YYYY h:mm A'
+           })
+           
+         })
+      </script>
 @endsection
 
