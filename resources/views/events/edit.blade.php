@@ -94,7 +94,7 @@
                     <form method="post" action="{{action('EventsController@destroy', $event['id'])}}">
                         {{csrf_field()}}
                         <input type="hidden" name="_method" value="Delete" />
-                        <button type="submit" class="btn btn-danger btn-rounded mb-4"> Delete  </button>
+                        <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-rounded mb-4"> Delete  </button>
                     </form>
                 </th>
             </tr>

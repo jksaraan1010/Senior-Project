@@ -79,7 +79,7 @@
          <!-- Brand Logo -->
          <a href="{{url('home')}}" class="brand-link  bg-primary">
          <img src='{{ asset("/mte.ico")}}' class="brand-image img-circle elevation-2"  alt="mte Image"  style="opacity: .8">
-         <span class="brand-text font-weight-light" style="font-size:83%;">My Transition Explorer</span>
+         <span class="brand-text font-weight-bold" style="font-size:80%;">My Transition Explorer</span>
          </a>
          <!-- Sidebar -->
          <div class="sidebar">
@@ -370,6 +370,7 @@
                               <div>
                                  <div class="form-group">
                                     {!! Form::label('event_name','Enter Event Name:') !!}
+                                   
                                     <div>
                                        {!! Form::text('event_name', null, ['class' => 'form-control']) !!}
                                     </div>
@@ -378,6 +379,7 @@
                               <div>
                                  <div class="form-group">
                                     {!! Form::label('event_time','Enter Event Date and Time Range:') !!}
+                                    <p class="text-primary"> *Format: MM/DD/YYYY 12:00 AM - MM/DD/YYYY 11:59 PM </p>
                                     <div>
                                        {!! Form::text('event_time', null, ['class' => 'form-control', 'id' => 'eventTime']) !!}
                                     </div>
@@ -403,7 +405,7 @@
       </div>
       <!-- ./wrapper -->
       <footer class="main-footer text-center">
-         <strong>Copyright &copy; 2018-2019 <a href="www.transitionexplorer.com" target="_blank"> My Transition Explorer </a>.
+      <strong>Copyright &copy; 2018-2019 <a href="https://www.transitionexplorer.com/" target="_blank">My Transition Explorer </a>.
          All rights reserved. <a href="{{ route('terms.show') }}" target="_blank"> Terms and Conditions </a>.</strong>
       </footer>
       <!-- REQUIRED SCRIPTS -->
