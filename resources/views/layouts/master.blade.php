@@ -294,6 +294,8 @@ header('Content-Type: text/html');
       <!-- bottom Script is for quiz/adminlte-->
       <script src="{{asset('adminlte/js/app.js')}}"></script>
       <script src="{{asset('adminlte/ckeditor/ckeditor.js')}}"></script>
+            <!-- bottom Script is for chartjs, and actually making thr graph with data in controller-->
+
       <script>
          <?php if(isset($graphJsonTotal)&& isset($graphJsonSection1) && isset($graphJsonSection2) && isset($graphJsonSection3)) { ?>
          var jsonResultCodeTotal = <?php echo $graphJsonTotal;?>;
@@ -344,7 +346,7 @@ header('Content-Type: text/html');
          dateTaken = dateTaken.replace(/,\s*$/, "");
          var arrayDateTaken = JSON.parse("[" + dateTaken + "]");
          var lineChartTest = document.getElementById("line-chart").getContext("2d");
-         new Chart(lineChartTest, {
+         var chart_variable = new Chart(lineChartTest, {
          type: 'line',
          data: {
          labels: arrayDateTaken,
@@ -400,6 +402,7 @@ header('Content-Type: text/html');
          ]
          },
          options: {
+//backgroundColor:'rgb(10,10,10)',
          title: {
          display: true,
          text: 'Assessment Scores'
@@ -417,7 +420,26 @@ header('Content-Type: text/html');
                   },
          });
          <?php } ?>
-             
+function downloadImage() {
+   /* set new title */
+// not needed as of now!
+// chart_variable.options.title.text = 'New Chart Title';
+   chart_variable.update({
+      duration: 0
+   });
+
+   /* save as image */
+   var link = document.createElement('a');
+   link.href = chart_variable.toBase64Image();
+   link.download = 'score.jpg';
+   link.click();
+
+   /* rollback to old title */
+   chart_variable.options.title.text = 'Assessment Scores Over Time';
+   chart_variable.update({
+      duration: 0
+   });
+}
       </script>
       @yield('javascript')
    </body>

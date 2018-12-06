@@ -4,7 +4,8 @@
       <title>Welcome to My Transition </title>
    </head>
    <body>
-      Welcome to My Transition Explorer. We hope you enjoy using this application. Below are the Modules!
+      Welcome to My Transition Explorer. We hope you enjoy using this application. 
+      Below are the Modules!
       <br><br>
       <p>
          Dear Admin,
@@ -34,30 +35,31 @@
       </p>
       <br>
       <h2> Assessment- Take Assessment </h2>
-      <p>The transition Assessment is a simple and easy to understand Assessment which focuses on
-         three main areas in your transition: 
+      <p>The transition Assessment is a simple and easy to understand Assessment 
+         which focuses on three main areas in your transition: 
       <ul>
          <li> Self-Care.</li>
          <li> Health Awareness.</li>
          <li> Communication. </li>
       </ul>
       </p>
-      <p> The Assessment consists of 12 questions, and should be taken once every 3-6 months.</p>
+      <p> The Assessment consists of 12 questions, and should be taken once every 
+          3-6 months.</p>
       <p> As an admin you will get access to the assessment to view it
          -as the user will see it- while updating it.
       </p>
       <br>
       <h2>  Timeline </h2>
-      <p>Milestones help keep us on track! The timeline serves as a milestone guiding 
-         tracker in the following three areas:
+      <p>Milestones help keep us on track! The timeline serves as a milestone 
+         guiding tracker in the following three areas:
       <ul>
          <li> Self-Care.</li>
          <li> Health Awareness.</li>
          <li> Communication. </li>
       </ul>
       </p>
-      <p> The timeline milestones categorize the transition to adult care in three age 
-         categories: 
+      <p> The timeline milestones categorize the transition to adult care in 
+          three age categories: 
       <ul>
          <li> Ages 13-15</li>
          <li> Ages 15-17</li>

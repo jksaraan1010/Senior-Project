@@ -54,8 +54,8 @@ Route::get('/updatePassword', 'UpdatePasswordController@index')->name('updatePas
 Route::post('changePass', 'UpdatePasswordController@changePass');
 Route::get('ResultTable', 'ResultTableController@SurveyResultTable');
 Route::get('ResultGraph', 'ResultGraphController@SurveyResultGraph');
-Route::get('EmailNotes','MailController@index' );
-Route::post('sendNotes', 'MailController@send');
+Route::get('EmailNotes','MailNotesController@index' );
+Route::post('sendNotes', 'MailNotesController@send');
 Route::get('EmailEvents','MailEventsController@index' );
 Route::post('sendEvents', 'MailEventsController@send');
 Route::get('EmailTable','MailTableController@index' );
