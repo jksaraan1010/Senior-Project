@@ -289,20 +289,8 @@ header('Content-Type: text/html');
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="/daterangepicker/daterangepicker-bs3.css">
-      <script type="text/javascript" src="/daterangepicker/daterangepicker.js"></script>
-      <script>
-         $(function () {
-           $('#eventTime').daterangepicker({
-             timePicker         : true,
-             timePickerIncrement: 15,
-             format             : 'MM/DD/YYYY h:mm A'
-           })
-           
-         })
-      </script>
      
-      
+ 
       <!-- bottom Script is for quiz/adminlte-->
       <script src="{{asset('adminlte/js/app.js')}}"></script>
       <script src="{{asset('adminlte/ckeditor/ckeditor.js')}}"></script>

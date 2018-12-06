@@ -376,7 +376,7 @@
 </div>
 <div class="row">
   <div class="form-group col-md-6">
-    <label for="inputAddress">Office Address</label>
+    <label for="inputAddress1">Office Address</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="{{$infos->address}}"disabled>
   </div>
   <div class="form-group col-md-6">

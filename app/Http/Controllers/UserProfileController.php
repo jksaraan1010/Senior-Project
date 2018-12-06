@@ -21,9 +21,6 @@ class UserProfileController extends Controller
         return view('userProfile.index')->with('docinfo', $docinfo);
     }
 
-    
-
-   
     /**
      * Show the form for creating a new resource.
      *
@@ -117,14 +114,7 @@ class UserProfileController extends Controller
         else{
             $docinfo->specialty = "";
         }
-       
-        
-        
-        
-        
-        
-        
-        
+         
         $docinfo->save();
 
         //redirect
