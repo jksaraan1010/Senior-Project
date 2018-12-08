@@ -1,5 +1,5 @@
 @extends('layouts.master')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 @section('content')
 @if(Auth::user()->role_id != 1)
