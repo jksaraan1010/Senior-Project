@@ -32,7 +32,7 @@
 <br>
 <br>
 <!-- below is for rendering the chart, and i added settings  -->
-<div class="chart-container" style="position: relative; height:40vh; width:auto;">
+<div class="chart-container" style="position: relative; height:60vh; width:auto;">
    <canvas id="line-chart"></canvas>
 </div>
 @endif
