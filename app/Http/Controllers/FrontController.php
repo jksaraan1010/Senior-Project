@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Terms;
 
+//controller to return the view of the terms and conditions to the user
+
 class FrontController extends Controller
 {
     

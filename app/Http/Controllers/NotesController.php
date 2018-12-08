@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Note;
 use Illuminate\Support\Facades\DB;
+
+//controller to return the view of the notes to the user
 class NotesController extends Controller
 {
     /**
@@ -17,6 +19,7 @@ class NotesController extends Controller
    
      public function index()
     {
+        //user can only see their own notes
         $id = Auth::id();
 
         $note = Note::where('user_id', Auth::user()->id)->orderBy('id', 'desc')

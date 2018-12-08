@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Validator;
 use Calendar;
 
-
+//controller to return the view of the calendar to the user
 class EventsController extends Controller
 {
     /**
@@ -20,19 +20,17 @@ class EventsController extends Controller
      */
     public function index()
     { 
-       // $id = Auth::id();
-        //dd($id);
-        //$userId
-        //$events = Events:: select('event_name')-> where('user_id', auth()->id())->get();
-      
+        //user can only see their own calendar/ events
         $events = Events::where('user_id', Auth::user()->id)->get();
         $event_list = [];
         foreach ($events as $key => $event) {
             $event_list[] = Calendar::event(
                 $event->event_name,
                 false, //full day event
+                //parsing the event datetime range into a start and end times
                 new \DateTime($event->start_date),
                 new \DateTime($event->end_date),
+                //calendar looks, events on the calendar
                 $event->id,
                     [
                     'backgroundColor' =>'#0984e3', 
@@ -43,6 +41,7 @@ class EventsController extends Controller
                   ]
             );
         }
+        //once event is added it shows up on the calendar
         $calendar_details = Calendar::addEvents($event_list); 
  
         return view('events.index', compact('calendar_details') );
@@ -68,6 +67,7 @@ class EventsController extends Controller
   
     public function store(Request $request)
     {
+        //validate the event name and time are required
         $validator = Validator::make($request->all(), [
             
             'event_name' => 'required|min:3|max:255',
@@ -135,6 +135,7 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //updating event
         $this->validate($request,[
             'event_name' => 'required|min:3|max:255',
             'event_time' => 'required',
