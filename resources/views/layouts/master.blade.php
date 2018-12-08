@@ -411,6 +411,7 @@ header('Content-Type: text/html');
          yAxes: [{
          ticks: {
          min: 0,
+         max:12,
          stepSize: 1
          }
          }]
