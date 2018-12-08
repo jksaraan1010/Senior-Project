@@ -345,7 +345,6 @@
             </div>
             <div class="form-group">
                 <label> Updated Event Date and Time Range </label>
-                <p class="text-primary"> *Format: MM/DD/YYYY 12:00 AM - MM/DD/YYYY 11:59 PM </p>
                 <input type="text" class="form-control" name="event_time" placeholder="Event Time" id="eventTime" value="{{$eventsUnderEdit->event_time}}">
             </div>
 
@@ -394,7 +393,8 @@
              timePickerIncrement: 15,
              format             : 'MM/DD/YYYY h:mm A'
            })
-           
+            //DISABLE inputs
+            $("#eventTime").attr("readonly", true);
          })
       </script>
    </body>

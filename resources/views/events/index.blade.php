@@ -379,7 +379,6 @@
                               <div>
                                  <div class="form-group">
                                     {!! Form::label('event_time','Enter Event Date and Time Range:') !!}
-                                    <p class="text-primary"> *Format: MM/DD/YYYY 12:00 AM - MM/DD/YYYY 11:59 PM </p>
                                     <div>
                                        {!! Form::text('event_time', null, ['class' => 'form-control', 'id' => 'eventTime']) !!}
                                     </div>
@@ -423,7 +422,10 @@
              timePicker         : true,
              timePickerIncrement: 15,
              format             : 'MM/DD/YYYY h:mm A'
+            
            })
+            //DISABLE inputs
+            $("#eventTime").attr("readonly", true);
            
          })
       </script>
