@@ -85,7 +85,7 @@
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="d-md-flex">
-                  <div class="p-1 flex-1" style="overflow: hidden; height:42vh">  
+                  <div class="p-1 flex-1" style="overflow: hidden; height:40vh">  
                    <div class="chart-container" style=" height:42vh">
                     <canvas id="line-chart"></canvas>
                 </div>
