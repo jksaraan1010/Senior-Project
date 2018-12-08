@@ -340,10 +340,6 @@
             </div>
 
             <div class="form-group">
-                <label> Event Date and Time Range </label>
-                <input type="text" class="form-control" name="event_time" placeholder="Event Time" id="event_Time" value="{{$eventsUnderEdit->event_time}}"readonly>
-            </div>
-            <div class="form-group">
                 <label> Updated Event Date and Time Range </label>
                 <input type="text" class="form-control" name="event_time" placeholder="Event Time" id="eventTime" value="{{$eventsUnderEdit->event_time}}">
             </div>
