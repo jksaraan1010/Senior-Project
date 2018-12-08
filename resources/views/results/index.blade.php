@@ -41,7 +41,7 @@
          </thead>
          <tbody>
             @if (count($results) > 0)
-            @foreach ($results as $result)
+            @foreach ($results as $result) <!-- all results display through loop -->
             <tr>
                @if(Auth::user()->isAdmin())
                <td>{{ $result->user->name}} ({{$result->user->email}})</td>
@@ -49,7 +49,7 @@
                <td>{{ $result->created_at->format('d M Y h:i A') }}</td>
                <td>
                   <?php
-                     $total_questions = $controller->getTotalQuestion($result->id);
+                     $total_questions = $controller->getTotalQuestion($result->id); // get TotalQuestion from table
                      ?>
                   {{ $result->result }} out of  {{ $total_questions }}
                </td>

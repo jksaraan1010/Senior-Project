@@ -52,7 +52,7 @@
       </div>
       <!-- /.card -->
       <div class="row">
-         @forelse($module->module_detail as $key => $value)
+         @forelse($module->module_detail as $key => $value) <!-- all review detail display through loop -->
          <div class="col-md-12">
             <div class="card">
                <div class="card-header bg-primary">

@@ -38,8 +38,8 @@
                 
                 <tbody>
                     @if (count($users) > 0)
-                        @foreach ($users as $user)
-                            <tr data-entry-id="{{ $user->id }}">
+                        @foreach ($users as $user) <!-- all User display through loop -->
+                            <tr data-entry-id="{{ $user->id }}">  
                               
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>

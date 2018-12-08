@@ -18,9 +18,10 @@ class ModuleDetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //this function is dispay all Module
     public function index($id)
     {
-        $module = Module::find($id);
+        $module = Module::find($id); //get Module from Module table
         return view('module_detail.view', compact('module'));
     }
 
@@ -31,7 +32,7 @@ class ModuleDetailController extends Controller
      */
     public function create($id)
     {
-        $module = Module::find($id);
+        $module = Module::find($id); //get Module from Module table
         return view('module_detail.create',compact('module'));
     }
 
@@ -41,11 +42,10 @@ class ModuleDetailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+     //this function is insert ModuleDetail in table
     public function store(Request $request)
     {
-        // echo "<pre>";
-        // print_r($request->all());
-        // exit;
+          //insert ModuleDetail
         $input = $request->except(['_token']);
         ModuleDetail::forceCreate($input);
         return redirect()->route('module_detail.index',['id' => $request->module_id])->with('success','Module Detail created successfully');
@@ -57,9 +57,10 @@ class ModuleDetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //this function is show Module
     public function show($id)
     {
-        $module = Module::find($id);
+        $module = Module::find($id); //get Module from Module table
         return view('module_detail.show',compact('module'));
     }
 
@@ -69,12 +70,10 @@ class ModuleDetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+       //this function is open edit ModuleDetail form
     public function edit($id)
     {
-        $module_detail = ModuleDetail::find($id);
-        // echo "<pre>";
-        // print_r($module_detail);
-        // exit;
+        $module_detail = ModuleDetail::find($id); //get ModuleDetail from ModuleDetail table
         return view('module_detail.edit',compact('module_detail'));
     }
 
@@ -85,11 +84,11 @@ class ModuleDetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+         //this function is update ModuleDetail
     public function update(Request $request, $id)
     {
-        // echo "<pre>";
-        // print_r($id);
-        // exit;
+        //update ModuleDetail
         $module_detail = ModuleDetail::find($id);
         $module_detail->title = $request->title;
         $module_detail->description = $request->description;
@@ -103,8 +102,10 @@ class ModuleDetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+      //this function is delete ModuleDetail
     public function destroy($id)
     {
+           //delete ModuleDetail
         $module_detail = ModuleDetail::find($id);
         $module_detail->delete();
         return redirect()->route('module_detail.index',['id' => $module_detail->module->id])->with('success','Module_ Detail delete successfully');

@@ -19,7 +19,7 @@
                </thead>
                <tbody>
                   @if (count($questions_options) > 0)
-                  @foreach ($questions_options as $questions_option)
+                  @foreach ($questions_options as $questions_option) <!-- all questions options display through loop -->
                   <tr data-entry-id="{{ $questions_option->id }}">
                      <td>{{ $questions_option->question->question_text }}</td>
                      <td>{{ $questions_option->option }}</td>

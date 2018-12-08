@@ -13,6 +13,7 @@
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-6">
+							 <!-- Display single Role -->
 						<table class="table table-bordered table-striped">
 							<tr><th>@lang('general.roles.fields.title')</th>
 								<td>{{ $role->title }}</td></tr>

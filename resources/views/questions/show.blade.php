@@ -21,6 +21,7 @@
          <div class="panel-body">
             <div class="row">
                <div class="col-md-6">
+                  <!-- Display single questions -->
                   <table class="table table-bordered table-striped">
                      <tr>
                         <th>@lang('general.questions.fields.topic')</th>

@@ -13,6 +13,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-6">
+                         <!-- Display single User -->
                     <table class="table table-bordered table-striped">
                         <tr><th>@lang('general.users.fields.name')</th>
                     <td>{{ $user->name }}</td></tr><tr><th>@lang('general.users.fields.email')</th>

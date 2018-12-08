@@ -17,9 +17,10 @@ class TermsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     //this function dispays Terms
     public function index()
     {
-        $terms = Terms::All();
+        $terms = Terms::All(); //get Terms from Terms table
         return view('terms.view', compact('terms'));
     }
 
@@ -39,11 +40,11 @@ class TermsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // insert Terms in table
     public function store(Request $request)
     {
-        // echo "<pre>";
-        // print_r($request->all());
-        // exit;
+        
+        //insert Terms
         $input = $request->except(['_token']);
         Terms::forceCreate($input);
         return redirect()->route('terms.index')->with('success','Terms created successfully');
@@ -52,7 +53,7 @@ class TermsController extends Controller
     
     public function show()
     {
-        $terms = Terms::All();
+        $terms = Terms::All(); //get Terms from Terms table
        
         return view('terms.show',compact('terms'));
     }

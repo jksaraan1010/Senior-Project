@@ -18,6 +18,7 @@
 <!-- /.row -->
 <div class="content-header">
     <div class="container-fluid">
+        <!--         Quetion insert form -->
         {!! Form::open(['method' => 'POST', 'route' => ['questions.store']]) !!}
         <div class="panel panel-default">
             <div class="panel-body">
@@ -157,17 +158,19 @@
 @section('javascript')
 <script type="text/javascript">
     $(document).ready(function(){
+
+        // question option automatically generate after you add option
         $(document.body).on('change','.quation_option',function(){
             var html = '';
             $(".quation_option").each(function() {
                 if($(this).val() !== ''){
-                    var index = $(this).attr('data-id');
-                    html += '<option value="option'+index+'">Option #'+index+'</option>';
-                }
+                    var index = $(this).attr('data-id'); // get option id using "data-id" attribute
+                    html += '<option value="option'+index+'">Option #'+index+'</option>'; // set option value and option text
+                } 
             });
             $(".correct_option_dropdown").html(html);           
         });
-    
+     //new topic add form submit
         $("#addNewTopicForm").submit(function(e){
     
             e.preventDefault();
@@ -183,14 +186,14 @@
                    dataType:'json',
                    success: function( data ) {
                     if(data.status == 'success'){
-                        $("#add_new_topic_model").modal('hide');
+                        $("#add_new_topic_model").modal('hide'); //hide currently topic model
                         me[0].reset();
-                        var option = '<option value="'+data.id+'">'+topic_name+'</option>';
+                        var option = '<option value="'+data.id+'">'+topic_name+'</option>'; //create new dropdown option
                         $(".topic_dropdown").append(option);
-                        $('.topic_dropdown option[value="'+data.id+'"]').prop('selected', true)
+                        $('.topic_dropdown option[value="'+data.id+'"]').prop('selected', true) // added new dropdown option select
     
                     }else{
-                        alert('Error');
+                        alert('Error'); // in topic if it is not insert successfully then it generates error
                     }
                    }
                });

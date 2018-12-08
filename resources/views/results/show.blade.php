@@ -5,6 +5,7 @@
 <div class="content-header">
   <div class="container-fluid">
                       <div class="col-md-12">
+                          <!-- Display single result  -->
                     <table class="table table-bordered table-striped">
                         @if(Auth::user()->isAdmin())
                         <tr>
@@ -21,7 +22,7 @@
                             <td>{{ $test->result }} out of {{$total_questions}}</td>
                         </tr>
                         </tr>
-                @foreach($topics_results as $topic => $results)
+                @foreach($topics_results as $topic => $results) <!-- topic results display through loop -->
                 <tr>
                     @if($results->where('correct', 1)->count() != $results->count())
                     <th>{{ $topic }}</th>

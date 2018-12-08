@@ -47,6 +47,7 @@ class ResultsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+        //this function is dispay all Test
     public function show($id)
     {
         
@@ -55,7 +56,7 @@ class ResultsController extends Controller
 
         
         
-        $test = Test::find($id)->load('user');
+        $test = Test::find($id)->load('user'); //get record form test table
 
         if ($test) {
             $results = TestAnswer::where('test_id', $id)

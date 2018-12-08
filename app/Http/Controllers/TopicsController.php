@@ -21,7 +21,7 @@ class TopicsController extends Controller
      */
     public function index()
     {
-        $topics = Topic::all();
+        $topics = Topic::all(); //get all User from User table
 
         return view('topics.index', compact('topics'));
     }
@@ -122,6 +122,7 @@ class TopicsController extends Controller
             }
         }
     }
+    //this function is for Add new topic Popup modal
     public function addNewTopic(Request $request)
     {
        
@@ -129,11 +130,11 @@ class TopicsController extends Controller
         $topic->title = $request->topic_name;
         if($topic->save())
         {
-            echo json_encode(array('status' => 'success', 'id' => $topic->id));    
+            echo json_encode(array('status' => 'success', 'id' => $topic->id)); // if topic add successfully than Ajax return success or topic id 
         }
         else
         {
-            echo json_encode(array('status' => 'error'));
+            echo json_encode(array('status' => 'error'));  //if any error give inserting time than Ajax return error
         }
     }
 }

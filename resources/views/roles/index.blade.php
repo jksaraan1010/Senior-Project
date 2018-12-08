@@ -25,7 +25,7 @@
 					</thead>
 
 					<tbody>
-						@if (count($roles) > 0)
+						@if (count($roles) > 0) <!-- all Role display through loop -->
 						@foreach ($roles as $role)
 						<tr data-entry-id="{{ $role->id }}">
 							<td></td>

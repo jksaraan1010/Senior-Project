@@ -31,7 +31,7 @@
                </thead>
                <tbody>
                   @if (count($questions) > 0)
-                  @foreach ($questions as $question)
+                  @foreach ($questions as $question)  <!-- all quetion display through loop -->
                   <tr data-entry-id="{{ $question->id }}">
                      <td>{{ $question->topic->title }}</td>
                      <td>{!! $question->question_text !!}</td>

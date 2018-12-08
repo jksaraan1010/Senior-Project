@@ -18,9 +18,10 @@ class RolesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //this function is dispay all Role
     public function index()
     {
-        $roles = Role::all();
+        $roles = Role::all(); //get all Role from database
 
         return view('roles.index', compact('roles'));
     }
@@ -30,6 +31,8 @@ class RolesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+       //this function is dispay roles form
     public function create()
     {
         return view('roles.create');
@@ -41,6 +44,8 @@ class RolesController extends Controller
      * @param  \App\Http\Requests\StoreRolesRequest  $request
      * @return \Illuminate\Http\Response
      */
+
+      //this function is insert Role in table
     public function store(StoreRolesRequest $request)
     {
         Role::create($request->all());
@@ -57,7 +62,7 @@ class RolesController extends Controller
      */
     public function edit($id)
     {
-        $role = Role::findOrFail($id);
+        $role = Role::findOrFail($id); //get record from Role table
 
         return view('roles.edit', compact('role'));
     }
@@ -86,7 +91,7 @@ class RolesController extends Controller
      */
     public function show($id)
     {
-        $role = Role::findOrFail($id);
+        $role = Role::findOrFail($id); //get Role from Role table
 
         return view('roles.show', compact('role'));
     }

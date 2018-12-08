@@ -10,6 +10,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-6">
+                      <!-- Display single questions option -->
                     <table class="table table-bordered table-striped">
                         <tr><th>@lang('general.questions-options.fields.question')</th>
                     <td>{{ $questions_option->question->question_text}}</td></tr><tr><th>@lang('general.questions-options.fields.option')</th>

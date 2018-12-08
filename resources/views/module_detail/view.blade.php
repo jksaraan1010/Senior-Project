@@ -35,7 +35,7 @@
                </thead>
                <tbody>
                   @if (count($module->module_detail) > 0)
-                  @foreach ($module->module_detail as $value)
+                  @foreach ($module->module_detail as $value) <!-- all review detail display through loop -->
                   <tr data-entry-id="{{ $value->id }}">
                      <td>{{ $value->title }}</td>
                      <td>{!! $value->description !!}</td>

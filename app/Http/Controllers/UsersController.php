@@ -48,7 +48,7 @@ class UsersController extends Controller
      */
     public function store(StoreUsersRequest $request)
     {
-        User::create($request->all());
+        User::create($request->all()); //insert User
 
         return redirect()->route('users.index');
     }
@@ -96,10 +96,10 @@ class UsersController extends Controller
     public function show($id)
     {
         $relations = [
-            'roles' => \App\Role::get()->pluck('title', 'id')->prepend('Please select', ''),
+            'roles' => \App\Role::get()->pluck('title', 'id')->prepend('Please select', ''), //get all role from role table
         ];
 
-        $user = User::findOrFail($id);
+        $user = User::findOrFail($id); //get User from User table
 
         return view('users.show', compact('user') + $relations);
     }

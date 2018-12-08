@@ -4,7 +4,7 @@
 <div class="content-header">
   <div class="container-fluid">
        <h3 class="page-title">@lang('general.questions-options.title')</h3>
-    
+      <!-- questions option edit form -->
     {!! Form::model($questions_option, ['method' => 'PUT', 'route' => ['questions_options.update', $questions_option->id]]) !!}
 
     <div class="panel panel-default">

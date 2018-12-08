@@ -19,6 +19,8 @@
 <!-- /.row -->
 <div class="content-header">
    <div class="container-fluid">
+
+                <!-- Review Details insert form -->
       {!! Form::open(['method' => 'POST', 'route' => ['module_detail.store']]) !!}
       <input type="hidden" name="module_id" value="{{$module->id}}">
       <div class="panel panel-default">
@@ -60,7 +62,7 @@
 @push('js')
 <script type="text/javascript">
    $(document).ready(function(){
-      CKEDITOR.replace( 'editor' );
+      CKEDITOR.replace( 'editor' ); //Display text editor
    });
 </script>
 @endpush 

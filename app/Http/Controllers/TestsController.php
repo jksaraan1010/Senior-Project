@@ -38,6 +38,7 @@ class TestsController extends Controller
      * @param  \App\Http\Requests\StoreResultsRequest  $request
      * @return \Illuminate\Http\Response
      */
+    // insert results in table
     public function store(Request $request)
     {
         $result = 0;

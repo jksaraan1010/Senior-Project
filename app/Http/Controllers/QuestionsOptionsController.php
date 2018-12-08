@@ -21,7 +21,7 @@ class QuestionsOptionsController extends Controller
      */
     public function index()
     {
-        $questions_options = QuestionsOption::all();
+        $questions_options = QuestionsOption::all(); //get all QuestionsOption from database
 
         return view('questions_options.index', compact('questions_options'));
     }
@@ -48,6 +48,7 @@ class QuestionsOptionsController extends Controller
      */
     public function store(StoreQuestionsOptionsRequest $request)
     {
+        //insert QuestionsOption
         QuestionsOption::create($request->all());
 
         return redirect()->route('questions_options.index');
@@ -66,7 +67,7 @@ class QuestionsOptionsController extends Controller
             'questions' => \App\Question::get()->pluck('question_text', 'id')->prepend('Please select', ''),
         ];
 
-        $questions_option = QuestionsOption::findOrFail($id);
+        $questions_option = QuestionsOption::findOrFail($id);  //get edited record from QuestionsOption table
 
         return view('questions_options.edit', compact('questions_option') + $relations);
     }

@@ -28,7 +28,7 @@
 		
 
 		<p>
-			@if(count($terms) > 0)
+			@if(count($terms) > 0) <!-- Main section of terms display through loop -->
 			@else
 			<a href="{{ route('terms.create') }}" class="btn btn-success">@lang('general.add_new')</a>
 			@endif

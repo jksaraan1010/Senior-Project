@@ -21,9 +21,10 @@ class QuestionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //this function is dispay all question
     public function index()
     {
-        $questions = Question::all();
+        $questions = Question::all(); //get all question from database
 
         return view('questions.index', compact('questions'));
     }
@@ -33,11 +34,11 @@ class QuestionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //this function is dispay question form
     public function create()
     {
         $relations = [
-            //'topics' => \App\Topic::get()->pluck('title', 'id')->prepend('Please select', ''),
-                        'topics' => \App\Topic::get()->pluck('title', 'id'),
+             'topics' => \App\Topic::get()->pluck('title', 'id'), //get topic from table
 
         ];
 
@@ -58,6 +59,7 @@ class QuestionsController extends Controller
      * @param  \App\Http\Requests\StoreQuestionsRequest  $request
      * @return \Illuminate\Http\Response
      */
+     //this function is insert question in table
     public function store(StoreQuestionsRequest $request)
     {
           if($request->title != ''){
@@ -68,12 +70,14 @@ class QuestionsController extends Controller
         }else{
             $topic_id = $request->topic_id;
         }
-
+        //insert Question
        $question = new Question();
         $question->topic_id = $topic_id;
         $question->question_text = $request->question_text;
         $question->save();
 
+
+        //insert QuestionsOption
         foreach ($request->input() as $key => $value) {
             if(strpos($key, 'option') !== false && $value != '') {
                 $status = $request->input('correct') == $key ? 1 : 0;
@@ -95,13 +99,15 @@ class QuestionsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
+    //this function is open edit quation form
     public function edit($id)
     {
         $relations = [
-            'topics' => \App\Topic::get()->pluck('title', 'id'),
+            'topics' => \App\Topic::get()->pluck('title', 'id'), //get record from topic table
         ];
 
-        $question = Question::findOrFail($id);
+        $question = Question::findOrFail($id); //get edited record from Question table
 
         return view('questions.edit', compact('question') + $relations);
     }
@@ -113,9 +119,11 @@ class QuestionsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //this function is update quation
     public function update(UpdateQuestionsRequest $request, $id)
     {
-       if($request->title != ''){
+        //existed topic or new topic 
+        if($request->title != ''){
             $topic = new Topic();
             $topic->title = $request->title;
             $topic->save();
@@ -124,14 +132,18 @@ class QuestionsController extends Controller
             $topic_id = $request->topic_id;
         }
 
-        $question = Question::findOrFail($id);
+        
+        //update quation
+        $question = Question::findOrFail($id); 
         $question->topic_id = $topic_id;
         $question->question_text = $request->question_text;
         $question->save();
 
 
-        QuestionsOption::where('question_id','=',$id)->forceDelete();
+        QuestionsOption::where('question_id','=',$id)->forceDelete(); // //delete old QuestionsOption
 
+       
+        //update QuestionsOption
         foreach ($request->input() as $key => $value) {
             if(strpos($key, 'option') !== false && $value != '') {
                 $status = $request->input('correct') == $key ? 1 : 0;
@@ -161,7 +173,7 @@ class QuestionsController extends Controller
             ->prepend('Please select', ''),
         ];
 
-        $question = Question::findOrFail($id);
+        $question = Question::findOrFail($id); //get Question from Question table
 
         return view('questions.show', compact('question') + $relations);
     }
