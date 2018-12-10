@@ -84,7 +84,7 @@
             'Urology' => 'Urology',
             'Other' => 'Other',
             
-            ], 'Cardiology')}}
+            ])}}
         </div>
 </div>
     <div class="row">
@@ -103,8 +103,15 @@
     {{Form::label('city', 'City') }}
     {{ Form::text('city', null, array('class' => 'form-control')) }}
     </div>
-    <div class="form-group col-md-2">
-    
+
+  <div class="form-group col-md-4" >
+
+  {{Form::label('zip', 'Zip Code') }}
+  {{ Form::number('zip', null, array('class' => 'form-control')) }}
+</div>
+
+    <div class="row">
+    <div class="form-group col-md-4">
     {{Form::label('state', 'State') }}
                     
         {{Form::select('state', [
@@ -159,16 +166,15 @@
             'WV' => 'West Virginia',
             'WI' => 'Wisconsin',
             'WY' => 'Wyoming',
-            ], 'MI')}}
-
+            ])}}
+<br>
     </div>
-    <div class="form-group col-md-6">
 
-    {{Form::label('zip', 'Zip Code') }}
-    {{ Form::number('zip', null, array('class' => 'form-control')) }}
 </div>
-</div>
+<div align="center"> 
 <div class="row justify-content-around">
+</div>
+
     <div class="col-12 text-center">
     {{ Form::submit('Update Doctor Information', array('class' => 'btn btn-primary')) }}
     </div>
